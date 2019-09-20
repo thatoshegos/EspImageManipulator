@@ -1,0 +1,14 @@
+<!-- <div class="loop-data">
+  <ul>
+    <li
+      *ngFor="let image of getImages; let i = index"
+      [innerHTML]="image.content.rendered"
+    ></li>
+  </ul>
+</div> -->
+<div class="loop-data">
+  <div
+    *ngFor="let image of getImages; let i = index"
+    [innerHTML]="image.content.rendered"
+  ></div>
+</div>

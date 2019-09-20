@@ -1,0 +1,225 @@
+
+<div class="complete-fund-table">
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <th></th>
+      <th *ngIf="isHideConditionOn"></th>
+      <th *ngIf="!isHideConditionOn">MONTHLY FACT SHEET</th>
+      <th>QUARTERLY FACT SHEET</th>
+      <th *ngIf="isHideConditionOn"></th>
+      <th *ngIf="!isHideConditionOn">QUARTERLY COMMENTARY</th>
+      <th>ARCHIVE</th>
+    </tr>
+    <tr>
+      <td colspan="5" class="high-light">
+        <strong>{{
+          isHideConditionOn ? "Equity funds" : "South African funds"
+        }}</strong>
+      </td>
+    </tr>
+
+    <tr
+      *ngFor="
+        let tdata of isHideConditionOn
+          ? tableDate.acf.equity_funds
+          : tableDate.acf.south_african_funds;
+        let i = index
+      "
+      [ngClass]="i % 2 == 0 ? 'bg-white' : 'light-bg'"
+    >
+      <td>{{ tdata.fund_name }}</td>
+      <td *ngIf="isHideConditionOn"></td>
+
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.monthly_fact_sheet"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td>
+        <a [href]="tdata.quarterly_fact_sheet"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.quarterly_commentary"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td>
+        <a [href]="tdata.archive"><img src="assets/images/buttons-new/form_download_b.png"/></a>
+      </td>
+    </tr>
+	<tr class="bg-white"> <td colspan=7></td></tr>
+    <!--<tr class="bg-white">
+      <td></td>
+      <td *ngIf="isHideConditionOn"></td>
+
+      <td *ngIf="!isHideConditionOn">
+        <img src="assets/images/buttons-new/form_download_b.png" /> full pack
+      </td>
+      <td *ngIf="!isHideConditionOn">
+        <img src="assets/images/buttons-new/form_download_b.png" /> full pack
+      </td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="!isHideConditionOn">
+        <img src="assets/images/buttons-new/form_download_b.png" /> full pack
+      </td>
+      <td></td>
+    </tr>-->
+
+    <tr>
+      <td colspan="5" class="high-light">
+        <strong>
+          {{
+            isHideConditionOn ? "Multi-asset class funds" : "Sharia funds"
+          }}</strong
+        >
+      </td>
+    </tr>
+    <tr
+      *ngFor="
+        let tdata of isHideConditionOn
+          ? tableDate.acf['multi-asset_class_funds']
+          : tableDate.acf.sharia_funds;
+        let i = index
+      "
+      [ngClass]="i % 2 == 0 ? 'bg-white' : 'light-bg'"
+    >
+      <td>{{ tdata.fund_name }}</td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.monthly_fact_sheet"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td>
+        <a [href]="tdata.quarterly_fact_sheet"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.quarterly_commentary"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td>
+        <a [href]="tdata.archive"><img src="assets/images/buttons-new/form_download_b.png"/></a>
+      </td>
+    </tr>
+
+   <!-- <tr></tr>
+    <tr>
+      <td></td>
+      <td *ngIf="!isHideConditionOn">
+        <img src="assets/images/buttons-new/form_download_b.png" /> full pack
+      </td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="!isHideConditionOn">
+        <img src="assets/images/buttons-new/form_download_b.png" /> full pack
+      </td>
+
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="!isHideConditionOn">
+        <img src="assets/images/buttons-new/form_download_b.png" /> full pack
+      </td>
+      <td></td>
+    </tr>-->
+	<tr class="bg-white"> <td colspan=7></td></tr>
+
+    <tr>
+      <td colspan="5" class="high-light">
+        <strong>{{
+          isHideConditionOn ? "Yield funds" : "Tax free fund"
+        }}</strong>
+      </td>
+    </tr>
+    <tr
+      *ngFor="
+        let tdata of isHideConditionOn
+          ? tableDate.acf.yield_funds
+          : tableDate.acf.tax_free_funds;
+        let i = index
+      "
+      [ngClass]="i % 2 == 0 ? 'bg-white' : 'light-bg'"
+    >
+      <td>{{ tdata.fund_name }}</td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.monthly_fact_sheet"
+          target="_blank"><img src="assets/images/icon-1.png"
+        /></a>
+      </td>
+      <td>
+        <a [href]="tdata.quarterly_fact_sheet"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.quarterly_commentary"
+         target="_blank" ><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td>
+        <a [href]="tdata.archive"><img src="assets/images/buttons-new/form_download_b.png"/></a>
+      </td>
+    </tr>
+<tr class="bg-white"> <td colspan=8></td></tr>
+    <!--<tr class="bg-white">
+      <td></td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="!isHideConditionOn">
+        <img src="assets/images/buttons-new/form_download_b.png" /> full pack
+      </td>
+      <td *ngIf="!isHideConditionOn">
+        <img src="assets/images/buttons-new/form_download_b.png" /> full pack
+      </td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="!isHideConditionOn">
+        <img src="assets/images/buttons-new/form_download_b.png" /> full pack
+      </td>
+      <td></td>
+    </tr>-->
+    <tr>
+      <td *ngIf="!isHideConditionOn" colspan="5" class="high-light">
+        <strong>Global Fund</strong>
+      </td>
+    </tr>
+
+    <tr
+      *ngFor="let tdata of tableDate.acf.global_funds; let i = index"
+      [ngClass]="i % 2 == 0 ? 'bg-white' : 'light-bg'"
+    >
+      <td *ngIf="!isHideConditionOn">{{ tdata.fund_name }}</td>
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.monthly_fact_sheet"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.quarterly_fact_sheet"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.quarterly_commentary"
+          target="_blank"><img src="assets/images/buttons-new/form_view_b.png"
+        /></a>
+      </td>
+      <td *ngIf="!isHideConditionOn">
+        <a [href]="tdata.archive"><img src="assets/images/buttons-new/form_download_b.png"/></a>
+      </td>
+    </tr>
+    <!--<tr *ngIf="!isHideConditionOn">
+      <td></td>
+      <td><img src="assets/images/buttons-new/form_download_b.png" /> full pack</td>
+      <td><img src="assets/images/buttons-new/form_download_b.png" /> full pack</td>
+      <td><img src="assets/images/buttons-new/form_download_b.png" /> full pack</td>
+      <td></td>
+    </tr>-->
+	<tr class="bg-white"> <td colspan=5></td></tr>
+  </table>
+</div>

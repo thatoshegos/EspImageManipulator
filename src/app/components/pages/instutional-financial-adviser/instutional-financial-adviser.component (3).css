@@ -1,0 +1,24 @@
+.light-green-box-inst {
+    background: #e3edec;
+    padding: 30px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    height: 348px;
+}
+.light-green-box-inst img{
+    height: 250px;
+    width: 250px;
+}
+.light-green-box-inst img:hover{transform: scale(1.1)}
+.light-green-box-inst .text-title {
+    color: #656565;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    background: #e3edec url(https://dev.omangom.com/kagiso/simple-arrow-icon.08e8f0831875f4dd6f16.jpg) no-repeat right center;
+    display: inline-block;
+    padding-right: 20px;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+}

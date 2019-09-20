@@ -1,0 +1,73 @@
+.complete-fund-btn .btn-meet-leaders {
+  font-size: 16px;
+}
+.complete-fund-btn-list {
+  margin: -115px 30px 0 0;
+  padding: 0;
+  float: right;
+}
+.complete-fund-btn-list li {
+  display: block;
+  margin: 4px 0;
+}
+/* .complete-fund-btn-list li a.red{background: #eac7ce url(../images/red-arrow-icon.jpg) no-repeat right} */
+
+.complete-fund-table {
+  padding: 30px 0;
+  border-bottom: 5px solid #b6d3d1;
+}
+.complete-fund-table table {
+  width: 100%;
+}
+.complete-fund-table table th {
+  color: #fff;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+  background: #7aaba9;
+  padding: 10px 8px;
+  border-bottom: 15px solid #fff;
+}
+.complete-fund-table table td {
+  text-align: left;
+  padding: 10px 20px;
+  color: #656565;
+}
+.complete-fund-table table td.high-light {
+  color: #656565;
+  background: #b6d3d1;
+  font-weight: 400;
+}
+.complete-fund-table .white-bg {
+  background: #fff;
+}
+.complete-fund-table .light-bg {
+  background: #e3edec;
+}
+.cfr-icon-1{
+    background: url(https://dev.omangom.com/kagiso/assets/images/icon-1.png) no-repeat;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+.cfr-icon-1:hover{
+    background: url(https://dev.omangom.com/kagiso/assets/images/icon-2.png) no-repeat;
+}
+.cfr-icon-2{
+    background: url(https://dev.omangom.com/kagiso/assets/images/icon-2.png) no-repeat;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+.cfr-icon-2:hover{
+    background: url(https://dev.omangom.com/kagiso/assets/images/icon-1.png) no-repeat;
+}
+.cfr-icon-3{
+    background: url(https://dev.omangom.com/kagiso/assets/images/icon-3.png) no-repeat;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+.cfr-icon-3:hover{
+    background: url(https://dev.omangom.com/kagiso/assets/images/icon-2.png) no-repeat;
+}

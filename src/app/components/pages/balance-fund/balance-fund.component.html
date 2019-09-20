@@ -1,0 +1,238 @@
+<!-- start blanced fund -->
+<section
+  class="wow fadeIn bg-gray-light  xs-margin-80px-top xs-margin-15px-lr"
+>
+<div class="col-md-12 margin-60px-top margin-30px-bottom "><div  class="text-center">&nbsp;</div></div>
+  <div class="container">
+    <div class="row">
+      <!-- start Unconventional thinking box item -->
+      <div
+        class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp unconventional-thinking blanced-fund-box"
+        data-wow-delay="0.2s"
+      >
+        <div class="text-center">
+          <h2>
+            <!-- ./assets/images/blanced-fund-bg.jpg -->
+            <img [src]="getBalancedData.acf.fund_icon.url" />
+            {{ getBalancedData.title.rendered }}
+          </h2>
+
+          <!-- btn-list -->
+          <ul class="blanced-fund-btn-list">
+            <li>
+              <a routerLink="/fact-sheets-archive" class="btn-invest-now-green"
+                ><span>FACT SHEETS</span></a
+              >
+            </li>
+            <li>
+              <a routerLink="/tax-free-investing" class="btn-invest-now-red"
+                ><span>INVEST NOW</span></a
+              >
+            </li>
+          </ul>
+          <!-- btn-list -->
+          <div class="inner-match-height bg-white">
+            <div class="row">
+              <div class="col-md-5 padding-45px-all graph-box1" >
+                <!-- Tab Menu -->
+                <app-fund-tab [getApiData]="getBalancedData"></app-fund-tab>
+                <!-- Tab Menu Closed -->
+              </div>
+               <!-- <div class="vertical-row"></div>-->
+              <div class="col-md-7  graph-box padding-45px-all" >
+                <ul class="year-list" style="float: left">
+                  <li class="current">
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(5)"
+                      >5 Years</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(7)"
+                      >7 Years</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(10)"
+                      >10 Years</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" (click)="getConditionalCSV()"
+                      >Since Inception</a
+                    >
+                  </li>
+                </ul>
+                <div class="graph-content">
+                  <app-graph
+                    *ngIf="getGraphData"
+                    [dataSet]="getGraphData"
+                  ></app-graph>
+                  <!--<img src="http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/balance-fundgraph.jpg">-->
+                </div>
+                <ul class="return-list" style="float: left">
+                  <li>
+                    <a href="#"
+                      >Fund Return
+                      <span style="color:#b50c2f">{{
+                        getBalancedData.acf.fund_return
+                      }}</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      >Benchmark Return
+                      <span>{{ getBalancedData.acf.benchmark_return }}</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      >Outperformance
+                      <span>{{ getBalancedData.acf.outperformance }}</span></a
+                    >
+                  </li>
+                </ul>
+                <p style="font-size: 12px; width: 90%">{{ getBalancedData.acf.notes }}</p>
+                <div class="select-fund" style="width: 92.5%">
+                  <div class="row">
+                    <div
+                     class="col-xs-12 col-md-6 xs-padding-20px-right"
+                      style="padding-right:0"
+                    >
+                      <span><b>Select Another funds</b></span>
+                    </div>
+                    <div
+                      class="col-xs-12 col-md-6 select-funds"
+                    >
+                      <select (change)="getFundOnChange($event)">
+                        <option value="">Please select Fund</option>
+                        <option
+                          *ngFor="let fund of getBalancedData.acf.fund_list"
+                          [value]="fund.fund_url"
+                          [attr.selected]="
+                            currentRoute == fund.fund_url ? true : null
+                          "
+                          >{{ fund.fund_title }}</option>
+                          
+<!--                         <option>EQUITY ALPHA FUND</option>
+                        <option>ISLAMIC EQUITY FUND</option>
+                        <option>BALANCED FUND</option>
+                        <option>ISLAMIC BALANCED FUND</option>
+                        <option>PROTECTOR FUND</option>
+                        <option>STABLE FUND</option> -->
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fund-img-box bg-white">
+            <!--  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/about-us" style="margin-right:10px;">TAX FREE</a>
+		  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/meet-the-fund-manager" style="margin-right:10px;">TOP 10 HOLDINGS</a>
+		  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/faq" style="margin-right:10px;">FORMS</a>
+		  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/faq" style="margin-right:10px;">PLATEFORMS</a> -->
+
+            <ul class="fund-subcatagory-box">
+              <li class="col-md-3">
+                <a routerLink="/tax-free-investing" class="btn-tax-free">
+                  <div class="link-img-box"></div>
+                  <div class="title" style="">TAX FREE</div>
+                </a>
+              </li>
+              <li class="col-md-3">
+                <a [href]="getBalancedData.acf.top_10_holdings_url" class="btn-top-10-holdings" target="_blank">
+                  <div class="link-img-box"></div>
+                  <div class="title" style="width: 150px; font-size: 14px">TOP 10 HOLDINGS</div>
+                </a>
+              </li>
+              <li class="col-md-3">
+                <a routerLink="/forms-documents" class="btn-form">
+                  <div class="link-img-box"></div>
+                  <div class="title" style="width: 150px;font-size: 14px">FORMS</div>
+                </a>
+              </li>
+              <li class="col-md-3">
+                <a href="#" class="btn-platforms">
+                  <div class="link-img-box"></div>
+                  <div class="title" style="width: 150px; font-size: 14px">PLATFORMS</div>
+                </a>
+              </li>
+              <div class="clearfix"></div>
+            </ul>
+            <!--  <ul>
+              <li
+                class="col-md-3"
+                *ngFor="let image of getBalancedData.acf.image"
+              >
+                <a href="#">
+                  <div class="img-box">
+                    <img [src]="image.image_icon.url" class="img-responsive" />
+                  </div>
+                <div class="title">{{ image.title }}</div>
+                </a>
+              </li>
+
+              <div class="clearfix"></div>
+            </ul> -->
+          </div>
+        </div>
+        <div
+          _ngcontent-c15=""
+          class="text-center margin-50px-top xs-margin-30px-top"
+        >
+          <div _ngcontent-c15="" class="text-center">
+            <!-- <a
+          _ngcontent-c15=""
+          class="btn-meet-leaders"
+          href="#"
+          style="margin-right:10px;"
+          *ngFor="let buttonLink of getBalancedData.acf.buttons"
+          >{{ buttonLink.name }}</a
+        >-->
+            <a
+              _ngcontent-c15=""
+              class="btn-meet-leaders meet-leader margin-15px-right"
+              routerLink="/about-us"
+              style="vertical-align: middle" 
+              ><span>INVESTMENT APPROACH</span></a
+            >
+            <a
+              _ngcontent-c15=""
+              class="btn-meet-fund-manager margin-15px-right"
+              routerLink="/meet-the-fund-manager"
+              style="vertical-align: middle"  
+              ><span>MEET THE FUND MANAGER</span></a
+            >
+            <a
+              _ngcontent-c15=""
+              class="btn-meet-faq"
+              routerLink="/faq"
+              style="vertical-align: middle" 
+              ><span>FAQ's</span></a
+            >
+          </div>
+        </div>
+        <!-- end Unconventional thinking box item -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end blanced fund -->
+<!-- Test -->
+<section class="wow fadeIn bg-medium-gray-light video-hide">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div
+          class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp unconventional-thinking blanced-fund-box"
+          data-wow-delay="0.2s"
+        >
+          <h2>Fund commentary</h2>
+          <div [innerHTML]="getBalancedData.acf.fund_commentary"></div>
+          <!-- <img src="images/blanced-fund-video.jpg" alt="" title="" /> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Test Closed -->

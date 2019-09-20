@@ -1,0 +1,16 @@
+.last-grid {
+  background: #a9cfcc;
+  /* color: rgb(214, 151, 151); */
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 14px !important;
+  font-weight: 400;
+}
+a.btn-our-fund span {
+  padding: 7px 5px 10px 10px;
+  display: block;
+  background: #a9cfcc;
+  color: #656565;
+  font-weight: 500;
+}

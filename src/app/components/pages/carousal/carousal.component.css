@@ -1,0 +1,62 @@
+.list {
+  list-style-type: none;
+  padding: 0px 30px;
+  min-height: 540px;
+}
+.even {
+  background-color: #7fb1d0;
+}
+.odd {
+  background-color: #c3c3c3;
+}
+.history-slider-items{
+    width: 33.3%;
+    margin: 0px;
+    min-width: 33.3%;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1c1c1c;
+}
+.history-slider-items:first-child .list {
+    background: #6e6e6e!important;
+}
+.hsi-icon-holder{
+    padding-bottom: 10px;
+}
+.hsi-title{
+    color: #212121;
+    font-size: 20px;
+    font-weight: 600;
+}
+.hsi-year{
+    color: #b60c2f;
+    padding: 3px 0px;
+}
+.hsi-details{
+    padding: 0px 0px 40px;
+}
+
+
+/* ============== Font Responsive Css === */
+@media only screen and (min-width: 992px) and (max-width: 1130px) {
+    .list {
+        min-height: 694px;
+    }
+}
+
+/* --------------- Mobile CSS ---*/
+@media screen and (max-width: 480px) {
+   .history-slider-items{
+        width: 100%;
+        margin: 0px;
+        min-width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: #1c1c1c;
+    } 
+    .list {
+        min-height: 400px;
+    }
+}

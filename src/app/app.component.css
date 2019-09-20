@@ -1,0 +1,9 @@
+input.more-btn.text-black {
+  width: 175px;
+}
+.is-invalid {
+  border: 1px solid #aa1118;
+}
+.invalid-feedback {
+  color: #aa1118;
+}

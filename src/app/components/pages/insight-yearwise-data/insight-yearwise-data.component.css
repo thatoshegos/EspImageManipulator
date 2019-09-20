@@ -1,0 +1,41 @@
+.remove-margin {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.accordion-style2 .panel .panel-heading {
+  background: #fff;
+  border-radius: 0;
+  padding: 20px 28px 20px;
+  margin-top: 1px;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.accordion-style2 .panel {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.margin-30px-bottom-insight {
+  margin-bottom: 30px !important;
+}
+.title {
+  padding: 25px 0 10px 0;
+  padding-left: 0px;
+  color: #B60C2F;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.year-list > ul > li .active {
+  color: #B60C2F;
+  font-weight: 800;
+}
+.year-post > span {
+  font-weight: 800;
+}
+.accordion-style2 .panel-body{
+    padding: 0px 28px 25px;
+    border: none;
+}

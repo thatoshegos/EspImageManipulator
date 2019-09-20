@@ -1,0 +1,63 @@
+<!--<section
+  class="wow fadeIn no-padding main-slider mobile-height top-space"
+  *ngIf="meetOurTeam"
+>
+  <app-slider [sliders]="meetOurTeam.acf.home_slider"></app-slider>
+</section>-->
+<section
+  class="wow fadeIn bg-light-gray"
+  style="visibility: visible; animation-name: fadeIn;"
+  *ngIf="meetOurTeam"
+>
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp"
+        data-wow-delay="0.2s"
+        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"
+      >
+        <div class="bg-white text-center">
+          <h2>{{ meetOurTeam.title.rendered }}</h2>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row"
+      *ngFor="let meetLeader of meetOurTeam.acf.meet_our_leaders"
+    >
+      <!-- start Meet our leaders box item -->
+
+      <div
+        class="col-md-12 col-sm-12 col-xs-12 wow fadeInUp unconventional-thinking"
+        data-wow-delay="0.2s"
+        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"
+      >
+        <div
+          class="text-center margin-5px-top"
+          [innerHTML]="meetLeader.video_url"
+        >
+          <!-- <img src="assets/images/Unconventional-thinking-video.jpg" /> -->
+        </div>
+      </div>
+      <div
+        class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom margin-60px-bottom wow fadeInUp"
+        data-wow-delay="0.2s"
+        style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"
+      >
+        <div class="bg-white text-center">
+          <div class="padding-45px-all sm-padding-15px-all inner-match-height">
+            <p class="text-deep-pink margin-30px-top">
+              <strong>{{ meetLeader.name }} </strong>
+            </p><br>
+            <p>
+              <em>{{ meetLeader.position }}</em>
+            </p>
+            <p class="text-justify">
+              {{ meetLeader.details }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+.remove-margin {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.accordion-style2 .panel .panel-heading {
+  background: #fff;
+  border-radius: 0;
+  padding: 33px 28px 22px;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0px !important;
+  margin-bottom: 3px !important;
+}
+.accordion-style2 .panel {
+  margin-top: 0px !important;
+  margin-bottom: 3px !important;
+}
+.margin-30px-bottom-insight {
+  margin-bottom: 30px !important;
+}
+.title {
+  padding: 0 0 15px 0;
+  padding-left: 0px;
+  color: indianred;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.year-list > ul > li .active {
+  color: red;
+  font-weight: 800;
+}
+.year-post > span {
+  font-weight: 800;
+}

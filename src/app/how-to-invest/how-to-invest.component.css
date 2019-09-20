@@ -1,0 +1,14 @@
+.htmlwrap {
+  white-space: pre-wrap;
+}
+.how-to-invest-lt{
+    float: left;
+    width: 50%;
+}
+.how-to-invest-rt{
+    float: left;
+    width: 32%;
+    margin-left: 8%;
+    text-align: right;
+    padding-top: 0px;
+}

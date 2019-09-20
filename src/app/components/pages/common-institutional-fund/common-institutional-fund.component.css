@@ -1,0 +1,80 @@
+.p-text {
+  padding: 20px;
+  text-align: justify;
+}
+.text-decoration {
+  padding: 20px;
+  margin: 35px 1px 0px 182px;
+  text-align: justify;
+  line-height: 1.9 !important;
+}
+.text-decoration p {
+  padding: 20px;
+  margin: 35px 1px 0px 182px;
+  text-align: justify;
+  line-height: 1.9 !important;
+}
+.blanced-fund-btn-list {
+  margin: -108px 30px 0 0;
+  padding: 0;
+  float: right;
+}
+.blanced-fund-btn-list li {
+  display: block;
+  margin: 4px 0;
+}
+.blanced-fund-btn-list li a.red {
+  background: url("../../../../assets/images/red-arrow-icon.jpg") no-repeat
+    right;
+}
+
+a.btn-invest-now-red span {
+  padding: 10px 20px 10px 20px;
+  display: block;
+  background: #e9c2c9;
+  font-size: 14px;
+  color: #656565;
+  font-weight: 500;
+}
+a.btn-invest-now-red span:hover {
+  background: #d98b9c;
+  color: #333;
+}
+a.btn-invest-now-red {
+  display: inline-block;
+  background: #b30b2e
+    url(https://dev.omangom.com/kagiso/red-arrow-icon.6be28c54a0d555ff2462.jpg)
+    no-repeat right center;
+  padding-right: 50px;
+    width: 178px;
+}
+a.btn-invest-now-green span {
+  padding: 10px 20px 10px 20px;
+  display: block;
+  background: #c5dad7;
+  font-size: 14px;
+  color: #656565;
+  font-weight: 500;
+}
+a.btn-invest-now-green span:hover {
+  background: #c5d9e2;
+  color: #333;
+}
+a.btn-invest-now-green {
+  display: inline-block;
+  background: #b30b2e
+    url(https://dev.omangom.com/kagiso/arrow-icon.7df4ea734180f4c8726f.jpg)
+    no-repeat right center;
+  padding-right: 50px;
+    width: 178px;
+}
+.fund-manage-heading {
+  min-height: 115px;
+  line-height: 66px !important;
+}
+/* --------------- Mobile CSS ---*/
+@media screen and (max-width: 480px) {
+  .p-text {
+    text-align: left;
+  }
+}

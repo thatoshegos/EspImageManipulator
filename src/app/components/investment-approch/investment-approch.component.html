@@ -1,0 +1,32 @@
+<div class="">
+  <!-- start features box item -->
+  <div
+    class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-15px-bottom wow fadeInUp"
+    data-wow-delay="0.2s"
+  >
+    <div
+      class="text-center margin-100px-lr width-750px xs-no-margin-lr"
+      *ngIf="investment"
+    >
+      <h2>{{ investment.acf.investment_title }}</h2>
+      <div class="padding-45px-all sm-padding-15px-all inner-match-height bg-white">
+        <p [innerHTML]="investment.acf.investment_content">
+          <!-- We buy investments that are priced well below their intrinsic values
+          and avoid those that we believe are overpriced.<br /><br />
+          Because the future is never certain, we always strive to think more
+          deeply, to be more alert and to work harder at making your investment
+          grow. -->
+        </p>
+        <div class="padding-30px-top padding-30px-bottom text-left">
+          <a
+            [href]="investment.acf.investment_button_url"
+            target="_blank"
+            class="more-btn"
+            ><span>MORE</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end feature box item -->
+</div>

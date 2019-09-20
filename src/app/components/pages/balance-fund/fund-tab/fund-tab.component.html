@@ -1,0 +1,75 @@
+<ul class="fund-tabs" style="float: left; margin-bottom: 0px">
+  <li
+    data-tab="overview"
+    (click)="getTabData('overview', 'This is overview')"
+    [ngClass]="{ current: getSelected == 'overview' }"
+  >
+    Overview
+  </li>
+  <!--<li
+    data-tab="details"
+    (click)="getTabData('details', 'This is Detail')"
+    [ngClass]="{ current: getSelected == 'details' }"
+  >
+    Details
+  </li>-->
+  <li
+    class=""
+    [ngClass]="{ current: getSelected == 'prices' }"
+    data-tab="price"
+    (click)="getTabData('prices', 'This is price')"
+  >
+    Price
+  </li>
+  <li
+    class=""
+    data-tab="fees"
+    [ngClass]="{ current: getSelected == 'fees' }"
+    (click)="getTabData('fees', 'This is fees')"
+  >
+    Fees
+  </li>
+</ul>
+
+<div *ngIf="getTabDateSet != null" style="float: left">
+  <div
+    class="get-tab-data fund-tab-content current"
+    [innerHTML]="getTabDateSet"
+  ></div>
+</div>
+<br /><br />
+<div class="latest" *ngIf="getPriceData && getPriceData.isPrice">
+  <ul>
+    <li style="margin-left: -20px">
+      <div class="month-start">
+        Latest Price <span class="amt">{{ getApiData.acf.latest_price }}</span>
+      </div>
+    </li>
+    <li class="right-li">
+      <div class="month-latest-end1">
+        Month End Price <span class="amt">{{ getApiData.acf.monthend_price }}</span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="price-section" *ngIf="getPriceData && getPriceData.isPrice">
+  <table id="scrollable" class="table blanced-fund-table table-bordered">
+    <thead>
+      <tr>
+        <th *ngFor="let header of getHeader">{{ header }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let getPrice of getPriceData.data">
+        <td>{{ getPrice.DATE }}</td>
+        <!-- <td>{{ getPrice["price\r"] | number: "1.2-2" }}</td> -->
+        <td>{{ getPrice["Price"] | number: "1.2-2" }}</td>
+      </tr>
+    </tbody>
+  </table> 
+</div>
+<div class=" margin-30px-top" *ngIf="getPriceData && getPriceData.isPrice">
+  <a [href]="getApiData.acf.prices" class="btn-download"
+    ><span>DOWNLOAD</span></a
+  >
+</div>

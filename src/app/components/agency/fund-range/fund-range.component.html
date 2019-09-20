@@ -1,0 +1,134 @@
+<div
+  class="our-fund col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-15px-bottom xs-margin-0px-top margin-30px-top wow fadeInUp"
+  data-wow-delay="0.6s"
+>
+  <div class="bg-white text-center" data-aos="fade-up">
+    <h2 class="grey-bt-border">Our fund range</h2>
+    <div
+      class="padding-45px-all sm-padding-15px-all inner-match-height xs-margin-20px-lr  xs-no-padding-lr"
+    >
+      <a
+        href="javascript:void(0);"
+        (click)="changeView()"
+        class="padding-10px-all block"
+        ><span [class]="viewSChangeFlag ? 'link_on' : 'link_off'">{{
+          saFund.title
+        }}</span></a
+      >
+      <!--|
+      <a
+        href="javascript:void(0);"
+        (click)="changeGView()"
+        class="padding-10px-all"
+        ><span [class]="viewSChangeFlag ? 'link_on' : 'link_off'">{{
+          msFund.title
+        }}</span></a
+      >-->
+        |
+        <a
+        href="javascript:void(0);"
+        (click)="changeGView()"
+        class="padding-10px-all"
+        ><span [class]="!viewSChangeFlag ? 'link_on' : 'link_off'">{{
+          glFund.title
+        }}</span></a
+      >
+      <p
+        class="padding-30px-top"
+        *ngIf="viewSChangeFlag"
+        [innerHTML]="saFund.desc"
+      ></p>
+      <p
+        class="padding-30px-top gl"
+        *ngIf="!viewSChangeFlag"
+        [innerHTML]="glFund.desc"
+      ></p>
+    </div>
+
+    <div
+      class="fund-range-graph-area margin-45px-lr xs-margin-20px-lr margin-100px-lr xs-no-margin-lr"
+    >
+      <div class="row" *ngIf="viewSChangeFlag">
+        <div
+          class="col-md-4 wow fadeInLeft"
+          data-wow-delay="0.4s"
+          *ngFor="let image of saFund.images; let i = index"
+          attr.data-aos="{{ animation[i] }}"
+          [ngStyle]="{
+            'margin-left': i == 3 && glfundLength < 5 ? '33.333%' : ''
+          }"
+        >
+          <div class="fund-range-graph-title">
+            {{ image.south_african_fund_image_title }}
+          </div>
+          <div
+            class="fund-range-graph bg-light-green"
+            [ngClass]="i != 4 ? 'margin-30px-bottom' : ''"
+          >
+            <a [routerLink]="'/' + image.south_african_fund_url"
+              ><img [src]="image.south_african_fund_image_uploader.url"
+            /></a>
+          </div>
+          <!-- <div
+            class="fund-range-graph-title last-grid text-title"
+            *ngIf="i == 4"
+          >
+            {{ image.south_african_fund_image_title }}
+          </div> -->
+        </div>
+      </div>
+      <!-- for global fund range  -->
+      <div class="row" *ngIf="viewChangeflag">
+        <!--<div class="col-md-4" style="width:16.6%">&nbsp;</div>-->
+        <div
+          class="col-md-4 wow fadeInLeft"
+          data-wow-delay="0.4s"
+          *ngFor="let image of glFund.images; let i = index"
+          attr.data-aos="{{ animation[i] }}"
+          [ngStyle]="{
+            'margin-left': i == 3 && glfundLength != 5 ? '33.333%' : ''
+          }"
+        >
+          <div class="fund-range-graph-title">
+            {{ image.global_funds_image_title }}
+          </div>
+          <div class="fund-range-graph bg-light-green margin-30px-bottom">
+            <a [routerLink]="'/' + image.global_funds_url"
+              ><img [src]="image.global_funds_image_uploader.url"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <!-- End Glogal section -->
+      <div
+        class="fund-range-btn-holder row wow fadeInUp"
+        data-wow-delay="0.6s"
+        data-aos="fade-right"
+        *ngIf="!isInstitutionalFund"
+      >
+        <div class="col-md-6 col-sm-6 col-xs-12 text-right padding-5px-bottom">
+          <a routerLink="/" class="plateform-btn"><span>PLATFORMS</span></a>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 text-left">
+          <a routerLink="/forms-documents" class="form-btn"><span>FORMS</span></a>
+        </div>
+      </div>
+      <div
+        class="fund-range-btn-holder row wow fadeInUp"
+        data-wow-delay="0.6s"
+        data-aos="fade-right"
+        *ngIf="isInstitutionalFund"
+      >
+        <div
+          class="col-md-6 col-sm-6 col-xs-12 col-md-offset-2 text-right padding-5px-bottom"
+        >
+          <a
+            href="wordpress/wp-content/uploads/performance/fundperformance.pdf"
+            class="btn-our-fund margin-20px-right xs-no-margin-right xs-margin-20px-bottom"
+            ><span>PERFORMANCE SHEET</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

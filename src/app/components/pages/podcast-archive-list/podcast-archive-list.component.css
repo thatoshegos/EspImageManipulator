@@ -1,0 +1,11 @@
+.repeat-podcast-loop ul {
+  list-style-type: none;
+}
+.repeat-podcast-loop ul li p span {
+  /* top: 72px; */
+  float: right;
+  margin: -128px 111px 5px 343px;
+}
+span.text-extra-dark-gray.xs-width-80.display-inline-block.active {
+  color: #db1a1a;
+}

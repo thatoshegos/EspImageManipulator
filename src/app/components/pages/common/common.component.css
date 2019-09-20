@@ -1,0 +1,20 @@
+.p-text {
+  padding: 20px;
+}
+.i-text {
+  padding: 20px;
+}
+.i-text p {
+  padding: 10px;
+}
+
+.o-text {
+  padding: 20px;
+}
+.o-text p {
+  padding: 10px;
+}
+.active {
+  color: red;
+  font-weight: 400;
+}

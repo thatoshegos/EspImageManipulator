@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row" *ngIf="agencies">
+    <!-- start features box item -->
+    <app-feature-box [DataSets]="agencies"></app-feature-box>
+
+    <!-- start features box item -->
+    <app-fund-range [FundRange]="agencies"></app-fund-range>
+    <!-- end feature box item -->
+
+    <!-- start features box item -->
+<!--    <app-invest-slider [dataset]="agencies"></app-invest-slider>-->
+    <!-- end feature box item -->
+  </div>
+</div>

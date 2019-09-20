@@ -1,0 +1,38 @@
+<div
+  class="container sm-margin-four-bottom wow fadeInUp padding-30px-top xs-padding-10px-top about-sec"
+  data-wow-delay="0.6s"
+  data-aos="fade-up"
+>
+
+    <div class="col-md-8 col-md-offset-2">
+      <div class="bg-white text-center">
+        <h2 class="section-heading">Investment Approach</h2>
+      </div>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="main-content" *ngFor="let investment of investments">
+        <div
+          class="bg-white padding-20px-bottom padding-20px-top sm-padding-15px-all inner-match-height {{
+            investment.heading.replace(' ', '-') | lowercase
+          }}"
+        >
+          <div class="padding-45px-lr ">
+            <p class="text-deep-pink"><strong>{{ investment.heading }}</strong></p>
+            <p
+              class="text-light-blue text-italic"
+              [innerHTML]="investment.idea"
+            ></p>
+
+            <p
+              class="p-text"
+              [innerHTML]="investment.about_us_investment_approach_content"
+            ></p>
+            <!--<div class="padding-30px-top xs-padding-10px-top text-center">
+              <a [href]="" class="more-btn margin-30px-bottom read-more xs-no-margin-bottom">MORE</a>
+            </div>-->
+          </div>
+          <!--<div [innerHTML]="investment.video" class="m-hide"></div>-->
+        </div>
+      </div>
+    </div>
+</div>

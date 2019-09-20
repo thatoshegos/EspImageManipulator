@@ -1,0 +1,20 @@
+.accordion-style2 .panel {
+  margin-bottom: 0px;
+}
+.quaterly-images-accordan > .accordion-style2 .panel .panel-heading {
+  background: #fff;
+  border-radius: 0;
+  padding: 22px 28px 25px;
+  border-bottom: 2px solid #f4f6f7;
+  font-weight: 800;
+}
+.repeat-loop ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.repeat-loop ul li {
+  padding: 10px;
+}
+.repeat-loop ul li a img {
+  width: 45px;
+}

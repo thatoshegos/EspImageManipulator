@@ -1,0 +1,50 @@
+<div
+  class=" sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-tb  how-to-investe"
+  [ngClass]="!fromHowToInvest ? 'col-md-12 col-sm-12 col-xs-12' : 'row'"
+  data-wow-delay="0.2s"
+>
+  <div class="bg-white text-center swiper-container" *ngIf="dataset">
+    <swiper [config]="config" #usefulSwiper style="height: 470px">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
+          *ngFor="let slider of slideDatas"
+        >
+          <div class="opacity-extra-medium"></div>
+          <div
+            class="container position-relative one-fourth-screen xs-height-400px"
+          >
+            <div class="slider-typography text-center">
+              <div class="slider-text-middle-main">
+                <div
+                  class="slider-text-top padding-70px-top padding-70px-lr xs-padding-40px-lr"
+                >
+                    <div class="how-to-invest-lt">
+                        <h3>{{ slider.title }}</h3>
+
+                        <p [innerHTML]="slider.content"></p>
+                    </div>
+                    <div class="how-to-invest-rt">
+                       <img [src]="slider.background_image.url">
+                        <!--<img src="https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/howitwork-img.jpg">-->
+                    </div>
+                    <div class="clear-both"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Pagination -->
+
+      <div class="swiper-pagination"></div>
+
+      <!-- Add Arrows -->
+
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-button-prev"></div>
+    </swiper>
+  </div>
+</div>

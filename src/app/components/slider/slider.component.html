@@ -1,0 +1,83 @@
+<!-- <div class="swiper-full-screen swiper-container width-100 white-move">
+  <div class="swiper-wrapper">
+    
+    <div
+      class="swiper-slide cover-background"
+      *ngFor="let slider of sliders"
+      [style.backgroundImage]="'url(' + slider.slide_1.url + ')'"
+    >
+      <div class="opacity-extra-medium"></div>
+      <div
+        class="container position-relative one-fourth-screen xs-height-400px"
+      >
+        <div class="slider-typography text-center">
+          <div class="slider-text-middle-main">
+            <div class="slider-text-bottom">
+              <h1>
+                <span>{{ slider.image_title }}</span
+                ><span>{{ slider.slide_1.title }}</span>
+              </h1>
+              <div class="btn-dual">
+                <a href="#" target="_blank" class="more-btn">START INVESTNG</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+ 
+  <div
+    class="swiper-pagination swiper-pagination-white swiper-full-screen-pagination"
+  ></div>
+  <div class="swiper-button-next swiper-button-black-highlight"></div>
+  <div class="swiper-button-prev swiper-button-black-highlight"></div>
+  <div class="slider-arrow-down">
+    <a href="javascript:void(0);"
+      ><img src="assets/images/arrow-dropdown-large-white.svg"
+    /></a>
+  </div>
+</div> -->
+
+<swiper [config]="config">
+  <div class="swiper-wrapper">
+    <div
+      *ngFor="let slider of sliders; let i = index"
+      class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
+      [style.backgroundImage]="'url(' + slider.slide_1.url + ')'"
+      style="width: 1295px;"
+    >
+      <div class="opacity-extra-medium"></div>
+      <div
+        class="container position-relative one-fourth-screen xs-height-500px"
+      >
+        <div class="slider-typography text-center">
+          <div class="slider-text-middle-main">
+            <div class="slider-text-bottom">
+              <h1>
+                <span>{{
+                  slider.image_title ? slider.image_title : slider.slide_1.title
+                }}</span>
+                <span>{{ slider.image_title1 }}</span>
+              </h1>
+              <div class="btn-dual m-center" *ngIf="slider.image_title2">
+                <a
+                  href="{{ slider.image_url }}"
+                  target="_self"
+                  class="main-slider-btn"
+                  >{{ slider.image_title2 }}</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</swiper>

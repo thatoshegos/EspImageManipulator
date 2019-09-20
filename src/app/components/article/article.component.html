@@ -1,0 +1,14 @@
+<div class="row" *ngIf="getArticleData">
+  <div class="col-md-12">
+    <div class="bg-white text-center">
+      <h2>{{ getArticleData.title.rendered }}</h2>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div
+      class="bg-white padding-20px-bottom padding-20px-top padding-20px-left sm-padding-15px-all "
+    >
+      <p [innerHTML]="getArticleData.content.rendered"></p>
+    </div>
+  </div>
+</div>

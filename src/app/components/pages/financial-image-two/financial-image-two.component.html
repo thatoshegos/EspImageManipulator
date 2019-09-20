@@ -1,0 +1,16 @@
+<div
+  class=" row padding-40px-tb bg-medium-gray-light margin-0px-top xs-padding-15px-top xs-no-padding-bottom xs-no-margin-top xs-no-padding-lr margin-100px-lr xs-no-margin-lr text-center adviser-image"
+  *ngIf="imageTwo"
+  [ngClass]="!imageTwo.insightStatus ? 'margin-100px-lr' : 'none'"
+>
+  <div
+    class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInLeft"
+    data-wow-delay="0.6s"
+    data-aos="fade-right"
+    *ngFor="let fImagesecond of imageTwo.acf.financial_adviser_image_second"
+  >
+    <a [href]="'/' + fImagesecond.url"
+      ><img [src]="fImagesecond.second_image.url"
+    /></a>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+<div class=" margin-100px-bottom"   >
+  <div
+    [ngClass]="
+      !fromStatusFaq && !insightStatus && !glossaryStatus && !fromNewInvesting
+        ? 'margin-100px-lr'
+        : 'none'
+    "
+  >
+    <h2 *ngIf="!glossaryStatus">Frequently asked questions</h2>
+    <div class="row equalize sm-equalize-auto">
+      <div class="col-md-12 col-sm-12 col-xs-12 display-table wow fadeInUp">
+        <div
+          class="display-table-cell-vertical-middle sm-padding-six-all xs-no-padding-tb xs-no-padding-lr"
+        >
+          <div class="panel-group accordion-style2" id="accordion" *ngIf="faqs">
+            <!-- <div class="panel panel-default">
+              <div class="panel-heading">
+                <a
+                  class="accordion-toggle"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                  href="#collapseOne"
+                >
+                  <div class="panel-title">
+                    <span
+                      class="alt-font font-weight-600 text-deep-pink tab-tag"
+                      >01</span
+                    >
+                    <span
+                      class="text-extra-dark-gray xs-width-80 display-inline-block"
+                      >Unique and bold website design</span
+                    >
+                    <div class="indicator faq-minus pull-right"></div>
+                  </div>
+                </a>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </div>
+              </div>
+            </div> -->
+
+            <!-- start tab content -->
+            <div
+              class="panel panel-default"
+              *ngFor="let faq of faqs; let i = index"
+            >
+              <div class="panel-heading">
+                <a
+                  class="accordion-toggle"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                  (click)="getClicked($event, faq, isfirst)"
+                  href="javascript:void(0)"
+                >
+                  <!-- #collapseTwo-{{ i }} -->
+                  <div class="panel-title">
+                    <span
+                      class="alt-font font-weight-600 text-deep-pink tab-tag"
+                      >{{ i + 1 }}</span
+                    >
+                    <span
+                      class="xs-width-80 display-inline-block"
+                      [innerHTML]="faq.question_label"
+                    ></span>
+                    <div
+                      class="indicator  pull-right"
+                      [ngClass]="
+                        faq == currentFaq && isfirst ? 'faq-minus' : 'faq-plus'
+                      "
+                    ></div>
+                  </div>
+                </a>
+              </div>
+              <div
+                id="collapseTwo-{{ i }}"
+                class="panel-collapse collapse"
+                [ngClass]="faq == currentFaq && isfirst ? 'in' : 'none'"
+                attr.aria-expanded="{{ isfirst }}"
+              >
+                <div class="panel-body faq-pan" [innerHTML]="faq.answer_label">
+                  <!-- Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. -->
+                  <!-- {{ faq.answer_label }} -->
+                </div>
+              </div>
+            </div>
+            <!-- end tab content -->
+          </div>
+          <div class="padding-30px-top  text-center">
+            <a routerLink="/faq" class="more-btn" *ngIf="!glossaryStatus"
+              ><span style="background-color: white">MORE</span></a
+            >
+            <a routerLink="/glossary" class="more-btn" *ngIf="glossaryStatus"
+              ><span style="background-color: white">MORE</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

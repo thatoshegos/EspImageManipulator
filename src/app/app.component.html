@@ -1,0 +1,169 @@
+<app-header></app-header>
+<div style="min-height:550px">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>
+<!-- end footer -->
+<!--<div class="right-fixed-link">
+  <a href="javascript:void(0)"><img src="assets/images/invest-now.png"/></a>
+  <a href="javascript:void(0)" *ngIf="getMessageStatus" (click)="open(content)"
+    ><img src="assets/images/leave-message.png"
+  /></a>
+  <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div>
+</div>-->
+
+<div class="right-fixed-link">
+  <a href="javascript:void(0)"><img src="assets/images/invest-now.png"/></a>
+  <a href="javascript:void(0)" class="leave-message"
+    ><img src="assets/images/leave-message.png"
+  /></a>
+  <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
+</div>
+<div
+  class="btn-leave-message"
+  *ngIf="getMessageStatus"
+  (click)="open(content)"
+></div>
+<!-- start scroll to top -->
+<a class="scroll-top-arrow" href="javascript:void(0);"
+  ><i class="fas fa-arrow-up"></i
+></a>
+
+<!-- start scroll to top -->
+<a class="scroll-top-arrow" href="javascript:void(0);"
+  ><i class="fas fa-arrow-up"></i
+></a>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-content1">
+    <div class="modal-header">
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="d('Cross click')"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <!-- <h4 class="modal-title">Send us an email</h4> -->
+      <div class="box-2-heading padding-15px-all">Send us an email</div>
+    </div>
+    <div class="modal-body">
+      <div class="box-2 padding-5px-all margin-40px-bottom">
+        <!-- <div class="box-2-heading padding-15px-all">
+          Send us an email
+        </div> -->
+        <div class="box-2-content padding-20px-all">
+          <form
+            name="form"
+            #f="ngForm"
+            (ngSubmit)="f.form.valid && submitForm(f)"
+            novalidate
+          >
+            <div>
+              <div id="success-contact-form" class="no-margin-lr"></div>
+              <input
+                type="text"
+                name="name"
+                [(ngModel)]="model.name"
+                #name="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
+                placeholder="Name"
+                class="bg-light-green no-border medium-input margin-5px-bottom"
+                required
+              />
+              <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                <div *ngIf="name.errors.required">Name is required</div>
+              </div>
+              <input
+                type="emailt"
+                name="email"
+                [(ngModel)]="model.email"
+                #email="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                placeholder="E-mail"
+                class="bg-light-green no-border medium-input margin-5px-bottom"
+                required
+                email
+              />
+              <div
+                *ngIf="f.submitted && email.invalid"
+                class="invalid-feedback"
+              >
+                <div *ngIf="email.errors.required">Email is required</div>
+                <div *ngIf="email.errors.email">Invalid email address</div>
+              </div>
+              <input
+                type="tel"
+                name="subject"
+                id="subject"
+                [(ngModel)]="model.mobile"
+                #mobile="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && mobile.invalid }"
+                placeholder="Telephone"
+                class="bg-light-green no-border medium-input margin-5px-bottom"
+                required
+              />
+              <div
+                *ngIf="f.submitted && mobile.invalid"
+                class="invalid-feedback"
+              >
+                <div *ngIf="mobile.errors.required">Telephone is required</div>
+              </div>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                [(ngModel)]="model.intrest"
+                #intrest="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && intrest.invalid }"
+                placeholder="Area of Interest"
+                class="bg-light-green no-border medium-input margin-5px-bottom"
+                required
+              />
+              <div
+                *ngIf="f.submitted && intrest.invalid"
+                class="invalid-feedback"
+              >
+                <div *ngIf="intrest.errors.required">
+                  This field is required
+                </div>
+              </div>
+              <textarea
+                name="comment"
+                id="comment"
+                [(ngModel)]="model.comment"
+                #comment="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && comment.invalid }"
+                placeholder="Comment"
+                rows="5"
+                class="bg-light-green no-border medium-textarea margin-5px-bottom"
+                required
+              ></textarea>
+              <div
+                *ngIf="f.submitted && comment.invalid"
+                class="invalid-feedback"
+              >
+                <div *ngIf="comment.errors.required">
+                  Comment is required
+                </div>
+              </div>
+              <div class="padding-30px-top text-center ">
+                <!-- <a href="#" target="_blank" class="more-btn text-black">SEND</a> -->
+                <input type="submit" class="more-btn text-black" value="SEND" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-default" (click)="c('Close click')">
+        Close
+      </button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div> -->
+  </div>
+  <!-- /.modal-content -->
+</ng-template>

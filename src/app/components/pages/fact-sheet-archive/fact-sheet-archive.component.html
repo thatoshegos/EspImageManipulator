@@ -1,0 +1,96 @@
+<div class=" margin-30px-bottom-insight">
+  <div class=" xs-no-margin-lr">
+    <!-- <h2 *ngFor="let category">{{ categoryDatas[0].parentName }}</h2> -->
+    <div class="row" *ngIf="categoryDatas">
+      <div
+        class="col-md-12 col-sm-12 col-xs-12 display-table wow fadeInUp"
+        *ngFor="let categoryD of categoryDatas"
+      >
+        <div class="parent-name">
+          <p>{{ categoryD.parentName }}</p>
+        </div>
+        <div
+          class="display-table-cell-vertical-middle md-padding-ten-all sm-padding-six-all xs-no-padding-tb xs-no-padding-lr"
+        >
+          <div
+            class="panel-group accordion-style2"
+            id="accordion"
+            *ngIf="categoryD.getCategories"
+          >
+            <div
+              class="panel panel-default"
+              *ngFor="let category of categoryD.getCategories; let i = index"
+            >
+              <div class="panel-heading">
+                <a
+                  class="accordion-toggle"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                  href="javascript:void(0)"
+                  (click)="getYearPost(category, $event, isfirst)"
+                >
+                  <!-- #collapseTwo-{{ i }} -->
+                  <div class="panel-title year-post">
+                    <!-- <span
+                        class="alt-font font-weight-600 text-deep-pink tab-tag"
+                        >0{{ i + 1 }}</span 
+                    >-->
+                    <span
+                      class="text-extra-dark-gray xs-width-80 display-inline-block"
+                      [innerHTML]="category.name"
+                    ></span>
+                    <div
+                      class="indicator  pull-right"
+                      [ngClass]="
+                        category == currentSubCate && isfirst
+                          ? 'faq-minus'
+                          : 'faq-plus'
+                      "
+                    ></div>
+                  </div>
+                </a>
+              </div>
+              <div
+                id="collapseTwo-{{ i }}"
+                class="panel-collapse collapse"
+                [ngClass]="
+                  category == currentSubCate && isfirst ? 'in' : 'none'
+                "
+                attr.aria-expanded="{{ isfirst }}"
+              >
+                <div class="panel-body ">
+                  <div class="repeat-loop text-center year-list">
+                    <ul *ngIf="subCategory">
+                      <li *ngFor="let subCate of subCategory">
+                        <a
+                          href="javascript:void(0)"
+                          [id]="subCate.id"
+                          (click)="getSubCategoryData(subCate, $event)"
+                          [ngClass]="{ active: selectedItem == subCate }"
+                          >{{ subCate.name }}
+                        </a>
+                      </li>
+                    </ul>
+                    <div *ngIf="categoryData">
+                      <ul>
+                        <li *ngFor="let data of categoryData">
+                          <div [innerHTML]="data.content.rendered"></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- {{ faq.answer_label }} -->
+                </div>
+              </div>
+            </div>
+            <!-- end tab content -->
+          </div>
+          <!-- <div class="padding-30px-top padding-30px-bottom text-center">
+                <a routerLink="/faq" class="more-btn">MORE</a>
+              </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

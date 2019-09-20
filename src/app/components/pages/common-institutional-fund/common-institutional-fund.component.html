@@ -1,0 +1,44 @@
+<div
+  class="row sm-margin-four-bottom xs-no-margin-bottom wow fadeInUp "
+  data-wow-delay="0.6s"
+  data-aos="fade-up"
+>
+  <div
+    class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp unconventional-thinking blanced-fund-box"
+  >
+    <div class="bg-white text-center">
+      <h2 class="fund-manage-heading">{{ fundDatas.title.rendered }}</h2>
+      <ul class="blanced-fund-btn-list">
+        <li>
+          <a routerLink="/fact-sheets-archive" class="btn-invest-now-green"
+            ><span>FACT SHEETS</span></a
+          >
+        </li>
+        <li>
+          <a routerLink="/tax-free-investing" class="btn-invest-now-red"
+            ><span>INVEST NOW</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-12 col-sm-12 col-lg-12">
+    <div
+      class="bg-white text-center padding-30px-all sm-padding-15px-all inner-match-height"
+    >
+      <p
+        [innerHTML]="fundDatas.content.rendered"
+      ></p>
+    </div>
+  </div>
+</div>
+<section class="button-section" style="padding:0px">
+  <div class="row margin-30px-top margin-50px-bottom">
+      <div class=" col-md-12 text-center suscribe">
+        <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader" style="margin-right:20px;"
+          ><span>INVESTMENT APPROCH</span></a
+        >
+        <a routerLink="/meet-the-fund-manager" target="_self" class="btn-meet-fund-manager"><span>MEET THE FUND MANAGER</span></a>
+      </div>
+    </div>
+</section>

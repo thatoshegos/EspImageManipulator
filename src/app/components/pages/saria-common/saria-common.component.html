@@ -1,0 +1,73 @@
+<div
+  class="row sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp padding-30px-top "
+  data-wow-delay="0.6s"
+  data-aos="fade-up"
+>
+ <div class="col-md-12" *ngIf="podcast">
+    <h2>
+      Podcast
+    </h2>
+  </div>
+  <div
+    class="col-md-8 col-sm-8 col-xs-8 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 "
+  >
+    <div class="bg-white text-center">
+      <h2 *ngIf="reba">{{ reba.acf.what_is_riba }}</h2>
+      <h2 *ngIf="shariaInvest">{{ shariaInvest.acf.sharia_title }}</h2>
+      <h2 *ngIf="investProcess">
+        {{ investProcess.acf.investment_process_title }}
+      </h2>
+      <h2 *ngIf="screenProcess">
+        {{ screenProcess.acf.screening_process_title }}
+      </h2>
+    </div>
+  </div>
+  <div
+    class="col-md-8 col-sm-8 col-xs-8 col-md-offset-2 col-sm-offset-2 col-xs-offset-2"
+  >
+    <div class="bg-white text-center">
+      <p
+        class="padding-40px-all"
+        *ngIf="reba"
+        [innerHTML]="reba.acf.what_is_riba_content"
+      ></p>
+      <p
+        class="padding-40px-all"
+        *ngIf="shariaInvest"
+        [innerHTML]="shariaInvest.acf.our_sharia_investment_philosophy_content"
+      ></p>
+      <p
+        class="padding-40px-all"
+        *ngIf="investProcess"
+        [innerHTML]="investProcess.acf.investment_process_content"
+      ></p>
+      <p
+        class="padding-40px-all"
+        *ngIf="screenProcess"
+        [innerHTML]="screenProcess.acf.screening_process_content"
+      ></p>
+   <div class="row" *ngIf="podcast">
+        <div
+          class="col-md-12 podcost-div"
+          [innerHTML]="podcast.acf.podcast[0].podcast_video"
+        ></div>
+      </div>
+      <!-- <div class="second-slide" *ngIf="social_corporate">
+        <app-slider [sliders]="social_corporate.corporate_slider"></app-slider>
+      </div> -->
+    </div>
+  </div>
+  <!-- <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="bg-white text-center">
+      <iframe
+        width="100%"
+        height="615"
+        src="https://www.youtube.com/embed/ukzFI9rgwfU"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div> -->
+  <!-- <div class="col-md-12 col-sm-12 col-xs-12" style="height:20px"></div> -->
+</div>

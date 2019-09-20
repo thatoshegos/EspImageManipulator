@@ -1,0 +1,13 @@
+.invester-login-btn {
+  background: none;
+  padding: 0px 43px 0px 0px;
+}
+.nav > li > a > img {
+  max-width: none;
+}
+
+.invester-login-btn img {
+  vertical-align: top;
+  margin-top: -1px;
+  margin-right: 5px;
+}

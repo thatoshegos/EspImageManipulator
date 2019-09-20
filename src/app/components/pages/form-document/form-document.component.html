@@ -1,0 +1,96 @@
+<div class=" margin-30px-bottom-insight">
+  <div class=" xs-no-margin-lr">
+    <!-- <h2>{{ faqs.title.rendered }}</h2> -->
+    <div class="row remove-margin equalize sm-equalize-auto">
+      <div class="col-md-12 col-sm-12 col-xs-12 display-table  wow fadeInUp">
+        <div
+          class="display-table-cell-vertical-middle md-padding-ten-all sm-padding-six-all xs-no-padding-tb xs-no-padding-lr quaterly-images-accordan"
+        >
+          <div
+            class="panel-group accordion-style2"
+            id="accordion"
+            *ngIf="formHeading"
+          >
+            <div
+              class="panel panel-default"
+              *ngFor="let heading of formHeading.acf.heading; let i = index"
+            >
+              <div class="panel-heading">
+                <a
+                  class="accordion-toggle"
+                  data-toggle="collapse"
+                  data-parent="#accordion"
+                  href="javascript:void(0)"
+                  (click)="getFormData(heading, $event, isfirst)"
+                >
+                  <!-- #collapseTwo-{{ i }} -->
+                  <div class="panel-title year-post">
+                    <!-- <span
+                          class="alt-font font-weight-600 text-deep-pink tab-tag"
+                          >0{{ i + 1 }}</span 
+                      >-->
+                    <!-- [ngClass]="{ active: selectedItem == heading }" -->
+                    <span
+                      class="text-extra-dark-gray xs-width-80 display-inline-block"
+                      [innerHTML]="heading.headings"
+                    ></span>
+                    <div
+                      class="indicator  pull-right"
+                      [ngClass]="
+                        heading == currentSubCate && isfirst
+                          ? 'faq-minus'
+                          : 'faq-plus'
+                      "
+                    ></div>
+                  </div>
+                </a>
+              </div>
+              <div
+                id="collapseTwo-{{ i }}"
+                class="panel-collapse collapse"
+                [ngClass]="heading == currentSubCate && isfirst ? 'in' : 'none'"
+                attr.aria-expanded="{{ isfirst }}"
+              >
+                <div class="panel-body">
+                  <div class="repeat-loop" *ngIf="getFormPageData">
+                    <ul>
+                      <li
+                        *ngFor="
+                          let subHeading of getFormPageData[0].acf.form_title
+                        "
+                      >
+                        <div
+                          class=" col-md-8 internal-data"
+                          [innerHTML]="subHeading.title"
+                        ></div>
+                        <div class="col-md-4">
+                          <a href=""
+                            ><img
+                              src="./assets/images/form_view_icon.png"
+                              style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
+                          /></a>
+                          <a href=""
+                            ><img
+                              src="./assets/images/form_download_icon.png"
+                              style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
+                          /></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- {{ faq.answer_label }} -->
+                </div>
+              </div>
+            </div>
+            <!-- end tab content -->
+          </div>
+          <!-- <div class="padding-30px-top padding-30px-bottom text-center">
+                  <a routerLink="/faq" class="more-btn">MORE</a>
+                </div> -->
+          <!-- <div class="col-md-12 text-center margin-40px-top margin-60px-bottom"><div class="suscribe "><a class="btn-meet-leaders" href="#" style="margin-right:20px;">PLATFORMS</a><a  class="btn-meet-leaders" href="#">INVESTMENT APPROACH</a></div></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

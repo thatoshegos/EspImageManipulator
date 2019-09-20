@@ -1,0 +1,27 @@
+.btn-meet-leaders {
+    display: inline-block;
+    padding-left: 60px;
+    /*margin: 0 10px;*/
+    background-size: 60px!important;;
+}
+.btn-meet-leaders span {
+    padding:9px 15px 10px 15px;
+    height: 60px;
+    text-align: left;
+    display: inline-block;
+    background: #fff;
+    color: #656565;
+    font-weight: 500;
+    width: 200px;
+    line-height: 20px;
+}
+.btn-meet-leaders span:hover{
+    background: #c8dbe5
+}
+
+span.active {
+  color: #b60c2f !important;
+  font-weight: 400;
+}
+
+

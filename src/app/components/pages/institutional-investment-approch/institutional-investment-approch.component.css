@@ -1,0 +1,42 @@
+.p-text {
+  padding: 20px;
+  text-align: justify;
+}
+.heading {
+  margin-left: 40px;
+  font-style: inherit;
+  color: #e26f2b;
+  font-weight: 600;
+  font-size: 21px;
+}
+.idea {
+  margin-left: 45px;
+  font-style: italic;
+  color: green;
+  font-weight: 400;
+  font-family: inherit;
+}
+.read-more {
+  margin-bottom: 13px;
+}
+.section-heading {
+  margin-bottom: 14 3px;
+}
+.no-padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  /* min-height: 600px; */
+}
+.right-padding-class {
+  padding-right: 5px !important;
+  /* max-height: 800px !important; */
+}
+.set-min-height {
+  min-height: 700px;
+}
+/* --------------- Mobile CSS ---*/
+@media screen and (max-width: 480px) {
+  .p-text {
+    text-align: left;
+  }
+}

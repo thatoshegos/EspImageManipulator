@@ -1,0 +1,27 @@
+<swiper [config]="config">
+  <div class="swiper-wrapper">
+    <div
+      class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
+      *ngFor="let slider of sliders.podcast"
+    >
+      <!-- background:url('assets/images/howitwork-bg.jpg') no-repeat #ececec; -->
+      <div class="opacity-extra-medium"></div>
+      <div
+        class="container position-relative one-fourth-screen xs-height-400px"
+      >
+        <div class="slider-typography text-center">
+          <div class="slider-text-middle-main">
+            <div class="slider-text-top   xs-padding-40px-lr">
+              <p [innerHTML]="slider.podcast_video"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</swiper>

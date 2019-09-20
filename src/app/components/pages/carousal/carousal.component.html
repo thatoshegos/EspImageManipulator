@@ -1,0 +1,26 @@
+<div
+  ng2-carouselamos
+  [items]="items"
+  [$item]="itemTemplate"
+  [$prev]="prevTemplate"
+  [$next]="nextTemplate"
+></div>
+
+<ng-template #prevTemplate>
+  <img src="./assets/images/banner-arrow-left.png"/>
+</ng-template>
+
+<ng-template #nextTemplate>
+  <img src="./assets/images/banner-arrow-right.png" />
+</ng-template>
+
+<ng-template let-item let-i="index" #itemTemplate>
+  <div class="history-slider-items">
+    <li class="list" [ngClass]="i % 2 == 0 ? 'odd' : 'even'">
+      <div class="hsi-icon-holder" [innerHTML]="item.icon"></div>
+      <div class="hsi-title"> {{ item.heading }}</div>
+      <div class="hsi-year"> {{ item.year }}</div>
+      <div class="hsi-details" [innerHTML]="item.content"></div>
+    </li>
+  </div>
+</ng-template>

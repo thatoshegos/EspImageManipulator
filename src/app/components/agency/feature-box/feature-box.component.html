@@ -1,0 +1,35 @@
+<div
+  class="col-md-8 col-sm-8 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp unconventional-thinking"
+  data-wow-delay="0.2s"
+>
+  <div class="text-center min-height-440" *ngIf="DataSets">
+    <h2>{{ DataSets.acf.title }}</h2>
+    <div class="padding-40px-all padding-60px-bottom sm-padding-15px-all inner-match-height bg-white min-height-355px" style="padding-bottom: 0px; padding-top: 35px">
+      <p [innerHTML]="DataSets.acf.Content">
+        <!-- We are a specialist investment firm that manages funds across the risk
+        spectrum for the sophisticated investor. <br /><br />
+        Our funds are managed by a team of highly skilled professionals who
+        apply unconventional thinking (thinking deeply and independently) to
+        unearth opportunities in changing markets -->
+      </p>
+      <div class="padding-30px-top  text-left">
+        <!-- <a [routerLink]="DataSets.acf.buttonurl" class="more-btn">MORE</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end feature box item -->
+<!-- start features box item -->
+<div
+  class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom unconventional-thinking-right xs-no-margin-bottom wow fadeInUp"
+  data-wow-delay="0.4s"
+> <a [routerLink]="'/' + DataSets.acf.buttonurl">
+  <div class="min-height-440 bg-light-green-v2" style="background: #d0e0df">
+    <img [src]="DataSets.acf.image.sizes.large" alt="" />
+    <div class="text-center"><span class="text-title">
+     {{DataSets.acf.button_title}}</span>
+    </div>
+  </div>
+  </a>
+</div>
+<!-- end feature box item -->

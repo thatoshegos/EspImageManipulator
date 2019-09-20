@@ -1,0 +1,278 @@
+<!-- start about agency -->
+<section class="wow fadeIn bg-light-gray" *ngIf="page">
+  <div class="container  contact-sec">
+    <div class="row">
+      <!-- start Contact us box item -->
+      <div
+        class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom margin-120px-top xs-margin-80px-top wow fadeInUp"
+        data-wow-delay="0.2s"
+      >
+        <div>
+          <h2>Contact us</h2>
+          <div
+            class="padding-45px-all sm-padding-15px-all inner-match-height bg-white"
+          >
+            <p class="xs-margin-20px-lr text-deep-pinktext-deep-pink">
+              <span class="contact-content">
+                Our Client Services Team can be reached from Monday to Friday,
+                8am to 5pm on the number below, email or leave a message in the
+                pop up message box.
+              </span>
+            </p>
+            <div class="row">
+              <div
+                class="col-md-6 col-sm-12 col-xs-12 margin-40px-top xs-margin-20px-top"
+              >
+                <div
+                  class="box-1 padding-40px-all margin-40px-bottom xs-margin-20px-bottom"
+                >
+                  <p>
+                    Phone us on:
+                    <span class="text-deep-pink">{{ page.acf.phone }}</span>
+                  </p>
+                  <p>
+                    Fax us on:
+                    <span class="text-black">{{ page.acf.fax }}</span>
+                  </p>
+                  <p>
+                    Email us on:
+                    <span class="text-black email"
+                      ><a href="mailto:{{ page.acf.email_us_on }">
+                        {{ page.acf.email_us_on }}</a
+                      ></span
+                    >
+                  </p>
+                </div>
+                <div
+                  class="box-2 padding-5px-all no-padding-top margin-40px-bottom xs-no-margin-bottom"
+                >
+                  <div class="box-2-heading padding-15px-all">
+                    Send us an email
+                  </div>
+                  <div class="box-2-content padding-20px-all">
+                    <form
+                      name="form"
+                      (ngSubmit)="f.form.valid && submitForm()"
+                      #f="ngForm"
+                      novalidate
+                    >
+                      <div>
+                        <div
+                          id="success-contact-form"
+                          class="no-margin-lr"
+                        ></div>
+                        <input
+                          type="text"
+                          name="name"
+                          [(ngModel)]="model.name"
+                          #name="ngModel"
+                          [ngClass]="{
+                            'is-invalid': f.submitted && name.invalid
+                          }"
+                          placeholder="Name"
+                          class="bg-light-green no-border medium-input margin-5px-bottom"
+                          required
+                        />
+                        <div
+                          *ngIf="f.submitted && name.invalid"
+                          class="invalid-feedback"
+                        >
+                          <div *ngIf="name.errors.required">
+                            Name is required
+                          </div>
+                        </div>
+                        <input
+                          type="emailt"
+                          name="email"
+                          [(ngModel)]="model.email"
+                          #email="ngModel"
+                          [ngClass]="{
+                            'is-invalid': f.submitted && email.invalid
+                          }"
+                          placeholder="E-mail"
+                          class="bg-light-green no-border medium-input margin-5px-bottom"
+                          required
+                          email
+                        />
+                        <div
+                          *ngIf="f.submitted && email.invalid"
+                          class="invalid-feedback"
+                        >
+                          <div *ngIf="email.errors.required">
+                            Email is required
+                          </div>
+                          <div *ngIf="email.errors.email">
+                            Invalid email address
+                          </div>
+                        </div>
+                        <input
+                          type="tel"
+                          name="subject"
+                          id="subject"
+                          [(ngModel)]="model.mobile"
+                          #mobile="ngModel"
+                          [ngClass]="{
+                            'is-invalid': f.submitted && mobile.invalid
+                          }"
+                          placeholder="Telephone"
+                          class="bg-light-green no-border medium-input margin-5px-bottom"
+                          required
+                        />
+                        <div
+                          *ngIf="f.submitted && mobile.invalid"
+                          class="invalid-feedback"
+                        >
+                          <div *ngIf="mobile.errors.required">
+                            Telephone is required
+                          </div>
+                        </div>
+                        <input
+                          type="text"
+                          name="subject"
+                          id="subject"
+                          [(ngModel)]="model.intrest"
+                          #intrest="ngModel"
+                          [ngClass]="{
+                            'is-invalid': f.submitted && intrest.invalid
+                          }"
+                          placeholder="Area of Interest"
+                          class="bg-light-green no-border medium-input margin-5px-bottom"
+                          required
+                        />
+                        <div
+                          *ngIf="f.submitted && intrest.invalid"
+                          class="invalid-feedback"
+                        >
+                          <div *ngIf="intrest.errors.required">
+                            This field is required
+                          </div>
+                        </div>
+                        <textarea
+                          name="comment"
+                          id="comment"
+                          [(ngModel)]="model.comment"
+                          #comment="ngModel"
+                          [ngClass]="{
+                            'is-invalid': f.submitted && comment.invalid
+                          }"
+                          placeholder="Comment"
+                          rows="5"
+                          class="bg-light-green no-border medium-textarea margin-5px-bottom"
+                          required
+                        ></textarea>
+                        <div
+                          *ngIf="f.submitted && comment.invalid"
+                          class="invalid-feedback"
+                        >
+                          <div *ngIf="comment.errors.required">
+                            Comment is required
+                          </div>
+                        </div>
+                        <div class="padding-30px-top text-center ">
+                          <!-- <a href="#" target="_blank" class="more-btn text-black">SEND</a> -->
+                          <input
+                            type="submit"
+                            class="more-btn text-black"
+                            value="SEND"
+                          />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 col-xs-12">
+                <div
+                  class="box-2 padding-5px-all no-padding-top margin-40px-bottom margin-40px-top xs-no-margin-bottom xs-margin-20px-top"
+                >
+                  <div class="box-2-heading padding-15px-all">
+                    Cape Town
+                  </div>
+                  <div class="box-2-content padding-20px-all">
+                    <p class="email">
+                      Telephone: {{ page.acf.telephone }}<br />
+                      Fax: {{ page.acf.fax }}<br />
+                      Email:
+                      <a href="mailto:{{ page.acf.email }}">{{
+                        page.acf.email
+                      }}</a>
+                    </p>
+
+                    <p>
+                      <strong>Physical address:</strong><br />
+                      <span [innerHTML]="page.acf.physical_address"></span>
+                      <!-- {{ page.acf.physical_address }} -->
+
+                      <a [href]="page.acf.google_map_url" class="text-deep-pink"
+                        >[view map]</a
+                      >
+                    </p>
+
+                    <p>
+                      <strong>Postal address:</strong><br />
+                      {{ page.acf.postal_address }}
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="box-2 padding-5px-all no-padding-top margin-50px-bottom margin-40px-top xs-margin-20px-top xs-margin-20px-bottom"
+                >
+                  <div class="box-2-heading padding-15px-all">
+                    {{ page.acf.johannesburg_name }}
+                  </div>
+                  <div
+                    class="box-2-content padding-20px-all padding-30px-bottom"
+                  >
+                    <p class="email">
+                      Telephone: {{ page.acf.johannesburg_telephone }}<br />
+                      Fax:{{ page.acf.johannesburg_fax }}<br />
+                      Email:
+                      <a href="mailto:{{ page.acf.johannesburg_email }}">{{
+                        page.acf.johannesburg_email
+                      }}</a>
+                    </p>
+                    <p>
+                      <strong>Physical address:</strong><br /><span
+                        [innerHTML]="page.acf.johannesburg_physical_address"
+                      ></span>
+                    </p>
+
+                    <a
+                      [href]="page.acf.johannesburg_google_map_url"
+                      class="text-deep-pink"
+                      >[view map]</a
+                    >
+
+                    <!--p>
+                      Postal address<br />
+                      {{ page.acf.postal_address }}
+                    </p-->
+                  </div>
+                </div>
+
+                <div class="box-2 padding-5px-all">
+                  <div class="box-2-content padding-25px-all">
+                    <!--p>
+                      <input type="checkbox" class="robot-check" /> I’m not a  robot
+                    </p -->
+                    <p class="no-margin-bottom">
+                      <label class="check-box">
+                        I’m not a robot
+                        <input type="checkbox" class="robot-check" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <!-- Test closed -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end Contact us box item -->
+    </div>
+  </div>
+</section>
+<!-- end about agency section -->

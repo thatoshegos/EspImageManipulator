@@ -1,0 +1,112 @@
+
+<div class="row">
+    <div class="col-md-12  margin-30px-bottom xs-margin-30px-top">
+  <div class="text-center suscribe">
+    <div class="col-md-3">
+      <a
+        routerLink="/about-us/investment-approach"
+        class="btn-meet-leaders meet-leader margin-20px-right xs-no-margin-right xs-margin-20px-bottom"
+         [ngClass]="
+            CurrentTab.child == 'investment approach' ? 'active' : 'none'
+          "
+        ><span
+          [ngClass]="
+            CurrentTab.child == 'investment approach' ? 'active' : 'none'
+          "
+          >INVESTMENT APPROACH</span
+        ></a
+      >
+    </div>
+    <div class="col-md-3">
+      <a
+        routerLink="/about-us/meet-our-leaders"
+        class="btn-meet-diverse-team"
+        ><span
+          [ngClass]="CurrentTab.child == 'meet our leaders' ? 'active' : 'none'"
+          >MEET OUR LEADERS</span
+        ></a
+      >
+    </div>
+    <div class="col-md-3">
+      <a
+        routerLink="/about-us/ownership-structure"
+        class="ownership-structure"
+         [ngClass]="
+            CurrentTab.child == 'ownership structure' ? 'active' : 'none'
+          "
+        ><span
+          [ngClass]="
+            CurrentTab.child == 'ownership structure' ? 'active' : 'none'
+          "
+          >OWNERSHIP STRUCTURE</span
+        ></a
+      >
+    </div>
+
+    <div class="col-md-3">
+      <a routerLink="/about-us/our-history" class="our-history"
+         [ngClass]="CurrentTab.child == 'our history' ? 'active' : 'none'"
+        ><span [ngClass]="CurrentTab.child == 'our history' ? 'active' : 'none'"
+          >OUR HISTORY</span
+        ></a
+      >
+    </div>
+  </div>
+</div>
+
+<div class="col-md-12 ">
+  <div class="text-center suscribe">
+    <div class="col-md-3">
+      <a
+        routerLink="/about-us/our-culture"
+        class="our-culture xs-no-margin-right xs-margin-20px-bottom "
+         [ngClass]="CurrentTab.child == 'our culture' ? 'active' : 'none'"
+        ><span [ngClass]="CurrentTab.child == 'our culture' ? 'active' : 'none'"
+          >OUR CULTURE</span
+        ></a
+      >
+    </div>
+    <div class="col-md-3">
+      <a
+        routerLink="/about-us/responsible-investing"
+        class="responsible-investing"
+         [ngClass]="
+          CurrentTab.child == 'responsible investing' ? 'active' : 'none'
+        ">
+        <span [ngClass]="
+          CurrentTab.child == 'responsible investing' ? 'active' : 'none'
+        "
+        >RESPONSIBLE INVESTING</span></a
+      >
+    </div>
+    <div class="col-md-3">
+      <a
+        routerLink="/about-us/corporate-social-investment"
+        class="corporate-social-investing"
+          [ngClass]="
+            CurrentTab.child == 'corporate social investment' ? 'active' : 'none' "
+        ><span
+          [ngClass]="
+            CurrentTab.child == 'corporate social investment' ? 'active' : 'none' "
+          >CORPORATE SOCIAL INVESTMENT</span
+        ></a
+      >
+    </div>
+
+    <div class="col-md-3">
+      <a
+        routerLink="/about-us/committed-to-transformation"
+        class="transformation"
+         [ngClass]="
+            CurrentTab.child == 'committed to transformation' ? 'active' : 'none' "
+        ><span
+          [ngClass]="
+            CurrentTab.child == 'committed to transformation' ? 'active' : 'none' "
+          >TRANSFORMATION</span
+        ></a
+      >
+    </div>
+  </div>
+</div>
+    </div>
+    

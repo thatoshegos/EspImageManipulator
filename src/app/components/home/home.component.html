@@ -1,0 +1,35 @@
+<section
+  class="wow fadeIn no-padding main-slider mobile-height top-space"
+  *ngIf="homePage"
+>
+  <app-slider [sliders]="homePage.acf.home_slider"></app-slider>
+</section>
+
+<section class="wow fadeIn bg-light-gray" *ngIf="homePage">
+  <app-agency [agencies]="homePage"></app-agency>
+</section>
+
+<section
+  class="wow fadeIn md-no-background-img"
+  style="background: url('assets/images/kagsio_bg_image.jpg'); background-size: cover;"
+>
+  <app-investment-approch [investment]="homePage"></app-investment-approch>
+</section>
+<!-- end counter section -->
+
+<!-- start financial adviser section -->
+<section class="bg-light-gray border-none wow fadeIn">
+  <app-financial-adviser [fadviser]="homePage"></app-financial-adviser>
+</section>
+<!-- end financial adviser section -->
+
+<!-- start accordion section -->
+<section
+  class="bg-light-gray border-none no-padding wow fadeIn faq" style="margin-top: px"
+  *ngIf="homePage"
+>
+  <div class="container">
+    <app-faq [faqs]="faqs"></app-faq>
+  </div>
+</section>
+<!-- end accordion section -->

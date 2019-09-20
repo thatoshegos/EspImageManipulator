@@ -1,0 +1,219 @@
+.bg-white {
+  background-color: white !important;
+}
+.contact {
+  width: 480px;
+  height: 400px;
+  background-color: lightblue;
+  margin-left: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contact h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 8px 8px 8px;
+  margin-top: 0px;
+  margin-left: 30px;
+
+  color: black;
+}
+.johansberg-contact.panel-body {
+  padding: 10px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.send-us-email {
+  width: 480px;
+  height: auto;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.panel-default {
+  border: 2px solid darkcyan;
+}
+.panel-heading {
+  background-color: darkcyan;
+  color: white;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.full-background {
+  background: url("/assets/images/hero.jpg");
+  min-height: 500px;
+  padding: 60px;
+}
+.padding-30px-top {
+  padding: 0px !important;
+}
+.how-to-invest {
+  padding: 0px !important;
+}
+.year-report-list > ul > li .active {
+  color: #b50c2f;
+  font-weight: 800;
+}
+/* .year-post > span {
+  font-weight: 800;
+} */
+
+.remove-margin {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 30px;
+}
+
+.up-image ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.up-image ul li {
+  width: 340px;
+    height: 375px;
+  display: inline-block;
+  /* padding: 20px 20px 20px 0px; */
+  padding: 11px 36px 1px 0px;
+    vertical-align: middle
+}
+li.row-end {
+  padding-right: 30px !important;
+}
+.suscribe a {
+  margin-right: 24px;
+}
+
+.suscribe {
+  padding-bottom: 15px;
+}
+.ul-tab {
+  font-size: 20px;
+  font-weight: 500;
+}
+a.padding-10px-all.ul-tab.active {
+  color: #b50c2f;
+  font-weight: 600;
+  /*border-bottom: 3px dotted #b50c2f;*/
+}
+.insight-title {
+    background: #bfd6d4;
+    padding: 18px 0px;
+    color: #000;
+}
+.insight-title .text-title{
+    background: url(https://dev.omangom.com/kagiso/assets/images/arrow-icon-2.jpg) no-repeat right;
+    padding-right: 32px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 30px;
+}
+.img-size img {
+  max-width: 224px !important;
+}
+.inst-img-center{
+    display: inline-block;
+    margin: 0 30px;
+}
+.max-width-inst-326{
+    margin: 0 auto;
+    /*width: 350px;*/
+    
+}
+.insight-bg{
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/INSIGHTS-abt.png) 14px center no-repeat #9dc4c0; 
+}
+.insight-bg:hover{
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/INSIGHTS-abt.png) 14px center no-repeat #5a9fc0; 
+}
+.about-leader-title{
+    padding: 16px 20px;
+    background: #c0d6d4;
+    line-height: 35px;
+    text-align: center;
+}
+.about-leader-title span{
+    display: inline-block;
+    height: 37px;
+    width: 30px;
+    background: url('/kagiso/assets/images/buttons-new/buttons_more.png') no-repeat;
+    vertical-align: bottom;
+}
+.btn-investment-approch{
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch.png) left center no-repeat #80ada7;
+    vertical-align: middle;
+}
+.about-us-div-background {
+    background: url('/kagiso/assets/images/buttons-new/funds designed.jpg') center top/cover no-repeat fixed;
+    padding-bottom: 80px;
+}
+.btn-green-white span{
+    padding: 5px 30px;
+    height: 50px;
+    text-align: left;
+    display: inline-block;
+    background: #fff;
+    color: #656565;
+    font-weight: 500;
+    width: 200px;
+    line-height: 20px;
+}
+.btn-green-white{
+    display: inline-block;
+    padding-left: 60px;
+    margin:0 10px;
+    background-size:60px!important;
+}
+
+.btn-green-white span:hover{
+    background: #c8dbe5;
+}
+.about-leader-img img{
+    min-height: 250px;
+}
+/* --------------- Mobile CSS ---*/
+@media screen and (max-width: 480px) {
+    .up-image ul li{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    .suscribe{
+        padding-bottom: 0px;
+    }
+    .suscribe a{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .up-image ul{
+        margin-bottom: 0px;
+    }
+    .insight-title{
+        margin-bottom: 20px;
+    }
+}
+.inst-img-center {
+    display: inline-block;
+    margin: 0 30px;
+}
