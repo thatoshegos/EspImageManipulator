@@ -11,25 +11,47 @@
         data-wow-delay="0.2s"
       >
         <div class="text-center">
-          <h2>
-            <!-- ./assets/images/blanced-fund-bg.jpg -->
-            <img [src]="getBalancedData.acf.fund_icon.url" />
-            {{ getBalancedData.title.rendered }}
-          </h2>
+          <div class="top-content">
+            <h2>
+              <!-- ./assets/images/blanced-fund-bg.jpg -->
+              <img class="img"[src]="getBalancedData.acf.fund_icon.url" />
+              {{ getBalancedData.title.rendered }}
+            </h2>
 
-          <!-- btn-list -->
-          <ul class="blanced-fund-btn-list">
-            <li>
-              <a routerLink="/fact-sheets-archive" class="btn-invest-now-green"
-                ><span>FACT SHEETS</span></a
-              >
-            </li>
-            <li>
-              <a routerLink="/tax-free-investing" class="btn-invest-now-red"
-                ><span>INVEST NOW</span></a
-              >
-            </li>
-          </ul>
+            <!-- btn-list -->
+            <ul class="blanced-fund-btn-list">
+              <li>
+                  <a targer="_blank"  class="btn-invest-now-green" [href]="pdfUrl('monthly_fact_sheet')"
+                    ><span class="first-span">MONTHLY FACT SHEET</span></a
+                  >
+              </li>
+              <li>
+                  <a  targer="_blank" class="btn-invest-now-green"  [href]="pdfUrl('quarterly_commentary')" 
+                    ><span>QUARTERLY COMMENTARY</span></a
+                  >
+              </li>
+              <li>
+                  <a 
+                    ><span></span></a
+                  >
+              </li>
+              <li>
+                  <a  targer="_blank" class="btn-invest-now-green" [href]="pdfUrl('quarterly_fact_sheet')" 
+                    ><span>QUARTERLY INVESTOR REPORT</span></a
+                  >
+              </li>
+              <li>
+                <a routerLink="/fact-sheets-archive" class="btn-invest-now-green"
+                  ><span>ARCHIVE</span></a
+                >
+              </li>
+              <li>
+                <a routerLink="/forms-documents" class="btn-invest-now-red"
+                  ><span>INVEST NOW</span></a
+                >
+              </li>
+            </ul>
+          </div>
           <!-- btn-list -->
           <div class="inner-match-height bg-white">
             <div class="row">
@@ -40,8 +62,8 @@
               </div>
                <!-- <div class="vertical-row"></div>-->
               <div class="col-md-7  graph-box padding-45px-all" >
-                <ul class="year-list" style="float: left">
-                  <li class="current">
+                <ul class="year-list" >
+                  <li>
                     <a href="javascript:void(0)" (click)="getConditionalCSV(5)"
                       >5 Years</a
                     >
@@ -56,8 +78,8 @@
                       >10 Years</a
                     >
                   </li>
-                  <li>
-                    <a href="javascript:void(0)" (click)="getConditionalCSV()"
+                  <li class="current">
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(4)"
                       >Since Inception</a
                     >
                   </li>
@@ -91,12 +113,12 @@
                     >
                   </li>
                 </ul>
-                <p style="font-size: 12px; width: 90%">{{ getBalancedData.acf.notes }}</p>
-                <div class="select-fund" style="width: 92.5%">
+                <p style="font-size: 12px;">{{ getBalancedData.acf.notes }}</p>
+                <div class="select-fund" style="width: 96%">
                   <div class="row">
                     <div
                      class="col-xs-12 col-md-6 xs-padding-20px-right"
-                      style="padding-right:0"
+                      style="padding-right:0; width: 40%; font-size: 16px;"
                     >
                       <span><b>Select Another funds</b></span>
                     </div>

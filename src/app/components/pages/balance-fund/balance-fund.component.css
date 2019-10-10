@@ -7,6 +7,40 @@
   position: relative;
   width: 100%;
 }
+.top-content{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: white;
+  margin-bottom: 5px;
+  padding-left: 35px;
+}
+
+.top-content .blanced-fund-btn-list {
+  margin: 0;
+  padding: 0;
+  width: 550px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  text-align: left;
+  margin-top: 15px;
+}
+
+
+.top-content .blanced-fund-btn-list li {
+  height: 45px;
+  width: 165px;
+  margin-top: 5px;
+  margin-right: 5px;
+  
+}
+
+ul .first-span{
+  padding-right: 30px;
+}
+
 .blanced-fund-box .graph-box1 {
   border-right: 0px solid #d1d1d1;
 }
@@ -36,12 +70,15 @@ content: "";
 .blanced-fund-box .year-list {
   /*margin: 0 0 30px 0;*/
   padding: 0;
+  padding-right: 12px;
   list-style: none;
-  text-align: right;
-  font-size: 0; padding-bottom: 30px;
+  display: flex;
+  font-size: 0; 
+  padding-bottom: 30px;
 }
 .blanced-fund-box .year-list li {
-  margin: 0 10px 0 0;
+  flex: 1 0 auto;
+  margin: 0 40px 0 0;
   padding: 0;
   display: inline-block;
   font-size: 14px;
@@ -75,6 +112,7 @@ content: "";
   padding: 0;
   display: inline-block;
   font-size: 14px;
+  width: 195px;
 }
 .blanced-fund-box .return-list li a {
   display: block;
@@ -102,15 +140,15 @@ content: "";
     border-radius: 0!important;
   width: 100%;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   height: 49px;
   margin: 0!important;   
 }
-.select-funds{padding:0px;border: 1px solid #a8c3be;}
+.select-funds{padding:0px;border: 1px solid #a8c3be; width: 60%;}
 .blanced-fund-box .graph-box .select-fund span {
-  padding: 10px;
+  padding: 12px;
     border: 1px solid #a8c3be;
     border-radius: 0!important;
     width: 100%;
@@ -213,27 +251,31 @@ content: "";
 .blanced-fund-btn .btn-meet-leaders {
   font-size: 16px;
 }
-.blanced-fund-btn-list {
-  margin: -115px 30px 0 0;
-  padding: 0;
-  float: right;
-}
-.blanced-fund-btn-list li {
-  display: block;
+
+
+/* .width {
+  flex-direction: row;
+  justify-content: space-between;
+} */
+/* .blanced-fund-btn-list li {
+  display: inline;
   margin: 4px 0;
-}
+} */
 .blanced-fund-btn-list li a.red {
   background: url("../../../../assets/images/red-arrow-icon.jpg") no-repeat
     right;
 }
 
 a.btn-invest-now-red span{
-    padding: 10px 20px 10px 20px;
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     background: #e9c2c9;
-    font-size: 14px;
+    font-size: 12px;
     color: #656565;
     font-weight: 500;
+    height: 40px;
+    padding-left: 10px;
 }
 a.btn-invest-now-red span:hover{
     background: #d98b9c;
@@ -243,15 +285,20 @@ a.btn-invest-now-red{
     display: inline-block;
     background: #b30b2e url('/kagiso/assets/images/buttons-new/buttons_more.png') no-repeat right center;
     padding-right: 50px;
-    width: 200px;
+    margin-top: 5px;
+    width: 165px;
 }
 a.btn-invest-now-green span{
-    padding: 10px 20px 10px 20px;
-    display: block;
+    /* padding: 10px 40px 10px 20px; */
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
     background: #c5dad7;
-    font-size: 14px;
+    font-size: 12px;
     color: #656565;
     font-weight: 500;
+    height: 40px;
+    padding-left: 10px
 }
 a.btn-invest-now-green span:hover{
     background: #c5d9e2;
@@ -261,9 +308,10 @@ a.btn-invest-now-green{
     display: inline-block;
 
     background: #8abbb6 url('/kagiso/assets/images/buttons-new/buttons_more.png') no-repeat right center;
-
+    margin-top: 5px;
     padding-right: 50px;
-    width: 200px;
+    width: 165px;
+    height: 40px;
 }
 
 .link-img-box{

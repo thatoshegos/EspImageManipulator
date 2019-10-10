@@ -90,14 +90,13 @@ input[type="submit"]:hover {
 }
 .up-image ul li {
   width: 340px;
-    height: 375px;
-  display: inline-block;
-  /* padding: 20px 20px 20px 0px; */
-  padding: 11px 36px 1px 0px;
-    vertical-align: middle
+  display: inline-flex;
+  /* padding: 20px 20px 20px 0px;  */
+  vertical-align: middle;
+  margin-right: 60px
 }
 li.row-end {
-  padding-right: 30px !important;
+  margin-right: 0px !important;
 }
 .suscribe a {
   margin-right: 24px;
