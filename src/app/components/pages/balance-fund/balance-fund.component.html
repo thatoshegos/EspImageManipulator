@@ -2,7 +2,7 @@
 <section
   class="wow fadeIn bg-gray-light  xs-margin-80px-top xs-margin-15px-lr"
 >
-<div class="col-md-12 margin-60px-top margin-30px-bottom "><div  class="text-center">&nbsp;</div></div>
+<div class="col-md-12"><div  class="text-center">&nbsp;</div></div>
   <div class="container">
     <div class="row">
       <!-- start Unconventional thinking box item -->
@@ -10,6 +10,19 @@
         class="col-md-12 col-sm-12 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInUp unconventional-thinking blanced-fund-box"
         data-wow-delay="0.2s"
       >
+        <div class="nav-content">
+          <ul>
+            <li>
+                INDIVIDUAL > 
+            </li>
+            <li>
+                OUR FUNDS > 
+            </li>
+            <li>
+                {{getBalancedData.title.rendered.toUpperCase()}}
+            </li>
+          </ul>
+        </div>
         <div class="text-center">
           <div class="top-content">
             <h2>
@@ -62,8 +75,8 @@
               </div>
                <!-- <div class="vertical-row"></div>-->
               <div class="col-md-7  graph-box padding-45px-all" >
-                <ul class="year-list" >
-                  <li>
+                <ul class="year-list">
+                  <li class="current">
                     <a href="javascript:void(0)" (click)="getConditionalCSV(5)"
                       >5 Years</a
                     >
@@ -78,8 +91,8 @@
                       >10 Years</a
                     >
                   </li>
-                  <li class="current">
-                    <a href="javascript:void(0)" (click)="getConditionalCSV(4)"
+                  <li >
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(0)"
                       >Since Inception</a
                     >
                   </li>
@@ -91,7 +104,7 @@
                   ></app-graph>
                   <!--<img src="http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/balance-fundgraph.jpg">-->
                 </div>
-                <ul class="return-list" style="float: left">
+                <ul class="return-list">
                   <li>
                     <a href="#"
                       >Fund Return
@@ -114,8 +127,8 @@
                   </li>
                 </ul>
                 <p style="font-size: 12px;">{{ getBalancedData.acf.notes }}</p>
-                <div class="select-fund" style="width: 96%">
-                  <div class="row">
+                <div class="select-fund" style="display: flex;">
+                  <div class="row"  style="flex: 1; margin-right: 0px;">
                     <div
                      class="col-xs-12 col-md-6 xs-padding-20px-right"
                       style="padding-right:0; width: 40%; font-size: 16px;"
@@ -125,7 +138,7 @@
                     <div
                       class="col-xs-12 col-md-6 select-funds"
                     >
-                      <select (change)="getFundOnChange($event)">
+                      <select class="select" (change)="getFundOnChange($event)">
                         <option value="">Please select Fund</option>
                         <option
                           *ngFor="let fund of getBalancedData.acf.fund_list"
@@ -200,7 +213,7 @@
         </div>
         <div
           _ngcontent-c15=""
-          class="text-center margin-50px-top xs-margin-30px-top"
+          class="text-center margin-80px-top xs-margin-30px-top margin-60px-bottom"
         >
           <div _ngcontent-c15="" class="text-center">
             <!-- <a
@@ -213,21 +226,21 @@
         >-->
             <a
               _ngcontent-c15=""
-              class="btn-meet-leaders meet-leader margin-15px-right"
+              class="btn-meet-leaders btn-investment-approch margin-15px-right"
               routerLink="/about-us"
               style="vertical-align: middle" 
               ><span>INVESTMENT APPROACH</span></a
             >
             <a
               _ngcontent-c15=""
-              class="btn-meet-fund-manager margin-15px-right"
+              class="btn-meet-leaders btn-meet-fund-manager1 margin-15px-right"
               routerLink="/meet-the-fund-manager"
               style="vertical-align: middle"  
               ><span>MEET THE FUND MANAGER</span></a
             >
             <a
               _ngcontent-c15=""
-              class="btn-meet-faq"
+              class=" btn-meet-faq btn-meet-leaders btn-meet-insights"
               routerLink="/faq"
               style="vertical-align: middle" 
               ><span>FAQ's</span></a

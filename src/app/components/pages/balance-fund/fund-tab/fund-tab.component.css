@@ -77,17 +77,21 @@ ul.fund-tabs li.current {
   overflow-y: auto;
 }
 .latest ul {
+  display: flex;
   list-style-type: none;
   padding: 0px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 .latest ul li {
-  display: inline-block;
+  display: inline-flex;
+  flex: 1 0 auto;
   padding: 6px;
   background-color: #c6dddb;
 }
-.right-li {
-  float: right;
-}
+/* .right-li {
+  margin-right: 2px;
+} */
 .amt {
   color: red;
   font-family: inherit;

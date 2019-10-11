@@ -7,6 +7,25 @@
   position: relative;
   width: 100%;
 }
+.nav-content {
+  height: 45px; 
+  display:flex;  
+  color: black; 
+  margin-top: 55px;
+}
+.nav-content ul {
+  flex: 1 0 auto;
+  padding: 0; 
+  font-size: 14px; 
+  display: inline-flex; 
+  justify-content: flex-start; 
+  align-items: center;
+  list-style-type: none; 
+  margin-bottom:0px;
+}
+.nav-content ul li {
+  margin-right: 5px;
+}
 .top-content{
   display: flex;
   flex-direction: row;
@@ -20,7 +39,7 @@
 .top-content .blanced-fund-btn-list {
   margin: 0;
   padding: 0;
-  width: 550px;
+  width: 540px;
   display: inline-flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -70,7 +89,6 @@ content: "";
 .blanced-fund-box .year-list {
   /*margin: 0 0 30px 0;*/
   padding: 0;
-  padding-right: 12px;
   list-style: none;
   display: flex;
   font-size: 0; 
@@ -106,25 +124,28 @@ content: "";
   list-style: none;
   text-align: center;
   font-size: 0;
+  display: flex;
 }
 .blanced-fund-box .return-list li {
-  margin: 0 4.6px 0 0;
+  margin-right: 4.6px;
   padding: 0;
-  display: inline-block;
+  flex: 1;
   font-size: 14px;
-  width: 195px;
+}
+.blanced-fund-box .return-list li:last-child {
+  margin-right: 0;
 }
 .blanced-fund-box .return-list li a {
   display: block;
-  padding: 8px 6px;
+  padding: 8px 2px;
   color: #656565;
-  border: 1px solid #a8c3be;
+  border: 2px solid #a8c3be;
   margin: 0;
   background: #a8c3be;
   text-transform: uppercase;
 }
 .blanced-fund-box .return-list li a span {
-  font-weight:600;
+  font-weight:700;
 }
 .blanced-fund-box .return-list li a:hover {
   text-decoration: none;
@@ -144,17 +165,24 @@ content: "";
   font-weight: 400;
   line-height: 1.5;
   height: 49px;
-  margin: 0!important;   
+  margin: 0!important;  
+  background-color: transparent; 
 }
-.select-funds{padding:0px;border: 1px solid #a8c3be; width: 60%;}
+.select-funds{padding:0px;border: 2px solid #a8c3be; width: 60%;}
+/* .select {
+  appearance:none;
+  background: url(https://kagisonew.cotomo.com/assets/images/buttons-new/arrow_large_new_to_inv.png) no-repeat
+    right;
+} */
+
 .blanced-fund-box .graph-box .select-fund span {
   padding: 12px;
-    border: 1px solid #a8c3be;
-    border-radius: 0!important;
-    width: 100%;
-    display: block;
-    border-right: none;
-    height: 51px;
+  border: 2px solid #a8c3be;
+  border-radius: 0!important;
+  width: 100%;
+  display: block;
+  border-right: none;
+  height: 53px;
 }
 .blanced-fund-box ul.fund-tabs {
   margin: 0;
@@ -225,7 +253,7 @@ content: "";
   list-style-type: none;
   position: relative;
   width: 100%;
-  padding: 45px 100px;
+  padding: 45px 220px;
   margin: 0;
 }
 .fund-img-box ul li {
@@ -283,7 +311,7 @@ a.btn-invest-now-red span:hover{
 }
 a.btn-invest-now-red{
     display: inline-block;
-    background: #b30b2e url('/kagiso/assets/images/buttons-new/buttons_more.png') no-repeat right center;
+    background: #b30b2e url(https://kagisonew.cotomo.com/assets/images/buttons-new/buttons_more1.png) no-repeat right center;
     padding-right: 50px;
     margin-top: 5px;
     width: 165px;
@@ -307,7 +335,7 @@ a.btn-invest-now-green span:hover{
 a.btn-invest-now-green{
     display: inline-block;
 
-    background: #8abbb6 url('/kagiso/assets/images/buttons-new/buttons_more.png') no-repeat right center;
+    background: #8abbb6 url(https://kagisonew.cotomo.com/assets/images/buttons-new/buttons_more1.png) no-repeat right center;
     margin-top: 5px;
     padding-right: 50px;
     width: 165px;
@@ -321,29 +349,29 @@ a.btn-invest-now-green{
     background-size: cover!important;
 }
 .btn-tax-free .link-img-box{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/taxfree.png) no-repeat;
+  background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-forms.jpg) no-repeat;
 }
 .btn-top-10-holdings .link-img-box{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/top10.png) no-repeat;
+    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-forms.jpg) no-repeat;
 }
 .btn-form .link-img-box{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/forms.png) no-repeat;
+    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-forms.jpg) no-repeat;
 }
 .btn-platforms .link-img-box{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/platforms-1.png) no-repeat;
+    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-forms.jpg) no-repeat;
 }
 
 .btn-tax-free .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/taxfree-over.png) no-repeat;
+    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-tree.jpg) no-repeat;
 }
 .btn-top-10-holdings .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/top10-over.png) no-repeat;
+    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-tree.jpg) no-repeat;
 }
 .btn-form .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/forms-over.png) no-repeat;
+    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-tree.jpg) no-repeat;
 }
 .btn-platforms .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/platforms-1-over.png) no-repeat;
+    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-tree.jpg) no-repeat;
 }
 
 .btn-green-white{
@@ -368,22 +396,22 @@ a.btn-invest-now-green{
     background: #c8dbe5;
 }
 .btn-investment-approch{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch.png) left center no-repeat #80ada7;
+    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg.jpg) left center no-repeat #80ada7;
 }
 .btn-meet-fund-manager1{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-fund-manager.png) left center no-repeat #80ada7;
+    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg.jpg) left center no-repeat #80ada7;
 }
 .btn-meet-insights{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-insights.png) left center no-repeat #80ada7;
+    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg.jpg) left center no-repeat #80ada7;
 }
 .btn-investment-approch:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch-over.png) left center no-repeat #5b9dbe;
+    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg-hover.jpg) left center no-repeat #5b9dbe;
 }
 .btn-meet-fund-manager1:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-fund-manager-over.png) left center no-repeat #5b9dbe;
+    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg-hover.jpg) left center no-repeat #5b9dbe;
 }
 .btn-meet-insights:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-insights-over.png) left center no-repeat #5b9dbe;
+    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg-hover.jpg) left center no-repeat #5b9dbe;
 }
 
 /* --------------- Mobile CSS ---*/
