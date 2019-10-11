@@ -101,7 +101,6 @@ export class BalanceFundComponent implements OnInit {
     } else {
       startingPoint = 1;
     }
-    console.log(startingPoint);
     var result = [];
     var headers = lines[0].split(",");
     var dates = [];
@@ -125,11 +124,8 @@ export class BalanceFundComponent implements OnInit {
     return graphDataSet;
   }
   getFundOnChange(e) {
-    // console.log(this.router.url);
     this.currentRoute = this.router.url;
     this.selectedRoute = e.target.value;
-    console.log(this.selectedRoute);
-    console.log(this.currentRoute);
     this.router.navigate(["/" + e.target.value]);
   }
 }

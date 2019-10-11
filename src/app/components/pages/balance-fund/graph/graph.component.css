@@ -6,3 +6,9 @@ stroke:red;}
 .amcharts-plot-area {
   stroke-width: 20px;
 }*/
+#chartdiv2 {
+	background-color: rgb(227, 237, 236);
+}
+.amcharts-main-div * {
+	transform: none !important;
+}

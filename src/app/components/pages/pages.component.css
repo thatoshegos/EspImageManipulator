@@ -120,7 +120,7 @@ a.padding-10px-all.ul-tab.active {
     color: #000;
 }
 .insight-title .text-title{
-    background: url(https://dev.omangom.com/kagiso/assets/images/arrow-icon-2.jpg) no-repeat right;
+    background: url(/assets/images/arrow-icon-2.jpg) no-repeat right;
     padding-right: 32px;
     height: 30px;
     font-weight: 500;
@@ -141,10 +141,10 @@ a.padding-10px-all.ul-tab.active {
     
 }
 .insight-bg{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/INSIGHTS-abt.png) 14px center no-repeat #9dc4c0; 
+    background: url(/wp-content/uploads/2019/05/INSIGHTS-abt.png) 14px center no-repeat #9dc4c0; 
 }
 .insight-bg:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/05/INSIGHTS-abt.png) 14px center no-repeat #5a9fc0; 
+    background: url(/wp-content/uploads/2019/05/INSIGHTS-abt.png) 14px center no-repeat #5a9fc0; 
 }
 .about-leader-title{
     padding: 16px 20px;
@@ -156,15 +156,15 @@ a.padding-10px-all.ul-tab.active {
     display: inline-block;
     height: 37px;
     width: 30px;
-    background: url('/kagiso/assets/images/buttons-new/buttons_more.png') no-repeat;
+    background: url('/assets/images/buttons-new/buttons_more.png') no-repeat;
     vertical-align: bottom;
 }
 .btn-investment-approch{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch.png) left center no-repeat #80ada7;
+    background: url(/wp-content/uploads/2019/06/meet-investment-approch.png) left center no-repeat #80ada7;
     vertical-align: middle;
 }
 .about-us-div-background {
-    background: url('/kagiso/assets/images/buttons-new/funds designed.jpg') center top/cover no-repeat fixed;
+    background: url('/assets/images/buttons-new/funds designed.jpg') center top/cover no-repeat fixed;
     padding-bottom: 80px;
 }
 .btn-green-white span{

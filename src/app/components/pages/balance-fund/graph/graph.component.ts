@@ -126,7 +126,9 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           lineThickness: 1,
           useLineColorForBulletBorder: false,
           valueField: "value",
-           bulletSize:13,
+		   bulletSize:13,
+		   showOnInit: false,
+		   startDuration: 0
         },
         {
           id: "g2",
@@ -140,7 +142,9 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           lineColor: "rgb(128,175,169)",
           hideBulletsCount: 50,
           lineThickness: 1,
-          valueField: "value1",  
+          valueField: "value1",
+		  showOnInit: false,
+		  startDuration: 0
         },
          
       ],
@@ -154,7 +158,9 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
             fillColor:"white",
             borderColor:"gray",
             shadowAlpha:0,
-           fontSize:13,
+		   fontSize:13,
+		   animationDuration: 0,
+		   startDuration: 0
            
         },
 
@@ -163,6 +169,8 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
         cursorAlpha: 1,
           cursorColor:"rgb(163,11,42)",
         valueLineAlpha: 2,
+		animationDuration: 0,
+		startDuration: 0
          
          
           
@@ -223,6 +231,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
     }
   }
   ngOnChanges(changes: SimpleChanges) {
+	  console.log('chchch')
     this.newData = this.makeDataSet();
     console.log(this.newData);
     if (this.newData) {

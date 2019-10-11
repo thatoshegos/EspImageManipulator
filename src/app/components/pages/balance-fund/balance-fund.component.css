@@ -8,19 +8,19 @@
   width: 100%;
 }
 .nav-content {
-  height: 45px; 
-  display:flex;  
-  color: black; 
+  height: 45px;
+  display:flex;
+  color: black;
   margin-top: 55px;
 }
 .nav-content ul {
   flex: 1 0 auto;
-  padding: 0; 
-  font-size: 14px; 
-  display: inline-flex; 
-  justify-content: flex-start; 
+  padding: 0;
+  font-size: 14px;
+  display: inline-flex;
+  justify-content: flex-start;
   align-items: center;
-  list-style-type: none; 
+  list-style-type: none;
   margin-bottom:0px;
 }
 .nav-content ul li {
@@ -53,7 +53,7 @@
   width: 165px;
   margin-top: 5px;
   margin-right: 5px;
-  
+
 }
 
 ul .first-span{
@@ -75,7 +75,7 @@ content: "";
   display: block;}
 
 .blanced-fund-box .graph-box {
-  border-left: 4px solid #E7E7E7; 
+  border-left: 4px solid #E7E7E7;
 }
 .blanced-fund-box .graph-box .graph-content {
   margin: 0;
@@ -91,7 +91,7 @@ content: "";
   padding: 0;
   list-style: none;
   display: flex;
-  font-size: 0; 
+  font-size: 0;
   padding-bottom: 30px;
 }
 .blanced-fund-box .year-list li {
@@ -165,8 +165,8 @@ content: "";
   font-weight: 400;
   line-height: 1.5;
   height: 49px;
-  margin: 0!important;  
-  background-color: transparent; 
+  margin: 0!important;
+  background-color: transparent;
 }
 .select-funds{padding:0px;border: 2px solid #a8c3be; width: 60%;}
 /* .select {
@@ -177,7 +177,7 @@ content: "";
 
 .blanced-fund-box .graph-box .select-fund span {
   padding: 12px;
-  border: 2px solid #a8c3be;
+  border-right: 2px solid #a8c3be;
   border-radius: 0!important;
   width: 100%;
   display: block;
@@ -390,7 +390,7 @@ a.btn-invest-now-green{
     font-weight: 500;
     width: 200px;
     line-height: 20px;
-    
+
 }
 .btn-green-white span:hover{
     background: #c8dbe5;

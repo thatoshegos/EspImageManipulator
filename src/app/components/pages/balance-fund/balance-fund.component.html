@@ -102,7 +102,7 @@
                     *ngIf="getGraphData"
                     [dataSet]="getGraphData"
                   ></app-graph>
-                  <!--<img src="http://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/balance-fundgraph.jpg">-->
+                  <!--<img src="/wp-content/uploads/2019/06/balance-fundgraph.jpg">-->
                 </div>
                 <ul class="return-list">
                   <li>
@@ -128,15 +128,13 @@
                 </ul>
                 <p style="font-size: 12px;">{{ getBalancedData.acf.notes }}</p>
                 <div class="select-fund" style="display: flex;">
-                  <div class="row"  style="flex: 1; margin-right: 0px;">
                     <div
-                     class="col-xs-12 col-md-6 xs-padding-20px-right"
-                      style="padding-right:0; width: 40%; font-size: 16px;"
+                      style="flex: 1 1 auto"
                     >
-                      <span><b>Select Another funds</b></span>
+                      <span><b>Select Another fund</b></span>
                     </div>
-                    <div
-                      class="col-xs-12 col-md-6 select-funds"
+					<div
+						style="flex: 1 1 auto"
                     >
                       <select class="select" (change)="getFundOnChange($event)">
                         <option value="">Please select Fund</option>
@@ -156,7 +154,6 @@
                         <option>STABLE FUND</option> -->
                       </select>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>

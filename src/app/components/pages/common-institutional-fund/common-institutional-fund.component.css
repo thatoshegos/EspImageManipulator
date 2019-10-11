@@ -43,7 +43,7 @@ a.btn-invest-now-red span:hover {
 a.btn-invest-now-red {
   display: inline-block;
   background: #b30b2e
-    url(https://dev.omangom.com/kagiso/red-arrow-icon.6be28c54a0d555ff2462.jpg)
+    url(/red-arrow-icon.6be28c54a0d555ff2462.jpg)
     no-repeat right center;
   padding-right: 50px;
     width: 178px;
@@ -63,7 +63,7 @@ a.btn-invest-now-green span:hover {
 a.btn-invest-now-green {
   display: inline-block;
   background: #b30b2e
-    url(https://dev.omangom.com/kagiso/arrow-icon.7df4ea734180f4c8726f.jpg)
+    url(/arrow-icon.7df4ea734180f4c8726f.jpg)
     no-repeat right center;
   padding-right: 50px;
     width: 178px;

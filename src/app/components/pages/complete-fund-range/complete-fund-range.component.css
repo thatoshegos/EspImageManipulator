@@ -45,29 +45,29 @@
   background: #e3edec;
 }
 .cfr-icon-1{
-    background: url(https://dev.omangom.com/kagiso/assets/images/icon-1.png) no-repeat;
+    background: url(/assets/images/icon-1.png) no-repeat;
     height: 30px;
     width: 30px;
     display: inline-block;
 }
 .cfr-icon-1:hover{
-    background: url(https://dev.omangom.com/kagiso/assets/images/icon-2.png) no-repeat;
+    background: url(/assets/images/icon-2.png) no-repeat;
 }
 .cfr-icon-2{
-    background: url(https://dev.omangom.com/kagiso/assets/images/icon-2.png) no-repeat;
+    background: url(/assets/images/icon-2.png) no-repeat;
     height: 30px;
     width: 30px;
     display: inline-block;
 }
 .cfr-icon-2:hover{
-    background: url(https://dev.omangom.com/kagiso/assets/images/icon-1.png) no-repeat;
+    background: url(/assets/images/icon-1.png) no-repeat;
 }
 .cfr-icon-3{
-    background: url(https://dev.omangom.com/kagiso/assets/images/icon-3.png) no-repeat;
+    background: url(/assets/images/icon-3.png) no-repeat;
     height: 30px;
     width: 30px;
     display: inline-block;
 }
 .cfr-icon-3:hover{
-    background: url(https://dev.omangom.com/kagiso/assets/images/icon-2.png) no-repeat;
+    background: url(/assets/images/icon-2.png) no-repeat;
 }

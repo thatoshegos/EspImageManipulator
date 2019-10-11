@@ -4,16 +4,19 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 @Injectable({
   providedIn: "root"
 })
+
+const domainPrefix = "http://kagisonew.cotomo.com"
+
 export class WPAPIService {
-  endpoints = "https://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
-  menuEndPoints = "https://dev.omangom.com/kagiso/wordpress/wp-json/menus/v1";
-  pagesEndPoint = "https://dev.omangom.com/kagiso/wordpress/wp-json/acf/v3";
-  postEndpoint = "https://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2";
+  endpoints = "/wp-json/wp/v2";
+  menuEndPoints = "/wp-json/menus/v1";
+  pagesEndPoint = "/wp-json/acf/v3";
+  postEndpoint = "/wp-json/wp/v2";
   csvDataEndPoint =
-    "http://dev.omangom.com/kagiso/wordpress/?custom_action=get_chart_data&csv_url=";
+    "/?custom_action=get_chart_data&csv_url=";
   emailSendUrl =
-    "http://dev.omangom.com/kagiso/wordpress/?custom_action=save_contact";
-  postByslug = "http://dev.omangom.com/kagiso/wordpress/wp-json/wp/v2/posts";
+    "/?custom_action=save_contact";
+  postByslug = "/wp-json/wp/v2/posts";
   constructor(private http: HttpClient) {}
   getCategory(query) {
     return this.http.get(`${this.endpoints}/categories/${query}`);
