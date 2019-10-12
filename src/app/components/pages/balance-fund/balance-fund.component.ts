@@ -17,7 +17,7 @@ export class BalanceFundComponent implements OnInit {
   currentRoute;
   selectedRoute;
   csvData;
-  
+
   constructor(private wpservice: WPAPIService, private router: Router) {}
 
   ngOnInit() {
@@ -42,14 +42,14 @@ export class BalanceFundComponent implements OnInit {
         quarterly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/equality_alpha_funds/' + year + '/Quartley Investment Report/current.pdf'
       },
       'balanced-fund':{
-        monthly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/ballanced_allocation/' + year + 'current.pdf',
+        monthly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/ballanced_allocation/' + year + '/current.pdf',
         quarterly_commentary:'wordpress/wp-content/uploads/factsheets/ballanced_allocation/' + year + '/Quarterly Summary/current.pdf',
         quarterly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/ballanced_allocation/' + year + '/Quartley Investment Report/current.pdf'
       },
       'top-40-tracker-fund':{
         monthly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/top40/' + year + '/current.pdf',
         quarterly_commentary:'wordpress/wp-content/uploads/factsheets/top40/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/top40/' + year + '/Quartley Investment Report//current.pdf'
+        quarterly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/top40/' + year + '/Quartley Investment Report/current.pdf'
       },
       'protector-fund':{
         monthly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/protector/' + year + '/current.pdf',
