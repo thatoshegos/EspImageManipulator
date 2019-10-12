@@ -37,29 +37,29 @@ export class BalanceFundComponent implements OnInit {
   pdfUrl(type : string){
     let pdfMap: Object = {
       'equity-alpha-fund' :{
-        monthly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/equality_alpha_funds/' + year + '/current.pdf',
-        quarterly_commentary: 'wordpress/wp-content/uploads/factsheets/equality_alpha_funds/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/equality_alpha_funds/' + year + '/Quartley Investment Report/current.pdf'
+        monthly_fact_sheet: '/wp-content/uploads/factsheets/equality_alpha_funds/' + year + '/current.pdf',
+        quarterly_commentary: '/wp-content/uploads/factsheets/equality_alpha_funds/' + year + '/Quarterly Summary/current.pdf',
+        quarterly_fact_sheet: '/wp-content/uploads/factsheets/equality_alpha_funds/' + year + '/Quartley Investment Report/current.pdf'
       },
       'balanced-fund':{
-        monthly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/ballanced_allocation/' + year + '/current.pdf',
-        quarterly_commentary:'wordpress/wp-content/uploads/factsheets/ballanced_allocation/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/ballanced_allocation/' + year + '/Quartley Investment Report/current.pdf'
+        monthly_fact_sheet: '/wp-content/uploads/factsheets/ballanced_allocation/' + year + '/current.pdf',
+        quarterly_commentary:'/wp-content/uploads/factsheets/ballanced_allocation/' + year + '/Quarterly Summary/current.pdf',
+        quarterly_fact_sheet: '/wp-content/uploads/factsheets/ballanced_allocation/' + year + '/Quartley Investment Report/current.pdf'
       },
       'top-40-tracker-fund':{
-        monthly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/top40/' + year + '/current.pdf',
-        quarterly_commentary:'wordpress/wp-content/uploads/factsheets/top40/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/top40/' + year + '/Quartley Investment Report/current.pdf'
+        monthly_fact_sheet: '/wp-content/uploads/factsheets/top40/' + year + '/current.pdf',
+        quarterly_commentary:'/wp-content/uploads/factsheets/top40/' + year + '/Quarterly Summary/current.pdf',
+        quarterly_fact_sheet: '/wp-content/uploads/factsheets/top40/' + year + '/Quartley Investment Report/current.pdf'
       },
       'protector-fund':{
-        monthly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/protector/' + year + '/current.pdf',
-        quarterly_commentary:'wordpress/wp-content/uploads/factsheets/protector/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/protector/' + year + '/Quartley Investment Report/current.pdf'
+        monthly_fact_sheet: '/wp-content/uploads/factsheets/protector/' + year + '/current.pdf',
+        quarterly_commentary:'/wp-content/uploads/factsheets/protector/' + year + '/Quarterly Summary/current.pdf',
+        quarterly_fact_sheet: '/wp-content/uploads/factsheets/protector/' + year + '/Quartley Investment Report/current.pdf'
       },
       'stable-fund':{
-        monthly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/stable/' + year + '/current.pdf',
-        quarterly_commentary:'wordpress/wp-content/uploads/factsheets/stable/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: 'wordpress/wp-content/uploads/factsheets/stable/' + year + '/Quartley Investment Report/current.pdf'
+        monthly_fact_sheet: '/wp-content/uploads/factsheets/stable/' + year + '/current.pdf',
+        quarterly_commentary:'/wp-content/uploads/factsheets/stable/' + year + '/Quarterly Summary/current.pdf',
+        quarterly_fact_sheet: '/wp-content/uploads/factsheets/stable/' + year + '/Quartley Investment Report/current.pdf'
       }
 
     }

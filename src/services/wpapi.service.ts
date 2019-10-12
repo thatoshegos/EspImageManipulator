@@ -5,8 +5,6 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   providedIn: "root"
 })
 
-const domainPrefix = "http://kagisonew.cotomo.com"
-
 export class WPAPIService {
   endpoints = "/wp-json/wp/v2";
   menuEndPoints = "/wp-json/menus/v1";
