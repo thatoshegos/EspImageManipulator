@@ -68,8 +68,8 @@ b, strong { font-weight: 600;}
 .last-paragraph-no-margin p:last-of-type {margin-bottom:0}
 .alt-font strong {font-weight: 700 }
 ul, ol, dl {list-style-position: outside; margin-bottom: 25px}
-*{transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -ms-transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s;}
-*:hover{transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -ms-transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s; }
+/**{transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -ms-transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s;}
+*:hover{transition-timing-function: ease-in-out; -ms-transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -ms-transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s; }*/
 ::selection { color: #000; background:#dbdbdb; }
 ::-moz-selection { color:#000; background:#dbdbdb; }
 ::-webkit-input-placeholder { color: #6f6f6f; text-overflow: ellipsis;}
@@ -3427,14 +3427,14 @@ header.sticky nav.navbar.brand-center ul.nav > li > a {padding: 20px; margin: 0 
 
 /* piechart style 1 */
 .chart-style1 .chart1 { position: relative; display: inline-block; width: 150px; height: 150px; text-align: center; border-radius: 50%;  }
-.chart-style1 .chart1 canvas { position: absolute; top: 0; left: 0; }
+/*.chart-style1 .chart1 canvas { position: absolute; top: 0; left: 0; }*/
 .chart-style1 .chart-percent { margin: 0 0 15px 0}
 .chart-style1 .percent { display: inline-block; line-height: 150px; z-index: 2;}
 .percent:after { content: '%'; }
 
 /* piechart style 2 */
 .chart-style2 .chart2 { position: relative; display: inline-block; width: 120px; height: 120px; text-align: center; border-radius: 50%;  }
-.chart-style2 .chart2 canvas { position: absolute; top: 0; left: 0; }
+/*.chart-style2 .chart2 canvas { position: absolute; top: 0; left: 0; }*/
 .chart-style2 .percent { display: inline-block; line-height: 120px; z-index: 2;}
 .chart-style2 .chart-percent { margin: 0 0 10px 0}
 
