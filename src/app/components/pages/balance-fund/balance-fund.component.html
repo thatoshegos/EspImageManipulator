@@ -13,10 +13,10 @@
         <div class="nav-content">
           <ul>
             <li>
-                INDIVIDUAL >
+                <a href="/individual-investor/invest-with-us">INDIVIDUAL > </a>
             </li>
             <li>
-                OUR FUNDS >
+                <a href="/individual-investor/our-funds"> OUR FUNDS > </a>
             </li>
             <li>
                 {{getBalancedData.title.rendered.toUpperCase()}}
@@ -43,7 +43,7 @@
                     ><span>QUARTERLY COMMENTARY</span></a
                   >
               </li>
-              <li>
+              <li class= 'empty-li'>
                   <a
                     ><span></span></a
                   >
@@ -127,36 +127,34 @@
                   </li>
                 </ul>
                 <p style="font-size: 12px;">{{ getBalancedData.acf.notes }}</p>
-                <div class="select-fund" style="display: flex;">
+                <div class="select-fund">
+                    <div>
+                      <span>Select Another fund</span>
+                    </div>
                     <div
                       style="flex: 1 1 auto"
-                    >
-                      <span><b>Select Another fund</b></span>
-                    </div>
-					<div
-						style="flex: 1 1 auto"
-                    >
-                      <select class="select" (change)="getFundOnChange($event)">
-                        <option value="">Please select Fund</option>
-                        <option
-                          *ngFor="let fund of getBalancedData.acf.fund_list"
-                          [value]="fund.fund_url"
-                          [attr.selected]="
-                            currentRoute == fund.fund_url ? true : null
-                          "
-                          >{{ fund.fund_title }}</option>
+                              >
+                                <select class="select" (change)="getFundOnChange($event)">
+                                  <option value="">Please select Fund</option>
+                                  <option
+                                    *ngFor="let fund of getBalancedData.acf.fund_list"
+                                    [value]="fund.fund_url"
+                                    [attr.selected]="
+                                      currentRoute == fund.fund_url ? true : null
+                                    "
+                                    >{{ fund.fund_title }}</option>
 
-<!--                         <option>EQUITY ALPHA FUND</option>
-                        <option>ISLAMIC EQUITY FUND</option>
-                        <option>BALANCED FUND</option>
-                        <option>ISLAMIC BALANCED FUND</option>
-                        <option>PROTECTOR FUND</option>
-                        <option>STABLE FUND</option> -->
-                      </select>
-                    </div>
-                </div>
-              </div>
-            </div>
+          <!--                         <option>EQUITY ALPHA FUND</option>
+                                  <option>ISLAMIC EQUITY FUND</option>
+                                  <option>BALANCED FUND</option>
+                                  <option>ISLAMIC BALANCED FUND</option>
+                                  <option>PROTECTOR FUND</option>
+                                  <option>STABLE FUND</option> -->
+                                </select>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
           </div>
           <div class="fund-img-box bg-white">
             <!--  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/about-us" style="margin-right:10px;">TAX FREE</a>
@@ -223,21 +221,21 @@
         >-->
             <a
               _ngcontent-c15=""
-              class="btn-meet-leaders btn-investment-approch margin-15px-right"
+              class="btn-meet-leaders meet-leader margin-15px-right"
               routerLink="/about-us"
               style="vertical-align: middle"
               ><span>INVESTMENT APPROACH</span></a
             >
             <a
               _ngcontent-c15=""
-              class="btn-meet-leaders btn-meet-fund-manager1 margin-15px-right"
+              class=" btn-meet-fund-manager margin-15px-right"
               routerLink="/meet-the-fund-manager"
               style="vertical-align: middle"
               ><span>MEET THE FUND MANAGER</span></a
             >
             <a
               _ngcontent-c15=""
-              class=" btn-meet-faq btn-meet-leaders btn-meet-insights"
+              class=" btn-meet-faq"
               routerLink="/faq"
               style="vertical-align: middle"
               ><span>FAQ's</span></a

@@ -4853,6 +4853,10 @@ a.btn-news-literature:hover{
     background: #c5dad7;
     text-align: center;
 }
+
+.footer-title {
+    margin-top: 50px;
+}
 .btn-download span:hover
 {background: #c5d9e2}
 .btn-download:hover{background: #5b9dbe url('../images/buttons-new/download.png') no-repeat right;}

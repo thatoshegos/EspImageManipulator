@@ -153,18 +153,19 @@ content: "";
 .blanced-fund-box .graph-box .select-fund {
   margin: 0!important;
   padding: 0;
-  width: 100%;
+  display: flex;
+  border: 2px solid #a8c3be;
   text-transform: uppercase;
 }
 .blanced-fund-box .graph-box .select-fund select {
   padding: 10px;
-    border-radius: 0!important;
+  border-radius: 0!important;
   width: 100%;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  height: 49px;
+  height: 53px;
   margin: 0!important;
   background-color: transparent;
 }
@@ -181,7 +182,6 @@ content: "";
   border-radius: 0!important;
   width: 100%;
   display: block;
-  border-right: none;
   height: 53px;
 }
 .blanced-fund-box ul.fund-tabs {
@@ -222,10 +222,47 @@ content: "";
 @media (min-width: 992px) and (max-width: 1199px) {
   .blanced-fund-box .return-list li a {
     font-size: 12px;
-    padding: 8px 2px;
+    padding: 8px 1px;
   }
+
+  /* .link-img-box {
+    width: 100px;
+    height: 100px;
+  } */
+
+  /* .fund-img-box ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 110px;
+    margin: 0;
+  } */
+  /* .fund-img-box ul li {
+    margin-right: 10px;
+    font-size: 14px;
+  } */
+  
 }
 @media (max-width: 991px) {
+  .blanced-fund-box h2{
+    margin-right: 20px;
+  }
+  .nav-content{
+    margin-top: 15px;
+  }
+  .top-content .blanced-fund-btn-list {
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  .top-content .blanced-fund-btn-list li.empty-li {
+    display:  none;
+  }
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .blanced-fund-box .year-list {
     text-align: center;
   }
@@ -234,13 +271,47 @@ content: "";
     border-left: none;
     border-top: 5px solid #ccc;
   }
+  .btn-meet-leaders {
+    margin-bottom: 10px;
+  }
+  .blanced-fund-box .graph-box1 {
+    height: 700px;
+  }
+  /* .fund-img-box ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    padding: 45px 220px;
+    margin: 0;
+  } */
+
+  .fund-img-box ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-title {
+    margin-top: 50px;
+  }
 }
 @media (max-width: 767px) {
+  .nav-content{
+    margin-top: -50px;
+  }
+  .top-content .blanced-fund-btn-list {
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
   .blanced-fund-box .year-list li {
     margin: 0 5px;
   }
   .blanced-fund-box .return-list li {
     margin: 5px;
+    font-size: 12px;
   }
 }
 
@@ -349,29 +420,29 @@ a.btn-invest-now-green{
     background-size: cover!important;
 }
 .btn-tax-free .link-img-box{
-  background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-forms.jpg) no-repeat;
+  background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/taxfree.png) no-repeat;
 }
 .btn-top-10-holdings .link-img-box{
-    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-forms.jpg) no-repeat;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/top10.png) no-repeat;
 }
 .btn-form .link-img-box{
-    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-forms.jpg) no-repeat;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/forms.png) no-repeat;
 }
 .btn-platforms .link-img-box{
-    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-forms.jpg) no-repeat;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/platforms-1.png) no-repeat;
 }
 
 .btn-tax-free .link-img-box:hover{
-    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-tree.jpg) no-repeat;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/taxfree-over.png) no-repeat;
 }
 .btn-top-10-holdings .link-img-box:hover{
-    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-tree.jpg) no-repeat;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/top10-over.png) no-repeat;
 }
 .btn-form .link-img-box:hover{
-    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-tree.jpg) no-repeat;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/forms-over.png) no-repeat;
 }
 .btn-platforms .link-img-box:hover{
-    background: url(https://kagisonew.cotomo.com/assets/images/blanced-fund-tree.jpg) no-repeat;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/platforms-1-over.png) no-repeat;
 }
 
 .btn-green-white{
@@ -396,22 +467,22 @@ a.btn-invest-now-green{
     background: #c8dbe5;
 }
 .btn-investment-approch{
-    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg.jpg) left center no-repeat #80ada7;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch.png) left center no-repeat #80ada7;
 }
 .btn-meet-fund-manager1{
-    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg.jpg) left center no-repeat #80ada7;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-fund-manager.png) left center no-repeat #80ada7;
 }
 .btn-meet-insights{
-    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg.jpg) left center no-repeat #80ada7;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-insights.png) left center no-repeat #80ada7;
 }
 .btn-investment-approch:hover{
-    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg-hover.jpg) left center no-repeat #5b9dbe;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch-over.png) left center no-repeat #5b9dbe;
 }
 .btn-meet-fund-manager1:hover{
-    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg-hover.jpg) left center no-repeat #5b9dbe;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-fund-manager-over.png) left center no-repeat #5b9dbe;
 }
 .btn-meet-insights:hover{
-    background: url(https://kagisonew.cotomo.com/assets/images/meet-leader-btnbg-hover.jpg) left center no-repeat #5b9dbe;
+    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-insights-over.png) left center no-repeat #5b9dbe;
 }
 
 /* --------------- Mobile CSS ---*/
@@ -437,15 +508,27 @@ a.btn-invest-now-green{
     .blanced-fund-box .year-list li{
         margin: 5px 5px;
     }
+     .blanced-fund-box .year-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .blanced-fund-box .graph-box .select-fund {
+      margin: 0!important;
+      padding: 0;
+      display: flex;
+      border: 2px solid #a8c3be;
+      text-transform: uppercase;
+      margin-left: -10px !important;
+      margin-top: 20px !important;
+    }
     .blanced-fund-box .graph-box .select-fund span{
-        border-right: 1px solid #a8c3be;
-        font-size: 16px;
+        border-right: 2px solid #a8c3be;
+        font-size: 13px;
+        padding: 8px;
         border-radius: 0!important;
     }
     .blanced-fund-box .graph-box .select-fund select{
-        margin-left: -10px;
-        margin-top: 20px;
-        font-size: 16px;
+        font-size: 13px;
         border-radius: 0!important;
     }
     .fund-img-box ul li{
@@ -469,5 +552,9 @@ a.btn-invest-now-green{
     }
     .btn-green-white span{
         font-size: 16px;
+    }
+
+    a .btn-meet-leaders {
+      margin-right: 0px;
     }
 }
