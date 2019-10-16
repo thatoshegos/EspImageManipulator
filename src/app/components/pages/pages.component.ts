@@ -37,7 +37,7 @@ export class PagesComponent implements OnInit {
     private modalService: NgbModal,
     private santiser: DomSanitizer,
     public toastr: ToastrManager,
-    
+
   ) {
     console.log('this', this)
     route.params.subscribe(val => {
@@ -80,7 +80,7 @@ export class PagesComponent implements OnInit {
             this.page.annualReport = true;
             this.annualReportUrl = this.page.acf.annual_report[0].report_url;
           }
-          if (slug == "april-2018-quarterly") {
+          if (slug == "up-quarterly") {
             this.page.quaterlyStatus = true;
           }
           if (slug == "our-sharia-board") {
