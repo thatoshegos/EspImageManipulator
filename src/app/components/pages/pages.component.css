@@ -191,6 +191,17 @@ a.padding-10px-all.ul-tab.active {
 .about-leader-img img{
     min-height: 250px;
 }
+
+input.more-btn.text-black {
+  width: 175px;
+}
+.is-invalid {
+  border: 1px solid #aa1118;
+}
+.invalid-feedback {
+  color: #aa1118;
+}
+
 /* --------------- Mobile CSS ---*/
 @media screen and (max-width: 480px) {
     .up-image ul li{

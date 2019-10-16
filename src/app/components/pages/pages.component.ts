@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { DomSanitizer } from "@angular/platform-browser";
 import { WPAPIService } from "../../../services/wpapi.service";
+import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
+import { ToastrManager } from "ng6-toastr-notifications";
 import { Observable } from "rxjs";
 @Component({
   selector: "app-pages",
@@ -9,6 +11,7 @@ import { Observable } from "rxjs";
   styleUrls: ["./pages.component.css"]
 })
 export class PagesComponent implements OnInit {
+  closeResult: string;
   page = null;
   contactUs = false;
   faq;
@@ -18,6 +21,8 @@ export class PagesComponent implements OnInit {
   fundRangeTestStatus;
   getHowToInvestSlider;
   getHomeSlider;
+  model: any = {};
+  response;
 
   activeClickedTab;
   getCurrentTab;
@@ -29,8 +34,12 @@ export class PagesComponent implements OnInit {
     private wpservice: WPAPIService,
     private route: ActivatedRoute,
     private router: Router,
-    private santiser: DomSanitizer
+    private modalService: NgbModal,
+    private santiser: DomSanitizer,
+    public toastr: ToastrManager,
+    
   ) {
+    console.log('this', this)
     route.params.subscribe(val => {
       // console.log(val);
       //console.log(this.router.url);
@@ -620,6 +629,44 @@ export class PagesComponent implements OnInit {
     this.annualReportUrl = year.report_url;
     this.selectedYear = year;
   }
+
+  open(content) {
+    // console.log(this.getMessageStatus);
+    this.modalService
+      .open(content, { ariaLabelledBy: "modal-basic-title" })
+      .result.then(
+        result => {
+          this.closeResult = `Closed with: ${result}`;
+        },
+        reason => {
+          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        }
+      );
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return "by pressing ESC";
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      // this.getMessageStatus = true;
+      return "by clicking on a backdrop";
+    } else {
+      return `with: ${reason}`;
+    }
+  }
+
+  submitForm(f) {
+    this.wpservice.saveContact(this.model).subscribe(data => {
+      this.response = data;
+
+      if (this.response.success) {
+        console.log(this.response);
+        this.toastr.successToastr("Contact save successfully !", "success!");
+        f.resetForm();
+      }
+    });
+  }
+
   ngOnInit() {}
 
   changeSliderData(data, clickedTab) {

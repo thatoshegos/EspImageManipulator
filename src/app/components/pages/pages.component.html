@@ -710,11 +710,77 @@
       </li>
     </ul>
   </div>
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-content1">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          aria-label="Close"
+          (click)="d('Cross click')"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="box-2-heading padding-15px-all">Send us an email</div>
+      </div>
+      <div class="modal-body">
+        <div class="box-2 padding-5px-all margin-40px-bottom">
+          <div class="box-2-content padding-20px-all">
+            <form
+              name="form"
+              #f="ngForm"
+              (ngSubmit)="f.form.valid && submitForm(f)"
+              novalidate
+            >
+              <div>
+                <div id="success-contact-form" class="no-margin-lr"></div>
+                <input
+                  type="text"
+                  name="name"
+                  [(ngModel)]="model.name"
+                  #name="ngModel"
+                  [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
+                  placeholder="Name"
+                  class="bg-light-green no-border medium-input margin-5px-bottom"
+                  required
+                />
+                <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                  <div *ngIf="name.errors.required">Name is required</div>
+                </div>
+                <input
+                  type="emailt"
+                  name="email"
+                  [(ngModel)]="model.email"
+                  #email="ngModel"
+                  [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                  placeholder="E-mail"
+                  class="bg-light-green no-border medium-input margin-5px-bottom"
+                  required
+                  email
+                />
+                <div
+                  *ngIf="f.submitted && email.invalid"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="email.errors.required">Email is required</div>
+                  <div *ngIf="email.errors.email">Invalid email address</div>
+                </div>
+                <div class="padding-30px-top text-center ">
+                  <input type="submit" class="more-btn text-black" value="SEND" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  
   <div class="row margin-40px-top xs-no-margin-top">
     <div class="col-md-12 text-center">
       <div class="suscribe">
-        <a href="#" class="btn-suscribe"><span>SUBSCRIBE</span></a>
-        <a href="#" class="btn-unsuscribe"><span>UNSUBSCRIBE</span></a>
+        <a  (click)="open(content)" class="btn-suscribe"><span>SUBSCRIBE</span></a>
+        <a   (click)="open(content)" class="btn-unsuscribe"><span>UNSUBSCRIBE</span></a>
       </div>
     </div>
   </div>
