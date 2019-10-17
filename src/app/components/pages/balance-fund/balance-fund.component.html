@@ -19,7 +19,9 @@
                 <a href="/individual-investor/our-funds"> OUR FUNDS > </a>
             </li>
             <li>
-                {{getBalancedData.title.rendered.toUpperCase()}}
+                <a href="#">
+                  {{getBalancedData.title.rendered.toUpperCase()}}
+                </a>
             </li>
           </ul>
         </div>
@@ -131,9 +133,7 @@
                     <div>
                       <span>Select Another fund</span>
                     </div>
-                    <div
-                      style="flex: 1 1 auto"
-                              >
+                    <div>
                                 <select class="select" (change)="getFundOnChange($event)">
                                   <option value="">Please select Fund</option>
                                   <option

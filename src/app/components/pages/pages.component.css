@@ -36,7 +36,7 @@
   background-color: darkcyan;
   color: white;
 }
-input[type="text"],
+/* input[type="text"],
 select,
 textarea {
   width: 100%;
@@ -45,7 +45,7 @@ textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-}
+} 
 
 input[type="submit"] {
   background-color: #4caf50;
@@ -55,18 +55,18 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+ input[type="submit"]:hover {
   background-color: #45a049;
-}
+} */
 
 .full-background {
   background: url("/assets/images/hero.jpg");
   min-height: 500px;
   padding: 60px;
 }
-.padding-30px-top {
+/* .padding-30px-top {
   padding: 0px !important;
-}
+} */
 .how-to-invest {
   padding: 0px !important;
 }
@@ -200,6 +200,12 @@ input.more-btn.text-black {
 }
 .invalid-feedback {
   color: #aa1118;
+}
+
+@media screen and (max-width: 1200px) {
+  li.row-end {
+    margin-right: 60px !important;
+  }
 }
 
 /* --------------- Mobile CSS ---*/

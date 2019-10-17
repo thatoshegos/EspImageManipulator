@@ -694,7 +694,7 @@
     data-wow-delay="0.6s"
     data-aos="fade-up"
   >
-    <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12 margin-50px-top">
       <h2 [innerHTML]="page.title.rendered"></h2>
     </div>
   </div>
@@ -729,7 +729,7 @@
             <form
               name="form"
               #f="ngForm"
-              (ngSubmit)="f.form.valid && submitForm(f)"
+              (ngSubmit)="f.form.valid && submitForm(f, type)"
               novalidate
             >
               <div>
@@ -779,8 +779,8 @@
   <div class="row margin-40px-top xs-no-margin-top">
     <div class="col-md-12 text-center">
       <div class="suscribe">
-        <a  (click)="open(content)" class="btn-suscribe"><span>SUBSCRIBE</span></a>
-        <a   (click)="open(content)" class="btn-unsuscribe"><span>UNSUBSCRIBE</span></a>
+        <a  (click)="open(content, 'subscribe')" class="btn-suscribe"><span>SUBSCRIBE</span></a>
+        <a   (click)="open(content, 'unsubscribe')" class="btn-unsuscribe"><span>UNSUBSCRIBE</span></a>
       </div>
     </div>
   </div>

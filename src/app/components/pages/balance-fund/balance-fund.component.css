@@ -91,14 +91,14 @@ content: "";
   padding: 0;
   list-style: none;
   display: flex;
+  justify-content: space-between;
   font-size: 0;
   padding-bottom: 30px;
 }
 .blanced-fund-box .year-list li {
-  flex: 1 0 auto;
   margin: 0 40px 0 0;
   padding: 0;
-  display: inline-block;
+  display: inline-flex;
   font-size: 14px;
 }
 .blanced-fund-box .year-list li:last-child {
@@ -288,12 +288,12 @@ content: "";
 
 @media (min-width: 768px) and (max-width: 991px) {
   .blanced-fund-box h2 {
-   width: 400px;
+   width: 250px;
   }
-  .blanced-fund-box h2 img{
+  /* .blanced-fund-box h2 img{
     margin-right: 63px;
     margin-left: 63px;
-  }
+  } */
   .nav-content{
     margin-top: 15px;
   }
@@ -320,8 +320,10 @@ content: "";
   .btn-meet-leaders {
     margin-bottom: 10px;
   }
-  .blanced-fund-box .graph-box1 {
-    height: 700px;
+  .inner-match-height .graph-box1 {
+    display: flex;
+    flex: 1;
+    height: auto;
   }
   .fund-img-box ul {
     padding: 50px 101px;
@@ -349,12 +351,12 @@ content: "";
     margin-top: -65px;
   }
   .blanced-fund-box h2 {
-    width: 500px;
+    width: 250px;
    }
-  .blanced-fund-box h2 img{
+  /* .blanced-fund-box h2 img{
     margin-right: 63px;
     margin-left: 63px;
-  }
+  } */
   .top-content .blanced-fund-btn-list {
     justify-content: flex-end;
     margin-right: 20px;
@@ -370,19 +372,24 @@ content: "";
 
   .blanced-fund-box .return-list li {
     margin: 5px;
-    font-size: 12px;
-  }
-
-  .blanced-fund-box .graph-box .select-fund span {
-     font-size: 14px;
-     padding: 15px;
   }
   .blanced-fund-box .graph-box .select-fund select {
-    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 
   }
-  .blanced-fund-box .graph-box1 {
-    height: 900px;
+  .blanced-fund-box .graph-box .select-fund span {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+  .inner-match-height .graph-box1 {
+    display: flex;
+    flex: 1;
+    height: auto;
   }
   .fund-img-box ul {
     padding: 50px 220px;
@@ -396,7 +403,7 @@ content: "";
   }
 }
 
-@media (max-width: 512px) {
+/* @media (max-width: 512px) {
   .blanced-fund-box .graph-box .select-fund span {
     font-size: 14px;
     padding: 15px 5px;
@@ -405,14 +412,14 @@ content: "";
  
   margin-right: 20px;
 }
-}
+} */
 
-@media (max-width: 493px) {
+/* @media (max-width: 493px) {
   .blanced-fund-box .graph-box .select-fund span {
     font-size: 14px;
     padding: 10px 5px;
  }
-}
+} */
 
 .fund-img-box {
   margin: 0;
@@ -630,7 +637,6 @@ a.btn-invest-now-green{
     .blanced-fund-box .return-list li {
       margin: 5px;
       flex: 1;
-      font-size: 12px;
     }
     .blanced-fund-box .return-list li:first-child {
       margin-left: 0px;
@@ -649,14 +655,27 @@ a.btn-invest-now-green{
         padding: 8px;
         border-radius: 0!important;
     } */
-    .blanced-fund-box .graph-box .select-fund span {
-      font-size: 14px;
-      padding: 15px 5px;
-   }
-    .blanced-fund-box .graph-box .select-fund select{
-        font-size: 13px;
-        border-radius: 0!important;
+    .blanced-fund-box .graph-box .select-fund select {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+  
     }
+    .blanced-fund-box .graph-box .select-fund span {
+      
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   }
+   
+    /* .blanced-fund-box .graph-box .select-fund select{
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+        border-radius: 0!important;
+    } */
     .fund-img-box ul li{
         float: none;
         text-align: center;
@@ -698,8 +717,11 @@ a.btn-invest-now-green{
   }
 } */
 
-@media (min-width: 320px) and (max-width: 414px) {
-    .nav-content {
+ @media (min-width: 320px) and (max-width: 414px) {
+    .top-content {
+      padding-left: 10px;
+    }
+    /* .nav-content {
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
@@ -736,7 +758,6 @@ a.btn-invest-now-green{
       width: 110px;
       height: 50px;
       margin-top: 0px;
-      /* padding-right: 35px; */
     }
 
     .top-content .blanced-fund-btn-list li a span {
@@ -762,41 +783,116 @@ a.btn-invest-now-green{
       margin: 5px 0px 0px 0px;
     }
 
-    /* .blanced-fund-box .graph-box1 ul.fund-tabs li{
-     margin-right: 20px;
-    } */
-
     .graph-box .return-list {
       display: flex;
       flex-direction: column;
     }
     .graph-box .return-list li {
       margin: 5px 0px 0px 0px;
-    }
-
-    /* .blanced-fund-box .graph-box .select-fund span {
-      width: 85px;
-      font-size: 9px;
-    }
-   
-    .blanced-fund-box .graph-box .select-fund select{
-      font-size: 9px;
-      padding: 5px 0;
-      align-self: flex-start;
     } */
 
     .fund-img-box ul {
       padding: 50px 15px;
     }
 
-    a.btn-meet-faq {
+    /* a.btn-meet-faq {
       margin-left: 0px;
-    }
+    } */
     
 }
 
 @media screen and (max-width: 320px) {
+
+  .nav-content ul {
+    width: 100%;
+  }
+  .top-content {
+    padding-left: 13px;
+  }
+  .top-content h2 {
+    margin-top: 20px;
+    padding: 0px;
+    width: 150px;
+  }
+  .top-content .blanced-fund-btn-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 315px;
+   
+  }
+  .top-content .blanced-fund-btn-list li {
+    margin: 10px 10px 0 12px;
+  }
+
+  .top-content .blanced-fund-btn-list li > a{
+    margin-top: 0;
+    height: 100%;
+    display: block;
+  }
+
+  .top-content .blanced-fund-btn-list li > a > span {
+    height: 100%;
+  }
+
+  .nav-content ul li {
+    display: flex;
+    flex-flow: row;
+    width: 90px;
+    
+  }
+
+  .nav-content ul li > a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: calc(100% - 1px);
+  }
+
   .fund-img-box ul {
     padding: 50px 0px;
   }
-}
+
+  .graph-box .year-list {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .graph-box .year-list li > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .graph-box .year-list li:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .graph-box .year-list li:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .graph-box .return-list {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  .graph-box .return-list li {
+    margin: 5px 0;
+  }
+
+  /* .top-content .blanced-fund-btn-list li:nth-child(6){
+    margin-top: 10px;
+  } */
+  /* .top-content .blanced-fund-btn-list li a {
+    width: 130px;
+    height: 50px;
+    margin-top: 0px;
+  } */
+} 

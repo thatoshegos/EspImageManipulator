@@ -23,6 +23,7 @@ export class PagesComponent implements OnInit {
   getHomeSlider;
   model: any = {};
   response;
+  type = null;
 
   activeClickedTab;
   getCurrentTab;
@@ -630,12 +631,15 @@ export class PagesComponent implements OnInit {
     this.selectedYear = year;
   }
 
-  open(content) {
+  open(content, type) {
+    this.type = type
+    console.log('content', content)
     // console.log(this.getMessageStatus);
     this.modalService
       .open(content, { ariaLabelledBy: "modal-basic-title" })
       .result.then(
         result => {
+          console.log('+++', result)
           this.closeResult = `Closed with: ${result}`;
         },
         reason => {
@@ -654,9 +658,10 @@ export class PagesComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
-
-  submitForm(f) {
-    this.wpservice.saveContact(this.model).subscribe(data => {
+  
+  submitForm(f, type) {
+    console.log('submit', f, this.model, type)
+    this.wpservice.Subscribe(this.model).subscribe(data => {
       this.response = data;
 
       if (this.response.success) {
