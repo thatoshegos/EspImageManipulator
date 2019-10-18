@@ -60,6 +60,9 @@ export class WPAPIService {
   ${this.csvDataEndPoint}${csvUrl}?rand=${new Date().getTime()}`;
     return this.http.get(apiUrl, { responseType: "text" });
   }
+  subscribe(model) {
+    return model
+  }
   saveContact(contact) {
     const httpOptions = {
       headers: new HttpHeaders({

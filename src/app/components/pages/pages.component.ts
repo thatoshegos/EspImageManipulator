@@ -658,10 +658,10 @@ export class PagesComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
-  
+
   submitForm(f, type) {
     console.log('submit', f, this.model, type)
-    this.wpservice.Subscribe(this.model).subscribe(data => {
+    this.wpservice.subscribe(this.model).subscribe(data => {
       this.response = data;
 
       if (this.response.success) {
