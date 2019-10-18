@@ -202,6 +202,217 @@ input.more-btn.text-black {
   color: #aa1118;
 }
 
+.image{
+  position: fixed;
+  right: 0px;
+  top: 600px;
+  width: 40px;
+  z-index: 99;
+  background: #80B7B1;
+  height: 45px;
+}
+
+.image:hover {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #6a9693;
+}
+
+.image:hover .image-arrow-check {
+  height: 45px;
+  width: 40px;
+}
+
+.image-text {
+  display: none;
+}
+
+.image:hover .image-text{
+    position: fixed;
+    right: 40px;
+    top: 600px;
+    width: 165px;
+    height: 45px;
+    z-index: 99;
+    background: #95bcb8;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------- unsubscribe ---*/
+.image-unsubscribe{
+  position: fixed;
+  right: 0px;
+  top: 650px;
+  width: 40px;
+  z-index: 99;
+  background: #80B7B1;
+  height: 45px;
+}
+
+.image-unsubscribe:hover {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #6a9693;
+}
+
+.image-unsubscribe:hover .image-arrow-check-unsubscribe {
+  height: 45px;
+  width: 40px;
+}
+
+.image-text-unsubscribe {
+  display: none;
+}
+
+.image-unsubscribe:hover .image-text-unsubscribe{
+    position: fixed;
+    right: 40px;
+    top: 650px;
+    width: 165px;
+    height: 45px;
+    z-index: 99;
+    background: #95bcb8;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --------------- DOWNLAOD ---*/
+.image-download{
+  position: fixed;
+  right: 0px;
+  top: 700px;
+  width: 40px;
+  z-index: 99;
+  background: #80B7B1;
+  height: 45px;
+}
+
+.image-download:hover {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #6a9693;
+}
+
+.image-download:hover .image-arrow-check-download {
+  height: 45px;
+  width: 40px;
+}
+
+.image-text-download {
+  display: none;
+}
+
+.image-download:hover .image-text-download{
+    position: fixed;
+    right: 40px;
+    top: 700px;
+    width: 165px;
+    height: 45px;
+    z-index: 99;
+    background: #95bcb8;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------- Share ---*/
+.image-share{
+  position: fixed;
+  right: 0px;
+  top: 750px;
+  width: 40px;
+  z-index: 99;
+  background: #80B7B1;
+  height: 45px;
+}
+
+.image-share:hover {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #6a9693;
+}
+
+.image-share:hover .image-arrow-check-share{
+  height: 45px;
+  width: 40px;
+}
+
+.image-text-share {
+  display: none;
+}
+
+.image-share:hover .image-text-share{
+    position: fixed;
+    right: 40px;
+    top: 750px;
+    width: 165px;
+    height: 45px;
+    z-index: 99;
+    background: #95bcb8;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------- Subscribe red ---*/
+.image-subscribe-red{
+  position: fixed;
+  right: 0px;
+  top: 900px;
+  width: 40px;
+  z-index: 99;
+  background: #b30b2e;
+  height: 45px;
+}
+
+.image-subscribe-red:hover {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #b30b2e;
+}
+
+.image-subscribe-red:hover .image-arrow-check-subscribe-red{
+  height: 45px;
+  width: 40px;
+}
+
+.image-text-subscribe-red{
+  display: none;
+}
+
+.image-subscribe-red:hover .image-text-subscribe-red{
+    position: fixed;
+    right: 40px;
+    top: 900px;
+    width: 165px;
+    height: 45px;
+    z-index: 99;
+    background: #e9c2c9;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 @media screen and (max-width: 1200px) {
   li.row-end {
     margin-right: 60px !important;

@@ -90,19 +90,18 @@ content: "";
   /*margin: 0 0 30px 0;*/
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: space-between;
-  font-size: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
   padding-bottom: 30px;
 }
 .blanced-fund-box .year-list li {
-  margin: 0 40px 0 0;
   padding: 0;
-  display: inline-flex;
   font-size: 14px;
 }
 .blanced-fund-box .year-list li:last-child {
   margin-right: 0;
+  grid-column-end: span 2;
 }
 .blanced-fund-box .year-list li a {
   display: block;
@@ -169,6 +168,12 @@ content: "";
   margin: 0!important;
   background-color: transparent;
 }
+
+
+.blanced-fund-box .graph-box .select-fund div:last-of-type {
+  flex: 1;
+} 
+
 .select-funds{padding:0px;border: 2px solid #a8c3be; width: 60%;}
 /* .select {
   appearance:none;
@@ -367,7 +372,7 @@ content: "";
   }
   
   .blanced-fund-box .year-list li {
-    margin: 0 5px;
+    /* margin: 0 5px; */
   }
 
   .blanced-fund-box .return-list li {
@@ -592,6 +597,129 @@ a.btn-invest-now-green{
 }
 
 /* --------------- Mobile CSS ---*/
+
+@media screen and (max-width: 320px) {
+
+  .nav-content ul {
+    width: 100%;
+  }
+  .top-content {
+    padding-left: 13px;
+  }
+  .top-content h2 {
+    margin-top: 20px;
+    padding: 0px;
+    width: 150px;
+  }
+  .top-content .blanced-fund-btn-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 315px;
+   
+  }
+  .top-content .blanced-fund-btn-list li {
+    margin: 10px 10px 0 12px;
+  }
+
+  .top-content .blanced-fund-btn-list li > a{
+    margin-top: 0;
+    height: 100%;
+    display: block;
+  }
+
+  .top-content .blanced-fund-btn-list li > a > span {
+    height: 100%;
+  }
+
+  .nav-content ul li {
+    display: flex;
+    flex-flow: row;
+    width: 90px;
+    
+  }
+
+  .nav-content ul li > a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: calc(100% - 1px);
+  }
+
+  .fund-img-box ul {
+    padding: 50px 0px;
+  }
+
+  .graph-box .year-list {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .graph-box .year-list li > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .graph-box .year-list li:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .graph-box .year-list li:nth-child(even) {
+    margin-right: 0;
+  }
+
+  .graph-box .year-list li:last-of-type {
+    grid-column-end: span 1;
+  }
+
+  .graph-box .return-list {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  .graph-box .return-list li {
+    margin: 5px 0;
+  }
+
+  .graph-box .select-fund {
+    display: flex;
+  }
+
+  .graph-box .select-fund > div {
+    width: 50%;
+  }
+
+  .blanced-fund-box .graph-box .select-fund span,
+  .blanced-fund-box .graph-box .select-fund select {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .bottom-content > a {
+    margin-right: 0;
+  }
+
+  
+
+  /* .top-content .blanced-fund-btn-list li:nth-child(6){
+    margin-top: 10px;
+  } */
+  /* .top-content .blanced-fund-btn-list li a {
+    width: 130px;
+    height: 50px;
+    margin-top: 0px;
+  } */
+} 
+
 @media screen and (max-width: 480px) {
     .nav-content{
       margin-top: -50px;
@@ -620,8 +748,8 @@ a.btn-invest-now-green{
     }
 
     .blanced-fund-box .year-list{
-        display: flex;
-        flex-wrap: wrap;
+        /* display: flex;
+        flex-wrap: wrap; */
     }
     .blanced-fund-box .year-list li{
       flex: 1;
@@ -635,7 +763,7 @@ a.btn-invest-now-green{
       flex-wrap: wrap;
     }
     .blanced-fund-box .return-list li {
-      margin: 5px;
+      /* margin: 5px; */
       flex: 1;
     }
     .blanced-fund-box .return-list li:first-child {
@@ -685,7 +813,7 @@ a.btn-invest-now-green{
         width: 100%!important;
     }
     .fund-img-box ul{
-        padding: 45px;
+        /* padding: 45px; */
     }
     .link-img-box{
         width: 100%;
@@ -717,10 +845,96 @@ a.btn-invest-now-green{
   }
 } */
 
- @media (min-width: 320px) and (max-width: 414px) {
+ @media (min-width: 321px) and (max-width: 480px) {
     .top-content {
-      padding-left: 10px;
+      padding-left: 20px;
     }
+
+    .top-content h2 {
+      margin-top: 20px;
+      padding: 0px;
+      width: 150px;
+    }
+
+    .top-content .blanced-fund-btn-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin: 10px 0;
+      width: 315px;
+     
+    }
+    .top-content .blanced-fund-btn-list li {
+      margin: 10px 10px 0 12px;
+    }
+  
+    .top-content .blanced-fund-btn-list li > a{
+      margin-top: 0;
+      height: 100%;
+      display: block;
+    }
+  
+    .top-content .blanced-fund-btn-list li > a > span {
+      height: 100%;
+    }
+
+    .graph-box .year-list {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .graph-box .year-list li > a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .graph-box .year-list li:nth-child(odd) {
+      margin-left: 0;
+    }
+  
+    .graph-box .year-list li:nth-child(even) {
+      margin-right: 0;
+    }
+
+    .graph-box .year-list li:last-of-type {
+      grid-column-end: span 1;
+    }
+    
+    .graph-box .return-list {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
+  
+    .graph-box .return-list li {
+      margin: 5px 0;
+    }
+  
+    .graph-box .select-fund {
+      display: flex;
+    }
+  
+    .graph-box .select-fund > div {
+      width: 50%;
+    }
+  
+    .blanced-fund-box .graph-box .select-fund span,
+    .blanced-fund-box .graph-box .select-fund select {
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  
+    .bottom-content > a {
+      margin-right: 0;
+    }
+
     /* .nav-content {
       display: inline-block;
       white-space: nowrap;
@@ -801,98 +1015,84 @@ a.btn-invest-now-green{
     
 }
 
-@media screen and (max-width: 320px) {
-
-  .nav-content ul {
-    width: 100%;
-  }
-  .top-content {
-    padding-left: 13px;
-  }
-  .top-content h2 {
-    margin-top: 20px;
-    padding: 0px;
-    width: 150px;
-  }
-  .top-content .blanced-fund-btn-list {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin: 10px 0;
-    width: 315px;
-   
-  }
-  .top-content .blanced-fund-btn-list li {
-    margin: 10px 10px 0 12px;
-  }
-
-  .top-content .blanced-fund-btn-list li > a{
-    margin-top: 0;
-    height: 100%;
-    display: block;
-  }
-
-  .top-content .blanced-fund-btn-list li > a > span {
-    height: 100%;
-  }
-
-  .nav-content ul li {
-    display: flex;
-    flex-flow: row;
-    width: 90px;
-    
-  }
-
-  .nav-content ul li > a {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    width: calc(100% - 1px);
-  }
-
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .fund-img-box ul {
-    padding: 50px 0px;
-  }
-
-  .graph-box .year-list {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .graph-box .year-list li > a {
-    width: 100%;
-    height: 100%;
     display: flex;
-    align-items: center;
+    flex-flow: column;
     justify-content: center;
+    align-items: center;
+    padding: 30px 0;
   }
 
-  .graph-box .year-list li:nth-child(odd) {
-    margin-left: 0;
+  .blanced-fund-box .graph-box .select-fund div:first-of-type {
+    width: 35%;
   }
 
-  .graph-box .year-list li:nth-child(even) {
-    margin-right: 0;
+  .blanced-fund-box .graph-box .select-fund div:first-of-type > span {
+    width: 100%;
+  }
+
+  .blanced-fund-box .graph-box .select-fund div:last-of-type {
+    flex: 1;
+  }
+
+  .graph-box {
+    border-top: 5px solid #e7e7e7;
   }
 
   .graph-box .return-list {
     display: flex;
-    flex-flow: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0 20px 0;
   }
 
   .graph-box .return-list li {
-    margin: 5px 0;
+    width: 90px;
+    margin: 0 5px 0 0;
   }
 
-  /* .top-content .blanced-fund-btn-list li:nth-child(6){
-    margin-top: 10px;
-  } */
-  /* .top-content .blanced-fund-btn-list li a {
-    width: 130px;
-    height: 50px;
-    margin-top: 0px;
-  } */
-} 
+  .graph-box .return-list li > a{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .graph-box .year-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .graph-box .year-list li {
+    height: 100%;
+    display: flex;
+  }
+
+  .graph-box .year-list li a {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .graph-box .year-list li:last-of-type {
+    grid-column-end: span 1;
+  }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .blanced-fund-box .graph-box .select-fund div:first-of-type {
+    width: 35%;
+  }
+
+  .blanced-fund-box .graph-box .select-fund div:first-of-type > span {
+    width: 100%;
+  }
+
+  .blanced-fund-box .graph-box .select-fund div:last-of-type {
+    flex: 1;
+  }
+}
+
+
