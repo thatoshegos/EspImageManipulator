@@ -15,7 +15,7 @@ export class UpQuaterlyLibraryComponent implements OnInit {
   constructor(private wpservice: WPAPIService) {}
 
   ngOnInit() {
-    this.wpservice.getCategory("?parent=121").subscribe(categories => {
+    this.wpservice.getCategory("?parent=31").subscribe(categories => {
       this.categories = categories;
       this.categories.sort((a, b) => b.name - a.name);
       this.selectedItem = categories[0];
