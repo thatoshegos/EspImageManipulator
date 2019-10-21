@@ -85,18 +85,40 @@ ul.fund-tabs li.current {
 }
 .latest ul li {
   display: inline-flex;
-  flex: 1 0 auto;
+  flex: 1;
   padding: 6px;
   background-color: #c6dddb;
 }
+
+.latest ul li > div.month-start{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
 /* .right-li {
   margin-right: 2px;
 } */
 .amt {
   color: red;
+  margin-left: 3px;
   font-family: inherit;
 }
 /*.more-btn {
   padding: 7px 59px 7px 20px !important;
 }*/
 
+@media screen and (max-width: 476px) {
+  .latest ul li > div.month-start{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 320px) {
+  .latest ul {
+    width: 230px;
+  }
+}

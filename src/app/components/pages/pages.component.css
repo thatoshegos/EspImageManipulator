@@ -202,216 +202,86 @@ input.more-btn.text-black {
   color: #aa1118;
 }
 
-.image{
+/* -----------right fixed icons------*/
+.image, .image-unsubscribe, .image-download, .image-share, .image-subscribe-red {
   position: fixed;
   right: 0px;
-  top: 600px;
+  bottom: 400px;
   width: 40px;
   z-index: 99;
   background: #80B7B1;
   height: 45px;
 }
 
-.image:hover {
-  width: 200px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: #6a9693;
-}
-
-.image:hover .image-arrow-check {
-  height: 45px;
-  width: 40px;
-}
-
-.image-text {
-  display: none;
-}
-
-.image:hover .image-text{
-    position: fixed;
-    right: 40px;
-    top: 600px;
-    width: 165px;
-    height: 45px;
-    z-index: 99;
-    background: #95bcb8;
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* --------------- unsubscribe ---*/
 .image-unsubscribe{
-  position: fixed;
-  right: 0px;
-  top: 650px;
-  width: 40px;
-  z-index: 99;
-  background: #80B7B1;
-  height: 45px;
+   bottom: 350px;
+}
+.image-download{
+  bottom: 300px;
 }
 
-.image-unsubscribe:hover {
+.image-share{
+  bottom: 250px;
+}
+
+.image-subscribe-red{
+  background: #b30b2e;
+  bottom: 100px;
+}
+
+.image:hover, .image-unsubscribe:hover, .image-download:hover, .image-share:hover, .image-subscribe-red:hover{
   width: 200px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background: #6a9693;
+} 
+
+.image-subscribe-red:hover{
+  background: #b30b2e;
 }
 
-.image-unsubscribe:hover .image-arrow-check-unsubscribe {
+.image:hover .image-arrow-check, .image-unsubscribe:hover .image-arrow-check-unsubscribe, .image-download:hover .image-arrow-check-download, .image-share:hover .image-arrow-check-share, .image-subscribe-red:hover .image-arrow-check-subscribe-red {
   height: 45px;
   width: 40px;
 }
 
-.image-text-unsubscribe {
+.image-text, .image-text-unsubscribe, .image-text-download, .image-text-share, .image-text-subscribe-red {
   display: none;
+}
+
+.image:hover .image-text, .image-unsubscribe:hover .image-text-unsubscribe, .image-download:hover .image-text-download, .image-share:hover .image-text-share, .image-subscribe-red:hover .image-text-subscribe-red {
+  position: fixed;
+  right: 40px;
+  bottom: 400px;
+  width: 165px;
+  height: 45px;
+  z-index: 99;
+  background: #95bcb8;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-unsubscribe:hover .image-text-unsubscribe{
-    position: fixed;
-    right: 40px;
-    top: 650px;
-    width: 165px;
-    height: 45px;
-    z-index: 99;
-    background: #95bcb8;
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  bottom: 350px;
 }
-
-
-/* --------------- DOWNLAOD ---*/
-.image-download{
-  position: fixed;
-  right: 0px;
-  top: 700px;
-  width: 40px;
-  z-index: 99;
-  background: #80B7B1;
-  height: 45px;
-}
-
-.image-download:hover {
-  width: 200px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: #6a9693;
-}
-
-.image-download:hover .image-arrow-check-download {
-  height: 45px;
-  width: 40px;
-}
-
-.image-text-download {
-  display: none;
-}
-
 .image-download:hover .image-text-download{
-    position: fixed;
-    right: 40px;
-    top: 700px;
-    width: 165px;
-    height: 45px;
-    z-index: 99;
-    background: #95bcb8;
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  bottom: 300px;
 }
-
-/* --------------- Share ---*/
-.image-share{
-  position: fixed;
-  right: 0px;
-  top: 750px;
-  width: 40px;
-  z-index: 99;
-  background: #80B7B1;
-  height: 45px;
-}
-
-.image-share:hover {
-  width: 200px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: #6a9693;
-}
-
-.image-share:hover .image-arrow-check-share{
-  height: 45px;
-  width: 40px;
-}
-
-.image-text-share {
-  display: none;
-}
-
 .image-share:hover .image-text-share{
-    position: fixed;
-    right: 40px;
-    top: 750px;
-    width: 165px;
-    height: 45px;
-    z-index: 99;
-    background: #95bcb8;
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  bottom: 250px
 }
-
-/* --------------- Subscribe red ---*/
-.image-subscribe-red{
-  position: fixed;
-  right: 0px;
-  top: 900px;
-  width: 40px;
-  z-index: 99;
-  background: #b30b2e;
-  height: 45px;
-}
-
-.image-subscribe-red:hover {
-  width: 200px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: #b30b2e;
-}
-
-.image-subscribe-red:hover .image-arrow-check-subscribe-red{
-  height: 45px;
-  width: 40px;
-}
-
-.image-text-subscribe-red{
-  display: none;
-}
-
 .image-subscribe-red:hover .image-text-subscribe-red{
-    position: fixed;
-    right: 40px;
-    top: 900px;
-    width: 165px;
-    height: 45px;
-    z-index: 99;
-    background: #e9c2c9;
-    display: block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: #e9c2c9;
+  bottom: 100px
 }
 
+a.link:hover {
+  color: #656565;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 1200px) {
   li.row-end {

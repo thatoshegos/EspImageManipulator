@@ -696,7 +696,7 @@
       </a>
     <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
     <div class="image-text"> 
-      <a class="link">SUBCSRIBE</a>
+      <a  (click)="open(content, 'subscribe')" class="link">SUBCSRIBE</a>
     </div>
   </div>
 
@@ -706,7 +706,7 @@
       </a>
     <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
     <div class="image-text-unsubscribe"> 
-      <a class="link">UNSUBSCRIBE</a>
+      <a (click)="open(content, 'unsubscribe')" class="link">UNSUBSCRIBE</a>
     </div>
   </div>
 
@@ -720,6 +720,8 @@
       <a class="link">DOWNLOAD</a>
     </div>
   </div>
+
+  <!-- [href]="getApiData.acf.prices"  -->
 
   <div class="image-share">
       <a href="javascript:void(0)" class="btn-subcribe">

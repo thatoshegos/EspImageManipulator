@@ -329,6 +329,7 @@ content: "";
     display: flex;
     flex: 1;
     height: auto;
+    justify-content: center;
   }
   .fund-img-box ul {
     padding: 50px 101px;
@@ -395,6 +396,7 @@ content: "";
     display: flex;
     flex: 1;
     height: auto;
+    justify-content: center;
   }
   .fund-img-box ul {
     padding: 50px 220px;
