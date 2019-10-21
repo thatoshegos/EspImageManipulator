@@ -45,7 +45,7 @@ export class BreadCrumbComponent implements OnInit {
         // menu[2];
       } else {
         this.breadCrumb =
-          parent[0] + " " + parent[1] + " > " + menu[0] + " " + menu[1];
+          parent[0] + " " + (parent[1] || '') + " > " + menu[0] + " " + (menu[1] || '');
       }
     } else {
       this.breadCrumb = menu[0] + " " + menu[1];
