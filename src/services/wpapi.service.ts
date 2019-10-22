@@ -1,22 +1,25 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
-const domainPatch = "https://dev.omangom.com/kagiso/wordpress"
+// for the live server with local wordpress running, following var ("domainPrefix") can be set to empty string
+// adding domain here allows devs to do local development without installing wp and lemp/lamp server locally
+const domainPrefix = "";//"http://kagisonew.cotomo.com";
+const wpPrefix = "/cms";
 
 @Injectable({
   providedIn: "root"
 })
 
 export class WPAPIService {
-  endpoints = "/wp-json/wp/v2";
-  menuEndPoints = "/wp-json/menus/v1";
-  pagesEndPoint = "/wp-json/acf/v3";
-  postEndpoint = "/wp-json/wp/v2";
+  endpoints = domainPrefix + wpPrefix + "/wp-json/wp/v2";
+  menuEndPoints = domainPrefix + wpPrefix + "/wp-json/menus/v1";
+  pagesEndPoint = domainPrefix + wpPrefix + "/wp-json/acf/v3";
+  postEndpoint = domainPrefix + wpPrefix + "/wp-json/wp/v2";
   csvDataEndPoint =
-    domainPatch + "/?custom_action=get_chart_data&csv_url=";
+    domainPrefix + wpPrefix + "/?custom_action=get_chart_data&csv_url=";
   emailSendUrl =
-    domainPatch + "/?custom_action=save_contact";
-  postByslug = "/wp-json/wp/v2/posts";
+    domainPrefix + wpPrefix + "/?custom_action=save_contact";
+  postByslug = domainPrefix + wpPrefix + "/wp-json/wp/v2/posts";
   constructor(private http: HttpClient) {}
   getCategory(query) {
     return this.http.get(`${this.endpoints}/categories/${query}`);
