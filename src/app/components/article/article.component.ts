@@ -7,7 +7,9 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class ArticleComponent implements OnInit {
   @Input() getArticleData;
-  constructor() {}
+  constructor() {
+    console.log('this', this.getArticleData)
+  }
 
   ngOnInit() {}
 }

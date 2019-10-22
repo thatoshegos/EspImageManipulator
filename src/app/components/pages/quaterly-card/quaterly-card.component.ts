@@ -7,7 +7,9 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class QuaterlyCardComponent implements OnInit {
   @Input() quaterlyData;
-  constructor() {}
+  constructor() {
+    console.log('this1', this)
+  }
 
   ngOnInit() {
     console.log(this.quaterlyData);

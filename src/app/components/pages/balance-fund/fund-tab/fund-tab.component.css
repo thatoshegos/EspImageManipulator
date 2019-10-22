@@ -96,6 +96,7 @@ ul.fund-tabs li.current {
   align-items: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 
@@ -110,6 +111,11 @@ ul.fund-tabs li.current {
 /*.more-btn {
   padding: 7px 59px 7px 20px !important;
 }*/
+@media (max-width: 320px) {
+  .latest ul {
+    width: 230px;
+  }
+}
 
 @media screen and (max-width: 476px) {
   .latest ul li > div.month-start{
@@ -117,8 +123,8 @@ ul.fund-tabs li.current {
   }
 }
 
-@media (max-width: 320px) {
-  .latest ul {
-    width: 230px;
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  .latest ul li > div.month-start {
+    flex-flow: row;
   }
 }

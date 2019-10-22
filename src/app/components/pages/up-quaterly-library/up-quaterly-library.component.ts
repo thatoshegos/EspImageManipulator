@@ -12,6 +12,7 @@ export class UpQuaterlyLibraryComponent implements OnInit {
   imagePosts;
   currentSubCate;
   isfirst = false;
+  loading = false;
   constructor(private wpservice: WPAPIService) {}
 
   ngOnInit() {
@@ -22,8 +23,9 @@ export class UpQuaterlyLibraryComponent implements OnInit {
       this.wpservice
         .getQuaterlyImagePostFromCategory(`?categories=${this.selectedItem.id}`)
         .subscribe(imagePost => {
+          this.loading = false;
           this.imagePosts = imagePost;
-          console.log(this.imagePosts);
+          console.log("image", this.imagePosts);
           this.isfirst = true;
           this.currentSubCate = this.selectedItem;
         });
@@ -32,6 +34,7 @@ export class UpQuaterlyLibraryComponent implements OnInit {
     // console.log(this.selectedItem);
   }
   getYearPost(category, event, toggle) {
+    this.loading = true;
     if (this.currentSubCate) {
       if (category == this.currentSubCate) {
         this.isfirst = !toggle;
@@ -47,6 +50,7 @@ export class UpQuaterlyLibraryComponent implements OnInit {
     this.wpservice
       .getQuaterlyImagePostFromCategory(`?categories=${category.id}`)
       .subscribe(imagePost => {
+        this.loading = false;
         this.imagePosts = imagePost;
         console.log(this.imagePosts);
       });

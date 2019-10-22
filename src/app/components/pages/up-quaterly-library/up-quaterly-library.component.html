@@ -52,13 +52,22 @@
                   category == currentSubCate && isfirst ? 'in' : 'none'
                 "
               >
+              
                 <div class="panel-body bg-white">
-                  <div class="repeat-loop">
+                  <div class="repeat-loop" *ngIf="!loading">
                     <app-up-quaterly-image-grid
                       [getImages]="imagePosts"
                     ></app-up-quaterly-image-grid>
                   </div>
-
+                  <!-- <div class="loading" *ngIf="loading">
+                    Loading up quaterly library images ...
+                  </div> -->
+                  <div class="loading" *ngIf="loading">
+                    <div class="spinner-border">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                  
                   <!-- {{ faq.answer_label }} -->
                 </div>
               </div>

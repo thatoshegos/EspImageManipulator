@@ -690,58 +690,7 @@
 <!---Quaterly Status-->
 <div class="container xs-margin-50px-top" *ngIf="page && page.quaterlyStatus">
 
-  <div class="image">
-      <a href="javascript:void(0)" class="btn-subcribe">
-        <img class="image-arrow-check" src="assets/images/buttons-new/download.png"/>
-      </a>
-    <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
-    <div class="image-text"> 
-      <a  (click)="open(content, 'subscribe')" class="link">SUBCSRIBE</a>
-    </div>
-  </div>
-
-  <div class="image-unsubscribe">
-      <a href="javascript:void(0)" class="btn-subcribe">
-        <img class="image-arrow-check-unsubscribe" src="assets/images/buttons-new/download.png"/>
-      </a>
-    <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
-    <div class="image-text-unsubscribe"> 
-      <a (click)="open(content, 'unsubscribe')" class="link">UNSUBSCRIBE</a>
-    </div>
-  </div>
-
-
-  <div class="image-download">
-      <a href="javascript:void(0)" class="btn-subcribe">
-        <img class="image-arrow-check-share" src="assets/images/buttons-new/download.png"/>
-      </a>
-    <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
-    <div class="image-text-download"> 
-      <a class="link">DOWNLOAD</a>
-    </div>
-  </div>
-
-  <!-- [href]="getApiData.acf.prices"  -->
-
-  <div class="image-share">
-      <a href="javascript:void(0)" class="btn-subcribe">
-        <img class="image-arrow-check-share" src="assets/images/buttons-new/download.png"/>
-      </a>
-    <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
-    <div class="image-text-share"> 
-      <a class="link">SHARE</a>
-    </div>
-  </div>
-
-  <div class="image-subscribe-red">
-      <a href="javascript:void(0)" class="btn-subcribe">
-        <img class="image-arrow-check-subscribe-red" src="assets/images/buttons-new/download.png"/>
-      </a>
-    <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
-    <div class="image-text-subscribe-red"> 
-      <a class="link">SUBSCRIBE</a>
-    </div>
-  </div>
+  
   <!-- <div
     class="btn-subscribe"
     *ngIf="getMessageStatus"
@@ -1327,14 +1276,127 @@
 <!-- Article-detail-page -->
 
 <div class="article-components margin-30px-bottom margin-60px-top padding-60px-top" *ngIf="page && page.articleStatus" >
-   
-        <div class="col-md-8 bread-crumb-about-us-home">
-            <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
-        </div> 
-   
+
+    <div class="image">
+        <a href="javascript:void(0)" class="btn-subcribe">
+          <img class="image-arrow-check" src="assets/images/subscribe-1.png"/>
+        </a>
+      <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
+      <div class="image-text"> 
+        <a  (click)="open(content, 'subscribe')" class="link">SUBCSRIBE</a>
+      </div>
+    </div>
+  
+    <div class="image-unsubscribe">
+        <a href="javascript:void(0)" class="btn-subcribe">
+          <img class="image-arrow-check-unsubscribe" src="assets/images/unsubscribe-1.png"/>
+        </a>
+      <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
+      <div class="image-text-unsubscribe"> 
+        <a (click)="open(content, 'unsubscribe')" class="link">UNSUBSCRIBE</a>
+      </div>
+    </div>
+  
+  
+    <div class="image-download">
+        <a href="javascript:void(0)" class="btn-subcribe">
+          <img class="image-arrow-check-download" src="assets/images/download-1.png"/>
+        </a>
+      <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
+      <div class="image-text-download"> 
+        <a class="link">DOWNLOAD</a>
+      </div>
+    </div>
+  
+    <!-- [href]="getApiData.acf.prices"  -->
+  
+    <div class="image-share">
+        <a href="javascript:void(0)" class="btn-subcribe">
+          <img class="image-arrow-check-share" src="assets/images/share.png"/>
+        </a>
+      <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
+      <div class="image-text-share"> 
+        <a class="link">SHARE</a>
+      </div>
+    </div>
+
+
+    <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-content1">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              (click)="d('Cross click')"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="box-2-heading padding-15px-all">Send us an email</div>
+          </div>
+          <div class="modal-body">
+            <div class="box-2 padding-5px-all margin-40px-bottom">
+              <div class="box-2-content padding-20px-all">
+                <form
+                  name="form"
+                  #f="ngForm"
+                  (ngSubmit)="f.form.valid && submitForm(f, type)"
+                  novalidate
+                >
+                  <div>
+                    <div id="success-contact-form" class="no-margin-lr"></div>
+                    <input
+                      type="text"
+                      name="name"
+                      [(ngModel)]="model.name"
+                      #name="ngModel"
+                      [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
+                      placeholder="Name"
+                      class="bg-light-green no-border medium-input margin-5px-bottom"
+                      required
+                    />
+                    <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                      <div *ngIf="name.errors.required">Name is required</div>
+                    </div>
+                    <input
+                      type="emailt"
+                      name="email"
+                      [(ngModel)]="model.email"
+                      #email="ngModel"
+                      [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                      placeholder="E-mail"
+                      class="bg-light-green no-border medium-input margin-5px-bottom"
+                      required
+                      email
+                    />
+                    <div
+                      *ngIf="f.submitted && email.invalid"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="email.errors.required">Email is required</div>
+                      <div *ngIf="email.errors.email">Invalid email address</div>
+                    </div>
+                    <div class="padding-30px-top text-center ">
+                      <input type="submit" class="more-btn text-black" value="SEND" />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+  
+    <!-- <div style="background: red; height: 500px; margin-top: -10px; position: relative;"></div> -->
+  
+    <div class="col-md-8 bread-crumb-about-us-home">
+        <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
+    </div> 
+  
     <div class="container">
-        <div class="article" *ngIf="page && page.articleStatus" style="margin-top:30px;">
-          <app-article [getArticleData]="page[0]"></app-article>
-       </div>
+      <div class="article" *ngIf="page && page.articleStatus" style="margin-top:30px;">
+        <app-article [getArticleData]="page[0]"></app-article>
+    </div>
+
       </div>
 </div>

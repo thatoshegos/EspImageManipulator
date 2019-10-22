@@ -203,10 +203,10 @@ input.more-btn.text-black {
 }
 
 /* -----------right fixed icons------*/
-.image, .image-unsubscribe, .image-download, .image-share, .image-subscribe-red {
+.image, .image-unsubscribe, .image-download, .image-share{
   position: fixed;
   right: 0px;
-  bottom: 400px;
+  bottom: 250px;
   width: 40px;
   z-index: 99;
   background: #80B7B1;
@@ -214,50 +214,45 @@ input.more-btn.text-black {
 }
 
 .image-unsubscribe{
-   bottom: 350px;
+   bottom: 200px;
 }
 .image-download{
-  bottom: 300px;
+  bottom: 150px;
 }
 
 .image-share{
-  bottom: 250px;
-}
-
-.image-subscribe-red{
-  background: #b30b2e;
   bottom: 100px;
 }
 
-.image:hover, .image-unsubscribe:hover, .image-download:hover, .image-share:hover, .image-subscribe-red:hover{
+.image:hover, .image-unsubscribe:hover, .image-download:hover, .image-share:hover{
   width: 200px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background: #6a9693;
+  background: #b30b2e;
 } 
 
 .image-subscribe-red:hover{
-  background: #b30b2e;
+  background: #e9c2c9;
 }
 
-.image:hover .image-arrow-check, .image-unsubscribe:hover .image-arrow-check-unsubscribe, .image-download:hover .image-arrow-check-download, .image-share:hover .image-arrow-check-share, .image-subscribe-red:hover .image-arrow-check-subscribe-red {
+.image:hover .image-arrow-check, .image-unsubscribe:hover .image-arrow-check-unsubscribe, .image-download:hover .image-arrow-check-download, .image-share:hover .image-arrow-check-share {
   height: 45px;
   width: 40px;
 }
 
-.image-text, .image-text-unsubscribe, .image-text-download, .image-text-share, .image-text-subscribe-red {
+.image-text, .image-text-unsubscribe, .image-text-download, .image-text-share {
   display: none;
 }
 
-.image:hover .image-text, .image-unsubscribe:hover .image-text-unsubscribe, .image-download:hover .image-text-download, .image-share:hover .image-text-share, .image-subscribe-red:hover .image-text-subscribe-red {
+.image:hover .image-text, .image-unsubscribe:hover .image-text-unsubscribe, .image-download:hover .image-text-download, .image-share:hover .image-text-share{
   position: fixed;
   right: 40px;
-  bottom: 400px;
+  bottom: 250px;
   width: 165px;
   height: 45px;
   z-index: 99;
-  background: #95bcb8;
+  background: #e9c2c9;
   display: block;
   display: flex;
   align-items: center;
@@ -265,17 +260,13 @@ input.more-btn.text-black {
 }
 
 .image-unsubscribe:hover .image-text-unsubscribe{
-  bottom: 350px;
+  bottom: 200px;
 }
 .image-download:hover .image-text-download{
-  bottom: 300px;
+  bottom:150px;
 }
 .image-share:hover .image-text-share{
-  bottom: 250px
-}
-.image-subscribe-red:hover .image-text-subscribe-red{
-  background: #e9c2c9;
-  bottom: 100px
+  bottom: 100px;
 }
 
 a.link:hover {

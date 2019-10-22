@@ -4035,7 +4035,7 @@ a.btn-our-fund-inst span {
 .right-fixed-link {
     position: fixed;
     right: 0px;
-    top: 350px;
+    bottom: 400px;
     width: 70px;
     z-index: 99;
 }
@@ -4047,7 +4047,7 @@ a.btn-our-fund-inst span {
 .btn-leave-message{
     position: fixed;
     right: -200px;
-    top: 412px;
+    bottom: 410px;
     height: 62px;
     width: 300px;
     background: url(../images/leave-msa.jpg) no-repeat right 0;

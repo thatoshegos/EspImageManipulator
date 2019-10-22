@@ -1,0 +1,22 @@
+.top-content {
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.top-content h2 {
+    padding: 0px;
+    text-align: left;
+    margin-left: 100px;
+
+  }
+  .top-content p {
+    font-style: italic;
+    margin-right: 30px;
+   }
+
+.content {
+    display: flex;
+    margin-bottom: 5px;
+} 

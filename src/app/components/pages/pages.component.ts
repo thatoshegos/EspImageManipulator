@@ -114,11 +114,11 @@ export class PagesComponent implements OnInit {
           }
           if (currentUrl.parent == "article") {
             // this.page.articleStatus = true;
-            // console.log(this.page);
+            // console.log("++++++", slug);
             this.wpservice.getPostBySlug(slug).subscribe(post => {
               this.page = post;
-			     this.page.articleStatus = true;
-             // console.log(this.page);
+              this.page.articleStatus = true;
+              // console.log(this.page);
             });
           }
           if (slug == "new-to-investing") {
