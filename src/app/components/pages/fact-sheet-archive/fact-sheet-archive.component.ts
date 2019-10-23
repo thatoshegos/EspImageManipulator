@@ -19,7 +19,7 @@ export class FactSheetArchiveComponent implements OnInit {
 
   ngOnInit() {
     this.wpservice
-      .getCategory("?parent=127&per_page=20")
+      .getCategory("?parent=6&per_page=20")
       .subscribe(pcategories => {
         this.getParentCategory = pcategories;
 
