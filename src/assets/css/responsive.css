@@ -1574,7 +1574,7 @@
     header .sidebar-part2 nav.navbar.bootsnav ul > li > a > .fas { top: -4px; }
     nav.navbar .container-fluid { padding-left: 24px; padding-right: 24px;}
     .header-with-topbar .navbar-top {top: 0px}
-    .header-with-topbar .top-nav{display: none;}
+    .header-with-topbar .top-nav, .header-with-topbar .bottom-nav{display: none;}
     #search-header {width: 75%}
 
     /* sidebar nav style 1 */

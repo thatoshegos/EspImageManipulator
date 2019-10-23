@@ -79,6 +79,29 @@ export class HeaderComponent implements OnInit {
       display: true
     }
   ];
+  mobileChildrenMenu = [
+    {
+      name: "ABOUT US",
+      slug: "about-us",
+      parent: "individual-investor",
+      id: 1,
+      display: true
+    },
+    {
+      name: "INSIGHTS",
+      slug: "insights",
+      parent: "individual-investor",
+      id: 2,
+      display: true
+    },
+    {
+      name: "CONTACT US",
+      slug: "contact-us",
+      parent: "individual-investor",
+      id: 3,
+      display: true
+    }
+  ];
   parentSlug;
 
   /**
@@ -219,17 +242,17 @@ export class HeaderComponent implements OnInit {
     this.route.events.subscribe(val => {
       //console.log(this.route.url);
 
-      if (this.route.url.includes("institutional-investor")) {
-        this.childrenMenu[0]["name"] = "INVESTMENT APPROACH";
-        this.childrenMenu[0]["slug"] = "investment-approach";
-        this.childrenMenu[0]["display"] = true;
-        this.spacialClass = "is-institutional-menu";
-      } else {
-        this.spacialClass = "";
-        this.childrenMenu[0]["name"] = "INVEST WITH US";
-        this.childrenMenu[0]["slug"] = "invest-with-us";
-        this.childrenMenu[0]["display"] = true;
-      }
+      // if (this.route.url.includes("institutional-investor")) {
+      //   this.childrenMenu[0]["name"] = "INVESTMENT APPROACH";
+      //   this.childrenMenu[0]["slug"] = "investment-approach";
+      //   this.childrenMenu[0]["display"] = true;
+      //   this.spacialClass = "is-institutional-menu";
+      // } else {
+      //   this.spacialClass = "";
+      //   this.childrenMenu[0]["name"] = "INVEST WITH US";
+      //   this.childrenMenu[0]["slug"] = "invest-with-us";
+      //   this.childrenMenu[0]["display"] = true;
+      // }
       if (val instanceof RoutesRecognized) {
         var strIdurl = val.state.root.firstChild.routeConfig.path;
         var strIdArr = strIdurl.split("/");

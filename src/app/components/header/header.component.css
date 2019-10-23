@@ -11,3 +11,100 @@
   margin-top: -1px;
   margin-right: 5px;
 }
+
+.mobile-menu {
+  display: none;
+}
+
+.navbar-collapse > ul > li.individual-investor {
+  display: none;
+}
+
+.navbar-collapse > ul > li.investor-login-link {
+  display: none;
+}
+
+@media (max-width: 991px) {
+
+  .navbar-collapse > ul > li.desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .navbar-collapse {
+    right: 0; 
+    padding:0; 
+    position: absolute; 
+    top: 100%; 
+    width: 100vw;
+    /* min-width: 250px; */
+    overflow-y: hidden;
+  }
+
+  .navbar-collapse > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #fff;
+    border-bottom: 1px solid #c9c9c9;
+  }
+
+  .navbar-collapse > ul > li > a {
+    padding: 15px!important;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .navbar-nav li > a, nav.navbar.navbar-default ul.nav > li > a, header .navbar-nav li > a {
+    color: #5d5d5d;
+  }
+  .header nav.navbar-default, nav.navbar.bootsnav {
+    padding: 0;
+  }
+
+  nav .accordion-menu {
+    padding: 26px 15px 26px 15px!important;
+  }
+
+  .navbar-collapse > ul > li.individual-investor {
+    display: flex;
+    flex-flow: column;
+    background: #323232;
+  }
+
+  .navbar-collapse > ul > li.individual-investor > .individual-investor-inner {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+  }
+
+  /* .navbar-collapse > ul > li.individual-investor > .individual-investor-inner > a.invest-with-us-link,
+  .navbar-collapse > ul > li.individual-investor > .individual-investor-inner > a.our-funds-link,
+  .navbar-collapse > ul > li.individual-investor > .individual-investor-inner > a.individual-investor-link {
+    padding: 0;
+  } */
+  .navbar-collapse > ul > li.individual-investor > .individual-investor-inner > a.invest-with-us-link {
+    padding: 5px 15px 0px 50px!important;
+    color: #868686;
+  }
+  
+  
+  .navbar-collapse > ul > li.individual-investor > .individual-investor-inner > a.individual-investor-link {
+    padding: 15px 15px 0 15px!important;
+    color: #b2b2b2;
+  }
+  
+  .navbar-collapse > ul > li.individual-investor > .individual-investor-inner > a.our-funds-link {
+    padding: 5px 15px 15px 50px!important;
+    color: #868686;
+  }
+
+  .navbar-collapse > ul > li.investor-login-link {
+    background: #b1c8c6;
+    display: flex;
+  }
+
+}

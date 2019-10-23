@@ -24,7 +24,7 @@
       </ng-container> -->
 
       <!-- start logo -->
-      <div class="row">
+      <div class="row" style='margin-left: 0; margin-right: 0;'>
         <div class="col-md-3 col-xs-7 text-center">
           <a
             routerLink="/"
@@ -97,7 +97,52 @@
                   *ngIf="menuItems.secondry"
                 >
                   <!-- start menu item -->
-                  <li *ngFor="let menu of childrenMenu">
+                  <li class="individual-investor">
+                    <div class="individual-investor-inner">
+                      <a href="/individual-investor" class="individual-investor-link">
+                        INDIVIDUAL INVESTOR
+                      </a>
+                    </div>
+                    <div class="individual-investor-inner">
+                      <a href="/individual-investor/invest-with-us" class="invest-with-us-link">
+                        > Invest with us
+                      </a>
+                      <a href="/individual-investor/our-funds" class="our-funds-link">
+                        > Our funds
+                      </a>
+                    </div>
+                  </li>
+                  <li class="individual-investor">
+                      <div class="individual-investor-inner">
+                        <a href="/sharia-investor" class="individual-investor-link">
+                          SHARIA INVESTOR
+                        </a>
+                      </div>
+                      <div class="individual-investor-inner">
+                        <a href="/sharia-investor/invest-with-us" class="invest-with-us-link">
+                          > Invest with us
+                        </a>
+                        <a href="/sharia-investor/our-funds" class="our-funds-link">
+                          > Our funds
+                        </a>
+                      </div>
+                    </li>
+                    <li class="individual-investor">
+                        <div class="individual-investor-inner">
+                          <a href="/institutional-investor" class="individual-investor-link">
+                            INSTITUTIONAL INVESTOR
+                          </a>
+                        </div>
+                        <div class="individual-investor-inner">
+                          <a href="/institutional-investor/investment-approach" class="invest-with-us-link">
+                            > Investment approach
+                          </a>
+                          <a href="/institutional-investor/our-funds" class="our-funds-link">
+                            > Our funds
+                          </a>
+                        </div>
+                      </li>
+                  <li class="desktop-menu" *ngFor="let menu of childrenMenu">
                     <a
                       *ngIf="
                         (menu.slug == 'invest-with-us' ||
@@ -126,6 +171,41 @@
                         >{{ menu.name }}</a
                       >
                     </ng-template>
+                  </li>
+                  <li class="mobile-menu" *ngFor="let item of mobileChildrenMenu">
+                      <a
+                      *ngIf="
+                        (item.slug == 'invest-with-us' ||
+                          item.slug == 'our-funds' ||
+                          item.slug == 'investment-approach') &&
+                          item.display;
+                        else elseSection
+                      "
+                      [routerLink]="item.parent + '/' + item.slug"
+                      [class]="
+                        route.url.includes(item.slug)
+                          ? 'header-item-selected'
+                          : ''
+                      "
+                      >{{ item.name }}
+                    </a>
+                    <ng-template #elseSection>
+                      <a
+                        *ngIf="item.display"
+                        [routerLink]="'/' + item.slug"
+                        [class]="
+                          route.url.includes(item.slug)
+                            ? 'header-item-selected'
+                            : ''
+                        "
+                        >{{ item.name }}</a
+                      >
+                    </ng-template>
+                  </li>
+                  <li class="investor-login-link">
+                    <a href="#">
+                      INVESTOR LOGIN
+                    </a>
                   </li>
                 </ul>
               </div>

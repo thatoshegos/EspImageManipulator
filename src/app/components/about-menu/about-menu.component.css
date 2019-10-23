@@ -24,4 +24,11 @@ span.active {
   font-weight: 400;
 }
 
+@media (max-width: 991px) {
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
 
