@@ -1,15 +1,49 @@
 <div class="row" *ngIf="getArticleData">
-  <div class="col-md-12 content">
-    <div class="bg-white text-center top-content">
-      <h2>Bright propspects for unbundled Quilter</h2>
-      <p style="text-align: right; margin-bottom: 0px;">Rahgib Davids - Investment Analyst</p>
-    </div>
-  </div>
-  <div class="col-md-12">
-    <div
-      class="bg-white padding-20px-bottom padding-20px-top padding-20px-left sm-padding-15px-all "
-    >
-      <p [innerHTML]="getArticleData.content.rendered"></p>
-    </div>
+  
+  <div style="padding: 20px 40px">
+      <div class="bg-white top-content">
+          <h2>Bright propspects for unbundled Quilter</h2>
+          <p>Rahgib Davids - Investment Analyst</p>
+      </div>
+      <div class="inner-content">
+          <div class="bg-white inner-content-photo padding-35px-tb padding-10px-lr">
+              
+          </div>
+          <div class="bg-white inner-content-text padding-35px-tb padding-10px-lr" >
+              <div [innerHTML]="getArticleData.content.rendered"></div>
+              <div class="light-box">
+                  <img src="assets/images/lightbox.png"/> 
+                </div>
+          </div>
+      </div>
+
+      <div class="inner-content-bottom ">
+          <div class="bg-white inner-content-photo  padding-35px-tb padding-10px-lr">
+              More articles
+          </div>
+          <div class="bg-white inner-content-text padding-35px-tb padding-10px-lr">
+              <div class="inner-content-text-box">
+                  <ul>
+                      <li>
+                          <img/>
+                          <p></p>
+                          <!-- <a href="#">READ MORE</a> -->
+                      </li>
+                      <li>
+                        <img/>
+                        <p></p>
+                        <!-- <a href="#">READ MORE</a> -->
+                      </li>
+                      <li>
+                        <img/>
+                        <p></p>
+                        <!-- <a href="#">READ MORE</a> -->
+                      </li>
+                  </ul>
+              </div>
+             
+          </div>
+          
+      </div>
   </div>
 </div>

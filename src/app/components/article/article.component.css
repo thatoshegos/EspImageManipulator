@@ -1,22 +1,81 @@
 .top-content {
-  flex: 1;
-  justify-content: flex-start;
+  width: 100%;
+  justify-content: center;
   align-items: center;
   padding: 20px 0;
+  margin-bottom: 5px;
 }
 
 .top-content h2 {
     padding: 0px;
     text-align: left;
     margin-left: 100px;
+    margin-bottom: 0px;
 
   }
-  .top-content p {
-    font-style: italic;
-    margin-right: 30px;
-   }
+.top-content p {
+  font-style: italic;
+  margin-right: 30px;
+  text-align: right;
+  margin-bottom: 0px;
+}
 
 .content {
     display: flex;
     margin-bottom: 5px;
 } 
+
+.inner-content {
+  display: flex; 
+  flex-direction: row;
+}
+
+.inner-content-photo {
+  margin-right: 2px;
+  width: 25%;
+}
+
+.inner-content-text {
+  flex: 1
+}
+
+.inner-content-bottom {
+  height: auto; 
+  margin-top: 5px;
+  display: flex; 
+  flex-direction: row;
+}
+
+.inner-content-bottom .inner-content-text-box {
+  display: flex;
+  flex: 1;
+}
+.inner-content-bottom .inner-content-text-box ul {
+  flex: 1 0 auto;
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.inner-content-bottom .inner-content-text ul li {
+  width: 30%;
+  height: 200px;
+  border: 1px solid grey;
+  margin-right: 10px;
+}
+
+.inner-content-bottom .inner-content-text ul li:last-child{
+  margin-right: 0;
+}
+
+.light-box {
+  /* background-image: url("src/assets/images/lightbox.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+
+}
