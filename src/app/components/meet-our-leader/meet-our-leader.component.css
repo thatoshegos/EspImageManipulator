@@ -1,0 +1,40 @@
+.common-meet-our-leaders {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .common-meet-our-leaders {
+    display: block;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .common-meet-our-leaders.common-funds {
+    margin-top: 0;
+  }
+
+  .common-meet-our-leaders.common-funds  .btn-meet-diverse-team {
+    background-image: url('src/assets/images/buttons-new/funds_button.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  .common-meet-our-leaders.common-insights {
+    margin-top: 15px;
+  }
+
+  .common-meet-our-leaders.common-insights  .btn-meet-diverse-team  {
+    background-image: url('src/assets/images/buttons-new/insights_button.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  
+  
+  .common-meet-our-leaders > .btn-meet-diverse-team {
+    width: 100%;
+  }
+  
+  .common-meet-our-leaders > .btn-meet-diverse-team > span{
+    width: 100%;
+  }
+}

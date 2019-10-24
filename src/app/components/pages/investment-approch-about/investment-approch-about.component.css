@@ -30,3 +30,15 @@
       text-align: left;
     } 
 }
+
+@media screen and (max-width: 991px) {
+  .about-sec {
+    padding: 0;
+  }
+  .about-investment-approach {
+    padding: 0;
+  }
+  .about-investment-approach-content {
+    padding: 0;
+  }
+}
