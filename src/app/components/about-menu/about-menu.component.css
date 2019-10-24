@@ -25,6 +25,11 @@ span.active {
 }
 
 @media (max-width: 991px) {
+
+    .desktop-about-submenu {
+        display: none;
+    }
+
     .row {
         margin-right: 0;
         margin-left: 0;

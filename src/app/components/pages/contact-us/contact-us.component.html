@@ -257,11 +257,12 @@
                       <input type="checkbox" class="robot-check" /> I’m not a  robot
                     </p -->
                     <p class="no-margin-bottom">
-                      <label class="check-box">
+                      <!-- <label class="check-box">
                         I’m not a robot
                         <input type="checkbox" class="robot-check" />
                         <span class="checkmark"></span>
-                      </label>
+                      </label> -->
+                      <re-captcha (resolved)="resolved($event)" siteKey="6LdbUb8UAAAAAO9XJtO0kqIlk2cnK7YErs4Thu6T"></re-captcha>
                       <!-- Test closed -->
                     </p>
                   </div>

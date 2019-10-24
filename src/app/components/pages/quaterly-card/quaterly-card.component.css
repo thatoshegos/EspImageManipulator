@@ -1,6 +1,7 @@
-/* .thumbnail {
-  width: 350px;
-} */
+.thumbnail {
+  border-radius: 0px;
+  height: 100%;
+}
 
 .quater-heading {
   font-size: 24px;

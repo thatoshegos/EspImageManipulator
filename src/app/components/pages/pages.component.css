@@ -87,13 +87,16 @@ input[type="submit"] {
 .up-image ul {
   list-style-type: none;
   padding: 0px;
+  display: grid;
+  /* flex-wrap: wrap; */
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 70px;
+  
 }
 .up-image ul li {
-  width: 340px;
-  display: inline-flex;
-  /* padding: 20px 20px 20px 0px;  */
-  vertical-align: middle;
-  margin-right: 60px
+  height: 100%;
+ 
 }
 li.row-end {
   margin-right: 0px !important;
@@ -291,9 +294,112 @@ a.link:hover {
   width: 30%;
   height: 100%;
 } */
+
+.mobile-common-submenu {
+  display: none;
+}
+
+.common-meet-our-leaders {
+  display: none;
+}
+
+
 @media screen and (max-width: 1200px) {
   li.row-end {
     margin-right: 60px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .mobile-common-submenu {
+    display: block;
+  }
+
+  .mobile-common-submenu > h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px 25px 15px;
+    padding: 20px 25px;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .mobile-common-submenu > h2 > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .mobile-menu-collapse-wrapper {
+    z-index: 3;
+    border: none;
+  }
+  
+  .mobile-menu-collapse {
+    display: flex;
+    flex-flow: column;
+    background: #fff;
+    margin: 0 30px;
+    list-style: none;
+    /* z-index: 2; */
+    width: auto;
+  }
+  
+  .mobile-menu-collapse > li > a {
+    display: block;
+    margin: 0!important;
+    padding: 15px 24px!important;
+    color: #5a5a5a;
+    border-bottom: 1px solid #ccc;
+    font-size: 17px;
+  }
+
+  .about-leader-title {
+    display: none;
+  }
+
+  .about-leader-img {
+    padding: 0 15px;
+  }
+
+  .common-meet-our-leaders {
+    display: block;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .common-meet-our-leaders.common-funds {
+    margin-top: 0;
+  }
+
+  .common-meet-our-leaders.common-funds  .btn-meet-diverse-team {
+    background-image: url('src/assets/images/buttons-new/funds_button.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  .common-meet-our-leaders.common-insights {
+    margin-top: 15px;
+  }
+
+  .common-meet-our-leaders.common-insights  .btn-meet-diverse-team  {
+    background-image: url('src/assets/images/buttons-new/insights_button.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  
+  
+  .common-meet-our-leaders > .btn-meet-diverse-team {
+    width: 100%;
+  }
+  
+  .common-meet-our-leaders > .btn-meet-diverse-team > span{
+    width: 100%;
+  }
+
+  .our-culture-content {
+    margin-bottom: 0;
   }
 }
 

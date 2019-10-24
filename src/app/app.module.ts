@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { RecaptchaModule } from 'ng-recaptcha';
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { ToastrModule } from "ng6-toastr-notifications";
@@ -136,7 +137,8 @@ import { ArticleComponent } from "./components/article/article.component";
     MalihuScrollbarModule.forRoot(),
     NgbModule.forRoot(),
     Ng2CarouselamosModule,
-    AmChartsModule
+    AmChartsModule,
+    RecaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
