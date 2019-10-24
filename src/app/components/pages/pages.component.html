@@ -602,13 +602,6 @@
     data-wow-delay="0.6s"
     data-aos="fade-up"
   >
-    <div class="col-md-12 col-sm-12 col-xs-12">
-      <div
-        class="bg-white text-center "
-        [innerHtml]="page.content.rendered"
-      ></div>
-    </div>
-    <app-insight-yearwise-data></app-insight-yearwise-data>
     <div class="col-md-12 video-hide" *ngIf="page && page.insightStatus">
       <h2>
         Podcast
@@ -630,14 +623,22 @@
       [insightStatus]="page.insightStatus"
     ></app-financial-image-two>
   </div>
-    <div class="row margin-100px-lr">
-  <div class="col-md-12 remove-margin m-hide">
-    <app-faq
-      [faqs]="page.acf['qa-ans']"
-      [insightStatus]="page.insightStatus"
-    ></app-faq>
-  </div>
+
+  <div class="row margin-100px-lr">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-30px-top">
+      <div
+        class="bg-white text-center "
+        [innerHtml]="page.content.rendered"
+      ></div>
     </div>
+    <app-insight-yearwise-data></app-insight-yearwise-data>
+    <!-- <div class="col-md-12 remove-margin m-hide">
+      <app-faq
+        [faqs]="page.acf['qa-ans']"
+        [insightStatus]="page.insightStatus"
+      ></app-faq>
+    </div> -->
+  </div>
 </div>
 <!-- end insight-->
 <!-- Annual Report -->

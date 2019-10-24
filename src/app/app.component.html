@@ -14,7 +14,10 @@
 </div>-->
 
 <div class="right-fixed-link">
-  <a href="javascript:void(0)"><img src="assets/images/invest-now.png"/></a>
+  
+  <div *ngIf="url && url[1] !== 'individual-investor'">
+    <a  routerLink="/forms-documents"><img src="assets/images/invest-now.png"/></a>
+  </div>
   <a href="javascript:void(0)" class="leave-message"
     ><img src="assets/images/leave-message.png"
   /></a>

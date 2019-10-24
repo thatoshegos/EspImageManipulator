@@ -9,6 +9,9 @@ import { ToastrManager } from "ng6-toastr-notifications";
   styleUrls: ["./contact-us.component.css"]
 })
 export class ContactUsComponent implements OnInit {
+  resolved(captchaResponse: string) {
+    console.log(`Resolved captcha with response: ${captchaResponse}`);
+  }
   model: any = {};
   response;
   constructor(private wpservice: WPAPIService, public toastr: ToastrManager) {}

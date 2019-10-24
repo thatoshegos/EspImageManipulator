@@ -16,6 +16,7 @@ export class AppComponent {
   public location = "/";
   title = "kagiso";
   model: any = {};
+  url: any
   response;
   constructor(
     private router: Router,
@@ -24,7 +25,7 @@ export class AppComponent {
     public toastr: ToastrManager
   ) {
     this.location = router.url;
-    //console.log(router.url);
+    
   }
   ngOnInit() {
     AOS.init({
@@ -33,6 +34,10 @@ export class AppComponent {
       easing: "ease-in-sine",
       delay: 100
     });
+  }
+
+  ngAfterContentChecked() {
+    this.url = this.router.url.split("/")
   }
 
   open(content) {
