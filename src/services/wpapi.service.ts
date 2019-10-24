@@ -19,6 +19,10 @@ export class WPAPIService {
     domainPrefix + wpPrefix + "/?custom_action=get_chart_data&csv_url=";
   emailSendUrl =
     domainPrefix + wpPrefix + "/?custom_action=save_contact";
+  subscribeUrl =
+    domainPrefix + wpPrefix + "/?custom_action=subscribe";
+  unsubscribeUrl =
+    domainPrefix + wpPrefix + "/?custom_action=unsubscribe";
   postByslug = domainPrefix + wpPrefix + "/wp-json/wp/v2/posts";
   constructor(private http: HttpClient) {}
   getCategory(query) {
@@ -63,8 +67,33 @@ export class WPAPIService {
   ${this.csvDataEndPoint}${csvUrl}?rand=${new Date().getTime()}`;
     return this.http.get(apiUrl, { responseType: "text" });
   }
-  subscribe(model) {
-    return model
+  subscribe(contact) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+      })
+    };
+
+    return this.http.get(
+      `${this.subscribeUrl}&rand=${new Date().getTime()}&name=${
+        contact.name
+      }&email=${contact.email}`
+    );
+  }
+  unsubscribe(contact) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+      })
+    };
+
+    return this.http.get(
+      `${this.unsubscribeUrl}&rand=${new Date().getTime()}&name=${
+        contact.name
+      }&email=${contact.email}`
+    );
   }
   saveContact(contact) {
     const httpOptions = {
