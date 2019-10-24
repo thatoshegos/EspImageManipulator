@@ -4,19 +4,19 @@
   data-aos="fade-up"
 >
 
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-8 col-md-offset-2 about-investment-approach">
       <div class="bg-white text-center">
         <h2 class="section-heading">Investment Approach</h2>
       </div>
     </div>
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-8 col-md-offset-2 about-investment-approach">
       <div class="main-content" *ngFor="let investment of investments">
         <div
           class="bg-white padding-20px-bottom padding-20px-top sm-padding-15px-all inner-match-height {{
             investment.heading.replace(' ', '-') | lowercase
           }}"
         >
-          <div class="padding-45px-lr ">
+          <div class="padding-45px-lr about-investment-approach-content">
             <p class="text-deep-pink"><strong>{{ investment.heading }}</strong></p>
             <p
               class="text-light-blue text-italic"
