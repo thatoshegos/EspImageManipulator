@@ -2278,6 +2278,9 @@ header nav.menu-logo-center .navbar-nav > li > a { margin: 0 20px;}
 header nav.menu-logo-center .navbar-nav > li:last-child a {margin-right: 20px}
 
 /* header navigation color and logo */
+header nav.navbar {
+	font-size: 14px;
+}
 header nav.navbar .navbar-nav > li > a, nav.navbar.bootsnav ul.nav > li > a{color: #646565;}
 header nav.navbar.white-link .navbar-nav > li > a, nav.navbar.bootsnav.white-link ul.nav > li > a,
 header nav.navbar.white-link .header-social-icon a,  nav.navbar.bootsnav.white-link .header-social-icon a,
@@ -2361,12 +2364,12 @@ header nav.navbar {border-radius: 0; padding: 0; }
 header nav.navbar-default, nav.navbar.bootsnav {border-bottom: 0;}
 header nav {width: 100%; top: 0px; z-index: 99; margin-bottom: 0; display: table; }
 header nav .nav-header-container {display: table-cell; vertical-align: middle; position: relative;}
-header nav .navbar-nav > li > a {color: #232323; font-size: 15px; font-weight: 800; margin:0 20px; padding: 5px 0px 5px}
+header nav .navbar-nav > li > a {color: #232323; font-weight: 800; margin:0 17px; padding: 5px 0px 5px}
 header nav .navbar-nav > li > a:hover, header nav .navbar-nav > li > a:focus, header nav .navbar-nav > li.active > a {background: transparent;}
 header nav .navbar-nav > li:last-child a { margin-right: 0;}
 .navbar-fixed-bottom, .navbar-fixed-top {z-index: 9999}
 header nav.navbar-default .navbar-nav > li > a:hover, header nav.navbar-default .navbar-nav > li > a:focus, header nav.navbar-default .navbar-nav > li.active > a {border-bottom-color: #232323}
-header nav .navbar-nav.text-normal > li > a {font-weight: 600; font-size: 16px }
+header nav .navbar-nav.text-normal > li > a {font-weight: 600; font-size: 14px }
 .navbar-nav > li { position: inherit;}
 .navbar-nav > li.dropdown > .fas { display: none}
 .navbar-nav > li ul { margin: 0; padding: 0;}
@@ -4256,8 +4259,7 @@ a.btn-news-literature:hover{
         font-size: 30px!important;
     }
     header nav .navbar-nav.text-normal > li > a{
-        font-size: 16px;
-        margin: 0px 15px!important;
+        margin: 0px 12px!important;
     }
     header nav .navbar-nav > li > a {
         margin: 0 16px;
@@ -4292,8 +4294,7 @@ a.btn-news-literature:hover{
 }
 @media only screen and (min-width: 992px) and (max-width: 1088px) {
     header nav .navbar-nav.text-normal > li > a {
-        font-size: 16px;
-        margin: 0px 7.7px!important;
+        margin: 0px 7.5px!important;
     }
     header nav .navbar-nav > li > a {
         margin: 0px 5px!important;
