@@ -25,14 +25,15 @@ export class ContactUsComponent implements OnInit {
       });
     });
   }
-  submitForm() {
-    // console.log(this.model);
+  submitForm(f, captchaProtectedForm) {
     this.wpservice.saveContact(this.model).subscribe(data => {
       this.response = data;
 
       if (this.response.success) {
         console.log(this.response);
         this.toastr.successToastr("Contact save successfully !", "success!");
+        f.resetForm();
+        captchaProtectedForm.resetForm();
       }
     });
   }

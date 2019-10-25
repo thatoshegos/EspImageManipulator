@@ -699,3 +699,6 @@ form#contact-form {
 input.more-btn.text-black {
   width: 175px;
 }
+
+.error { color: crimson; }
+.success { color: green; }

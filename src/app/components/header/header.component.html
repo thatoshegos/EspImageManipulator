@@ -55,6 +55,9 @@
                         ? 'header-menu-selected'
                         : ''
                     "
+
+                    [ngClass]="menu.defulturl.indexOf(selectedParent) !== -1 ? 'header-menu-selected' : ''
+                    "
                     [ngClass]="
                       menu.slug == 'institutional-investor' ? spacialClass : ''
                     "

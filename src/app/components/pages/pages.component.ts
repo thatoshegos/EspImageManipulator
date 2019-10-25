@@ -45,7 +45,6 @@ export class PagesComponent implements OnInit {
       // console.log(val);
       //console.log(this.router.url);
       var urlArr = this.router.url.split("/");
-      // console.log(urlArr);
       var currentUrl = {
         parent: urlArr.length > 2 ? urlArr[1] : "",
         child: urlArr.length > 2 ? urlArr[2] : urlArr[1],
@@ -661,15 +660,28 @@ export class PagesComponent implements OnInit {
 
   submitForm(f, type) {
     console.log('submit', f, this.model, type)
-    this.wpservice.subscribe(this.model).subscribe(data => {
-      this.response = data;
-
-      if (this.response.success) {
-        console.log(this.response);
-        this.toastr.successToastr("Contact save successfully !", "success!");
-        f.resetForm();
-      }
-    });
+    if (type === "subscribe"){
+      this.wpservice.subscribe(this.model).subscribe(data => {
+        this.response = data;
+  
+        if (this.response.success) {
+          console.log(this.response);
+          this.toastr.successToastr("Contact save successfully !", "success!");
+          f.resetForm();
+        }
+      });
+    } else if (type === 'unsubscribe') {
+      this.wpservice.unsubscribe(this.model).subscribe(data => {
+        this.response = data;
+  
+        if (this.response.success) {
+          console.log(this.response);
+          this.toastr.successToastr("Contact save successfully !", "success!");
+          f.resetForm();
+        }
+      });
+    }
+   
   }
 
   ngOnInit() {}

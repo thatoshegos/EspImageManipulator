@@ -9,10 +9,12 @@ import { CompileShallowModuleMetadata } from "@angular/compiler";
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
+  selectedParent;
   menuItems = {
     primary: null,
     secondry: null
   };
+ 
   spacialClass = "";
   secondMenus = null;
   activeStatus = false;
@@ -342,5 +344,18 @@ export class HeaderComponent implements OnInit {
         item.slug = urlArr[5];
       });
     });
+  }
+
+  ngAfterContentChecked() {
+    this.selectedParent = 'individual-investor'
+    var urlArr = this.route.url.split("/");
+    urlArr.shift()
+    if (urlArr.length > 1){
+      this.selectedParent = urlArr[0]
+      localStorage.setItem("parent", this.selectedParent);
+    } else if (urlArr.length === 1) {
+      var url = localStorage.getItem('parent')
+      this.selectedParent = url;
+    }
   }
 }
