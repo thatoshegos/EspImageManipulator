@@ -10,3 +10,23 @@
 a.btn-our-fund span{
     background: #e3edec;
 }
+
+@media screen and (max-width: 991px) {
+  .our-fund-range-content {
+    padding: 0;
+  }
+
+  .institutional-performance-sheet {
+    margin: 0 15px 30px 15px;
+  }
+
+  .institutional-performance-sheet > .btn-performance-sheet-on-white {
+    width: 100%;
+  }
+
+  .institutional-performance-sheet > .btn-performance-sheet-on-white > span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}

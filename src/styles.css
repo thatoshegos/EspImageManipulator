@@ -2280,8 +2280,8 @@ input, select, textarea {
     width: 100%!important;
 }
 .history-slider-area .controls{
-    left: -55px!important;
-    width: 110%!important;
+    left: -55px;
+    width: 110%;
     z-index: 9999;
 }
 .hsi-title-1 {
@@ -2331,7 +2331,7 @@ input, select, textarea {
     }
     .nav-header-container .text-center{
         text-align: left;
-        padding-left: 30px;
+        padding-left: 15px;
     }
     .main-slider .slider-typography h1 {
         float: none;

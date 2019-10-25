@@ -123,6 +123,16 @@ ul.fund-tabs li.current {
   }
 }
 
+@media screen and (max-width: 480px) {
+  ul.fund-tabs {
+    width: 100%;
+  }
+
+  .fund-tab-content {
+    padding-top: 0px;
+  }
+}
+
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .latest ul li > div.month-start {
     flex-flow: row;

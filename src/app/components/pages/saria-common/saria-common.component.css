@@ -8,3 +8,14 @@
   text-align: justify;
   font-size: 20px !important;
 }*/
+
+@media screen and (max-width: 991px) {
+  .sharia-content {
+    padding-top: 0;
+  }
+
+  .sharia-content-inner {
+    margin: 0;
+    width: 100%;
+  }
+}

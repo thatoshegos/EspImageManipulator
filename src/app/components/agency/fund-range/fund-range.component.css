@@ -14,3 +14,13 @@ a.btn-our-fund span {
   color: #656565;
   font-weight: 500;
 }
+
+@media screen and (max-width: 991px) {
+  .our-fund-range-content {
+    padding: 0;
+  }
+
+  .global-fund-box {
+    margin-left: 0!important;
+  }
+}

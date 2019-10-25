@@ -303,16 +303,46 @@ a.link:hover {
   display: none;
 }
 
+@media screen and (max-width: 480px) {
+  .bread-crumb {
+    padding: 20px 15px 0px 15px;
+  }
+  .up-image ul li{
+        width: 100%;
+        display: block;
+        padding: 0;
+      }
+    .suscribe{
+      padding-bottom: 0px;
+    }
+    .suscribe a{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    .up-image ul{
+        margin-bottom: 0px;
+    }
+    .insight-title{
+        margin-bottom: 20px;
+    }
+}
+.inst-img-center {
+    display: inline-block;
+    margin: 0 30px;
+}
 
-@media screen and (max-width: 1200px) {
-  li.row-end {
-    margin-right: 60px !important;
+@media screen and (max-width: 767xp) {
+  .bread-crumb {
+    padding: 20px 15px 0px 15px;
   }
 }
+
+
 
 @media screen and (max-width: 991px) {
   .mobile-common-submenu {
     display: block;
+    padding: 0;
   }
 
   .mobile-common-submenu > h2 {
@@ -340,7 +370,7 @@ a.link:hover {
     display: flex;
     flex-flow: column;
     background: #fff;
-    margin: 0 30px;
+    margin: 0 15px;
     list-style: none;
     /* z-index: 2; */
     width: auto;
@@ -358,9 +388,13 @@ a.link:hover {
   .about-leader-title {
     display: none;
   }
-
+  
   .about-leader-img {
-    padding: 0 15px;
+    /* padding: 0 15px; */
+  }
+  
+  .about-leader-img > img {
+    width: 100%;
   }
 
   .common-meet-our-leaders {
@@ -368,11 +402,11 @@ a.link:hover {
     padding: 0;
     margin-top: 30px;
   }
-
+  
   .common-meet-our-leaders.common-funds {
     margin-top: 0;
   }
-
+  
   .common-meet-our-leaders.common-funds  .btn-meet-diverse-team {
     background-image: url('src/assets/images/buttons-new/funds_button.png');
     background-repeat: no-repeat;
@@ -382,11 +416,11 @@ a.link:hover {
   .common-meet-our-leaders.common-funds .btn-meet-diverse-team:hover {
     background-image: url('src/assets/images/buttons-new/funds_b_button.png')!important;
   }
-
+  
   .common-meet-our-leaders.common-insights {
     margin-top: 15px;
   }
-
+  
   .common-meet-our-leaders.common-insights .btn-meet-diverse-team  {
     background-image: url('src/assets/images/buttons-new/insights_button.png');
     background-repeat: no-repeat;
@@ -404,34 +438,141 @@ a.link:hover {
   .common-meet-our-leaders > .btn-meet-diverse-team > span{
     width: 100%;
   }
-
+  
   .our-culture-content {
+    margin-top: 0;
     margin-bottom: 0;
   }
+  
+  .about-us-fund-content {
+    margin-top: 0;
+  }
+
+  .ownership-structure-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .our-history-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .our-history-content-inner {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .blanced-fund-box {
+    margin-top: 80px;
+  }
+
+  .complete-fund-range-content {
+    padding: 15px;
+  }
+
+  .complete-fund-range-bottom {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .complete-fund-range-bottom > .complete-fund-btn > a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .complete-fund-range-bottom > .complete-fund-btn > a > span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .our-funds-content-boxes {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .our-funds-box {
+    margin-left: 0;
+  }
+
+  .our-funds-box-inner {
+    margin-left: 0;
+  }
+
+  .up-image ul {
+    grid-template-columns: 1fr;
+    grid-gap: 30px
+  }
+
+  .suscribe {
+    margin-top: 15px;
+  }
+
+  .suscribe > .btn-suscribe {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .suscribe > a.btn-suscribe > span, 
+  .suscribe > a.btn-unsuscribe > span { 
+    width: 100%;
+  }
+
+  .fact-sheet-content {
+    margin-top: 80px;
+  }
+
+  .institutional-button-section > .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .institutional-button-section > .col-md-12 > .text-center > .btn-our-funds,
+  .institutional-button-section > .col-md-12 > .text-center > .btn-performance-sheet,
+  .institutional-button-section > .col-md-12 > .text-center > .btn-our-funds > span,
+  .institutional-button-section > .col-md-12 > .text-center > .btn-performance-sheet > span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .institutional-button-section > .col-md-12 > .text-center > .btn-our-funds {
+    margin-top: 10px;
+  }
+
+  .institutional-button-section > .col-md-12 > .text-center > .btn-performance-sheet {
+    margin-bottom: 20px
+  }
+
+  .institutional-more-about-us {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .institutional-more-about-us > .text-center > .btn-more-about-us > span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .institutional-investment-img {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .institutional-image-class {
+    margin-left: 0;
+  }
+
+  .institutional-image-class > .light-green-box {
+    margin-left: 0;
+  }
+
 }
 
+@media screen and (max-width: 1200px) {
+  li.row-end {
+    margin-right: 60px !important;
+  }
+}
 /* --------------- Mobile CSS ---*/
-@media screen and (max-width: 480px) {
-    .up-image ul li{
-        width: 100%;
-        display: block;
-        padding: 0;
-    }
-    .suscribe{
-        padding-bottom: 0px;
-    }
-    .suscribe a{
-        margin-right: 0px;
-        margin-bottom: 20px;
-    }
-    .up-image ul{
-        margin-bottom: 0px;
-    }
-    .insight-title{
-        margin-bottom: 20px;
-    }
-}
-.inst-img-center {
-    display: inline-block;
-    margin: 0 30px;
-}

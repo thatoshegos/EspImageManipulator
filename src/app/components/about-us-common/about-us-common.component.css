@@ -17,4 +17,9 @@
   .common-meet-our-leaders > .btn-meet-diverse-team > span{
     width: 100%;
   }
+
+  .common-about-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

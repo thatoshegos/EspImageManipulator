@@ -18,3 +18,18 @@
   color: red;
   font-weight: 400;
 }
+
+@media screen and (max-width: 991px) {
+  .common-fund-design-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .o-text {
+    padding: 0;
+  }
+
+  .invest-list-img > li > .content-box {
+    margin: 0 auto;
+  }
+}

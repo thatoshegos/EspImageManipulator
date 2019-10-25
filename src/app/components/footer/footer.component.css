@@ -1,0 +1,27 @@
+@media screen and (max-width:767px) {
+  .footer-logo > img {
+    max-width: 50%;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-content.copyright {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .footer-content > .footer-title,
+  .footer-content > .footer-text {
+    width: 100%;
+    padding-left: 60px;
+  }
+
+  .footer-content > .footer-title {
+    margin-top: 0;
+  }
+}
