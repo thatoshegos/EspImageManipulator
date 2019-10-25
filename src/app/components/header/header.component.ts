@@ -356,6 +356,13 @@ export class HeaderComponent implements OnInit {
     } else if (urlArr.length === 1) {
       var url = localStorage.getItem('parent')
       this.selectedParent = url;
-    }
+	}
+	if (this.selectedParent === 'institutional-investor'){
+		this.childrenMenu[0].name = "INVESTMENT APPROACH";
+		this.childrenMenu[0].slug = "investment-approach";
+	}else{
+		this.childrenMenu[0].name = "INVEST WITH US";
+		this.childrenMenu[0].slug = "invest-with-us";
+	}
   }
 }

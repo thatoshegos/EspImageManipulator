@@ -17,13 +17,13 @@ export class HomeComponent implements OnInit {
   ) {
     //console.log(this.router.url);
     var urlArr = this.router.url.split("/");
-    console.log(urlArr);
+    //console.log(urlArr);
     if (urlArr[1] == "individual-investor") {
       // console.log("individual-investor");
       this.wpservice.getPages("100").subscribe(data => {
         this.homePage = data;
         this.faqs = this.homePage.acf["qa-ans"];
-        console.log(this.homePage);
+        //console.log(this.homePage);
       });
     }
     //  else if (urlArr[1] == "sharia-investor") {

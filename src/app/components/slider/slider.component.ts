@@ -18,7 +18,7 @@ export class SliderComponent implements OnInit {
     spaceBetween: 30
   };
   getPaginationStatus() {
-    console.log(this.insight);
+    //console.log(this.insight);
     if (this.sliders.length > 1) {
       this.config.pagination = ".swiper-pagination";
     } else {

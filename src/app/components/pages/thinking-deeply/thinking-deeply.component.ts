@@ -10,6 +10,6 @@ export class ThinkingDeeplyComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.deeplyThink);
+    //console.log(this.deeplyThink);
   }
 }

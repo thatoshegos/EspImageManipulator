@@ -5,6 +5,11 @@ import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
 import { WPAPIService } from "../services/wpapi.service";
 import { ToastrManager } from "ng6-toastr-notifications";
 
+if (console){
+  // don't try this at home :)
+  console.log = () => {};
+}
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -25,7 +30,7 @@ export class AppComponent {
     public toastr: ToastrManager
   ) {
     this.location = router.url;
-    
+
   }
   ngOnInit() {
     AOS.init({

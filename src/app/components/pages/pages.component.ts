@@ -40,7 +40,7 @@ export class PagesComponent implements OnInit {
     public toastr: ToastrManager,
 
   ) {
-    console.log('this', this)
+    //console.log('this', this)
     route.params.subscribe(val => {
       // console.log(val);
       //console.log(this.router.url);
@@ -160,7 +160,7 @@ export class PagesComponent implements OnInit {
             //console.log(this.page);
           }
 
-          console.log(currentUrl);
+          //console.log(currentUrl);
           this.getCurrentTab = currentUrl;
           if (this.page) {
             /*** Old About us page    */
@@ -178,7 +178,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.aboutStatus = true;
                 this.contactUs = true;
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "about-us" &&
@@ -189,7 +189,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isAboutUsMeetLeaders = true;
                 // this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "about-us" &&
@@ -200,7 +200,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isAboutUsSocialInvestment = true;
                 // this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "about-us" &&
@@ -211,7 +211,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isAboutUsInvestmentApproach = true;
                 // this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "about-us" &&
@@ -222,7 +222,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isAboutUsTransform = true;
                 // this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "about-us" &&
@@ -233,7 +233,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isAboutUsResponsibleInvesting = true;
                 // this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "about-us" &&
@@ -244,7 +244,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isAboutUsOurHistroy = true;
                 // this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "about-us" &&
@@ -255,7 +255,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isAboutUsOurCulture = true;
                 // this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "about-us" &&
@@ -266,7 +266,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isAboutUsOwnership = true;
                 // this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "sharia-investor" &&
@@ -292,7 +292,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.islamicEquityStatus = true;
                 this.page.getParent = "sharia-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "sharia-investor" &&
@@ -304,7 +304,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.islamicbalancedStatus = true;
                 this.page.getParent = "sharia-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "sharia-investor" &&
@@ -316,7 +316,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.islamicHighYieldStatus = true;
                 this.page.getParent = "sharia-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "sharia-investor" &&
@@ -328,7 +328,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.islamicGlobalEquityStatus = true;
                 this.page.getParent = "sharia-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "sharia-investor" &&
@@ -341,7 +341,7 @@ export class PagesComponent implements OnInit {
                 this.page.islamicGlobalEquityFeederStatus = true;
                 this.page.getParent = "sharia-investor";
                 this.page.isInstitutionFundRange = false;
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "individual-investor" &&
@@ -365,7 +365,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.equityAlphaStatus = true;
                 this.page.getParent = "individual-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "individual-investor" &&
@@ -377,7 +377,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.balaceFundStatus = true;
                 this.page.getParent = "individual-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "individual-investor" &&
@@ -389,7 +389,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.protectorStatus = true;
                 this.page.getParent = "individual-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "individual-investor" &&
@@ -401,7 +401,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.globalEquityStatus = true;
                 this.page.getParent = "individual-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "individual-investor" &&
@@ -413,7 +413,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.topFortyTrackerStatus = true;
                 this.page.getParent = "individual-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "individual-investor" &&
@@ -425,19 +425,19 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.individualStableFundStatus = true;
                 this.page.getParent = "individual-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
               this.page.slug == "investment-approach"
             ) {
               this.page.id = 12678;
-              console.log("this institutional home page");
+              //console.log("this institutional home page");
               this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
                 this.page = page;
                 this.page.investWithUs = true;
                 this.faq = this.page.acf["qa-ans"];
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -450,7 +450,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isManagedEquityFund = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -463,7 +463,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.iscoredEquityFund = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -476,7 +476,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isManagedEquityCappedFund = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -489,7 +489,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isManagedEquitySwixFund = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -513,7 +513,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isInstitutionalCompleteFundRange = true;
                 // this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -525,7 +525,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isInstitutionalEquityStatus = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -537,7 +537,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isInstitutionalBondStatus = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -549,7 +549,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isInstitutionalMoneyStatus = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -561,7 +561,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isInstitutionalProtectorStatus = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -573,7 +573,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isInstitutionalStableStatus = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -585,7 +585,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isdomesticFundStatus = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "institutional-investor" &&
@@ -597,7 +597,7 @@ export class PagesComponent implements OnInit {
                 this.page = page;
                 this.page.isGlobalFundInstitutionalStatus = true;
                 this.page.getParent = "institutional-investor";
-                console.log(this.page);
+                //console.log(this.page);
               });
             } else if (
               currentUrl.parent == "sharia-investor" &&
@@ -606,7 +606,7 @@ export class PagesComponent implements OnInit {
               this.wpservice.getPages("89").subscribe(page => {
                 this.page = page;
                 this.page.saria = true;
-                console.log(this.page);
+                //console.log(this.page);
               });
             }
           }
@@ -632,13 +632,13 @@ export class PagesComponent implements OnInit {
 
   open(content, type) {
     this.type = type
-    console.log('content', content)
+    //console.log('content', content)
     // console.log(this.getMessageStatus);
     this.modalService
       .open(content, { ariaLabelledBy: "modal-basic-title" })
       .result.then(
         result => {
-          console.log('+++', result)
+          //console.log('+++', result)
           this.closeResult = `Closed with: ${result}`;
         },
         reason => {
@@ -659,13 +659,13 @@ export class PagesComponent implements OnInit {
   }
 
   submitForm(f, type) {
-    console.log('submit', f, this.model, type)
+    //console.log('submit', f, this.model, type)
     if (type === "subscribe"){
       this.wpservice.subscribe(this.model).subscribe(data => {
         this.response = data;
-  
+
         if (this.response.success) {
-          console.log(this.response);
+          //console.log(this.response);
           this.toastr.successToastr("Contact save successfully !", "success!");
           f.resetForm();
         }
@@ -673,15 +673,15 @@ export class PagesComponent implements OnInit {
     } else if (type === 'unsubscribe') {
       this.wpservice.unsubscribe(this.model).subscribe(data => {
         this.response = data;
-  
+
         if (this.response.success) {
-          console.log(this.response);
+          //console.log(this.response);
           this.toastr.successToastr("Contact save successfully !", "success!");
           f.resetForm();
         }
       });
     }
-   
+
   }
 
   ngOnInit() {}
@@ -689,6 +689,6 @@ export class PagesComponent implements OnInit {
   changeSliderData(data, clickedTab) {
     this.getHowToInvestSlider = data;
     this.activeClickedTab = clickedTab;
-    console.log(this.getHowToInvestSlider);
+    //console.log(this.getHowToInvestSlider);
   }
 }
