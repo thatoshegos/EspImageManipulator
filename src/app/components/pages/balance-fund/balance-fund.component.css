@@ -708,6 +708,13 @@ a.btn-invest-now-green{
 
   .bottom-content > a {
     margin-right: 0;
+    width: 100%
+  }
+
+  .bottom-content > a > span {
+    width: 100%;
+    display: flex;
+    align-content: center;
   }
 
   
@@ -733,6 +740,7 @@ a.btn-invest-now-green{
     .blanced-fund-btn-list li{
         display: inline-block;
         margin: 15px 5px 0px;
+        width: 95%;
     }
     .blanced-fund-btn-list{
         margin: 0;
@@ -741,7 +749,7 @@ a.btn-invest-now-green{
         background: #fff;
     }
     .blanced-fund-box .graph-box{
-        padding: 20px 40px;
+        padding: 20px 30px;
         border-left: none;
         border-top: 5px solid #e7e7e7;
     }
@@ -806,6 +814,11 @@ a.btn-invest-now-green{
       text-overflow: ellipsis;
         border-radius: 0!important;
     } */
+    .fund-img-box ul{
+        /* padding: 45px; */
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr); */
+    }
     .fund-img-box ul li{
         float: none;
         text-align: center;
@@ -813,9 +826,6 @@ a.btn-invest-now-green{
     }
     .title{
         width: 100%!important;
-    }
-    .fund-img-box ul{
-        /* padding: 45px; */
     }
     .link-img-box{
         width: 100%;
@@ -836,6 +846,14 @@ a.btn-invest-now-green{
     a.btn-meet-faq {
       margin-left: 0px;
     }
+
+    .top-content {
+      padding-left: 0;
+    }
+
+    .mobile-balance-fund-content {
+      padding: 15px 30px;
+    }
 }
 
 /* @media screen and (max-width: 1130px) {
@@ -849,7 +867,7 @@ a.btn-invest-now-green{
 
  @media (min-width: 321px) and (max-width: 480px) {
     .top-content {
-      padding-left: 20px;
+      padding-left: 0px;
     }
 
     .top-content h2 {
@@ -868,12 +886,14 @@ a.btn-invest-now-green{
      
     }
     .top-content .blanced-fund-btn-list li {
-      margin: 10px 10px 0 12px;
+      width: 95%;
+      margin: 10px 10px 0 0;
     }
   
     .top-content .blanced-fund-btn-list li > a{
       margin-top: 0;
       height: 100%;
+      width: 100%;
       display: block;
     }
   
@@ -935,6 +955,18 @@ a.btn-invest-now-green{
   
     .bottom-content > a {
       margin-right: 0;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .bottom-content > a > span {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .app-fund-tab {
+      width: 100%;
     }
 
     /* .nav-content {
@@ -1008,7 +1040,23 @@ a.btn-invest-now-green{
     } */
 
     .fund-img-box ul {
-      padding: 50px 15px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px 15px;
+    }
+
+    .fund-img-box ul li:nth-child(odd) {
+      padding-right: 5px;
+      padding-left: 0;
+    }
+
+    .fund-img-box ul li:nth-child(even) {
+      padding-right: 0;
+      padding-left: 5px;
+    }
+
+    .link-img-box {
+      height: 170px;
     }
 
     /* a.btn-meet-faq {

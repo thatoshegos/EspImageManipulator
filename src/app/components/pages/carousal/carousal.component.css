@@ -43,6 +43,7 @@
     .list {
         min-height: 694px;
     }
+    
 }
 
 /* --------------- Mobile CSS ---*/
@@ -59,4 +60,9 @@
     .list {
         min-height: 400px;
     }
+
+    .controls {
+        left: 0!important;
+        width: 100%!important;
+      }
 }

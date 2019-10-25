@@ -3,6 +3,21 @@
 }
 
 @media screen and (max-width: 991px) {
+
+  .meet-our-leaders-title {
+    float: none;
+    margin-bottom: 0;
+  }
+
+  p.leader-image {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .meet-our-leaders-content {
+    padding: 0;
+  }
+
   .common-meet-our-leaders {
     display: block;
     padding: 0;

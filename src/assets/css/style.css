@@ -2303,7 +2303,7 @@ header.sticky nav.header-light-transparent .logo .logo-light, header.sticky nav.
 .nav-top-scroll {position: absolute; top: 0; z-index: 5;}
 header.sticky nav.nav-top-scroll {background-color: inherit;}
 header a.logo {display: inline-block; vertical-align: middle;}
-header a.logo img {max-width:80%;}
+header a.logo img {max-width:100%;}
 header .left-nav .sidebar-part1 a.logo img {max-height:inherit;}
 .logo-holder img {max-height: 26px;}
 
@@ -4492,7 +4492,8 @@ a.btn-news-literature:hover{
 .transformation span:active{background: #c8dbe5;}
 
 .bread-crumb {padding: 20px 30px 0px 85px;}
-.bread-crumb-about-us-home{padding: 20px 30px 0px 113px;}
+/* .bread-crumb-about-us-home{padding: 20px 30px 0px 113px;} */
+.bread-crumb-about-us-home{padding: 20px 15px 0px 15px;}
 
 .btn-our-funds{    
     display: inline-block;

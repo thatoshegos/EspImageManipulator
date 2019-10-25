@@ -8,3 +8,13 @@
         text-align: left;
       } 
   }
+
+  @media screen and (max-width: 991px) {
+    .institutional-meet-our > a {
+      width: 100%;
+    }
+
+    .institutional-meet-our > a > span {
+      width: 100%;
+    }
+  }
