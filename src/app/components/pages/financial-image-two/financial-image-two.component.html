@@ -4,12 +4,12 @@
   [ngClass]="!imageTwo.insightStatus ? 'margin-100px-lr' : 'none'"
 >
   <div
-    class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom wow fadeInLeft"
+    class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom padding-0px-all wow fadeInLeft"
     data-wow-delay="0.6s"
     data-aos="fade-right"
     *ngFor="let fImagesecond of imageTwo.acf.financial_adviser_image_second"
   >
-    <a [href]="'/' + fImagesecond.url"
+    <a [href]="fImagesecond.url"
       ><img [src]="fImagesecond.second_image.url"
     /></a>
   </div>

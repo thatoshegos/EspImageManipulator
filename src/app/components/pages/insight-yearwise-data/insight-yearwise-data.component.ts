@@ -77,13 +77,13 @@ export class InsightYearwiseDataComponent implements OnInit {
     }
   }
   ngOnInit() {
-    this.wpservice.getCategory("?parent=14").subscribe(categories => {
+    this.wpservice.getCategory("?parent=12").subscribe(categories => {
       this.categories = categories;
       this.categories.sort((a, b) => b.name - a.name);
       this.selectedItem = categories[0];
     });
 
-    this.wpservice.getSubcategory("?parent=8").subscribe(subcategories => {
+    this.wpservice.getSubcategory("?parent=47").subscribe(subcategories => {
       this.subCategories = subcategories;
       this.subCategories.sort((a, b) => b.id - a.id);
       console.log(this.subCategories);

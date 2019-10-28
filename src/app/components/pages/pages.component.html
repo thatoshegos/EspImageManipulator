@@ -1178,7 +1178,7 @@
 <!-- end annual Report -->
 
 <!---Quaterly Status-->
-<div class="container xs-margin-50px-top" *ngIf="page && page.quaterlyStatus">
+<div class="container xs-margin-50px-top " *ngIf="page && page.quaterlyStatus">
 
   
   <!-- <div
@@ -1200,13 +1200,13 @@
     data-wow-delay="0.6s"
     data-aos="fade-up"
   >
-    <div class="col-md-12 col-sm-12 col-xs-12 margin-50px-top">
+    <div class="col-md-12 col-sm-12 col-xs-12 margin-100px-top">
       <h2 [innerHTML]="page.title.rendered"></h2>
     </div>
   </div>
   <div class="clearfix"></div>
 
-  <div class="up-image margin-30px-top xs-no-margin-top">
+  <div class="up-image xs-no-margin-top">
     <ul>
       <li
         *ngFor="let quaterlyData of page.acf.up_quarterly; let i = index"
