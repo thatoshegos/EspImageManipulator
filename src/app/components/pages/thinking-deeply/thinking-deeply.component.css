@@ -5,6 +5,7 @@
   /* --------------- Mobile CSS ---*/
   @media screen and (max-width: 480px) {
      .p-text {
+       padding: 15px;
         text-align: left;
       } 
   }
@@ -16,5 +17,9 @@
 
     .institutional-meet-our > a > span {
       width: 100%;
+    }
+
+    .thinking-deeply-content {
+      padding: 0!important;
     }
   }

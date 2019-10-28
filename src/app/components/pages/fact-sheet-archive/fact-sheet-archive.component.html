@@ -3,14 +3,14 @@
     <!-- <h2 *ngFor="let category">{{ categoryDatas[0].parentName }}</h2> -->
     <div class="row" *ngIf="categoryDatas">
       <div
-        class="col-md-12 col-sm-12 col-xs-12 display-table wow fadeInUp"
+        class="col-md-12 col-sm-12 col-xs-12 display-table wow fadeInUp fact-sheet-section"
         *ngFor="let categoryD of categoryDatas"
       >
         <div class="parent-name">
           <p>{{ categoryD.parentName }}</p>
         </div>
         <div
-          class="display-table-cell-vertical-middle md-padding-ten-all sm-padding-six-all xs-no-padding-tb xs-no-padding-lr"
+          class="display-table-cell-vertical-middle md-padding-ten-all sm-padding-six-all xs-no-padding-tb xs-no-padding-lr fact-sheet-inner"
         >
           <div
             class="panel-group accordion-style2"
@@ -59,6 +59,7 @@
                 attr.aria-expanded="{{ isfirst }}"
               >
                 <div class="panel-body ">
+                  <p class="click-on-date-text">Click on a date below to download a pdf of the fact sheet, report and commentary</p>
                   <div class="repeat-loop text-center year-list">
                     <ul *ngIf="subCategory">
                       <li *ngFor="let subCate of subCategory">
@@ -71,10 +72,10 @@
                         </a>
                       </li>
                     </ul>
-                    <div *ngIf="categoryData">
-                      <ul>
+                    <div class="panel-body-inner" *ngIf="categoryData">
+                      <ul class="">
                         <li *ngFor="let data of categoryData">
-                          <div [innerHTML]="data.content.rendered"></div>
+                          <div class="testtesttest" [innerHTML]="data.content.rendered"></div>
                         </li>
                       </ul>
                     </div>

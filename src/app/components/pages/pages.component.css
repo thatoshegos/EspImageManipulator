@@ -303,6 +303,11 @@ a.link:hover {
   display: none;
 }
 
+.yearwise-data-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 @media screen and (max-width: 480px) {
   .bread-crumb {
     padding: 20px 15px 0px 15px;
@@ -331,13 +336,22 @@ a.link:hover {
     margin: 0 30px;
 }
 
-@media screen and (max-width: 767xp) {
+@media screen and (max-width: 767px) {
   .bread-crumb {
     padding: 20px 15px 0px 15px;
   }
 }
 
+@media screen and (min-width: 768px) {
+  .mobile-menu-collapse-wrapper {
+    padding: 0 15px;
+  }
 
+  .mobile-menu-collapse {
+    width: 100%!important;
+    margin: 0!important;
+  }
+}
 
 @media screen and (max-width: 991px) {
   .mobile-common-submenu {
@@ -522,6 +536,10 @@ a.link:hover {
     margin-top: 80px;
   }
 
+  .institutional-button-section {
+    padding-top: 0;
+  }
+
   .institutional-button-section > .col-md-12 {
     padding-left: 0;
     padding-right: 0;
@@ -541,6 +559,7 @@ a.link:hover {
   }
 
   .institutional-button-section > .col-md-12 > .text-center > .btn-performance-sheet {
+    margin-top: 10px;;
     margin-bottom: 20px
   }
 
@@ -568,11 +587,89 @@ a.link:hover {
     margin-left: 0;
   }
 
+  .investment-approach-bottom-gray {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 0;
+  }
+
+  .investment-approach-bottom-gray > .adviser-image {
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+
+  .investment-approach-bottom-gray > .adviser-image > .inst-img-center {
+    margin: 0;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .investment-approach-bottom-gray > .adviser-image > .inst-img-center > a {
+    display: block;
+    width: 100%;
+  }
+
+  .investment-approach-bottom-gray > .adviser-image > .inst-img-center > a > img {
+    max-width: 100%!important;
+  }
+
+  .unconventional-thinking-bottom-gray > .adviser-image {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .unconventional-thinking-bottom-gray > .adviser-image > .inst-img-center {
+    margin: 0;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .unconventional-thinking-bottom-gray > .adviser-image > .inst-img-center > a {
+    display: block;
+    width: 100%;
+  }
+
+  .unconventional-thinking-bottom-gray > .adviser-image > .inst-img-center > a > img {
+    max-width: 100%!important;
+  }
+
+  .app-institutional-fund-common {
+    display: block;
+    margin-top: 80px;
+  }
+
+  .complete-fund-range-bottom-buttons {
+    margin-top: 15px;
+    padding: 0;
+  }
+
+  .complete-fund-range-bottom-buttons > .complete-fund-btn > a {
+    width: 100%;
+  }
+
+  .complete-fund-range-bottom-buttons > .complete-fund-btn > a > span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .sharia-top-content {
+    margin-bottom: 0;
+  }
+
+  .kagiso-in-the-news {
+    margin: 0;
+  }
+
 }
 
 @media screen and (max-width: 1200px) {
   li.row-end {
     margin-right: 60px !important;
+  }
+
+  .fact-sheet-content {
+    margin-top: 15%;
   }
 }
 /* --------------- Mobile CSS ---*/

@@ -1067,11 +1067,15 @@ a.btn-invest-now-green{
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .fund-img-box ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 0;
+  }
+
+  .fund-img-box ul li {
     display: flex;
-    flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 0;
   }
 
   .blanced-fund-box .graph-box .select-fund div:first-of-type {
