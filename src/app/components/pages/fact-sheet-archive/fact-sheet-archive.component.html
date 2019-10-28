@@ -67,7 +67,7 @@
                           href="javascript:void(0)"
                           [id]="subCate.id"
                           (click)="getSubCategoryData(subCate, $event)"
-                          [ngClass]="{ active: selectedItem == subCate }"
+                          [ngClass]="{ active: categoryData && categoryData[0] && categoryData[0].title && categoryData[0].title.rendered === subCate.name }"
                           >{{ subCate.name }}
                         </a>
                       </li>

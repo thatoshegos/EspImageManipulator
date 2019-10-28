@@ -2451,3 +2451,7 @@ input, select, textarea {
     margin: 20px 0 -10px 0;
     font-weight: bold;
 }
+
+.year-list a.active {
+    color: #b60c2f!important;
+}
