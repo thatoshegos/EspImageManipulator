@@ -39,3 +39,8 @@
     padding: 0px 28px 25px;
     border: none;
 }
+
+.yearwise-data-content {
+  padding-left: 0;
+  padding-right: 0;;
+}

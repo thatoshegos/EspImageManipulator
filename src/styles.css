@@ -122,7 +122,7 @@ h6 {font-size:25px; line-height:30px}
 .text-extra-light-gray {color:#b7b7b7}
 .text-light-gray {color:#d6d5d5}
 .text-very-light-gray {color:#ededed}
-.text-deep-pink {color:#b60c2f}
+.text-deep-pink {color:#b60c2f;}
 .text-light-blue{color: #80b9b3 }
 .text-italic{font-weight: 600;font-style:italic;}
 
@@ -2436,3 +2436,17 @@ input, select, textarea {
     padding-right: 10px!important;
   }
   
+
+.year-list p strong.text-deep-pink {
+    font-size: inherit;
+    display: block;
+    margin: 20px 0 -50px 0;
+    font-weight: bold;
+}
+
+.year-list h5.text-deep-pink {
+    font-size: inherit;
+    display: block;
+    margin: 20px 0 -10px 0;
+    font-weight: bold;
+}

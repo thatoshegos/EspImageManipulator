@@ -773,7 +773,7 @@
 <!-- Saria Page section -->
 <div *ngIf="page"  [ngStyle]="{ display: page.saria ? block : none }">
   <div
-    class="wow fadeIn no-padding main-slider mobile-height top-space margin-120px-bottom"
+    class="wow fadeIn no-padding main-slider mobile-height top-space margin-120px-bottom sharia-top-content"
     *ngIf="page && page.saria"
   >
     <app-slider [sliders]="page.acf.home_slider"></app-slider>
@@ -907,7 +907,7 @@
         </div>
       </div>
       </section>
-      <section style="padding:0px; " class="margin-40px-bottom">
+      <section style="padding:0px; " class="margin-40px-bottom investment-approach-bottom-gray">
           <div
           class="row padding-40px-tb  margin-100px-lr bg-medium-gray-light home-light-bg xs-no-margin-top xs-no-padding-lr  xs-no-margin-lr text-center adviser-image"
           *ngIf="page"
@@ -919,7 +919,7 @@
           *ngFor="let fImagesecond of page.acf.financial_adviser_image_second"
         >
           <a [routerLink]="'/' + fImagesecond.url"
-            ><img style="max-width: 224px!important" [src]="fImagesecond.second_image.url"
+            ><img style="" [src]="fImagesecond.second_image.url"
           /></a>
         </div>
       </div>
@@ -1034,7 +1034,7 @@
   <section *ngIf="page && page.ourfunds && !page.isInstitutionFundRange">
     <app-financial-image-two [imageTwo]="page"></app-financial-image-two>
   </section>
-<section style="padding:0px; padding-bottom:25px;"
+<section style="padding:0px;" class="unconventional-thinking-bottom-gray"
   *ngIf="page && page.ourfunds && page.isInstitutionFundRange"
   >
     <div
@@ -1113,8 +1113,8 @@
     ></app-financial-image-two>
   </div>
 
-  <div class="row margin-100px-lr">
-    <div class="col-md-12 col-sm-12 col-xs-12 padding-30px-top">
+  <div class="row margin-100px-lr kagiso-in-the-news">
+    <div class="col-md-12 col-sm-12 col-xs-12 padding-30px-top yearwise-data-content">
       <div
         class="bg-white text-center "
         [innerHtml]="page.content.rendered"
@@ -1677,28 +1677,28 @@
 <div class="container ">
   <section class="margin-30px-top"  *ngIf="page && page.isManagedEquityFund">
     <div class="get-view">
-        <app-common-institutional-fund [fundDatas]="page"></app-common-institutional-fund>
+        <app-common-institutional-fund class='app-institutional-fund-common' [fundDatas]="page"></app-common-institutional-fund>
     </div>
     </section>    
 </div>
 <div class="container ">
     <section  *ngIf="page && page.isInstitutionalMoneyStatus">
       <div class="get-view">
-          <app-common-institutional-fund [fundDatas]="page"></app-common-institutional-fund>
+          <app-common-institutional-fund class='app-institutional-fund-common' [fundDatas]="page"></app-common-institutional-fund>
       </div>  
       </section>    
   </div>
 <div class="container ">
     <section  *ngIf="page && page.isInstitutionalBondStatus">
       <div class="get-view">
-          <app-common-institutional-fund [fundDatas]="page"></app-common-institutional-fund>
+          <app-common-institutional-fund class='app-institutional-fund-common' [fundDatas]="page"></app-common-institutional-fund>
       </div>  
       </section>    
   </div>
 <div class="container ">
     <section  *ngIf="page && page.iscoredEquityFund">
       <div class="get-view">
-          <app-common-institutional-fund [fundDatas]="page"></app-common-institutional-fund>
+          <app-common-institutional-fund class='app-institutional-fund-common' [fundDatas]="page"></app-common-institutional-fund>
       </div>  
       </section>    
   </div>
@@ -1706,28 +1706,28 @@
   <div class="container ">
       <section  *ngIf="page && page.isManagedEquityCappedFund">
         <div class="get-view">
-            <app-common-institutional-fund [fundDatas]="page"></app-common-institutional-fund>
+            <app-common-institutional-fund class='app-institutional-fund-common' [fundDatas]="page"></app-common-institutional-fund>
         </div>  
         </section>    
     </div>
     <div class="container ">
         <section  *ngIf="page && page.isManagedEquitySwixFund">
           <div class="get-view">
-              <app-common-institutional-fund [fundDatas]="page"></app-common-institutional-fund>
+              <app-common-institutional-fund class='app-institutional-fund-common' [fundDatas]="page"></app-common-institutional-fund>
           </div>  
           </section>    
       </div>
       <div class="container ">
           <section  *ngIf="page && page.isdomesticFundStatus">
             <div class="get-view">
-                <app-common-institutional-fund [fundDatas]="page"></app-common-institutional-fund>
+                <app-common-institutional-fund class='app-institutional-fund-common' [fundDatas]="page"></app-common-institutional-fund>
             </div>  
             </section>    
         </div>
         <div class="container ">
             <section  *ngIf="page && page.isGlobalFundInstitutionalStatus">
               <div class="get-view">
-                  <app-common-institutional-fund [fundDatas]="page"></app-common-institutional-fund>
+                  <app-common-institutional-fund class='app-institutional-fund-common' [fundDatas]="page"></app-common-institutional-fund>
               </div>  
               </section>    
           </div>
@@ -1750,7 +1750,7 @@
            </div>
          </div>
        </div>
-       <div class="col-md-12  margin-30px-bottom margin-60px-top padding-100px-lr text-center">
+       <div class="col-md-12  margin-30px-bottom margin-60px-top padding-100px-lr text-center complete-fund-range-bottom-buttons">
           <div class=" complete-fund-btn">
               <!-- <a class="btn-meet-leaders" href="#" style="margin-right:10px;">PLATEFORMS</a> -->
               <a  class="btn-meet-leaders meet-leader" href="about-us/investment-approach" style="margin-right:10px;"><span>INVESTMENTS APPROACH</span></a>

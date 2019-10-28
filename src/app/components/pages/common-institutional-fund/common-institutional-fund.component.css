@@ -77,4 +77,45 @@ a.btn-invest-now-green {
   .p-text {
     text-align: left;
   }
+
+  .button-section > .row > .suscribe > .btn-meet-leaders {
+    margin-right: 0!important;
+    margin-bottom: 10px;
+  }
+  
+  .button-section > .row > .suscribe > .btn-meet-leaders > span, 
+  .button-section > .row > .suscribe > .btn-meet-fund-manager > span{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+
+}
+
+@media screen and (max-width: 991px) {
+  .unconventional-thinking {
+    float: none;
+  }
+  
+  .unconventional-thinking > .text-center {
+    display: flex;
+  }
+
+  .unconventional-thinking > .text-center > .fund-manage-heading {
+    padding: 10px;
+    min-height: unset;
+    line-height: unset!important;
+  }
+
+  .unconventional-thinking > .text-center > .blanced-fund-btn-list {
+    margin: 0;
+    padding: 0 15px 0 0;
+    float: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
 }
