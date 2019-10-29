@@ -1,3 +1,12 @@
+@media (min-width: 1000px) {
+    .navbar-collapse.mobile-menu-collapse-wrapper.collapse {
+      display: block !important;
+      height: auto !important;
+      overflow: visible !important;
+    }
+  }
+
+
 @media (min-width: 992px) {
     .feature-box-14 > div:nth-child(even) { border-bottom: 0}
     .feature-box-14 > div:nth-child(odd) { border-bottom: 0}

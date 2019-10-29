@@ -24,9 +24,19 @@
   display: none;
 }
 
-/* .header-logo-wrapper {
-  flex:
-} */
+.header-logo-wrapper {
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.bottom-nav-buttons {
+  padding-left: 0!important;
+}
+
+#navbar-collapse-toggle-1 {
+  width: 100%;
+}
 
 @media (max-width: 991px) {
 
@@ -72,6 +82,7 @@
   nav .accordion-menu {
     padding: 26px 15px 26px 15px!important;
   }
+
 
   .navbar-collapse > ul > li.individual-investor {
     display: flex;

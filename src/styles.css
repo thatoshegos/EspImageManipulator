@@ -2303,6 +2303,9 @@ input, select, textarea {
 .m-hide{
     display: block;
 }
+
+
+
 /* --------------- Mobile CSS ---*/
 @media screen and (max-width: 480px) {
     .m-hide{
@@ -2455,3 +2458,12 @@ input, select, textarea {
 .year-list a.active {
     color: #b60c2f!important;
 }
+
+
+@media (min-width: 1000px) {
+    .navbar-collapse.mobile-menu-collapse-wrapper.collapse {
+      display: block !important;
+      height: auto !important;
+      overflow: visible !important;
+    }
+  }
