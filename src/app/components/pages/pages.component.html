@@ -1201,7 +1201,7 @@
     data-aos="fade-up"
   >
     <div class="col-md-12 col-sm-12 col-xs-12 margin-100px-top">
-      <h2 [innerHTML]="page.title.rendered"></h2>
+      <h2 style="margin-bottom: 30px;" [innerHTML]="page.title.rendered"></h2>
     </div>
   </div>
   <div class="clearfix"></div>
@@ -1765,20 +1765,12 @@
 <!--end Instittutional manage equity fund view-->
 <!-- Article-detail-page -->
 
-<div class="article-components margin-30px-bottom margin-60px-top padding-55px-top" *ngIf="page && page.articleStatus" >
-    <!-- <div style="display: flex; flex-direction: row;flex: 1; margin-top: -17px; height: 600px;">
-      <img src="assets/images/article-one.png/">
+<div class="article-components margin-30px-bottom margin-60px-top padding-60px-top" *ngIf="page && page.articleStatus" >
+    <div style="display: flex; flex-direction: row;flex: 1; margin-top: -17px; height: 600px;">
+      <!-- <img src="assets/images/article-one.png/"> -->
         <div class="image-box">
         </div>
-    </div> -->
-    <!-- {{page.acf.home_slider}} -->
-    <section
-      class="wow fadeIn no-padding main-slider mobile-height top-space"
-    >
-      <app-slider [sliders]="slider"></app-slider>
-    </section>
-      
-    
+    </div>
     <div class="image">
         <a href="javascript:void(0)" class="btn-subcribe">
           <img class="image-arrow-check" src="assets/images/subscribe-1.png"/>
@@ -1888,9 +1880,9 @@
           </div>
         </div>
       </ng-template>
-     
+  
     <!-- <div style="background: red; height: 500px; margin-top: -10px; position: relative;"></div> -->
-    
+  
     <div class="col-md-8 bread-crumb-about-us-home">
         <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
     </div> 
@@ -1898,6 +1890,7 @@
     <div class="container">
       <div class="article" *ngIf="page && page.articleStatus" style="margin-top:30px;">
         <app-article [getArticleData]="page[0]"></app-article>
-      </div>
     </div>
+
+      </div>
 </div>

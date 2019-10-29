@@ -1,6 +1,8 @@
 .thumbnail {
   border-radius: 0px;
   height: 100%;
+  padding: 0;
+  border: none;
 }
 
 .quater-heading {
