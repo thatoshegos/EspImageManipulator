@@ -24,7 +24,8 @@ export class PagesComponent implements OnInit {
   model: any = {};
   response;
   type = null;
-
+  slider:  any;
+   
   activeClickedTab;
   getCurrentTab;
 
@@ -683,8 +684,13 @@ export class PagesComponent implements OnInit {
     }
 
   }
-
   ngOnInit() {}
+
+  ngAfterViewChecked(){
+    if (this.page && this.page.acf && this.page.acf.home_slider){
+      this.slider = this.page.acf.home_slider
+    }
+  }
 
   changeSliderData(data, clickedTab) {
     this.getHowToInvestSlider = data;
