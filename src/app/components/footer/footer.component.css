@@ -38,3 +38,9 @@
     max-width: 35%;
   }
 }
+
+@media screen and (min-height: 1242px) {
+  .footer-logo > img {
+    max-width: 100%;
+  }
+}
