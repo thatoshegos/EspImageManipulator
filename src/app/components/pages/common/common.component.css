@@ -31,12 +31,19 @@
     padding-left: 0;
     padding-right: 0;
   }
-
+  
   .o-text {
     padding: 0;
   }
-
+  
   .invest-list-img > li > .content-box {
     margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 991px) {
+  .funds-designed-meet {
+    padding-left: 30px!important;
+    padding-right: 30px!important;
   }
 }

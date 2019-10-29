@@ -1,0 +1,13 @@
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .individual-bottom-links-container {
+    padding: 0;
+  }
+
+  .individual-bottom-links {
+    margin: 0;
+  }
+
+  .individual-bottom-links-adviser {
+    margin: 0 15px;
+  }
+}

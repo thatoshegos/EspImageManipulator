@@ -788,7 +788,7 @@
       <app-saria-common [reba]="page"></app-saria-common>
     </div>
   </section>
-  <div class="container" *ngIf="page && page.saria">
+  <div class="container sharia-our-fund-container" *ngIf="page && page.saria">
     <section  style="margin-top:40px; padding-top: 0">
       <app-fund-range [FundRange]="page"></app-fund-range>
     </section>
@@ -945,7 +945,7 @@
   <app-slider [sliders]="page.acf.home_slider"></app-slider>
 </section>
 <!--Individual and Sharia fund range-->
-<div class="container xs-no-padding-lr" *ngIf="page && page.ourfunds && !page.isInstitutionFundRange">
+<div class="container xs-no-padding-lr md-no-padding-lr" *ngIf="page && page.ourfunds && !page.isInstitutionFundRange">
   <section class="no-padding-top">
     <app-fund-range [FundRange]="page"></app-fund-range>
   </section>

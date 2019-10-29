@@ -663,6 +663,71 @@ a.link:hover {
 
 }
 
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .sharia-our-fund-container {
+    padding: 0;
+  }
+  
+  .our-funds-box:first-of-type {
+    margin-bottom: 30px;
+  }
+
+  .institutional-button-section > .col-md-12 > .text-center > .btn-our-funds,
+  .institutional-button-section > .col-md-12 > .text-center > .btn-performance-sheet {
+    width: 35%;
+    display: inline-block;
+  }
+
+  .institutional-button-section > .col-md-12 > .text-center > .btn-our-funds {
+    margin-top: 0;
+  }
+  
+  .institutional-button-section > .col-md-12 > .text-center > .btn-performance-sheet {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .investment-approach-bottom-gray {
+    padding: 0;
+  }
+
+  .investment-approach-bottom-gray > .adviser-image {
+    margin: 0 15px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+
+  .investment-approach-bottom-gray > .adviser-image > .inst-img-center {
+    margin: 0;
+    width: unset;
+    padding: 0 15px;
+  }
+
+  .unconventional-thinking-bottom-gray > .adviser-image {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .unconventional-thinking-bottom-gray > .adviser-image > .inst-img-center {
+    margin: 0;
+    width: unset;
+    padding: 0 15px;
+  }
+
+  /* .unconventional-thinking-bottom-gray > .adviser-image > .inst-img-center > a {
+    display: block;
+    width: 100%;
+  }
+
+  .unconventional-thinking-bottom-gray > .adviser-image > .inst-img-center > a > img {
+    max-width: 100%!important;
+  } */
+
+
+}
+
 @media screen and (max-width: 1200px) {
   li.row-end {
     margin-right: 60px !important;
