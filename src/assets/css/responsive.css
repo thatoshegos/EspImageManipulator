@@ -4732,6 +4732,12 @@
     .skillbar-bar-style2 .skill-bar-percent {right: -30px;}
 }
 
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .header-searchbar {
+        top: 0;
+    }
+}
+
 /* ipad Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
     /* slider image */

@@ -119,3 +119,11 @@ a.btn-invest-now-green {
   }
 
 }
+
+@media screen and (min-width: 481px) and (max-width: 991px) {
+  .unconventional-thinking > .text-center {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+}

@@ -22,3 +22,23 @@
     text-transform: uppercase;
     margin: 20px 0 0 0;
 }*/
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .institutional-independent-bottom-links {
+        margin: 0;
+    }
+
+    .institutional-independent-bottom-links > .col-md-4 {
+        padding: 0;
+    }
+
+    .institutional-independent-bottom-links > .col-md-4:first-of-type {
+        padding-right: 15px;
+    }
+
+    .institutional-independent-bottom-links > .col-md-4:last-of-type {
+        padding-left: 15px;
+    }
+
+
+}

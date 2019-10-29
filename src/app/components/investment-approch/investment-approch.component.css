@@ -1,0 +1,6 @@
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .investment-approach-individual {
+    width: unset;
+    margin: 0 10px;
+  }
+}

@@ -15,6 +15,8 @@ a.btn-our-fund span {
   font-weight: 500;
 }
 
+
+
 @media screen and (max-width: 991px) {
   .our-fund-range-content {
     padding: 0;
@@ -22,5 +24,15 @@ a.btn-our-fund span {
 
   .global-fund-box {
     margin-left: 0!important;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .our-fund-range-content {
+    padding: 0 15px;
+  }
+
+  .global-fund-box:last-of-type {
+    margin-top: 30px;
   }
 }

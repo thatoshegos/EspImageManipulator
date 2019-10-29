@@ -32,6 +32,8 @@
   }
 }
 
+
+
 @media screen and (max-width: 991px) {
   /* .sharia-certificate {
     margin-left: -15px;
@@ -60,4 +62,23 @@
   .financial-adviser-bottom-images-inner-img {
     width: 100%;
   } */
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .sharia-certificate-inner > .col-md-4 {
+    margin-bottom: 30px;
+  }
+
+  .financial-adviser-bottom-images {
+    padding: 0;
+  }
+
+  .financial-adviser-bottom-images-inner {
+    margin: 0;
+  }
+
+  .sharia-bottom-frequently {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
