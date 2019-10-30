@@ -6,9 +6,11 @@
     >
       <app-slider [sliders]="page.acf.home_slider"></app-slider>
     </section>
-        <div class="col-md-12 bread-crumb-about-us-home">
-            <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
-        </div> 
+        <div class="container bread-crumb-about-us-home">
+          <div class="col-md-12 bread-crumb-about-us-home">
+              <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
+          </div> 
+        </div>
    <!-- <section *ngIf="page && page.aboutStatus"> -->
         <div class="col-md-12 padding-40px-bottom" style="padding-left: 0px!important; padding-right: 0px!important">
             <div 
@@ -45,29 +47,32 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-8 sm-margin-four-bottom xs-no-margin-bottom wow fadeInUp">
-              <app-about-us-common 
-              [deeplyThink]="page.acf"> </app-about-us-common>
-            </div>
-            <div class="col-md-4">
-                <div class="about-leader-img">
-                    <img src="assets/images/buttons-new/gavin&roland.png">
-                    <div class="about-leader-title"><a routerLink="/about-us/meet-our-leaders"> MEET OUR LEADERS <span></span></a>
-                    </div>
-                    <div class="col-md-3 common-meet-our-leaders">
-                      <a
-                        routerLink="/about-us/meet-our-leaders"
-                        class="btn-meet-diverse-team"
-                        ><span
-                          >MEET OUR LEADERS</span
-                        ></a
-                      >
+            <div class="container">
+              <div class="col-md-8 sm-margin-four-bottom xs-no-margin-bottom wow fadeInUp app-about-us-common-wrapper">
+                <app-about-us-common 
+                [deeplyThink]="page.acf"> </app-about-us-common>
+                <div class="col-md-4 app-about-us-common-right">
+                    <div class="about-leader-img">
+                        <img src="assets/images/buttons-new/gavin&roland.png">
+                        <div class="about-leader-title"><a routerLink="/about-us/meet-our-leaders"> MEET OUR LEADERS <span></span></a>
+                        </div>
+                        <div class="col-md-3 common-meet-our-leaders">
+                          <a
+                            routerLink="/about-us/meet-our-leaders"
+                            class="btn-meet-diverse-team"
+                            ><span
+                              >MEET OUR LEADERS</span
+                            ></a
+                          >
+                        </div>
                     </div>
                 </div>
+              </div>
+              <div class="padding-15px-left">
+                <app-about-menu [CurrentTab]="getCurrentTab"></app-about-menu>
+              </div>
+
             </div>
-          </div>
-          <div class="padding-15px-left">
-            <app-about-menu [CurrentTab]="getCurrentTab"></app-about-menu>
           </div>
         <div class="col-md-12 about-fund-design about-us-div-background margin-40px-top xs-no-margin-top xs-padding-30px-top xs-padding-15px-bottom" >
 
@@ -1521,7 +1526,7 @@
 
 <!--How to Invest -->
 <div class="container" *ngIf="page && page.howToInvestStatus">
-  <div class="row margin-30px-top 7 xs-margin-30px-top">
+  <div class="row margin-150px-top 7 xs-margin-30px-top">
     <h2>{{ page.title.rendered }}</h2>
   </div>
   <div class="row margin-20px-bottom xs-margin-30px-bottom">
