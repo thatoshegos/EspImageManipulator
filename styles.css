@@ -375,6 +375,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .more-btn {
     padding: 10px 40px 10px 0px;
     background: #9ec5c1 url('./assets/images/buttons-new/buttons_more.png') no-repeat right;
+    background-position: 100% 50%;
     color: #656565;
     display: inline-block;
     font-size: 14px;
@@ -383,7 +384,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 }
 .more-btn span{background-color: #c8dcda;padding: 11px 50px 11px 45px}
 .more-btn span:hover{background-color: #c8dbe5}
-.more-btn:hover{background:  #9ec5d9 url('./assets/images/buttons-new/buttons_more.png') no-repeat right;}
+.more-btn:hover{background:  #9ec5d9 url('./assets/images/buttons-new/buttons_more.png') no-repeat right;background-position: 100% 50%;}
 
 .main-slider .more-btn {
     padding: 11px 80px 11px 20px;

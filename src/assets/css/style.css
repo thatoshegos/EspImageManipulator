@@ -4869,13 +4869,14 @@ a.btn-news-literature:hover{
 .more-btn {
     padding: 10px 40px 10px 0px;
     background: #9ec5c1 url('../images/buttons-new/buttons_more.png') no-repeat right;
+    background-position: 100% 50%;
     color: #656565;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
     width: 175px;
 }
-.more-btn:hover{background:  #9ec5d9 url('../images/buttons-new/buttons_more.png') no-repeat right;}
+.more-btn:hover{background:  #9ec5d9 url('../images/buttons-new/buttons_more.png') no-repeat right; background-position: 100% 50%;}
 
 .main-slider-btn {
     padding: 11px 80px 11px 20px;

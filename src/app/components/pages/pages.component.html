@@ -773,13 +773,13 @@
 <!-- Saria Page section -->
 <div *ngIf="page"  [ngStyle]="{ display: page.saria ? block : none }">
   <div
-    class="wow fadeIn no-padding main-slider mobile-height top-space margin-120px-bottom sharia-top-content"
+    class="wow fadeIn no-padding main-slider mobile-height top-space sharia-top-content"
     *ngIf="page && page.saria"
   >
     <app-slider [sliders]="page.acf.home_slider"></app-slider>
   </div>
   <div class="container">
-    <section class="wow fadeIn row margin-30px-top" *ngIf="page && page.saria">
+    <section class="wow fadeIn row" *ngIf="page && page.saria">
       <app-feature-box [DataSets]="page"></app-feature-box>
     </section>
   </div>
@@ -1765,19 +1765,22 @@
 <!--end Instittutional manage equity fund view-->
 <!-- Article-detail-page -->
 
-<div class="article-components margin-30px-bottom margin-60px-top padding-60px-top" *ngIf="page && page.articleStatus" >
-    <div style="display: flex; flex-direction: row;flex: 1; margin-top: -17px; height: 600px;">
-      <!-- <img src="assets/images/article-one.png/"> -->
+<div class="article-components margin-30px-bottom margin-60px-top" *ngIf="page && page.articleStatus">
+    <!-- <div style="display: flex; flex-direction: row;flex: 1; margin-top: -17px; height: 600px;">
+      <img src="assets/images/article-one.png/"> 
         <div class="image-box">
         </div>
-    </div>
+    </div> -->
+    <section class="wow fadeIn no-padding main-slider mobile-height top-space">
+￼      <app-slider [sliders]="slider"></app-slider>
+￼    </section>
     <div class="image">
         <a href="javascript:void(0)" class="btn-subcribe">
           <img class="image-arrow-check" src="assets/images/subscribe-1.png"/>
         </a>
       <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
       <div class="image-text"> 
-        <a  (click)="open(content, 'subscribe')" class="link">SUBCSRIBE</a>
+        <a  (click)="open(content, 'subscribe')" class="link">SUBSCSRIBE</a>
       </div>
     </div>
   

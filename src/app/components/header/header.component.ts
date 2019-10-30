@@ -261,13 +261,15 @@ export class HeaderComponent implements OnInit {
         var strId = val.state.root.firstChild.params;
         this.childrenMenu.forEach(child => {
           if (typeof strId.ID != "undefined") {
-            child.parent = "individual-investor";
+            // UN -> when select (about-us, inisghts or contact-us) and then go to our-funds always will be set individual-investor - > our-funds. Fixed this with  remove child.parent = "individual-investor";
+            // child.parent = "individual-investor";
           } else {
             if (strIdArr[0] != "contact-us") {
               child.parent = strIdArr[0];
               this.activeStatus = true;
             } else {
-              child.parent = "individual-investor";
+              // UN -> when select (about-us, inisghts or contact-us) and then go to our-funds always will be set individual-investor - > our-funds. Fixed this with  remove child.parent = "individual-investor";
+              // child.parent = "individual-investor";
             }
           }
         });
@@ -356,13 +358,15 @@ export class HeaderComponent implements OnInit {
     } else if (urlArr.length === 1) {
       var url = localStorage.getItem('parent')
       this.selectedParent = url;
-	}
+	  }
 	if (this.selectedParent === 'institutional-investor'){
 		this.childrenMenu[0].name = "INVESTMENT APPROACH";
-		this.childrenMenu[0].slug = "investment-approach";
+    this.childrenMenu[0].slug = "investment-approach";
+    this.childrenMenu[0]["display"] = true;
 	}else{
 		this.childrenMenu[0].name = "INVEST WITH US";
-		this.childrenMenu[0].slug = "invest-with-us";
+    this.childrenMenu[0].slug = "invest-with-us";
+    this.childrenMenu[0]["display"] = true;
 	}
   }
 }
