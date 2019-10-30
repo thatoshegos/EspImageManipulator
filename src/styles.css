@@ -2459,7 +2459,6 @@ input, select, textarea {
     color: #b60c2f!important;
 }
 
-
 @media (min-width: 1000px) {
     .navbar-collapse.mobile-menu-collapse-wrapper.collapse {
       display: block !important;

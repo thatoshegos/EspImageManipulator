@@ -1326,7 +1326,7 @@
     .md-no-background-img {background-image: none !important}
 
     /* navigation */
-    header nav .navbar-nav > li > a { margin: 0 18px;}
+    /* header nav .navbar-nav > li > a { margin: 0 18px;} */
 
     /* nav box width */
     header nav.nav-box-width { padding: 0;}
@@ -1540,7 +1540,7 @@
     nav.navbar.bootsnav li.dropdown ul.mega-menu-full li ul {margin-top: 0}
     .navbar-nav > li.simple-dropdown ul.dropdown-menu {top: 0; min-width: 0;}
     nav.navbar.bootsnav ul.nav li.dropdown.simple-dropdown > .dropdown-menu {background-color: #232323;}
-    nav.navbar.bootsnav .navbar-toggle { top: 3px;}
+    nav.navbar.bootsnav .navbar-toggle { top: 3px; right: 20px;}
     .navbar-nav > li.dropdown > .fas { display: block; position: absolute; right: 0px; top: 0; color: #fff; font-size: 16px; cursor: pointer; padding: 9px 15px 8px}
     nav.navbar.bootsnav .navbar-nav > li.dropdown.open > ul, nav.navbar.bootsnav .navbar-nav > li.dropdown.on > ul { display: block !important; opacity: 1 !important}
     nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu > li > a{ border: 0; padding: 10px 0}

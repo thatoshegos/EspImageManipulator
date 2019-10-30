@@ -1,6 +1,6 @@
 .invester-login-btn {
   background: none;
-  padding: 0px 43px 0px 0px;
+  padding: 0px 15px;
 }
 .nav > li > a > img {
   max-width: none;
@@ -38,11 +38,35 @@
   width: 100%;
 }
 
+.desktop-top-nav,
+.desktop-bottom-nav {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  list-style-type: none;
+}
+
+.desktop-bottom-nav > li.desktop-menu {
+  flex-grow: 1;
+  display: inline-flex;
+}
+
+.navbar-nav > li {
+  position: inherit;
+  flex-grow: 1;
+  padding: 0 15px 0 0;
+}
+
 @media (max-width: 991px) {
 
   .navbar-collapse > ul > li.desktop-menu {
     display: none;
   }
+
+  .desktop-top-nav,
+  .desktop-bottom-nav {
+    display: unset;
+}
 
   .mobile-menu {
     display: flex;
