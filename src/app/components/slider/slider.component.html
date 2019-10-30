@@ -63,7 +63,7 @@
               </h1>
               <div class="btn-dual m-center" *ngIf="slider.image_title2">
                 <a
-                  href="/how-to-invest"
+                  [href]="slider.image_title2 == 'VIEW LATEST QUARTERLY' ? '/up-quarterly' : '/how-to-invest'"
                   target="_self"
                   class="main-slider-btn"
                   >{{ slider.image_title2 }}</a
