@@ -21,7 +21,7 @@ export class FundRangeComponent implements OnInit {
     "fade-left"
   ];
   glfundLength;
-  platformPdf= 'cms/wp-content/uploads/LISP_Summary/LISP_Summary_sheet.pdf';
+  platformPdf= 'cms/wp-content/uploads/LISP%20Summary/LISP_Summary_sheet.pdf';
   constructor() {}
 
   ngOnInit() {
