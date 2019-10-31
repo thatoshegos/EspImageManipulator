@@ -3907,7 +3907,8 @@ aside .latest-post li figure {width: 75px;}
 }
 .more-btn {
     padding: 11px 80px 11px 20px;
-    background: #BCDAD7 url(../images/arrow-icon.jpg) no-repeat right;
+    background: #BCDAD7 url(../images/arrow-icon.jpg) no-repeat ;
+    background-position: 104% 50%;
     color: #000;
     display: inline-block;
     font-size: 14px;
@@ -4870,7 +4871,8 @@ a.btn-news-literature:hover{
 .shariya-light-green .text-title{color:#656565; font-size: 14px;line-height: 21px; background: #d0e0df url('../images/buttons-new/buttons_more.png') no-repeat right center; display: inline-block; padding-right: 30px; text-transform: uppercase; margin: 20px 0 0 0}
 .more-btn {
     padding: 10px 40px 10px 0px;
-    background: #9ec5c1 url('../images/buttons-new/buttons_more.png') no-repeat right;
+    background: #BCDAD7 url(../images/arrow-icon.jpg) no-repeat;
+    background-position: 104% 50%;
     color: #656565;
     display: inline-block;
     font-size: 14px;
