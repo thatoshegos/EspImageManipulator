@@ -9,7 +9,7 @@ export class PodcastSliderComponent implements OnInit {
   @Input() sliders;
   constructor() {}
   config: SwiperOptions = {
-    autoplay: 3000,
+    // autoplay: 3000,
     pagination: ".swiper-pagination",
     paginationClickable: true,
     nextButton: ".swiper-button-next",

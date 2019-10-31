@@ -9,7 +9,7 @@ export class AgencyComponent implements OnInit {
   @Input() agencies;
   constructor() {}
   config: SwiperOptions = {
-    autoplay: 3000,
+    // autoplay: 3000,
     pagination: ".swiper-pagination",
     paginationClickable: true,
     nextButton: ".swiper-button-next",

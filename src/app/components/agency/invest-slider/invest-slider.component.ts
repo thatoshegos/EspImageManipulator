@@ -20,7 +20,7 @@ export class InvestSliderComponent implements AfterViewInit {
   index;
   constructor() {}
   config: SwiperOptions = {
-    autoplay: 3000,
+    // autoplay: 3000,
     pagination: ".swiper-pagination",
     paginationClickable: true,
     nextButton: ".swiper-button-next",
