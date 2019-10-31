@@ -50,6 +50,20 @@ export class FormDocumentComponent implements OnInit {
       });
     }
   }
+
+  convertUrl () {
+    const url =  this.getFormPageData[0].acf.form_title;
+    for (let i = 0; i < url.length; i++) {
+      const element = url[i];
+      if (!element.encoded) {
+        element.url = encodeURI(element.url)
+        element.encoded = true
+      }
+      
+    }
+    return url
+  }
+
   slugify(s) {
     return s
       .toLowerCase()
