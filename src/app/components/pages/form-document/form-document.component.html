@@ -64,12 +64,12 @@
                           [innerHTML]="subHeading.title"
                         ></div>
                         <div class="col-md-4">
-                          <a href=""
+                          <a [href]="subHeading.url" 
                             ><img
                               src="./assets/images/form_view_icon.png"
                               style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
                           /></a>
-                          <a href=""
+                          <a [href]="subHeading.url" download
                             ><img
                               src="./assets/images/form_download_icon.png"
                               style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
