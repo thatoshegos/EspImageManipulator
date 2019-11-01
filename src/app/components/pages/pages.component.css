@@ -1,3 +1,5 @@
+
+
 .bg-white {
   background-color: white !important;
 }
@@ -317,6 +319,11 @@ a.link:hover {
 .yearwise-data-content {
   padding-left: 0;
   padding-right: 0;
+}
+
+.app-institutional-fund-common {
+  display: block;
+  margin-top: 120px;
 }
 
 

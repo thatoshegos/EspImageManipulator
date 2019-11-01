@@ -863,9 +863,11 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .margin-25px-bottom {margin-bottom:25px}
 .margin-30px-bottom {margin-bottom:30px}
 .margin-35px-bottom {margin-bottom:35px}
+.margin-38px-bottom {margin-bottom:38px}
 .margin-40px-bottom {margin-bottom:40px}
 .margin-45px-bottom {margin-bottom:45px}
 .margin-50px-bottom {margin-bottom:50px}
+.margin-52px-bottom {margin-bottom:52px}
 .margin-55px-bottom {margin-bottom:55px}
 .margin-60px-bottom {margin-bottom:60px}
 .margin-65px-bottom {margin-bottom:65px}
@@ -2219,7 +2221,7 @@ h1.black{color: #000 !important}
 .unconventional-thinking-right .bg-light-green-v2{background: #e3edec}
 .unconventional-thinking-right .more-btn, .unconventional-thinking-right .more-btn:hover{background: #e3edec url(./assets/images/buttons-new/buttons_more.png) no-repeat right;}
 /* .light-green-box a{background: #e3edec; padding: 15px; display: block; text-align: center} */
-.light-green-box {background: #d0e0df; padding: 20px; display: block; text-align: center;overflow: hidden; height: 348px;}
+.light-green-box {background: #d0e0df; padding: 20px; display: block; text-align: center;overflow: hidden; /*height: 348px;*/}
 .light-green-box img{margin:0 auto; display: block;}
 /*.light-green-box:hover img{
     width: 120%;
@@ -2374,7 +2376,7 @@ input, select, textarea {
 .history-slider-area .controls{
     left: -55px!important;
     width: 110%!important;
-    z-index: 9999;
+    z-index: 5!important;
 }
 .hsi-title-1 {
     font-size: 36px;

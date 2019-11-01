@@ -494,10 +494,12 @@ a.btn-invest-now-red span{
     font-weight: 500;
     height: 40px;
     padding-left: 10px;
+    line-height: 13px;
 }
 a.btn-invest-now-red span:hover{
     background: #d98b9c;
     color: #333;
+    line-height: 13px;
 }
 a.btn-invest-now-red{
     display: inline-block;
@@ -506,6 +508,7 @@ a.btn-invest-now-red{
     padding-right: 38px;
     margin-top: 5px;
     width: 165px;
+    line-height: 13px;
 }
 a.btn-invest-now-green span{
     /* padding: 10px 40px 10px 20px; */
@@ -517,11 +520,13 @@ a.btn-invest-now-green span{
     color: #656565;
     font-weight: 500;
     height: 40px;
-    padding-left: 10px
+    padding-left: 10px;
+    line-height: 13px;
 }
 a.btn-invest-now-green span:hover{
     background: #c5d9e2;
     color: #333;
+    line-height: 13px;
 }
 a.btn-invest-now-green{
     display: inline-block;
