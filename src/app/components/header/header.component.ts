@@ -109,131 +109,131 @@ export class HeaderComponent implements OnInit {
   /**
    **
    **/
-  headerMenuItems = [
-    {
-      name: "Individual Investor",
-      slug: "individual-investor",
-      childrens: [
-        {
-          name: "INVEST WITH US",
-          slug: "invest-with-us",
-          parent: "individual-investor",
-          id: 1,
-          display: true
-        },
-        {
-          name: "OUR FUNDS",
-          slug: "our-funds",
-          parent: "individual-investor"
-        },
-        {
-          name: "ABOUT US",
-          slug: "about-us",
-          parent: "individual-investor"
-        },
-        {
-          name: "INSIGHTS",
-          slug: "insights",
-          parent: "individual-investor"
-        },
-        {
-          name: "CONTACT US",
-          slug: "contact-us"
-        }
-      ]
-    },
-    {
-      name: "Sharia Investor",
-      slug: "sharia-investor",
-      childrens: [
-        {
-          name: "INVEST WITH US",
-          slug: "invest-with-us",
-          parent: "individual-investor",
-          id: 1,
-          display: true
-        },
-        {
-          name: "OUR FUNDS",
-          slug: "our-funds",
-          parent: "individual-investor"
-        },
-        {
-          name: "ABOUT US",
-          slug: "about-us",
-          parent: "individual-investor"
-        },
-        {
-          name: "INSIGHTS",
-          slug: "insights",
-          parent: "individual-investor"
-        },
-        {
-          name: "CONTACT US",
-          slug: "contact-us"
-        }
-      ]
-    },
+//   headerMenuItems = [
+//     {
+//       name: "Individual Investor",
+//       slug: "individual-investor",
+//       childrens: [
+//         {
+//           name: "INVEST WITH US",
+//           slug: "invest-with-us",
+//           parent: "individual-investor",
+//           id: 1,
+//           display: true
+//         },
+//         {
+//           name: "OUR FUNDS",
+//           slug: "our-funds",
+//           parent: "individual-investor"
+//         },
+//         {
+//           name: "ABOUT US",
+//           slug: "about-us",
+//           parent: "individual-investor"
+//         },
+//         {
+//           name: "INSIGHTS",
+//           slug: "insights",
+//           parent: "individual-investor"
+//         },
+//         {
+//           name: "CONTACT US",
+//           slug: "contact-us"
+//         }
+//       ]
+//     },
+//     {
+//       name: "Sharia Investor",
+//       slug: "sharia-investor",
+//       childrens: [
+//         {
+//           name: "INVEST WITH US",
+//           slug: "invest-with-us",
+//           parent: "individual-investor",
+//           id: 1,
+//           display: true
+//         },
+//         {
+//           name: "OUR FUNDS",
+//           slug: "our-funds",
+//           parent: "individual-investor"
+//         },
+//         {
+//           name: "ABOUT US",
+//           slug: "about-us",
+//           parent: "individual-investor"
+//         },
+//         {
+//           name: "INSIGHTS",
+//           slug: "insights",
+//           parent: "individual-investor"
+//         },
+//         {
+//           name: "CONTACT US",
+//           slug: "contact-us"
+//         }
+//       ]
+//     },
 
-    {
-      name: "Institutional Investor",
-      slug: "institutional-investor",
-      childrens: [
- {
-          name: "INVESTMENT APPROACH",
-          slug: "investment-approach",
-          parent: "individual-investor",
-          id: 1,
-          display: true
-        },
-        {
-          name: "OUR FUNDS",
-          slug: "our-funds",
-          parent: "individual-investor"
-        },
-        {
-          name: "ABOUT US",
-          slug: "about-us",
-          parent: "individual-investor"
-        },
-        {
-          name: "INSIGHTS",
-          slug: "insights",
-          parent: "individual-investor"
-        },
-        {
-          name: "CONTACT US",
-          slug: "contact-us"
-        }
-      ]
-    },
-    {
-      name: "Investor Login",
-      slug: "investor-login",
-      childrens: [
-        {
-          name: "INVEST WITH US",
-          slug: "invest-with-us"
-        },
-        {
-          name: "OUR FUNDS",
-          slug: "our-funds"
-        },
-        {
-          name: "ABOUT US",
-          slug: "about-us"
-        },
-        {
-          name: "INSIGHTS",
-          slug: "insights"
-        },
-        {
-          name: "CONTACT US",
-          slug: "contact-us"
-        }
-      ]
-    }
-  ];
+//     {
+//       name: "Institutional Investor",
+//       slug: "institutional-investor",
+//       childrens: [
+//  {
+//           name: "INVESTMENT APPROACH",
+//           slug: "investment-approach",
+//           parent: "individual-investor",
+//           id: 1,
+//           display: true
+//         },
+//         {
+//           name: "OUR FUNDS",
+//           slug: "our-funds",
+//           parent: "individual-investor"
+//         },
+//         {
+//           name: "ABOUT US",
+//           slug: "about-us",
+//           parent: "individual-investor"
+//         },
+//         {
+//           name: "INSIGHTS",
+//           slug: "insights",
+//           parent: "individual-investor"
+//         },
+//         {
+//           name: "CONTACT US",
+//           slug: "contact-us"
+//         }
+//       ]
+//     },
+//     {
+//       name: "Investor Login",
+//       slug: "investor-login",
+//       childrens: [
+//         {
+//           name: "INVEST WITH US",
+//           slug: "invest-with-us"
+//         },
+//         {
+//           name: "OUR FUNDS",
+//           slug: "our-funds"
+//         },
+//         {
+//           name: "ABOUT US",
+//           slug: "about-us"
+//         },
+//         {
+//           name: "INSIGHTS",
+//           slug: "insights"
+//         },
+//         {
+//           name: "CONTACT US",
+//           slug: "contact-us"
+//         }
+//       ]
+//     }
+//   ];
   constructor(private WPService: WPAPIService, private route: Router) {
     /************************************************************
      * this code is related to make relatetion between parent   *
@@ -265,7 +265,11 @@ export class HeaderComponent implements OnInit {
             // child.parent = "individual-investor";
           } else {
             if (strIdArr[0] != "contact-us") {
-              child.parent = strIdArr[0];
+                if(strIdArr[0] == 'about-us' || strIdArr[0] == 'article' || strIdArr[0] == 'up-quarterly') {
+                  child.parent = child.parent;
+                } else {
+                  child.parent = strIdArr[0];
+                }
               this.activeStatus = true;
             } else {
               // UN -> when select (about-us, inisghts or contact-us) and then go to our-funds always will be set individual-investor - > our-funds. Fixed this with  remove child.parent = "individual-investor";

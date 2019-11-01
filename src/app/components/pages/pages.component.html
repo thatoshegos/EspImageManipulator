@@ -1777,8 +1777,8 @@
         </div>
     </div> -->
     <section class="wow fadeIn no-padding main-slider mobile-height top-space">
-￼      <app-slider [sliders]="slider"></app-slider>
-￼    </section>
+      <app-slider [sliders]="slider"></app-slider>
+    </section>
     <div class="image">
         <a href="javascript:void(0)" class="btn-subcribe">
           <img class="image-arrow-check" src="assets/images/subscribe-1.png"/>
@@ -1890,13 +1890,14 @@
       </ng-template>
   
     <!-- <div style="background: red; height: 500px; margin-top: -10px; position: relative;"></div> -->
-  
-    <div class="col-md-8 bread-crumb-about-us-home">
-        <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
-    </div> 
+    <div class="container">
+      <div class="col-md-8 bread-crumb-about-us-home">
+          <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
+      </div> 
+    </div>
   
     <div class="container">
-      <div class="article" *ngIf="page && page.articleStatus" style="margin-top:30px;">
+      <div class="article" *ngIf="page && page.articleStatus" style="margin-top:-20px;">
         <app-article [getArticleData]="page[0]"></app-article>
     </div>
 

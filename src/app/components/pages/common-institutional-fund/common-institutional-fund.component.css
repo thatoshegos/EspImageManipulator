@@ -35,18 +35,20 @@ a.btn-invest-now-red span {
   font-size: 14px;
   color: #656565;
   font-weight: 500;
+  line-height: 13px;
 }
 a.btn-invest-now-red span:hover {
   background: #d98b9c;
   color: #333;
+  line-height: 13px;
 }
 a.btn-invest-now-red {
   display: inline-block;
-  background: #b30b2e
-    url(/red-arrow-icon.6be28c54a0d555ff2462.jpg)
-    no-repeat right center;
-  padding-right: 50px;
-    width: 178px;
+  background: #b30b2e url('src/assets/images/red-arrow-icon.jpg') no-repeat;
+  background-position: 103% 50%;
+  padding-right: 45px;
+  width: 178px;
+  line-height: 13px;
 }
 a.btn-invest-now-green span {
   padding: 10px 20px 10px 20px;
@@ -55,18 +57,20 @@ a.btn-invest-now-green span {
   font-size: 14px;
   color: #656565;
   font-weight: 500;
+  line-height: 13px;
 }
 a.btn-invest-now-green span:hover {
   background: #c5d9e2;
   color: #333;
+  line-height: 13px;
 }
 a.btn-invest-now-green {
   display: inline-block;
-  background: #b30b2e
-    url(/arrow-icon.7df4ea734180f4c8726f.jpg)
-    no-repeat right center;
-  padding-right: 50px;
-    width: 178px;
+  background: #b30b2e url('src/assets/images/red-arrow-icon.jpg') no-repeat;
+  background-position: 103% 50%;
+  padding-right: 45px;
+  width: 178px;
+  line-height: 13px;  
 }
 .fund-manage-heading {
   min-height: 115px;
