@@ -17,6 +17,7 @@ export class BalanceFundComponent implements OnInit {
   currentRoute;
   selectedRoute;
   csvData;
+  selectedIndex;
 
   constructor(private wpservice: WPAPIService, private router: Router) {}
 
@@ -29,6 +30,7 @@ export class BalanceFundComponent implements OnInit {
       .subscribe(data => {
         this.csvData = data;
         this.getGraphData = this.makeDataSets(data);
+        this.getConditionalCSV(4, 3)
       });
     this.currentRoute = this.router.url.slice(1);
     this.selectedRoute = "";
@@ -68,10 +70,11 @@ export class BalanceFundComponent implements OnInit {
     return  pdfMap[slug][type]
   }
 
-  getConditionalCSV(years = null) {
+  getConditionalCSV(years = null, index: number) {
     if (years != null) {
       //this.createDataConditionalDataset(years);
       this.getGraphData = this.makeDataSets(this.csvData, years);
+      this.selectedIndex = index;
     }
   }
   createDataConditionalDataset(length) {
@@ -95,7 +98,7 @@ export class BalanceFundComponent implements OnInit {
     } else {
       showYear = lines.length;
     }
-
+    
     if (startingPoint) {
       startingPoint = startingPoint - 1;
     } else {

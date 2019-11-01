@@ -78,23 +78,23 @@
                <!-- <div class="vertical-row"></div>-->
               <div class="col-md-7  graph-box padding-45px-all" >
                 <ul class="year-list">
-                  <li>
-                    <a href="javascript:void(0)" (click)="getConditionalCSV(5)"
+                  <li [ngClass]="selectedIndex === 0 ? 'current' : ''">
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(5, 0)"
                       >5 Years</a
                     >
                   </li>
-                  <li>
-                    <a href="javascript:void(0)" (click)="getConditionalCSV(7)"
+                  <li [ngClass]="selectedIndex === 1 ? 'current' : ''">
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(7, 1)"
                       >7 Years</a
                     >
                   </li>
-                  <li>
-                    <a href="javascript:void(0)" (click)="getConditionalCSV(10)"
+                  <li [ngClass]="selectedIndex === 2 ? 'current' : ''">
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(10, 2)"
                       >10 Years</a
                     >
                   </li>
-                  <li class="current">
-                    <a href="javascript:void(0)" (click)="getConditionalCSV(0)"
+                  <li [ngClass]="selectedIndex === 3 ? 'current' : ''">
+                    <a href="javascript:void(0)" (click)="getConditionalCSV(4, 3)"
                       >Since Inception</a
                     >
                   </li>
