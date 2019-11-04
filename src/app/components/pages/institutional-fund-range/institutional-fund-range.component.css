@@ -13,7 +13,7 @@ a.btn-our-fund span{
 
 @media screen and (max-width: 991px) {
   .our-fund-range-content {
-    padding: 0;
+    /* padding: 0; */
   }
 
   .institutional-performance-sheet {

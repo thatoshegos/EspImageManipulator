@@ -184,7 +184,7 @@
                           item.display;
                         else elseSection
                       "
-                      [routerLink]="item.parent + '/' + item.slug"
+                      [href]="item.parent + '/' + item.slug"
                       [class]="
                         route.url.includes(item.slug)
                           ? 'header-item-selected'
@@ -195,7 +195,7 @@
                     <ng-template #elseSection>
                       <a
                         *ngIf="item.display"
-                        [routerLink]="'/' + item.slug"
+                        [href]="'/' + item.slug"
                         [class]="
                           route.url.includes(item.slug)
                             ? 'header-item-selected'

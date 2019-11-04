@@ -18,7 +18,7 @@ a.btn-our-fund span {
 
 
 @media screen and (max-width: 991px) {
-  .our-fund-range-content {
+  .shaira-our-fund-range-content {
     padding: 0;
   }
 
@@ -28,7 +28,7 @@ a.btn-our-fund span {
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  .our-fund-range-content {
+  .shaira-our-fund-range-content {
     padding: 0 15px;
   }
 

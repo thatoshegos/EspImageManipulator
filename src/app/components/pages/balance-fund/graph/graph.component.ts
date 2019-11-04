@@ -50,6 +50,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   makeOptions(dataProvider) {
+    console.log(dataProvider)
     function getMonthNameByNum(pNum) {
       switch (pNum) {
         case 0:
@@ -195,6 +196,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           );
         },
         labelFunction: function(valueText, serialDataItem, categoryAxis) {
+          console.log(serialDataItem)
           return (
             "" + parseInt(serialDataItem.dataContext.month.getFullYear(), 10)
           );
@@ -202,6 +204,8 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
         showFirstLabel: false,
         startOnAxis: false,
         equalSpacing: true,
+        autoGridCount: false,
+        gridCount: 4
       },
       /*
 	  categoryAxesSettings: {
@@ -219,15 +223,17 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
   }
   ngOnInit() {
     // Create chartdiv1
-
+    
     if (this.makeDataSet()) {
       this.options = this.makeOptions(this.makeDataSet());
-
+      console.log(this.options)
+      
       // Create chartdiv2
       this.chart2 = this.AmCharts.makeChart(
         "chartdiv2",
         this.makeOptions(this.makeDataSet())
-      );
+        );
+        console.log(this.chart2)
     }
   }
   ngOnChanges(changes: SimpleChanges) {

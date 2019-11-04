@@ -503,7 +503,7 @@ a.btn-invest-now-red span:hover{
 }
 a.btn-invest-now-red{
     display: inline-block;
-    background: #b30b2e url(https://kagisonew.cotomo.com/assets/images/buttons-new/buttons_more1.png) no-repeat;
+    background: #b30b2e url('src/assets/images/red-arrow-icon.jpg') no-repeat;
     background-position: 103% 50%;
     padding-right: 38px;
     margin-top: 5px;
@@ -531,7 +531,7 @@ a.btn-invest-now-green span:hover{
 a.btn-invest-now-green{
     display: inline-block;
 
-    background: #8abbb6 url(https://kagisonew.cotomo.com/assets/images/buttons-new/buttons_more1.png) no-repeat;
+    background: #8abbb6 url('src/assets/images/red-arrow-icon.jpg') no-repeat;
     background-position: 103% 50%;
     margin-top: 5px;
     padding-right: 38px;

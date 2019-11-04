@@ -2486,6 +2486,10 @@ input, select, textarea {
         padding-left: 20px;
         padding-right: 20px;
     }
+    .tab-data.responsible-investing-tab-data {
+        padding-left: 0;
+        padding-right: 0;;
+    }
     .suscribe a{
         display: block;
         margin-left: 0px;
