@@ -108,7 +108,7 @@
 }
 
 .inner-content .inner-content-photo {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;

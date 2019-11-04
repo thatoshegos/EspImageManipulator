@@ -349,6 +349,11 @@ a.link:hover {
     .insight-title{
         margin-bottom: 20px;
     }
+
+    .insights-financial-wrapper {
+      margin-left: -15px;
+      margin-right: -15px;;
+    }
 }
 .inst-img-center {
     display: inline-block;
@@ -437,7 +442,12 @@ a.link:hover {
   }
 
   .container.bread-crumb-about-us-home {
+    padding-top: 0;
     padding-left: 0;
+  }
+
+  .bread-crumb-about-us-home.article-one-bread {
+    padding: 20px 15px 35px 0;
   }
   
   .about-leader-img > img {
@@ -693,10 +703,16 @@ a.link:hover {
   .kagiso-in-the-news {
     margin: 0;
   }
-
+  .sharia-our-fund-container {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
+  .insights-financial-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;;
+  }
   .sharia-our-fund-container {
     padding: 0;
   }
