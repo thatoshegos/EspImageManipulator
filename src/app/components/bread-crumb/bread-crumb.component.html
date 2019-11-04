@@ -1,9 +1,12 @@
 <div class="">
-    <div class="">
-        
-  <p>
-    {{ breadCrumb | uppercase }}
-  </p>
+    <div>
+  <a [routerLink]= "'/'+parentLink">
+    {{ parentCrumb | uppercase }}   
+  </a>
+  <div [ngClass]="parentLink && childLink ? 'arrow-crumb': 'none-arrow'"> > </div>
+  <a [routerLink]= "'/'+childLink">
+     {{ childCrumb | uppercase }}
+  </a>
        
 </div>
  </div>

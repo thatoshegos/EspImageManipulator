@@ -25,6 +25,8 @@ export class PagesComponent implements OnInit {
   response;
   type = null;
   slider:  any;
+  url: any;
+  platformPdf= 'cms/wp-content/uploads/LISP platforms/LISP_Summary_sheet.pdf';
    
   activeClickedTab;
   getCurrentTab;
@@ -42,10 +44,12 @@ export class PagesComponent implements OnInit {
 
   ) {
     //console.log('this', this)
+    this.platformPdf = encodeURI(this.platformPdf);
     route.params.subscribe(val => {
       // console.log(val);
       //console.log(this.router.url);
       var urlArr = this.router.url.split("/");
+      this.url = urlArr;
       var currentUrl = {
         parent: urlArr.length > 2 ? urlArr[1] : "",
         child: urlArr.length > 2 ? urlArr[2] : urlArr[1],

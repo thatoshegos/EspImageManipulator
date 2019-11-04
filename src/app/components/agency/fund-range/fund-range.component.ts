@@ -21,7 +21,7 @@ export class FundRangeComponent implements OnInit {
     "fade-left"
   ];
   glfundLength;
-  platformPdf= 'cms/wp-content/uploads/LISP%20platforms/LISP_Summary_sheet.pdf';
+  platformPdf= 'cms/wp-content/uploads/LISP platforms/LISP_Summary_sheet.pdf';
   constructor() {}
 
   ngOnInit() {
@@ -34,7 +34,7 @@ export class FundRangeComponent implements OnInit {
     this.glFund.desc = this.FundRange.acf.global_funds_discription;
     this.glFund.images = this.FundRange.acf.global_funds_image;
     this.glfundLength = this.FundRange.acf.south_african_fund_image.length;
-    this.platformPdf = this.platformPdf;
+    this.platformPdf = encodeURI(this.platformPdf);
 
     console.log(this.glfundLength);
     // console.log(this.glFund);

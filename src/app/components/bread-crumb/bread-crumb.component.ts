@@ -8,10 +8,18 @@ import { Component, OnInit, Input } from "@angular/core";
 export class BreadCrumbComponent implements OnInit {
   @Input() CurrentUrl;
   breadCrumb;
+  parentCrumb;
+  childCrumb;
+  parentLink;
+  childLink;
   constructor() {}
 
   ngOnInit() {
-    // console.log(this.CurrentUrl);
+    // console.log(this.CurrentUrl.parent);
+   
+    this.parentLink = this.CurrentUrl.parent;
+    this.childLink = this.parentLink+"/"+this.CurrentUrl.child;
+    
     var parent = this.CurrentUrl.parent.split("-");
     var menu = this.CurrentUrl.child.split("-");
     menu.length >= 3
@@ -31,12 +39,15 @@ export class BreadCrumbComponent implements OnInit {
           child += menu[i] + " ";
         }
 
-        this.breadCrumb =
-          // parent[0] +
-          // " " +
-          // parent[1] +
+        // this.breadCrumb =
+        //   parent[0] +
+        //   " " +
+        //   parent[1] +
 
-          this.CurrentUrl.parent + " > " + child;
+        //   this.CurrentUrl.parent + " > " + child;
+
+         this.parentCrumb = this.CurrentUrl.parent
+         this.childCrumb = child
 
         // menu[0] +
         // " " +
@@ -44,11 +55,13 @@ export class BreadCrumbComponent implements OnInit {
         // " " +
         // menu[2];
       } else {
-        this.breadCrumb =
-          parent[0] + " " + (parent[1] || '') + " > " + menu[0] + " " + (menu[1] || '');
+        // this.breadCrumb =
+        //   parent[0] + " " + (parent[1] || '') + " > " + menu[0] + " " + (menu[1] || '');
+        this.parentCrumb = parent[0] + " " + (parent[1] || '') 
+        this.childCrumb = menu[0] + " " + (menu[1] || '')
       }
     } else {
-      this.breadCrumb = menu[0] + " " + menu[1];
+      this.childCrumb = menu[0] + " " + menu[1];
     }
   }
 }
