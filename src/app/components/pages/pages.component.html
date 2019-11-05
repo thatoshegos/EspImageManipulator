@@ -1374,13 +1374,13 @@
 <div class="silder-div" *ngIf="page && page.meetFundManager">
  <!-- <app-slider [sliders]="page.acf.home_slider"></app-slider>-->
   <div class="container">
-    <div class="row margin-40px-top">
+    <div class="row margin-130px-top">
       <h2>{{ page.title.rendered }}</h2>
     </div>
     <div class="row margin-5px-top">
-      <div class="bg-white padding-25px-bottom">
-        <div class="padding-45px-all" [innerHTML]="page.content.rendered"></div>
-      </div>
+      <!-- <div class="bg-white padding-25px-bottom"> -->
+        <div  [innerHTML]="page.content.rendered"></div>
+      <!-- </div> -->
     </div>
     <div class="row margin-30px-bottom  margin-30px-top">
       <div class=" col-md-8 col-md-offset-2 text-center suscribe">
