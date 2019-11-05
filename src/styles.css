@@ -2474,3 +2474,7 @@ input, select, textarea {
       overflow: visible !important;
     }
   }
+
+.amcharts-chart-div > a{
+    display: none!important;
+}

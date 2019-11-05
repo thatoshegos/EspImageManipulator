@@ -34,6 +34,18 @@
 .set-min-height {
   min-height: 700px;
 }
+
+.investment-approach-inner-content {
+  display: flex;
+  flex-flow: column;
+}
+
+@media screen and (min-width: 768px) {
+  .investment-approach-inner-content {
+    flex-flow: row;
+  }
+}
+
 /* --------------- Mobile CSS ---*/
 @media screen and (max-width: 480px) {
   .p-text {

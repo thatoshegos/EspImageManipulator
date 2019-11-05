@@ -4259,10 +4259,11 @@ a.btn-news-literature:hover{
 
 .bread-crumb p {font-size: 13px;}
 .bread-crumb-about-us-home p {font-size: 13px;}
+.bread-crumb-about-us-home { font-size: 13px;}
 
 .bread-crumb {padding: 20px 30px 0px 85px;}
 /* .bread-crumb-about-us-home{padding: 20px 30px 0px 113px;} */
-.bread-crumb-about-us-home{padding: 20px 15px 0px 15px;}
+.bread-crumb-about-us-home{padding: 20px 15px 5px 15px;}
 
 @media only screen and (max-width: 480px) {
     header .logo .logo-dark.default, header .logo .logo-light.default {
@@ -4340,7 +4341,15 @@ a.btn-news-literature:hover{
 
 @media only screen and (min-width: 992px) {
     .bread-crumb-about-us-home {
-        padding-left: 22px;
+        padding-left: 16px;
+    }
+    
+    .container.bread-crumb-about-us-home {
+        padding-left: 30px;
+    }
+
+    .article-one-bread {
+        padding-left: 25px;
     }
 }
 
@@ -4948,7 +4957,7 @@ a.btn-news-literature:hover{
 }
 
 .footer-title {
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .btn-download span:hover
 {background: #c5d9e2}
