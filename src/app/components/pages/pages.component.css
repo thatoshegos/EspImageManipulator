@@ -405,7 +405,7 @@ a.link:hover {
   }
   
   .mobile-menu-collapse-wrapper {
-    z-index: 3;
+    z-index: 6;
     border: none;
   }
   
@@ -451,7 +451,7 @@ a.link:hover {
   }
 
   .bread-crumb-about-us-home.article-one-bread {
-    padding: 20px 15px 35px 0;
+    padding: 20px 15px 55px 15px;
   }
   
   .about-leader-img > img {

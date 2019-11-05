@@ -133,19 +133,20 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
         },
         {
           id: "g2",
-          bullet: "round",
+          // bullet: "round",
             balloonColor:"gray",
           balloonText:
             "<div style='font-size:14px; background-color:#fff;text-align:left;padding-right:2px'><span style='color:#656565;'>BENCHMARK [[value1]]&nbsp;&nbsp;</span></div>",
-          bulletBorderAlpha: 1,
-            bulletBorderThickness:0,
-          bulletColor: "#a11c0d",
+          // bulletBorderAlpha: 1,
+            // bulletBorderThickness:0,
+          // bulletColor: "#a11c0d",
           lineColor: "rgb(128,175,169)",
           hideBulletsCount: 50,
           lineThickness: 1,
           valueField: "value1",
 		  showOnInit: false,
-		  startDuration: 0
+      startDuration: 0,
+      pointRadius: 0
         },
          
       ],
