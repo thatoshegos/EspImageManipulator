@@ -6,8 +6,8 @@ import { WPAPIService } from "../services/wpapi.service";
 import { ToastrManager } from "ng6-toastr-notifications";
 
 if (console){
-  // don't try this at home :)
-  // console.log = () => {};
+   //don't try this at home :)
+   console.log = () => {};
 }
 
 @Component({
