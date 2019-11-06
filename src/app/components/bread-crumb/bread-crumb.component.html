@@ -1,6 +1,6 @@
 <div class="">
   <div class="common-bread-crumb-inner-wrapper">
-    <a [routerLink]= "'/'+parentLink">
+    <a  [routerLink]= "'/'+parentLink">
       {{ parentCrumb | uppercase }}   
     </a>
     <div [ngClass]="parentLink && childLink ? 'arrow-crumb': 'none-arrow'"> > </div>
