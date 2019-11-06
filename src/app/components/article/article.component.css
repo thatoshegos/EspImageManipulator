@@ -139,6 +139,12 @@
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 769px) {
+  .inner-content .inner-content-photo {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .article-component-wrapper {
     padding: 0 15px 20px 15px;

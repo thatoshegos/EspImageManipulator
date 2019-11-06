@@ -10,3 +10,9 @@
 .arrow-crumb{
   display: inline-block;
 }
+
+.common-bread-crumb-inner-wrapper {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

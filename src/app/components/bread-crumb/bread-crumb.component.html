@@ -1,12 +1,15 @@
 <div class="">
-    <div>
-  <a [routerLink]= "'/'+parentLink">
-    {{ parentCrumb | uppercase }}   
-  </a>
-  <div [ngClass]="parentLink && childLink ? 'arrow-crumb': 'none-arrow'"> > </div>
-  <a [routerLink]= "'/'+childLink">
-     {{ childCrumb | uppercase }}
-  </a>
-       
-</div>
+  <div class="common-bread-crumb-inner-wrapper">
+    <a [routerLink]= "'/'+parentLink">
+      {{ parentCrumb | uppercase }}   
+    </a>
+    <div [ngClass]="parentLink && childLink ? 'arrow-crumb': 'none-arrow'"> > </div>
+    <a [routerLink]= "'/'+childLink">
+      {{ childCrumb | uppercase }}
+    </a>
+    <div [ngClass]="parentLink && childLink && sChildCrumb ? 'arrow-crumb': 'none-arrow'"> > </div>
+    <a [routerLink]="'/'+sChildLink">
+      {{ sChildCrumb | uppercase }}
+    </a>
+  </div>
  </div>

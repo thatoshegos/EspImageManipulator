@@ -10,18 +10,20 @@ export class BreadCrumbComponent implements OnInit {
   breadCrumb;
   parentCrumb;
   childCrumb;
+  sChildCrumb;
   parentLink;
   childLink;
+  sChildLink;
   constructor() {}
 
   ngOnInit() {
-    // console.log(this.CurrentUrl.parent);
-   
+    // console.log(this.CurrentUrl);
     this.parentLink = this.CurrentUrl.parent;
     this.childLink = this.parentLink+"/"+this.CurrentUrl.child;
-    
+    this.sChildLink = this.parentLink+"/"+this.CurrentUrl.child+"/"+this.CurrentUrl.schild
     var parent = this.CurrentUrl.parent.split("-");
     var menu = this.CurrentUrl.child.split("-");
+    var smenu = this.CurrentUrl.schild.split("-")
     menu.length >= 3
       ? (this.CurrentUrl.child = menu[0] + " " + menu[1] + " " + menu[2])
       : (this.CurrentUrl.child = menu[0] + " " + menu[1]);
@@ -34,6 +36,7 @@ export class BreadCrumbComponent implements OnInit {
       this.CurrentUrl.parent !== ""
     ) {
       if (menu.length >= 3) {
+
         var child = "";
         for (let i = 0; i < menu.length; i++) {
           child += menu[i] + " ";
@@ -48,7 +51,7 @@ export class BreadCrumbComponent implements OnInit {
 
          this.parentCrumb = this.CurrentUrl.parent
          this.childCrumb = child
-
+        //  this.sChildCrumb = this.parentCrumb + this.childCrumb
         // menu[0] +
         // " " +
         // menu[1] +
@@ -59,9 +62,15 @@ export class BreadCrumbComponent implements OnInit {
         //   parent[0] + " " + (parent[1] || '') + " > " + menu[0] + " " + (menu[1] || '');
         this.parentCrumb = parent[0] + " " + (parent[1] || '') 
         this.childCrumb = menu[0] + " " + (menu[1] || '')
+        if(this.CurrentUrl.schild !== " undefined" && this.CurrentUrl.schild !== "" ) {
+          this.sChildCrumb = smenu[0] + " " + smenu[1] + " " + (smenu[2] || '')
+        }
       }
     } else {
       this.childCrumb = menu[0] + " " + menu[1];
+      if(this.CurrentUrl.schild !== " undefined" && this.CurrentUrl.schild !== "" ) {
+        this.sChildCrumb = smenu[0] + " " + smenu[1] + " " + smenu[2]
+      }
     }
   }
 }

@@ -4343,9 +4343,13 @@ a.btn-news-literature:hover{
     .bread-crumb-about-us-home {
         padding-left: 16px;
     }
+
+    .bread-crumb-about-us-home.fund-crumb {
+        padding-left: 0px;
+    }
     
     .container.bread-crumb-about-us-home {
-        padding-left: 30px;
+        padding-left: 45px;
     }
 
     .article-one-bread {
