@@ -12,6 +12,7 @@ export class QuaterlyCardComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0,0);
     console.log(this.quaterlyData);
   }
 }

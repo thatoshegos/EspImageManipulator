@@ -12,6 +12,7 @@ export class FaqDetailComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    window.scrollTo(0,0);
     this.currentFaq = this.faqs.acf["qa-ans"][0];
     this.isfirst = true;
   }

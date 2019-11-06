@@ -1468,10 +1468,15 @@
 
 <!--New to Investing -->
 <div class="container" *ngIf="page && page.newToInvestingStatus">
-  <div class="row margin-twelve-top 7 xs-margin-70px-top">
-    <h2>{{ page.title.rendered }}</h2>
+  <div class="container wrap-container-bread-crumbs new-to-invest-crumb-wrapper">
+    <div class="col-md-12 margin-120px-top xs-margin-75px-top bread-crumb-about-us-home new-to-invest-crumb">
+      <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
+    </div>
   </div>
-  <div class="row margin-20px-bottom xs-margin-30px-bottom">
+  <div class="row 7">
+    <h2 class="new-to-investing-heading">{{ page.title.rendered }}</h2>
+  </div>
+  <div class="row margin-20px-bottom xs-margin-30px-bottom new-to-investing-mobile-content">
     <div class="bg-white">
       <div class="content-div" [innerHTML]="page.content.rendered"></div>
     </div>

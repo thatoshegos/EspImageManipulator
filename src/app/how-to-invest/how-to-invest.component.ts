@@ -36,6 +36,11 @@ export class HowToInvestComponent implements AfterViewInit {
       //console.log(this.slideDatas);
     }
   }
+
+  ngOnInit() {
+    window.scrollTo(0,0);
+  }
+
   ngOnChanges() {
     if (this.dataset.acf) {
       this.slideDatas = this.dataset.acf.how_do_i_invest;

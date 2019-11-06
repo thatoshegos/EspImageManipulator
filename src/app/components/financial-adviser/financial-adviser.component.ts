@@ -10,5 +10,7 @@ export class FinancialAdviserComponent implements OnInit {
   animationArr = ["fade-left", "fade-up", "fade-right", ""];
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    window.scrollTo(0,0);
+  }
 }

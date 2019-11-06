@@ -2301,7 +2301,7 @@ header.sticky nav.navbar-fixed-top.header-light.white-link .header-menu-button a
 header.sticky nav.navbar-fixed-top.header-light.white-link .header-menu-button a {color: #232323}
 
 header .logo .logo-dark, header .logo .logo-light {visibility: hidden; opacity: 0; width: 0; transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s;}
-header .logo .logo-dark.default, header .logo .logo-light.default {visibility: visible; opacity: 1; width: 66%; transition-duration:0.5s;  -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s;}
+header .logo .logo-dark.default, header .logo .logo-light.default {visibility: visible; opacity: 1; width: 76%; transition-duration:0.5s;  -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s;}
 header.sticky nav.header-dark-transparent .logo .logo-light, header.sticky nav.header-dark .logo .logo-light {visibility: visible;  opacity: 1; width: auto; transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s;}
 header.sticky nav.header-dark-transparent .logo .logo-dark, header.sticky nav.header-dark .logo .logo-dark {visibility: hidden; opacity: 0; width: 0; transition-duration:0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s;}
 header.sticky nav.header-light-transparent .logo .logo-dark, header.sticky nav.header-light .logo .logo-dark {visibility: visible;  opacity: 1; width: auto; transition-duration:0.5s; -webkit-transition-duration: 0.5s; -moz-transition-duration: 0.5s; -ms-transition-duration: 0.5s; -o-transition-duration: 0.5s;}
@@ -3671,6 +3671,9 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto }
 
 .bg-dark-footer{background-color:#141414;}
 .footer-logo {max-height: 28px;}
+.footer-logo > img {
+    max-width: 80%;
+}
 
 /* footer input */
 footer input::-webkit-input-placeholder { color: #6f6f6f; text-overflow: ellipsis; font-size: 11px; font-weight: 400; opacity:1;}
@@ -3903,7 +3906,7 @@ aside .latest-post li figure {width: 75px;}
 }
 .slider-typography h1 span {
     padding: 0px 20px;
-    background: #00000060;
+    background: rgba(0,0,0,0.3);
     line-height: 65px;
     display: block;
     margin-bottom: 5px;
@@ -4039,6 +4042,7 @@ a.btn-our-fund-inst span {
 }
 .copyright {
     color: #B5B5B5;
+    font-size: 15px;
 }
 .right-fixed-link {
     position: fixed;
@@ -4936,14 +4940,14 @@ a.btn-news-literature:hover{
 
 .main-slider-btn {
     padding: 11px 80px 11px 20px;
-    background: #FFFFFF80 url('../images/black-arrow-icon.jpg') no-repeat right;
-    color: #656565;
+    background: rgba(255,255,255,0.8) url('../images/black-arrow-icon.jpg') no-repeat right;
+    color: rgb(0,0,0);
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
     width: auto;
 }
-.main-slider-btn:hover{background: #FFF url('../images/black-arrow-icon-hover.jpg') no-repeat right; color: #656565;}
+.main-slider-btn:hover{background: rgba(255,255,255) url('../images/black-arrow-icon-hover.jpg') no-repeat right; color: #656565;}
 .meet-leader.btn-meet-leaders{background: url('../images/buttons-new/invapp_button.png') no-repeat left center #8abbb6;}
 .meet-leader.btn-meet-leaders:hover{background: url('../images/buttons-new/invapp_b_button.png') no-repeat left center #5b9dbe; color: #656565;}
 .btn-download{

@@ -31,6 +31,7 @@ export class InstitutionalFundRangeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    window.scrollTo(0,0);
     console.log(this.FundRange);
     this.viewSChangeFlag = "sa";
     this.isInstitutionalFund = this.FundRange.isInstitutionFundRange;

@@ -9,5 +9,7 @@ export class InvestmentApprochAboutComponent implements OnInit {
   @Input() investments;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    window.scrollTo(0,0);
+  }
 }

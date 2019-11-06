@@ -17,6 +17,7 @@ export class ContactUsComponent implements OnInit {
   constructor(private wpservice: WPAPIService, public toastr: ToastrManager) {}
   page = null;
   ngOnInit() {
+    window.scrollTo(0,0);
     this.wpservice.pages("?slug=contact-us").subscribe(page => {
       this.page = page[0];
       this.wpservice.getPages(`${this.page.id}`).subscribe(page => {

@@ -22,6 +22,7 @@ export class BalanceFundComponent implements OnInit {
   constructor(private wpservice: WPAPIService, private router: Router) {}
 
   ngOnInit() {
+    window.scrollTo(0,0);
     /*this.wpservice.readCSVDataFromServer().subscribe(data => {
       console.log("readCSVDataFromServer========", data);
     });*/

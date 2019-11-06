@@ -9,5 +9,7 @@ export class MeetOurTeamComponent implements OnInit {
   @Input() meetOurTeam;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    window.scrollTo(0,0);
+  }
 }

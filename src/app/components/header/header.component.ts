@@ -334,6 +334,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0,0);
     this.WPService.getFirstMenu().subscribe(menus => {
       this.menuItems.primary = menus;
       this.menuItems.primary.items.forEach(item => {

@@ -22,6 +22,7 @@ export class CommonComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    window.scrollTo(0,0);
     if (this.responsible) {
       this.tabData = this.responsible.responsible_investing_tab[0];
       this.currentTab = "UNPRI";

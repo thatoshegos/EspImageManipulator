@@ -10,5 +10,7 @@ export class FeatureBoxComponent implements OnInit {
   @Input() DataSets;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    window.scrollTo(0,0);
+  }
 }

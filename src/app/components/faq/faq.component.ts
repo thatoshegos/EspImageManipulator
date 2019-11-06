@@ -17,6 +17,7 @@ export class FaqComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    window.scrollTo(0,0);
     //console.log(this.faqs);
     this.currentFaq = this.faqs[0];
     this.isfirst = true;

@@ -688,7 +688,9 @@ export class PagesComponent implements OnInit {
     }
 
   }
-  ngOnInit() {}
+  ngOnInit() {
+    window.scrollTo(0,0);
+  }
 
   ngAfterViewChecked(){
     if (this.page && this.page.acf && this.page.acf.home_slider){

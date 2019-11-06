@@ -1,3 +1,12 @@
+.footer-media-icon {
+  font-size: 30px;
+}
+.footer-media-icon:hover {
+  font-size: 30px;
+  color: #B5B5B5;
+  font-weight: unset;
+}
+
 @media screen and (max-width:991px) {
   .footer-logo {
     max-height: unset;

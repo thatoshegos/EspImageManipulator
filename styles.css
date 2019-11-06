@@ -2195,16 +2195,16 @@ h1.black{color: #000 !important}
       font-size:18px;
       font-weight: 400;
   }
-.main-slider .swiper-pagination-bullet-active{background-color:#b60c2f !important; width:16px; height:16px;}
-.main-slider .swiper-pagination-bullet{width:16px; height:16px; opacity: 1 !important}
+.main-slider .swiper-pagination-bullet-active{background-color:#b60c2f !important; width:13px; height:13px;}
+.main-slider .swiper-pagination-bullet{width:13px; height:13px; opacity: 1 !important}
 .main-slider .swiper-container-horizontal > .swiper-pagination-bullets{text-align:right;}
 .main-slider .swiper-button-next, .main-slider .swiper-button-prev{display:none;}
 .main-slider .slider-typography h1{float:left; width:auto;}
 .main-slider .btn-dual{clear:both;}
 
 .swiper-container  .swiper-button-next, .swiper-container  .swiper-button-prev{/*display:none !important;*/}
-.swiper-container .swiper-pagination-bullet-active{background-color:#b60c2f !important; width:16px; height:16px;}
-.swiper-container .swiper-pagination-bullet{width:16px; height:16px; opacity: 1 !important; background: #80b4d2}
+.swiper-container .swiper-pagination-bullet-active{background-color:#b60c2f !important; width:13px; height:13px;}
+.swiper-container .swiper-pagination-bullet{width:13px; height:13px; opacity: 1 !important; background: #80b4d2}
 .swiper-container .swiper-pagination{text-align:right;}
 .plateform-btn:hover{background:#9ec5d9 url(./assets/images/buttons-new/buttons_platforms.png) no-repeat right;}
 .plateform-btn span:hover{background: #c8dbe5}
