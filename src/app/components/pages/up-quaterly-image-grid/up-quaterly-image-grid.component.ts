@@ -10,6 +10,5 @@ export class UpQuaterlyImageGridComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    window.scrollTo(0,0)
   }
 }

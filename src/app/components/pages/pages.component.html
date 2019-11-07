@@ -237,7 +237,7 @@
   <div class="col-md-12 our-history-area margin-80px-top xs-margin-20px-top xs-padding-30px-tb our-history-content">
     <div class="container xs-no-padding-lr margin-50px-top margin-50px-bottom our-history-content-inner" *ngIf="page">
       <div class="col-md-12 col-xs-12">
-          <h1 class="bg-white text-deep-pink text-center padding-15px-all">Our History</h1>
+          <h1 style="margin-bottom: 5px;" class="bg-white text-deep-pink text-center padding-15px-all">Our History</h1>
         <!--<app-common [history]="page.acf"></app-common>-->
         <div class="bg-white history-slider-area">
           <app-carousal></app-carousal>
@@ -958,7 +958,7 @@
   class="wow fadeIn no-padding main-slider mobile-height top-space"
   *ngIf="page && page.ourfunds"
 >
-  <app-slider [sliders]="page.acf.home_slider"></app-slider>
+  <app-slider class="glass-fund-slider" [sliders]="page.acf.home_slider"></app-slider>
 </section>
 <!--Individual and Sharia fund range-->
 <div class="container xs-no-padding-lr md-no-padding-lr" *ngIf="page && page.ourfunds && !page.isInstitutionFundRange">
@@ -1100,7 +1100,7 @@
 
 <!-- Insight Page start-->
 <div class="silders-div" *ngIf="page && page.insightStatus">
-  <app-slider [sliders]="page.acf.home_slider" [insight]="page.insightStatus"></app-slider>
+  <app-slider class="app-insights-slider" [sliders]="page.acf.home_slider" [insight]="page.insightStatus"></app-slider>
 </div>
 <div class="container" *ngIf="page && page.insightStatus">
   <div
@@ -1155,7 +1155,7 @@
     data-wow-delay="0.6s"
     data-aos="fade-up"
   >
-    <div class="col-md-12 col-sm-12 col-xs-12 margin-30px-top">
+    <div class="col-md-12 col-sm-12 col-xs-12 margin-140px-top xs-margin-100px-top">
       <h2 [innerHTML]="page.title.rendered"></h2>
     </div>
   </div>
@@ -1330,7 +1330,7 @@
 <!-- Start up Quaterly Library -->
 
 <div class="container" *ngIf="page && page.quaterlyLibraryStatus">
-  <div class="row margin-30px-top xs-margin-70px-top">
+  <div class="row margin-140px-top xs-margin-100px-top">
     <h2>{{ page.title.rendered }}</h2>
   </div>
   <div class="row margin-30px-bottom">
@@ -1460,7 +1460,7 @@
         <a [href]="platformPdf" class="platform-on-grey" style="vertical-align: middle"
           ><span>PLATFORMS</span></a
         >
-        <a routerLink="/about-us/investment-approach"  class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROCH</span></a>
+        <a routerLink="/about-us/investment-approach"  class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
       </div>
     </div>
   </div>
@@ -1597,7 +1597,7 @@
         <a [href]="platformPdf" class="platform-on-grey" style="vertical-align: middle"
           ><span>PLATFORMS</span></a
         >
-        <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROCH</span></a>
+        <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
       </div>
     </div>
 </div>

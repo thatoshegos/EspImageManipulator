@@ -51,9 +51,49 @@ ul.fund-tabs li.current {
   line-height: 1.5;
 }
 .blanced-fund-table {
+  display: flex;
+  flex-flow: column;
   border-collapse: collapse;
   border: 0;
 }
+
+.blanced-fund-table > thead,
+.blanced-fund-table > tbody {
+  display: flex;
+}
+
+.blanced-fund-table > tbody  {
+  flex-flow: column;
+}
+
+.blanced-fund-table > thead > tr,
+.blanced-fund-table > tbody > tr {
+  width: 100%;
+  display: flex;
+}
+
+
+.blanced-fund-table > thead > tr > th,
+.blanced-fund-table > tbody > tr > td {
+  width: 50%;
+}
+
+.blanced-fund-table > thead > tr > th:empty {
+  display: none;
+}
+
+.blanced-fund-table > thead > tr > th:nth-child(1),
+.blanced-fund-table > tbody > tr > td:nth-child(1) {
+  margin-right: 2px;
+  text-align: center;
+}
+
+.blanced-fund-table > thead > tr > th:nth-child(2),
+.blanced-fund-table > tbody > tr > td:nth-child(2) {
+  margin-left: 3px;
+  text-align: center;
+}
+
 .blanced-fund-table th {
   background: #c6dddb;
   border-left: 2px solid #fff !important;
@@ -104,7 +144,7 @@ ul.fund-tabs li.current {
   margin-right: 2px;
 } */
 .amt {
-  color: red;
+  color: #b60c2f;
   margin-left: 3px;
   font-family: inherit;
 }
