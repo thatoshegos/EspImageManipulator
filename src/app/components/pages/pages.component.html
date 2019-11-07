@@ -904,7 +904,7 @@
                 class="btn-our-funds  margin-20px-right"
                 style="vertical-align: middle"><span>OUR FUNDS</span></a
             >
-            <a href="wordpress/wp-content/uploads/performance/fundperformance.pdf" 
+            <a [routerLink]="fundperformance" 
                class="btn-performance-sheet"
                style="vertical-align: middle"><span>PERFORMANCE SHEET</span></a>
           </div>
@@ -927,13 +927,14 @@
           class="row padding-40px-tb  margin-100px-lr bg-medium-gray-light home-light-bg xs-no-margin-top xs-no-padding-lr  xs-margin-15px-lr text-center adviser-image"
           *ngIf="page"
         >
+        
           <div
           class="xs-margin-30px-bottom wow fadeInLeft img-size inst-img-center"
           data-wow-delay="0.6s"
           data-aos="fade-right"
           *ngFor="let fImagesecond of page.acf.financial_adviser_image_second"
         >
-          <a [routerLink]="'/' + fImagesecond.url"
+          <a [routerLink]="fImagesecond.second_image.title == 'corpbrochure_thumbnail' ? fImagesecond.url :  '/' + fImagesecond.url"
             ><img style="" [src]="fImagesecond.second_image.url"
           /></a>
         </div>
@@ -1243,9 +1244,10 @@
         >
           <span aria-hidden="true">&times;</span>
         </button>
-        <div class="box-2-heading padding-15px-all">Send us an email</div>
-      </div>
-      <div class="modal-body">
+        <div *ngIf="type=='subscribe'" style="text-align: left;" class="box-2-heading padding-15px-all">Please subscribe me to UP, Kagiso’s Quarterly magazine.</div>
+        <div *ngIf="type=='unsubscribe'" style="text-align: left;" class="box-2-heading padding-15px-all">Please unsubscribe me to UP, Kagiso’s Quarterly magazine.</div>
+        </div>
+      <div  class="modal-body">
         <div class="box-2 padding-5px-all margin-40px-bottom">
           <div class="box-2-content padding-20px-all">
             <form
@@ -1311,7 +1313,7 @@
       class="col-md-4"
       *ngFor="let quaterly of page.acf.up_quarterly_second_images"
     >
-      <a [routerLink]="'/' + quaterly.up_url">
+      <a [href]="'/' + quaterly.up_url">
         <img
           class="quaterly-image-2"
           [src]="quaterly.up_image.url"
@@ -1395,7 +1397,7 @@
     <div class="row margin-30px-bottom  margin-30px-top">
       <div class=" col-md-8 col-md-offset-2 text-center suscribe">
         <a [href]="platformPdf" class="platform-on-grey" style="vertical-align: middle"><span>PLATFORMS</span></a>
-        <a href="#" class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
+        <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
       </div>
     </div>
   </div>

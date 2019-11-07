@@ -1,7 +1,7 @@
 <div class="thumbnail">
   <img [src]="quaterlyData.up_image.url" alt="..." width="100%" />
   <div class="caption">
-    <a [routerLink]="'/article/' + quaterlyData.link">
+    <a [routerLink]="quaterlyData.up_title !== 'Performance Table' ?  '/article/' + quaterlyData.link :  '/' +  quaterlyData.link">
       <p class="quater-heading">{{ quaterlyData.up_title }}</p></a
     >
     <p class="writers">{{ quaterlyData.writers_name }}</p>

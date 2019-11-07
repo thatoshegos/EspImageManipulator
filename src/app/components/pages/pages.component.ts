@@ -27,6 +27,7 @@ export class PagesComponent implements OnInit {
   slider:  any;
   url: any;
   platformPdf= 'cms/wp-content/uploads/LISP platforms/LISP_Summary_sheet.pdf';
+  fundperformance = '/cms/wp-content/uploads/performance/fundperformance.pdf';
    
   activeClickedTab;
   getCurrentTab;
@@ -45,6 +46,7 @@ export class PagesComponent implements OnInit {
   ) {
     //console.log('this', this)
     this.platformPdf = encodeURI(this.platformPdf);
+    this.fundperformance = this.fundperformance;
     route.params.subscribe(val => {
       // console.log(val);
       //console.log(this.router.url);
