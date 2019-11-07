@@ -87,7 +87,7 @@
         ></p>
         <ul class="invest-list-img">
           <li>
-            <div class="content-box">
+            <div style="cursor: pointer;" class="content-box" (click)="getTabData('UNPRI', isActive)">
                 <div class="btn-unpri">
                  <!--  <img
                     class="alignnone size-full wp-image-445"
@@ -99,7 +99,7 @@
                 </div>
                 <div
                     class="title margin-5px-bottom"
-                    (click)="getTabData('UNPRI', isActive)"
+                    
                     [ngClass]="'UNPRI' == currentTab ? 'active' : 'none'"
                   >
                     UNPRI
@@ -129,7 +129,7 @@
             </div>
           </li>-->
           <li>
-            <div class="content-box">
+            <div style="cursor: pointer;" class="content-box" (click)="getTabData('proxy-voting', isActive)">
                 <div class="btn-proxy-voting">
               <!-- <img
                 class="alignnone size-full wp-image-445"
@@ -141,7 +141,7 @@
                 </div>
               <div
                 class="title"
-                (click)="getTabData('proxy-voting', isActive)"
+                
                 [ngClass]="'proxy-voting' == currentTab ? 'active' : 'none'"
               >
                 PROXY VOTING
@@ -149,7 +149,7 @@
             </div>
           </li>
           <li>
-            <div class="content-box">
+            <div style="cursor: pointer;" class="content-box" (click)="getTabData('conflict', isActive)">
                 <div class="btn-conflict">
               <!-- <img
                 class="alignnone size-full wp-image-445"
@@ -161,7 +161,7 @@
                 </div>
               <div
                 class="title"
-                (click)="getTabData('conflict', isActive)"
+                
                 [ngClass]="'conflict' == currentTab ? 'active' : 'none'"
               >
                 CONFLICTS OF INTEREST

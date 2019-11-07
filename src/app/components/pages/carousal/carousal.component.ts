@@ -12,6 +12,9 @@ export class CarousalComponent implements OnInit {
     console.log("SDfsdfsfsdfsdf");
     this.items = [
       {
+        icon: "",
+        heading: "",
+        year: "",
         content:
           "<div class='hsi-details-1'>As an owner-managed firm, we are independent of any large institution and are not driven by corporate imperatives that may run counter to our clients long-term interests.</div>"
       },
@@ -119,7 +122,19 @@ export class CarousalComponent implements OnInit {
         year:"2019",
         content:
           "Launched the Islamic Equity Feeder Fund and the Islamic High Yield Fund"
-      }
+      },
+      {
+        icon: "",
+        heading: "",
+        year: "",
+        content: ""
+      },
+      {
+        icon: "",
+        heading: "",
+        year: "",
+        content: ""
+      },
     ];
   }
 

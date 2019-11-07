@@ -806,6 +806,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .margin-90px-top {margin-top:90px}
 .margin-100px-top {margin-top:100px}
 .margin-130px-top{margin-top: 130px}
+.margin-140px-top{margin-top: 140px}
 
 /* margin bottom */
 .margin-one-bottom {margin-bottom:1%}
@@ -2387,8 +2388,9 @@ input, select, textarea {
 }
 .hsi-details-1 {
     font-size: 18px;
+    font-style: italic;
     color: #fff;
-    padding-top: 10px;
+    padding-top: 85px;
 }
 .width-750px{
     width: 750px;
@@ -2464,6 +2466,7 @@ input, select, textarea {
     }
     .hsi-details-1 {
         font-size: 16px;
+        padding-top: 65px;
     }
     .hsi-title-1 {
         font-size: 20px;

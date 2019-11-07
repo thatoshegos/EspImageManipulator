@@ -117,7 +117,7 @@ h6 {font-size:25px; line-height:30px}
 .text-light-gray {color:#d6d5d5}
 .text-very-light-gray {color:#ededed}
 .text-deep-pink {color:#b60c2f}
-.bullet-type{color:#b60c2f; list-style-type:circle;}
+.bullet-type{color:#b60c2f; list-style-type:disc;}
 
 /* dropcap */
 .first-letter {float: left; font-size: 50px; line-height: auto; margin: 0 20px 0 0; text-align: center; padding: 10px 0; font-weight: 600}
@@ -771,6 +771,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .margin-100px-top {margin-top:100px}
 .margin-120px-top{margin-top: 120px}
 .margin-130px-top{margin-top: 130px}
+.margin-140px-top{margin-top: 140px}
 .margin-150px-top{margin-top: 150px}
 /* margin bottom */
 .margin-one-bottom {margin-bottom:1%}
@@ -4947,7 +4948,7 @@ a.btn-news-literature:hover{
     font-weight: 400;
     width: auto;
 }
-.main-slider-btn:hover{background: rgba(255,255,255) url('../images/black-arrow-icon-hover.jpg') no-repeat right; color: #656565;}
+.main-slider-btn:hover{background: rgba(255,255,255) url('../images/black-arrow-icon-hover.jpg') no-repeat right; color: rgb(0,0,0);}
 .meet-leader.btn-meet-leaders{background: url('../images/buttons-new/invapp_button.png') no-repeat left center #8abbb6;}
 .meet-leader.btn-meet-leaders:hover{background: url('../images/buttons-new/invapp_b_button.png') no-repeat left center #5b9dbe; color: #656565;}
 .btn-download{
@@ -4970,3 +4971,11 @@ a.btn-news-literature:hover{
 .btn-download span:hover
 {background: #c5d9e2}
 .btn-download:hover{background: #5b9dbe url('../images/buttons-new/download.png') no-repeat right;}
+
+.glass-fund-slider .slider-text-bottom {
+    padding-bottom: 175px;
+}
+
+.app-insights-slider .slider-text-bottom {
+    padding-bottom: 230px;
+}

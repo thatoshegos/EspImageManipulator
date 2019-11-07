@@ -83,7 +83,7 @@ input[type="submit"] {
   padding: 0px !important;
 }
 .year-report-list > ul > li .active {
-  color: #b50c2f;
+  color: #b60c2f;
   font-weight: 800;
 }
 /* .year-post > span {
@@ -125,7 +125,7 @@ li.row-end {
   font-weight: 500;
 }
 a.padding-10px-all.ul-tab.active {
-  color: #b50c2f;
+  color: #b60c2f;
   font-weight: 600;
   /*border-bottom: 3px dotted #b50c2f;*/
 }
@@ -340,6 +340,15 @@ a.link:hover {
   display: none;
 }
 
+.glass-fund-slider {
+  display: block;
+  margin-top: 25px;
+}
+
+.app-insights-slider {
+  display: block;
+  margin-top: 80px;
+}
 
 @media screen and (max-width: 480px) {
   .bread-crumb {

@@ -17,6 +17,7 @@
     font-weight: 400;
     line-height: 1.5;
     color: #1c1c1c;
+    height: 450px;
 }
 .history-slider-items:first-child .list {
     background: #6e6e6e!important;
