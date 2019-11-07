@@ -17,12 +17,6 @@ export class BreadCrumbComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-<<<<<<< HEAD
-    console.log(this.CurrentUrl);
-    this.parentLink = this.CurrentUrl.parent;
-    this.childLink = this.parentLink+"/"+this.CurrentUrl.child;
-    this.sChildLink = this.parentLink+"/"+this.CurrentUrl.child+"/"+this.CurrentUrl.schild
-=======
     // console.log(this.CurrentUrl);
 
     if (this.CurrentUrl.child == "our-funds"){
@@ -33,7 +27,6 @@ export class BreadCrumbComponent implements OnInit {
 
     this.childLink = this.CurrentUrl.parent +"/"+this.CurrentUrl.child;
     this.sChildLink = this.CurrentUrl.parent+"/"+this.CurrentUrl.child+"/"+this.CurrentUrl.schild
->>>>>>> 2bf8a15fa8923dfee774ce01c582de5714a0fcd6
     var parent = this.CurrentUrl.parent.split("-");
     var menu = this.CurrentUrl.child.split("-");
     var smenu = this.CurrentUrl.schild.split("-")
