@@ -17,7 +17,9 @@ export class FormDocumentComponent implements OnInit {
   isfirst = false;
   constructor(private wpservice: WPAPIService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    window.scrollTo(0,0);
+  }
   getFormData(heading, event, toggle) {
     // accordian data
     if (this.currentSubCate) {

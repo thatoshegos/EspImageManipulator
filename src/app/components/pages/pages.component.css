@@ -170,6 +170,16 @@ a.padding-10px-all.ul-tab.active {
 
 .app-about-us-common-right {
   width: 100%;
+  display: flex;
+}
+
+.app-about-us-common-right > .about-leader-img {
+  display: flex;
+  flex-flow: column;
+}
+
+.app-about-us-common-right > .about-leader-img > img {
+  flex: 1;
 }
 
 .about-leader-title{
@@ -564,7 +574,7 @@ a.link:hover {
   }
 
   .blanced-fund-box {
-    margin-top: 80px;
+    /* margin-top: 80px; */
   }
 
   .complete-fund-range-content {

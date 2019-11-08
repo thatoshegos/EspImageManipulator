@@ -4,7 +4,8 @@
       <div
         class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom xs-margin-30px-bottom text-center wow fadeInLeft sharia-certificate-inner"
         *ngFor="let sharia of shariaCerticate.acf.sharia_image"
-      > <a [href]="'/' + sharia.sharia_image_url">
+      > 
+      <a [href]="'/' + sharia.sharia_image_url">
         <div class="light-green-box">         
             <img [src]="sharia.sharia_image.url" />
             <div class="text-title">{{ sharia.title }}</div>         
