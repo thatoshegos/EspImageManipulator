@@ -27,23 +27,21 @@ export class BalanceFundComponent implements OnInit {
     this.platformPdf = encodeURI(this.platformPdf);
     window.scrollTo(0,0);
 
-    this.wpservice
-      .getCSVData("assets/images/balance_fund.csv")
-      .subscribe(data => {
-        this.csvData = data;
-        this.getGraphData = this.makeDataSets(data);
-        this.getConditionalCSV(4, 3)
-      });
+    // this.wpservice
+    //   .getCSVData("assets/images/balance_fund.csv")
+    //   .subscribe(data => {
+    //     console.log('dataAssets', data)
+    //     this.csvData = data;
+    //     this.getGraphData = this.makeDataSets(data);
+    //     console.log('get', this.getGraphData)
+    //      this.getConditionalCSV(4, 0)
+    //   });
     /*this.wpservice.readCSVDataFromServer().subscribe(data => {
       console.log("readCSVDataFromServer========", data);
     });*/
-    // this.wpservice
-    //   .readCSVDataFromServer(this.getBalancedData.acf.since_inception_csv)
-    //   .subscribe(data => {
-    //     this.csvData = data;
-    //     this.getGraphData = this.makeDataSets(data);
-    //     this.getConditionalCSV(4, 3)
-    //   });
+   
+    this.getConditionalCSV(4, 3)
+     
     this.currentRoute = this.router.url.slice(1);
     this.selectedRoute = "";
   }
@@ -123,60 +121,151 @@ export class BalanceFundComponent implements OnInit {
 
   getConditionalCSV(years = null, index: number) {
     if (years != null) {
+      let csvUrl = ''; 
+      switch (index) {
+        case 0:
+          csvUrl = this.getBalancedData.acf.csv_file_graph
+          break;
+        case 1:
+          csvUrl = this.getBalancedData.acf.csv_file
+          break;
+        case 2:
+          csvUrl = this.getBalancedData.acf.ten_year_csv
+          break;
+        case 3:
+          csvUrl = this.getBalancedData.acf.since_inception_csv
+          break;
+        default:
+          break;
+      }
+      if (csvUrl !== ''){
+        this.wpservice
+        .readCSVDataFromServer(csvUrl)
+        .subscribe(data => {
+          console.log('csv', data)
+          this.csvData = JSON.parse(data);
+          this.getGraphData = this.makeDataSetsFromJson(this.csvData, years);
+          console.log('++', this.getGraphData)
+        });
+      } else {
+        this.getGraphData =  null;
+      }
       //this.createDataConditionalDataset(years);
-      this.getGraphData = this.makeDataSets(this.csvData, years);
+      // this.getGraphData = this.makeDataSets(this.csvData, years);
       this.selectedIndex = index;
     }
   }
   createDataConditionalDataset(length) {
     // console.log(this.getGraphData);
   }
-  makeDataSets(data, cond = null) {
-    var lines = data.split("\n");
+
+  makeDataSetsFromJson(data, cond = null) {
+    console.log("server", data)
+    var lines = data.length;
     var yearCond = cond * 12;
     var showYear;
     var startingPoint;
-    //console.log(lines);
+    // //console.log(lines);
     if (cond) {
-      if (lines.length == yearCond) {
-        showYear = lines.length;
-      } else if (lines.length > yearCond) {
-        showYear = yearCond;
-        startingPoint = lines.length - yearCond;
+      if (lines == yearCond) {
+        showYear = lines; 
+      } else if (lines > yearCond) {
+        showYear = yearCond; 
+        startingPoint = lines - yearCond; 
       } else {
-        showYear = lines.length;
+        showYear = lines;
       }
     } else {
-      showYear = lines.length;
+      showYear = lines;
     }
     
     if (startingPoint) {
       startingPoint = startingPoint - 1;
     } else {
-      startingPoint = 1;
+      startingPoint = 0;
     }
-    var result = [];
-    var headers = lines[0].split(",");
-    var dates = [];
-    var fundReturn = [];
-    var benchMark = [];
     var graphDataSet = {
-      dates: null,
-      fundReturn: null,
-      benchMark: null
-    };
-    for (var i = startingPoint; i < lines.length - 1; i++) {
-      var currentline = lines[i].split(",");
-      dates.push(currentline[0]);
-      fundReturn.push(currentline[1]);
-      benchMark.push(currentline[2]);
-    }
-    graphDataSet.dates = dates;
-    graphDataSet.fundReturn = fundReturn;
-    graphDataSet.benchMark = benchMark;
+        dates: [],
+        fundReturn: [],
+        benchMark: []
+      };
+      for (var i = startingPoint; i < lines ; i++) {
+        const element = data[i]
+        graphDataSet.dates.push(element['DATE'])
+        graphDataSet.benchMark.push(element['VAL2'])
+        graphDataSet.fundReturn.push(element['VAL1'])
+      };
+
+   
+    // var result = [];
+    // var headers = lines[0].split(",");
+    // var dates = [];
+    // var fundReturn = [];
+    // var benchMark = [];
+    // var graphDataSet = {
+    //   dates: null,
+    //   fundReturn: null,
+    //   benchMark: null
+    // };
+    // for (var i = startingPoint; i < lines.length - 1; i++) {
+    //   var currentline = lines[i].split(",");
+    //   dates.push(currentline[0]);
+    //   fundReturn.push(currentline[1]);
+    //   benchMark.push(currentline[2]);
+    // }
+    // graphDataSet.dates = dates;
+    // graphDataSet.fundReturn = fundReturn;
+    // graphDataSet.benchMark = benchMark;
 
     return graphDataSet;
   }
+  // makeDataSets(data, cond = null) {
+  //   // console.log("6565", data)
+  //   var lines = data.split("\n");
+  //   var yearCond = cond * 12;
+  //   var showYear;
+  //   var startingPoint;
+  //   //console.log(lines);
+  //   if (cond) {
+  //     if (lines.length == yearCond) {
+  //       showYear = lines.length;
+  //     } else if (lines.length > yearCond) {
+  //       showYear = yearCond;
+  //       startingPoint = lines.length - yearCond;
+  //     } else {
+  //       showYear = lines.length;
+  //     }
+  //   } else {
+  //     showYear = lines.length;
+  //   }
+    
+  //   if (startingPoint) {
+  //     startingPoint = startingPoint - 1;
+  //   } else {
+  //     startingPoint = 1;
+  //   }
+  //   var result = [];
+  //   var headers = lines[0].split(",");
+  //   var dates = [];
+  //   var fundReturn = [];
+  //   var benchMark = [];
+  //   var graphDataSet = {
+  //     dates: null,
+  //     fundReturn: null,
+  //     benchMark: null
+  //   };
+  //   for (var i = startingPoint; i < lines.length - 1; i++) {
+  //     var currentline = lines[i].split(",");
+  //     dates.push(currentline[0]);
+  //     fundReturn.push(currentline[1]);
+  //     benchMark.push(currentline[2]);
+  //   }
+  //   graphDataSet.dates = dates;
+  //   graphDataSet.fundReturn = fundReturn;
+  //   graphDataSet.benchMark = benchMark;
+
+  //   return graphDataSet;
+  // }
   getFundOnChange(e) {
     this.currentRoute = this.router.url;
     this.selectedRoute = e.target.value;
