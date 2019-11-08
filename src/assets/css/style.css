@@ -4043,7 +4043,7 @@ a.btn-our-fund-inst span {
 }
 .copyright {
     color: #B5B5B5;
-    font-size: 15px;
+    font-size: 13px;
 }
 .right-fixed-link {
     position: fixed;
@@ -4355,6 +4355,10 @@ a.btn-news-literature:hover{
     
     .container.bread-crumb-about-us-home {
         padding-left: 45px;
+    }
+
+    .container.bread-crumb-about-us-home > .bread-crumb-about-us-home.only-about-us {
+        padding-left: 0;
     }
 
     .article-one-bread {
