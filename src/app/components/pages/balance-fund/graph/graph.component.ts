@@ -44,7 +44,9 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
     data.sort(function(_a, _b) {
       const a: any = _a.month;
       const b: any = _b.month;
-      return b - a;
+      const aYear: any = a.getFullYear();
+      const bYear: any = b.getFullYear();
+      return b - a && aYear - bYear;
     });
     return data;
   }
