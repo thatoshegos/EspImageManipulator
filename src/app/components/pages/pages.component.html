@@ -946,10 +946,10 @@
 
 <!--Sharia Board start-->
 <div *ngIf="page && page.shariaBoardStatus">
-  <app-slider [sliders]="page.acf.home_slider"></app-slider>
+  <!-- <app-slider [sliders]="page.acf.home_slider"></app-slider> -->
 </div>
 <div class="container" *ngIf="page && page.shariaBoardStatus">
-  <app-sharia-board [shariaContent]="page"></app-sharia-board>
+  <app-sharia-board class="app-sharia-board" [shariaContent]="page"></app-sharia-board>
 </div>
 <!--Sharia board End-->
 

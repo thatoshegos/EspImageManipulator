@@ -1,3 +1,8 @@
+.app-sharia-board {
+  display: block;
+  margin: 140px 0 25px 0;
+}
+
 .wrap-container-bread-crumbs {
   padding-left: 0;
 }
@@ -176,6 +181,7 @@ a.padding-10px-all.ul-tab.active {
 .app-about-us-common-right > .about-leader-img {
   display: flex;
   flex-flow: column;
+  width: 100%;
 }
 
 .app-about-us-common-right > .about-leader-img > img {
@@ -857,7 +863,7 @@ a.link:hover {
     }
 
     .complete-fund-range-wrap {
-      margin-top: 120px;
+      /* margin-top: 120px; */
     }
 }
 

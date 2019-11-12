@@ -2140,6 +2140,9 @@ h1.black{color: #000 !important}
     padding-bottom: 30px;
 }
 
+.sharial-internal-contents {
+    padding-top: 10px;
+}
 
 .sharial-internal-contents h2 {
     font-size: 24px;
@@ -2157,11 +2160,11 @@ h1.black{color: #000 !important}
     font-size: 20px;
     font-weight: 300;
     line-height: 1.9;
-    padding: 12px 0px 1px 19px;
+    padding: 12px 0px 1px 0;
     text-align: left;
     color: #000000;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
     text-align: justify;
     font-weight: 500;
 }
@@ -2375,6 +2378,11 @@ input, select, textarea {
 .history-slider-area .ng2-carouselamos-wrapper{
     width: 100%!important;
 }
+
+.ng2-carouselamos-container {
+    height: 400px;
+}
+
 .history-slider-area .controls{
     left: -55px!important;
     width: 110%!important;
