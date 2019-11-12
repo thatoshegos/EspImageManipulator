@@ -54,7 +54,7 @@ export class FactSheetArchiveComponent implements OnInit {
     }
 
     this.categoryData = null;
-    this.wpservice.getCategory(`?parent=${category.id}&per_page=10`).subscribe(subCate => {
+    this.wpservice.getCategory(`?parent=${category.id}&per_page=20`).subscribe(subCate => {
       this.subCategory = subCate;
       this.subCategory.sort((a, b) => b.name - a.name);
       this.subCategory = subCate;

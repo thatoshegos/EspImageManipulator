@@ -350,7 +350,20 @@ export class PagesComponent implements OnInit {
                 this.page.isInstitutionFundRange = false;
                 //console.log(this.page);
               });
-            } else if (
+            }  else if (
+              currentUrl.parent == "individual-investor" &&
+              currentUrl.child == "our-funds" &&
+              currentUrl.schild == "global-equity-feeder-fund"
+            ) {
+              this.page.id = 12682;
+              this.wpservice.pages(`${this.page.id}`).subscribe(page => {
+                this.page = page;
+                this.page.islamicGlobalEquityFeederStatus = true;
+                this.page.getParent = "individual-investor";
+                this.page.isInstitutionFundRange = false;
+                //console.log(this.page);
+              });
+            }else if (
               currentUrl.parent == "individual-investor" &&
               this.page.slug == "our-funds"
             ) {
@@ -434,7 +447,8 @@ export class PagesComponent implements OnInit {
                 this.page.getParent = "individual-investor";
                 //console.log(this.page);
               });
-            } else if (
+            } 
+            else if (
               currentUrl.parent == "institutional-investor" &&
               this.page.slug == "investment-approach"
             ) {
@@ -632,9 +646,10 @@ export class PagesComponent implements OnInit {
     });
   }
 
-  getAnnualReport(event, year) {
+  getAnnualReport(year) {
     this.annualReportUrl = year.report_url;
     this.selectedYear = year;
+    // console.log('++++', this.annualReportUrl, this.selectedYear)
   }
 
   open(content, type) {

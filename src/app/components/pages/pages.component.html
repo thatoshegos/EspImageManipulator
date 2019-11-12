@@ -53,7 +53,7 @@
                 [deeplyThink]="page.acf"> </app-about-us-common>
                 <div class="col-md-4 app-about-us-common-right">
                     <div class="about-leader-img">
-                        <img src="assets/images/buttons-new/gavin&roland.png">
+                        <img src="http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/11/gavinrolandV2.png">
                         <div class="about-leader-title"><a routerLink="/about-us/meet-our-leaders"> MEET OUR LEADERS <span></span></a>
                         </div>
                         <div class="col-md-3 common-meet-our-leaders">
@@ -1164,24 +1164,24 @@
       <div class="bg-white annual">
         <img
           class="annual-image"
-          src="assets/images/annual-report.jpg"
+          src="http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/10/annualreport_thumbnail.png"
           style="left:37%;"
         />
       </div>
     </div>
-    <div class="col-md-12">
+    <!-- <div class="col-md-12">
       <div class="bg-white annual-link text-deep-pink">
         <a [href]="annualReportUrl">Download</a>
       </div>
-    </div>
+    </div> -->
     <div class="col-md-12 margin-30px-bottom">
       <div class="bg-white">
         <div class="bg-white text-center year-list year-report-list">
           <ul>
             <li *ngFor="let getYear of page.acf.annual_report">
               <a
-                href="javascript:void(0)"
-                (click)="getAnnualReport($event, getYear)"
+                [href]="annualReportUrl"
+                (click)="getAnnualReport(getYear)"
                 [ngClass]="{ active: selectedYear == getYear }"
                 >{{ getYear.year }}
               </a>

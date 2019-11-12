@@ -28,6 +28,7 @@ export class FundTabComponent implements OnInit {
 
   getTabData(clicked, data) {
     var keys = Object.keys(this.getApiData.acf);
+    console.log('keys', keys)
     keys.map(key => {
       if (key == clicked) {
         if (clicked == "prices") {
@@ -38,15 +39,17 @@ export class FundTabComponent implements OnInit {
             .readCSVDataFromServer(`${this.getApiData.acf.prices}`)
             .subscribe(data => {
               this.getPriceData.data = JSON.parse(data);
+              console.log('data', this.getPriceData.data)
               this.getPriceData.isPrice = true;
 
               this.endPrice = this.getPriceData.data[0].Price;
-              console.log(this.latestPrice);
+              console.log('price', this.latestPrice, this.endPrice);
               this.latestPrice = this.getPriceData.data[
                 this.getPriceData.data.length - 1
               ].Price;
 
               this.getHeader = Object.keys(this.getPriceData.data[0]);
+              console.log('header', this.getHeader)
             });
         } else {
           this.getPriceData = null;
