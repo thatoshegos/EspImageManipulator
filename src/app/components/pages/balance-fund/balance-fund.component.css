@@ -556,6 +556,7 @@ a.btn-invest-now-green{
 }
 .btn-platforms .link-img-box{
     background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/platforms-1.png) no-repeat;
+    background-position: center;
 }
 
 .btn-tax-free .link-img-box:hover{

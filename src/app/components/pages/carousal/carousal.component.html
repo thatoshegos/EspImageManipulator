@@ -1,4 +1,4 @@
-<div
+<!-- <div
   ng2-carouselamos
   [items]="items"
   [$item]="itemTemplate"
@@ -7,10 +7,13 @@
 ></div>
 
 <ng-template #prevTemplate>
+  <i class="fas fa-angle-left" style="font-size:75px;color:#b60c2f;"></i>
   <img src="./assets/images/banner-arrow-left.png"/>
 </ng-template>
 
 <ng-template #nextTemplate>
+    <i class="fa fa-angle-right" style="font-size:75px;color:#b60c2f;"></i>
+  <i class="fas fa-angle-right" style="font-size:48px;color:red;font-weight:lighter;"></i>
   <img src="./assets/images/banner-arrow-right.png" />
 </ng-template>
 
@@ -23,4 +26,36 @@
       <div class="hsi-details" [innerHTML]="item.content"></div>
     </li>
   </div>
-</ng-template>
+</ng-template> -->
+
+<swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div
+        class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
+        *ngFor="let item of items; let i = index"
+      >
+        <!-- background:url('assets/images/howitwork-bg.jpg') no-repeat #ececec; -->
+        <!-- <div class="opacity-extra-medium"></div> -->
+        <div
+          class="position-relative one-fourth-screen xs-height-400px"
+        >
+          <div class="swiper-slide-inner text-center">
+            <div class="slider-text-middle-main">
+              <div class="slider-text-top swiper-slide-inner-text xs-padding-40px-lr" [ngClass]="i % 2 == 0 ? 'odd' : 'even'">
+                  <div class="hsi-icon-holder" [innerHTML]="item.icon"></div>
+                  <div class="hsi-title"> {{ item.heading }}</div>
+                  <div class="hsi-year"> {{ item.year }}</div>
+                  <div class="hsi-details" [innerHTML]="item.content"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+  

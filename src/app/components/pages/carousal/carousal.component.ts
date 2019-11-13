@@ -138,5 +138,32 @@ export class CarousalComponent implements OnInit {
     ];
   }
 
+  config: SwiperOptions = {
+    // autoplay: 3000,
+    // pagination: ".swiper-pagination",
+    // paginationClickable: true,
+    nextButton: ".swiper-button-next",
+    prevButton: ".swiper-button-prev",
+    spaceBetween: 0,
+    slidesPerView: 3,
+    breakpoints: {
+      320: {
+        slidesPerView: 1
+      },
+      480: {
+        slidesPerView: 1
+      },
+      700: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 2
+      },
+      991: {
+        slidesPerView: 2
+      }
+    }
+  };
+
   ngOnInit() {}
 }
