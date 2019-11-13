@@ -937,7 +937,7 @@
           <!-- <a [routerLink]="fImagesecond.second_image.title == 'corpbrochure_thumbnail' ? fImagesecond.url :  '/' + fImagesecond.url"
             ><img style="" [src]="fImagesecond.second_image.url"
           /></a> -->
-          <a [routerLink]="'/' + fImagesecond.url"
+          <a [target]="fImagesecond == '/up-quarterly' ? '_self' : '_blank'" [routerLink]="'/' + fImagesecond.url"
             ><img style="" [src]="fImagesecond.second_image.url"
           /></a>
         </div>
@@ -1066,7 +1066,7 @@
     data-aos="fade-right"
     *ngFor="let fImagesecond of page.acf.financial_adviser_image_second"
   >
-    <a [routerLink]="'/' + fImagesecond.url"
+    <a [target]="fImagesecond == '/up-quarterly' ? '_self' : '_blank'" [routerLink]="'/' + fImagesecond.url"
       ><img [src]="fImagesecond.second_image.url"
     /></a>
   </div>
