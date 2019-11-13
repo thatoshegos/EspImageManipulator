@@ -111,6 +111,12 @@ export class PagesComponent implements OnInit {
             //   this.getHomeSlider = silder;
             // });
           }
+          if (slug == "meet-the-fund-manager-abdul") {
+            this.page.meetFundManagerAbdul = true;
+            // this.wpservice.getPost("11267").subscribe(silder => {
+            //   this.getHomeSlider = silder;
+            // });
+          }
           if (slug == "tax-free-investing") {
             this.page.textFreeInvesting = true;
             // this.wpservice.getPost("11272").subscribe(taxFrees => {

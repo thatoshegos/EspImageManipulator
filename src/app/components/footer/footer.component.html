@@ -4,6 +4,73 @@
   <div class="footer-widget-area padding-40px-bottom xs-padding-30px-bottom">
     <div class="container">
       <div class="row">
+
+      <ng-template #content let-c="close" let-d="dismiss">
+          <div class="modal-content1">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                aria-label="Close"
+                (click)="d('Cross click')"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div *ngIf="type=='subscribe'" style="text-align: left;" class="box-2-heading padding-15px-all">Please subscribe me to UP, Kagiso’s Quarterly magazine.</div>
+            </div>
+            <div class="modal-body">
+              <div class="box-2 padding-5px-all margin-40px-bottom">
+                <div class="box-2-content padding-20px-all">
+                  <form
+                    name="form"
+                    #f="ngForm"
+                    (ngSubmit)="f.form.valid && submitForm(f, type)"
+                    novalidate
+                  >
+                    <div>
+                      <div id="success-contact-form" class="no-margin-lr"></div>
+                      <input
+                        type="text"
+                        name="name"
+                        [(ngModel)]="model.name"
+                        #name="ngModel"
+                        [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
+                        placeholder="Name"
+                        class="bg-light-green no-border medium-input margin-5px-bottom"
+                        required
+                      />
+                      <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                        <div *ngIf="name.errors.required">Name is required</div>
+                      </div>
+                      <input
+                        type="emailt"
+                        name="email"
+                        [(ngModel)]="model.email"
+                        #email="ngModel"
+                        [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                        placeholder="E-mail"
+                        class="bg-light-green no-border medium-input margin-5px-bottom"
+                        required
+                        email
+                      />
+                      <div
+                        *ngIf="f.submitted && email.invalid"
+                        class="invalid-feedback"
+                      >
+                        <div *ngIf="email.errors.required">Email is required</div>
+                        <div *ngIf="email.errors.email">Invalid email address</div>
+                      </div>
+                      <div class="padding-30px-top text-center">
+                        <input type="submit" class="more-btn text-black" value="SEND" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+
         <div
           class="col-md-3 col-sm-12 col-xs-12 wow fadeInLeft"
           data-wow-delay="0.6s"
@@ -42,8 +109,8 @@
             FUNDS
           </div>
           <div class="footer-text">
-            <a href="#">South African funds </a><br />
-            <a href="#">Global funds </a><br />
+            <a href="/individual-investor/our-funds">Individual funds</a><br />
+            <!-- <a href="#">Global funds </a><br /> -->
             <!--<a routerLink="/glossary">Glossary </a><br />
             <a routerLink="/meet-the-fund-manager">Meet Fund Manager </a><br />
             <a routerLink="/tax-free-investing">Text Free Investing </a><br />
@@ -58,9 +125,9 @@
           <div class="footer-title">
             <a href="#">LEGAL</a>
           </div>
-          <div class="footer-title">
+          <!-- <div class="footer-title">
             <a href="#">SITEMAP</a>
-          </div>
+          </div> -->
         </div>
         <div
           class="col-md-3 col-sm-12 col-xs-12 wow fadeInRight footer-content"
@@ -71,14 +138,14 @@
           </div>
           <div class="footer-text">
             <a href="mailto:info@kagisoam.com">Email me</a><br />
-            <a href="#">Subscribe to UP quarterly</a>
+            <a (click)="open(content, 'subscribe')" href="javascript:void(0);">Subscribe to UP quarterly</a>
             <br />
             <br />
-            <a href="#" class="footer-media-icon">
+            <a href="https://www.linkedin.com/company/kagiso-asset-management/" class="footer-media-icon">
                 <i class="fab fa-linkedin"></i>
               <!-- <img src="assets/images/footer-in.jpg" /> -->
             </a>
-            <a href="#" class="margin-30px-left footer-media-icon">
+            <a href="https://www.youtube.com/channel/UCtOSnstZxN5IlZ6xP2Gd5TQ" class="margin-30px-left footer-media-icon">
               <!-- <img src="assets/images/footer-youtube.jpg" /> -->
               <i class="fab fa-youtube"></i>
             </a>

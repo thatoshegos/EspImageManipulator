@@ -934,7 +934,10 @@
           data-aos="fade-right"
           *ngFor="let fImagesecond of page.acf.financial_adviser_image_second"
         >
-          <a [routerLink]="fImagesecond.second_image.title == 'corpbrochure_thumbnail' ? fImagesecond.url :  '/' + fImagesecond.url"
+          <!-- <a [routerLink]="fImagesecond.second_image.title == 'corpbrochure_thumbnail' ? fImagesecond.url :  '/' + fImagesecond.url"
+            ><img style="" [src]="fImagesecond.second_image.url"
+          /></a> -->
+          <a [routerLink]="'/' + fImagesecond.url"
             ><img style="" [src]="fImagesecond.second_image.url"
           /></a>
         </div>
@@ -1403,7 +1406,30 @@
   </div>
 </div>
 
-<!-- end Meet Fund Manager -->
+<!-- end Meet Fund Manager Abdul -->
+
+<!-- Meet Fund  Manager Abdul-->
+<div class="silder-div" *ngIf="page && page.meetFundManagerAbdul">
+    <!-- <app-slider [sliders]="page.acf.home_slider"></app-slider>-->
+     <div class="container">
+       <div class="row margin-130px-top">
+         <h2 [innerHTML]="page.title.rendered"></h2>
+       </div>
+       <div class="row margin-5px-top">
+         <!-- <div class="bg-white padding-25px-bottom"> -->
+           <div  [innerHTML]="page.content.rendered"></div>
+         <!-- </div> -->
+       </div>
+       <div class="row margin-30px-bottom  margin-30px-top">
+         <div class=" col-md-8 col-md-offset-2 text-center suscribe">
+           <a [href]="platformPdf" class="platform-on-grey" style="vertical-align: middle"><span>PLATFORMS</span></a>
+           <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
+         </div>
+       </div>
+     </div>
+   </div>
+<!-- end Meet Fund  Manager Abdul-->
+
 <!-- text-Free-Investing-->
 <div class="text-free-investing" *ngIf="page && page.textFreeInvesting">
   <div class="container">

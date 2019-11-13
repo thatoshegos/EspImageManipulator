@@ -7,9 +7,12 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class ArticleComponent implements OnInit {
   @Input() getArticleData;
+  article_banners;
   constructor() {
     console.log('this', this.getArticleData)
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.article_banners = this.getArticleData.acf.article_banners
+  }
 }

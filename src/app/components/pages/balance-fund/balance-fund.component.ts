@@ -19,6 +19,7 @@ export class BalanceFundComponent implements OnInit {
   csvData;
   selectedIndex;
   platformPdf= 'cms/wp-content/uploads/LISP platforms/LISP_Summary_sheet.pdf';
+  url;
 
   constructor(private wpservice: WPAPIService, private router: Router) {}
 
@@ -43,6 +44,8 @@ export class BalanceFundComponent implements OnInit {
     this.getConditionalCSV(4, 3)
      
     this.currentRoute = this.router.url.slice(1);
+    this.url = this.router.url.split("/");
+    console.log('route', this.url )
     this.selectedRoute = "";
   }
 
@@ -79,10 +82,9 @@ export class BalanceFundComponent implements OnInit {
         quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_balanced/' + year + '/Quartley Investment Report/current.pdf'
       },
       'global-equity-feeder-fund':{
-         // aren't right path( missing folder in wp-admin)
-        monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_balanced/' + year + '/current.pdf',
-        quarterly_commentary:'/cms/wp-content/uploads/factsheets/global_balanced/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_balanced/' + year + '/Quartley Investment Report/current.pdf'
+        monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_equity_feeder_fund/' + year + '/current.pdf',
+        quarterly_commentary:'/cms/wp-content/uploads/factsheets/global_equity_feeder_fund/' + year + '/Quarterly Summary/current.pdf',
+        quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_equity_feeder_fund/' + year + '/Quartley Investment Report/current.pdf'
       },
       'islamic-equity-fund':{
         monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_equity/' + year + '/current.pdf',
@@ -95,22 +97,19 @@ export class BalanceFundComponent implements OnInit {
         quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/Quartley Investment Report/current.pdf'
       },
       "islamic-high-yield-fund": {
-        // aren't right path( missing folder in wp-admin)
-        monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/current.pdf',
-        quarterly_commentary:'/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/Quartley Investment Report/current.pdf'
+        monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_high_yield_fund/' + year + '/current.pdf',
+        quarterly_commentary:'/cms/wp-content/uploads/factsheets/islamic_high_yield_fund/' + year + '/Quarterly Summary/current.pdf',
+        quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_high_yield_fund/' + year + '/Quartley Investment Report/current.pdf'
       },
       "islamic-global-equity-fund": {
-        // aren't right path( missing folder in wp-admin)
-        monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/current.pdf',
-        quarterly_commentary:'/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/Quartley Investment Report/current.pdf'
+        monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_global_equity_fund/' + year + '/current.pdf',
+        quarterly_commentary:'/cms/wp-content/uploads/factsheets/islamic_global_equity_fund/' + year + '/Quarterly Summary/current.pdf',
+        quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_global_equity_fund/' + year + '/Quartley Investment Report/current.pdf'
       },
       "islamic-global-equity-feeder-fund": {
-         // aren't right path( missing folder in wp-admin)
-         monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/current.pdf',
-         quarterly_commentary:'/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/Quarterly Summary/current.pdf',
-         quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_balanced/' + year + '/Quartley Investment Report/current.pdf'
+         monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_global_equity_feeder_fund/' + year + '/current.pdf',
+         quarterly_commentary:'/cms/wp-content/uploads/factsheets/islamic_global_equity_feeder_fund/' + year + '/Quarterly Summary/current.pdf',
+         quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/islamic_global_equity_feeder_fund/' + year + '/Quartley Investment Report/current.pdf'
       }
 
     }
