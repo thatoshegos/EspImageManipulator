@@ -7,6 +7,9 @@
     <a [routerLink]= "'/'+childLink">
       {{ childCrumb | uppercase }}
     </a>
+    <!-- {{ parentCrumb || json }}
+    {{ childCrumb || json }}
+    {{ sChildCrumb || json }} -->
     <div [ngClass]="parentLink && childLink && sChildCrumb ? 'arrow-crumb': 'none-arrow'"> > </div>
     <a [routerLink]="'/'+sChildLink">
       {{ sChildCrumb | uppercase }}

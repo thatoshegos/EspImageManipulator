@@ -43,6 +43,7 @@ export class BalanceFundComponent implements OnInit {
     this.getConditionalCSV(4, 3)
      
     this.currentRoute = this.router.url.slice(1);
+    console.log(this.currentRoute)
     this.selectedRoute = "";
   }
 

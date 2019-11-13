@@ -10,6 +10,19 @@
   display: block;
   margin: 4px 0;
 }
+
+a.complete-fund-eye-btn {
+  background: url('src/assets/images/buttons-new/form_view_b.png') no-repeat;
+  background-size: contain;
+  display: block;
+  height: 35px;
+  width: 35px;
+}
+
+a.complete-fund-eye-btn.visited {
+  background: url('http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/11/form_view_r.png');
+}
+
 /* .complete-fund-btn-list li a.red{background: #eac7ce url(../images/red-arrow-icon.jpg) no-repeat right} */
 
 .complete-fund-table {
