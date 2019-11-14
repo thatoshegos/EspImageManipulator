@@ -45,7 +45,7 @@ export class BalanceFundComponent implements OnInit {
      
     this.currentRoute = this.router.url.slice(1);
     this.url = this.router.url.split("/");
-    console.log('route', this.url )
+    console.log('route', this.url, this.selectedRoute, this.currentRoute )
     this.selectedRoute = "";
   }
 
