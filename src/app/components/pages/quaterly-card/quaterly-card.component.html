@@ -1,10 +1,10 @@
+<a [target]="quaterlyData.up_title !== 'Performance Table' ? '_self' : '_blank'" [routerLink]="quaterlyData.up_title !== 'Performance Table' ?  '/article/' + quaterlyData.link :  '/' +  quaterlyData.link">
 <div class="thumbnail">
   <img [src]="quaterlyData.up_image.url" alt="..." width="100%" />
   <div class="caption">
-    <a [target]="quaterlyData.up_title !== 'Performance Table' ? '_self' : '_blank'" [routerLink]="quaterlyData.up_title !== 'Performance Table' ?  '/article/' + quaterlyData.link :  '/' +  quaterlyData.link">
       <p class="quater-heading">{{ quaterlyData.up_title }}</p>
-     </a>
-    <p class="writers">{{ quaterlyData.writers_name }}</p>
+      <p class="writers">{{ quaterlyData.writers_name }}</p>
+    </div>
+    <!-- </div> -->
   </div>
-  <!-- </div> -->
-</div>
+</a>

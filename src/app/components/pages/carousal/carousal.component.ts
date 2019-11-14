@@ -117,7 +117,7 @@ export class CarousalComponent implements OnInit {
           "Prestigious awards for top fund performance awarded to the Protector Fund and the Stable Fund<br>Nominations in two further categories for the Islamic Equity Fund and the Stable Fund<br>Raging Bull Award for the Chairman’s Black Asset Manager of the Year"
       },
 	   {
-        icon:"<img src='/cms/wp-content/uploads/2019/06/2019.png'>",
+        icon:"<img src='/cms/wp-content/uploads/2019/06/2009.png'>",
         heading: "Two new Islamic funds",
         year:"2019",
         content:

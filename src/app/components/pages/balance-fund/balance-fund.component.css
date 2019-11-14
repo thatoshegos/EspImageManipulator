@@ -612,6 +612,16 @@ a.btn-invest-now-green{
     background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-insights-over.png) left center no-repeat #5b9dbe;
 }
 
+.is-equity-alpha-li {
+  display: none;
+}
+
+.is-equity-alpha-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* --------------- Mobile CSS ---*/
 
 @media screen and (max-width: 320px) {
@@ -1086,10 +1096,21 @@ a.btn-invest-now-green{
     padding: 30px 0;
   }
 
+  .fund-img-box ul.is-equity-alpha-ul {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .fund-img-box ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .fund-img-box ul li.is-equity-alpha-li {
+    display: none;
   }
 
   .blanced-fund-box .graph-box .select-fund div:first-of-type {
