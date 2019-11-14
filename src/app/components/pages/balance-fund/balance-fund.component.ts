@@ -20,6 +20,9 @@ export class BalanceFundComponent implements OnInit {
   selectedIndex;
   platformPdf= 'cms/wp-content/uploads/LISP platforms/LISP_Summary_sheet.pdf';
   url;
+  allFundReturn: null;
+  allBenchmarkReturn: null;
+  allOutperformance: null;
 
   constructor(private wpservice: WPAPIService, private router: Router) {}
 
@@ -186,14 +189,34 @@ export class BalanceFundComponent implements OnInit {
     var graphDataSet = {
         dates: [],
         fundReturn: [],
-        benchMark: []
-      };
-      for (var i = startingPoint; i < lines ; i++) {
-        const element = data[i]
-        graphDataSet.dates.push(element['DATE'])
-        graphDataSet.benchMark.push(element['VAL2'])
-        graphDataSet.fundReturn.push(element['VAL1'])
-      };
+        benchMark: [],
+        valueFundReturn: [],
+        valueBenchmarkReturn: [],
+        valueOutperformance: []
+    };
+    console.log('start', startingPoint, lines)
+    for (var i = startingPoint; i < lines ; i++) {
+
+      const element = data[i]
+      // console.log('+++', data[i])
+      graphDataSet.dates.push(element['DATE'])
+      graphDataSet.benchMark.push(element['VAL2'])
+      graphDataSet.fundReturn.push(element['VAL1'])
+      graphDataSet.valueFundReturn.push(element['Fund Return'])
+      graphDataSet.valueBenchmarkReturn.push(element['Benchmark Return'])
+      graphDataSet.valueOutperformance.push(element['Outperformance'])
+
+      if (element['Fund Return'] && this.allFundReturn !== null) {
+        this.allFundReturn = element['Fund Return']
+      }
+      if (element['Benchmark Return'] && this.allBenchmarkReturn !== null) {
+        this.allBenchmarkReturn = element['Benchmark Return']
+      }
+
+      if (element['Outperformance'] && this.allOutperformance !== null )  {
+        this.allOutperformance = element['Outperformance'] 
+      }
+    };
 
    
     // var result = [];

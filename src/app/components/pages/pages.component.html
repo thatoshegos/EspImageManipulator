@@ -1430,6 +1430,49 @@
    </div>
 <!-- end Meet Fund  Manager Abdul-->
 
+<!-- diverse team-->
+<div class="silder-div" *ngIf="page && page.isDiverseTeam ">
+    <app-slider [sliders]="page.acf.home_slider"></app-slider>
+    <div class="container">
+      <div class="row margin-5px-top">
+        <div  [innerHTML]="page.content.rendered"></div>
+      </div>
+      <div
+        class="col-md-12 bg-white padding-25px-all meet-our-leaders-content"
+        *ngFor="let leader of page.acf.meet_our_leaders"
+        style="border-bottom: 30px #E7E7E7 solid"
+      >
+        <div class="col-md-6">
+          <p class="leader-image" [innerHTML]="leader.video_url"></p>
+        </div>
+        <div class="col-md-6" style="margin-top:23px;">
+          <p class="text-deep-pink" [innerHTML]="leader.name"></p>
+          <p [innerHTML]="leader.position"></p>
+          <p [innerHTML]="leader.details"></p>
+        </div>
+    </div>
+  </div>
+<!-- end diverse team-->
+
+<!-- legal-->
+<div class="silder-div" *ngIf="page && page.legalStatus">
+    <div class="container">
+      <div class="row margin-5px-top">
+        <div  [innerHTML]="page.content.rendered"></div>
+      </div>
+      <div
+        class="col-md-12 bg-white padding-25px-all meet-our-leaders-content"
+        *ngFor="let legal of page.acf.legal"
+        style="border-bottom: 30px #E7E7E7 solid"
+      >
+        <div class="col-md-6" style="margin-top:23px;">
+          <h1 class="text-deep-pink" [innerHTML]="legal.legal"></h1>
+          <p class="text-deep-pink" [innerHTML]="legal.legal_info"></p>
+        </div>
+    </div>
+  </div>
+<!--end legal-->
+
 <!-- text-Free-Investing-->
 <div class="text-free-investing" *ngIf="page && page.textFreeInvesting">
   <div class="container">

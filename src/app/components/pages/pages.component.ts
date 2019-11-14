@@ -44,7 +44,7 @@ export class PagesComponent implements OnInit {
     public toastr: ToastrManager,
 
   ) {
-    //console.log('this', this)
+    // console.log('this', this)
     this.platformPdf = encodeURI(this.platformPdf);
     this.fundperformance = this.fundperformance;
     route.params.subscribe(val => {
@@ -111,6 +111,12 @@ export class PagesComponent implements OnInit {
             //   this.getHomeSlider = silder;
             // });
           }
+          if (slug == "diverse-team") {
+            this.page.isDiverseTeam  = true;
+            // this.wpservice.getPost("11267").subscribe(silder => {
+            //   this.getHomeSlider = silder;
+            // });
+          }
           if (slug == "meet-the-fund-manager-abdul") {
             this.page.meetFundManagerAbdul = true;
             // this.wpservice.getPost("11267").subscribe(silder => {
@@ -145,6 +151,9 @@ export class PagesComponent implements OnInit {
           }
           if (slug == "forms-documents") {
             this.page.formDocumentStatus = true;
+          }
+          if (slug == "legal") {
+            this.page.legalStatus = true;
           }
 
           // if (slug == "balanced-fund") {
@@ -467,6 +476,20 @@ export class PagesComponent implements OnInit {
                 //console.log(this.page);
               });
             } else if (
+              currentUrl.parent == "diverse-team" 
+            ) {
+              console.log('ooo')
+              this.page.id = 402;
+
+              this.wpservice.pages(`${this.page.id}`).subscribe(page => {
+                console.log('diverse',page )
+                this.page = page;
+                this.page.isDiverseTeam = true;
+                this.page.getParent = "institutional-investor";
+                //console.log(this.page);
+              }); 
+            }
+            else if (
               currentUrl.parent == "institutional-investor" &&
               currentUrl.child == "our-funds" &&
               currentUrl.schild === "managed-equity-fund"
@@ -633,6 +656,16 @@ export class PagesComponent implements OnInit {
               this.wpservice.getPages("89").subscribe(page => {
                 this.page = page;
                 this.page.saria = true;
+                //console.log(this.page);
+              });
+            }
+            else if (
+              currentUrl.parent == "legal"
+            ) {
+              this.page.id = 415; 
+              this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
+                this.page = page;
+                this.page.legalStatus = true;
                 //console.log(this.page);
               });
             }
