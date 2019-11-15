@@ -52,31 +52,34 @@
                 attr.aria-expanded="{{ isfirst }}"
               >
                 <div class="panel-body">
-                  <div class="repeat-loop" *ngIf="getFormPageData">
-                    <ul>
-                      <li
-                        *ngFor="
-                          let subHeading of this.convertUrl()
-                        "
-                      >
-                        <div
-                          class=" col-md-8 internal-data"
-                          [innerHTML]="subHeading.title"
-                        ></div>
-                        <div class="col-md-4">
-                          <a [href]="subHeading.url" 
-                            ><img
-                              src="./assets/images/form_view_icon.png"
-                              style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
-                          /></a>
-                          <a [href]="subHeading.url" download
-                            ><img
-                              src="./assets/images/form_download_icon.png"
-                              style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
-                          /></a>
-                        </div>
-                      </li>
-                    </ul>
+                  <div class="repeat-loop" *ngIf="getFormPageData" >
+                      <div *ngFor='let category of categories'>
+                        <h1 style="font-size: 18px; color: black; font-weight: bold;">{{category.category}}</h1>
+                        <ul>
+                          <li
+                            *ngFor="
+                              let subHeading of category.items
+                            "
+                          >
+                            <div
+                              class=" col-md-8 internal-data"
+                              [innerHTML]="subHeading.title"
+                            ></div>
+                            <div class="col-md-4">
+                              <a [href]="subHeading.url" 
+                                ><img
+                                  src="./assets/images/form_view_icon.png"
+                                  style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
+                              /></a>
+                              <a [href]="subHeading.url" download
+                                ><img
+                                  src="./assets/images/form_download_icon.png"
+                                  style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
+                              /></a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                   </div>
 
                   <!-- {{ faq.answer_label }} -->

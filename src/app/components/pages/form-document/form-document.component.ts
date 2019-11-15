@@ -15,6 +15,7 @@ export class FormDocumentComponent implements OnInit {
   changedSlug;
   currentSubCate;
   isfirst = false;
+  categories;
   constructor(private wpservice: WPAPIService) {}
 
   ngOnInit() {
@@ -47,13 +48,35 @@ export class FormDocumentComponent implements OnInit {
       this.wpservice.pages(`?slug=${this.slug}`).subscribe(data => {
         this.getFormPageData = null;
         this.getFormPageData = data;
-        console.log(this.getFormPageData);
+        console.log(this.getFormPageData[0].acf.form_title);
+        const arr = this.convertUrl()
+        // makeCategories
+        let categories = []
+        for (let index = 0; index < arr.length; index++) {
+          const element = arr[index];
+          if (element.category){
+            const category= element.category
+            const existingCategoryIndex = categories.findIndex(item => item.category == category)
+            if (existingCategoryIndex == -1){
+              categories.push({
+                category,
+                items:[element]
+              });
+            } else {
+              categories[existingCategoryIndex].items.push(element)
+            }
+          }
+        }
+        console.log('dsada', categories)
+        this.categories = categories;
+
         this.changedSlug = heading.headings;
       });
     }
   }
 
   convertUrl () {
+    console.log('category', this.getFormPageData[0].acf);
     const url =  this.getFormPageData[0].acf.form_title;
     for (let i = 0; i < url.length; i++) {
       const element = url[i];
