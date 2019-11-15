@@ -31,7 +31,7 @@
                       >-->
                     <!-- [ngClass]="{ active: selectedItem == heading }" -->
                     <span
-                      class="text-extra-dark-gray xs-width-80 display-inline-block"
+                      class="accordion-heading xs-width-80 display-inline-block"
                       [innerHTML]="heading.headings"
                     ></span>
                     <div
@@ -53,30 +53,32 @@
               >
                 <div class="panel-body">
                   <div class="repeat-loop" *ngIf="getFormPageData" >
-                      <div *ngFor='let category of categories'>
-                        <h1 style="font-size: 18px; color: black; font-weight: bold;">{{category.category}}</h1>
-                        <ul>
+                      <div class="form-page-data-wrapper" *ngFor='let category of categories'>
+                        <h1>{{category.category}}</h1>
+                        <ul class="form-page-data-list">
                           <li
                             *ngFor="
                               let subHeading of category.items
                             "
                           >
+                          <div>
                             <div
                               class=" col-md-8 internal-data"
                               [innerHTML]="subHeading.title"
                             ></div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 right-side-icons">
                               <a [href]="subHeading.url" 
                                 ><img
                                   src="./assets/images/form_view_icon.png"
-                                  style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
+                                  style="height:auto; width:auto; margin-right: 10px; margin-bottom:10px"
                               /></a>
                               <a [href]="subHeading.url" download
                                 ><img
                                   src="./assets/images/form_download_icon.png"
-                                  style="height:auto; width:auto; margin-right:10px; margin-bottom:10px"
+                                  style="height:auto; width:auto; margin-bottom:10px"
                               /></a>
                             </div>
+                          </div>
                           </li>
                         </ul>
                       </div>
