@@ -38,7 +38,7 @@
         <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader" style="margin-right:20px;"
           ><span>INVESTMENT APPROACH</span></a
         >
-        <a routerLink="/meet-the-fund-manager" target="_self" class="btn-meet-fund-manager"><span>MEET THE FUND MANAGER</span></a>
+        <a [routerLink]="url && url[3] == 'bond-fund' || url[3] == 'money-market-fund'? '/meet-the-fund-manager-simon' : '/meet-the-fund-manager'" target="_self" class="btn-meet-fund-manager"><span>MEET THE FUND MANAGER</span></a>
       </div>
     </div>
 </section>

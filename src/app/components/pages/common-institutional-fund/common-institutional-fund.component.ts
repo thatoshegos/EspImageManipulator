@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { Router } from "@angular/router";
+import { WPAPIService } from "../../../../services/wpapi.service";
 
 @Component({
   selector: "app-common-institutional-fund",
@@ -7,7 +9,10 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class CommonInstitutionalFundComponent implements OnInit {
   @Input() fundDatas;
-  constructor() {}
+  constructor(private wpservice: WPAPIService, private router: Router) {}
+  url;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.url = this.router.url.split("/");
+  }
 }

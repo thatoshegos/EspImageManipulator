@@ -26,6 +26,11 @@ export class BalanceFundComponent implements OnInit {
 
   constructor(private wpservice: WPAPIService, private router: Router) {}
 
+  // ngAfterContentChecked() {
+  //   this.url = this.router.url.split("/")
+  //   console.log('routering', this.url )
+  // }
+
   ngOnInit() {
     console.log('balance', this.getBalancedData )
     this.platformPdf = encodeURI(this.platformPdf);
@@ -48,7 +53,8 @@ export class BalanceFundComponent implements OnInit {
      
     this.currentRoute = this.router.url.slice(1);
     this.url = this.router.url.split("/");
-    console.log('route', this.url, this.selectedRoute, this.currentRoute )
+    // console.log('routeri', this.router.url)
+    // console.log('route', this.router.url.split("/"))
     this.selectedRoute = "";
   }
 

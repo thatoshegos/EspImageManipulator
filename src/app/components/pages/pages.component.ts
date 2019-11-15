@@ -123,6 +123,21 @@ export class PagesComponent implements OnInit {
             //   this.getHomeSlider = silder;
             // });
           }
+          
+          if (slug == "meet-the-fund-manager-simon") {
+            this.page.meetFundManagerSimon = true;
+            // this.wpservice.getPost("11267").subscribe(silder => {
+            //   this.getHomeSlider = silder;
+            // });
+          }
+
+          if (slug == "meet-the-fund-manager-aslam") {
+            this.page.meetFundManagerAslam= true;
+            // this.wpservice.getPost("11267").subscribe(silder => {
+            //   this.getHomeSlider = silder;
+            // });
+          }
+          
           if (slug == "tax-free-investing") {
             this.page.textFreeInvesting = true;
             // this.wpservice.getPost("11272").subscribe(taxFrees => {
@@ -656,16 +671,6 @@ export class PagesComponent implements OnInit {
               this.wpservice.getPages("89").subscribe(page => {
                 this.page = page;
                 this.page.saria = true;
-                //console.log(this.page);
-              });
-            }
-            else if (
-              currentUrl.parent == "legal"
-            ) {
-              this.page.id = 415; 
-              this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
-                this.page = page;
-                this.page.legalStatus = true;
                 //console.log(this.page);
               });
             }
