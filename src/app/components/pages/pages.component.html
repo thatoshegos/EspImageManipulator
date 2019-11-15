@@ -1477,9 +1477,14 @@
 
 <!-- diverse team-->
 <div class="silder-div" *ngIf="page && page.isDiverseTeam ">
-    <app-slider [sliders]="page.acf.home_slider"></app-slider>
+    <!-- <app-slider [sliders]="page.acf.home_slider"></app-slider> -->
+    <div class="container wrap-container-bread-crumbs">
+      <div class="col-md-12 margin-120px-top xs-margin-75px-top bread-crumb-about-us-home">
+        <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
+      </div>
+    </div>
     <div class="container">
-      <div class="row margin-5px-top">
+      <div class="margin-5px-top">
         <div  [innerHTML]="page.content.rendered"></div>
       </div>
       <div
@@ -1695,12 +1700,12 @@
 
 <!--FormDocument start -->
 <div class="container" *ngIf="page && page.formDocumentStatus">
-  <div class="row margin-twelve-top">
+  <div class="row margin-twelve-top  xs-margin-100px-top">
     <h2 [innerHTML]="page.title.rendered"></h2>
   </div>
   <div class="row margin-2px-top">
     <div class="bg-white">
-      <div class="content-div" [innerHTML]="page.content.rendered"></div>
+      <div class="content-div form-document-top-content" [innerHTML]="page.content.rendered"></div>
     </div>
   </div>
   <div class="row margin-5px-top">
@@ -1710,10 +1715,10 @@
   </div>
  <div class="row margin-30px-top margin-50px-bottom">
       <div class=" col-md-8 col-md-offset-2 text-center suscribe">
-        <a [href]="platformPdf" class="platform-on-grey" style="vertical-align: middle"
+        <a [href]="platformPdf" class="platform-on-grey form-document-status" style="vertical-align: middle"
           ><span>PLATFORMS</span></a
         >
-        <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
+        <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader form-document-status" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
       </div>
     </div>
 </div>

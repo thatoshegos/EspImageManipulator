@@ -1,20 +1,80 @@
 .accordion-style2 .panel {
   margin-bottom: 0px;
 }
+
+
 .quaterly-images-accordan > .accordion-style2 .panel .panel-heading {
   background: #fff;
   border-radius: 0;
-  padding: 22px 28px 25px;
+  padding: 22px 108px 25px;
   border-bottom: 2px solid #f4f6f7;
   font-weight: 800;
 }
+
+.accordion-style2 .panel-body {
+  padding: 25px 108px 25px;
+}
+
 .repeat-loop ul {
-  list-style-type: none;
-  padding: 0px;
+  list-style-image: url('http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/11/bullet_point.png');
+  padding: 0 0 0 15px;
 }
 .repeat-loop ul li {
-  padding: 10px;
+  /* padding: 10px; */
 }
 .repeat-loop ul li a img {
   width: 45px;
+}
+
+.accordion-heading {
+  color: #b60c2f;
+}
+
+.form-page-data-wrapper {
+  display: flex;
+  flex-flow: column;
+}
+
+.form-page-data-wrapper > h1 {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+.form-page-data-list {
+  display: flex;
+  flex-flow: column;
+}
+
+.form-page-data-list > li > .internal-data {
+  padding-left: 3px;
+  padding-top: 1px;
+}
+
+.right-side-icons {
+  padding-right: 0;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .accordion-style2 .panel-body {
+    padding: 25px 30px 25px;
+  }
+
+  .quaterly-images-accordan > .accordion-style2 .panel .panel-heading {
+    padding: 25px 30px 25px;
+  }
+
+  .form-page-data-list > li {
+    margin-top: 10px;
+  }
+
+  .form-page-data-list > li > div {
+    display: flex;
+  }
+
+  .form-page-data-list > li > div > .internal-data {
+    flex: 1;
+    align-items: center;
+  }
 }

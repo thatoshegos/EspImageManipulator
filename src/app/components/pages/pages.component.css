@@ -379,6 +379,10 @@ a.link:hover {
   margin-top: 80px;
 }
 
+.form-document-top-content {
+  padding: 45px 108px;
+}
+
 @media screen and (max-width: 480px) {
   .bread-crumb {
     padding: 20px 15px 0px 15px;
@@ -421,6 +425,10 @@ a.link:hover {
 
 @media screen and (max-width: 767px) {
   
+  .form-document-top-content {
+    padding: 30px;
+  }
+
   .bread-crumb {
     padding: 20px 15px 0px 15px;
   }
@@ -776,6 +784,13 @@ a.link:hover {
 
   .wrap-container-bread-crumbs.new-to-invest-crumb-wrapper {
     margin-left: 0;
+  }
+
+  .platform-on-grey.form-document-status > span,
+  .btn-meet-leaders.form-document-status > span {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 }
 
