@@ -36,6 +36,7 @@ export class FactSheetArchiveComponent implements OnInit {
               categoryData.getCategories = category;
               this.getCategories = category;
               this.categoryDatas.push(categoryData);
+              this.categoryDatas.sort((a,b) => a.parentName - b.parentName ? 1 : -1);
             });
         });
       });

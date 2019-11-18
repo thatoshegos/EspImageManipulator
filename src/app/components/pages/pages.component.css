@@ -383,6 +383,10 @@ a.link:hover {
   padding: 45px 108px;
 }
 
+.fact-sheet-archive-title {
+  margin-bottom: 30px;
+}
+
 @media screen and (max-width: 480px) {
   .bread-crumb {
     padding: 20px 15px 0px 15px;
@@ -423,7 +427,7 @@ a.link:hover {
     margin: 0 30px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   
   .form-document-top-content {
     padding: 30px;
@@ -432,9 +436,27 @@ a.link:hover {
   .bread-crumb {
     padding: 20px 15px 0px 15px;
   }
+
+  .app-fact-sheet-archive {
+    display: block;
+    padding: 0 15px;
+  }
+
+  .fact-sheet-archive-title {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .quaterly-library-body-row {
+    margin: 0;
+  }
+
+  .quaterly-library-title {
+    margin: 0;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .mobile-menu-collapse-wrapper {
     padding: 0 15px;
   }

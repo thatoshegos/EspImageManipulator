@@ -80,6 +80,16 @@
   padding-left: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .accordion-style2 .panel .panel-heading {
+    padding: 30px;
+  }
+
+  .parent-name {
+    padding: 30px;
+  }
+
+}
 
 @media screen and (max-width: 1200px) {
   .fact-sheet-inner {
