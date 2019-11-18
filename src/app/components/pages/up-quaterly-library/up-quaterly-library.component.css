@@ -8,6 +8,10 @@ span.text-extra-dark-gray.xs-width-80.display-inline-block.active {
   height: 200px;
 }
 
+.quaterly-library-cont {
+  padding: 0 30px;
+}
+
 @keyframes spinner-border {
   to { transform: rotate(360deg); }
 }

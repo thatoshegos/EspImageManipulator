@@ -1316,7 +1316,7 @@
       class="col-md-4"
       *ngFor="let quaterly of page.acf.up_quarterly_second_images"
     >
-      <a [href]="'/' + quaterly.up_url">
+      <a *ngIf="(quaterly.up_title === 'DOWNLOAD UP'); else elseSelection" download [href]="'/' + quaterly.up_url">
         <img
           class="quaterly-image-2"
           [src]="quaterly.up_image.url"
@@ -1326,6 +1326,18 @@
       
 	  <div class="text-center insight-title"><span class="text-title">{{quaterly.up_title}}</span></div>
     </a>
+    <ng-template #elseSelection>
+        <a [href]="quaterly.up_url">
+          <img
+            class="quaterly-image-2"
+            [src]="quaterly.up_image.url"
+            width="400"
+            height="200"
+          />
+        
+      <div class="text-center insight-title"><span class="text-title">{{quaterly.up_title}}</span></div>
+      </a>
+    </ng-template>
 	</div>
   </div>
 </div>
@@ -1333,10 +1345,10 @@
 <!-- Start up Quaterly Library -->
 
 <div class="container" *ngIf="page && page.quaterlyLibraryStatus">
-  <div class="row margin-140px-top xs-margin-100px-top">
+  <div class="row margin-140px-top xs-margin-100px-top quaterly-library-title">
     <h2>{{ page.title.rendered }}</h2>
   </div>
-  <div class="row margin-30px-bottom">
+  <div class="row margin-30px-bottom quaterly-library-body-row">
     <div class="bg-white">
       <app-up-quaterly-library
         [getQuaterlyImage]="page"
@@ -1890,11 +1902,11 @@
 
 <!--Fact Sheet Archive-->
 <div class="container" *ngIf="page && page.factsheetStatus">
-  <div class="row margin-twelve-top fact-sheet-content">
-    <h2>{{ page.title.rendered }}</h2>
+  <div class="row margin-twelve-top xs-margin-100px-top fact-sheet-content">
+    <h2 class="fact-sheet-archive-title">{{ page.title.rendered }}</h2>
   </div>
   <div class="row">
-    <app-fact-sheet-archive></app-fact-sheet-archive>
+    <app-fact-sheet-archive class="app-fact-sheet-archive"></app-fact-sheet-archive>
   </div>
 </div>
 <!--End Fact sheet archive-->
