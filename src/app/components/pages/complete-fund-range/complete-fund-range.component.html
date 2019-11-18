@@ -31,18 +31,18 @@
       <td *ngIf="isHideConditionOn"></td>
 
       <td *ngIf="!isHideConditionOn">
-        <a [href]="tdata.monthly_fact_sheet" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.monthly_fact_sheet" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'south_african_funds', 'monthly_fact_sheet')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'south_african_funds', 'monthly_fact_sheet')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td>
-        <a [href]="tdata.quarterly_fact_sheet" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.quarterly_fact_sheet" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'south_african_funds',  'quarterly_fact_sheet')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'south_african_funds', 'quarterly_fact_sheet')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td *ngIf="isHideConditionOn"></td>
       <td *ngIf="!isHideConditionOn">
-        <a [href]="tdata.quarterly_commentary" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'south_african_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'south_african_funds', 'quarterly_commentary')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
@@ -89,17 +89,17 @@
       <td>{{ tdata.fund_name }}</td>
       <td *ngIf="isHideConditionOn"></td>
       <td *ngIf="!isHideConditionOn">
-        <a [href]="tdata.monthly_fact_sheet" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.monthly_fact_sheet" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'sharia_funds',  'monthly_fact_sheet')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'sharia_funds', 'monthly_fact_sheet')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td>
-        <a [href]="tdata.quarterly_fact_sheet" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.quarterly_fact_sheet" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'sharia_funds',  'quarterly_fact_sheet')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'sharia_funds', 'quarterly_fact_sheet')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td *ngIf="!isHideConditionOn">
-        <a [href]="tdata.quarterly_commentary" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'sharia_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'sharia_funds', 'quarterly_commentary')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
@@ -147,18 +147,18 @@
       <td>{{ tdata.fund_name }}</td>
       <td *ngIf="isHideConditionOn"></td>
       <td *ngIf="!isHideConditionOn">
-        <a [href]="tdata.monthly_fact_sheet" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.monthly_fact_sheet" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'tax_free_funds',  'monthly_fact_sheet')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'tax_free_funds', 'monthly_fact_sheet' )" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td>
-        <a [href]="tdata.quarterly_fact_sheet" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.quarterly_fact_sheet" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'tax_free_funds',  'quarterly_fact_sheet')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'tax_free_funds','quarterly_fact_sheet')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td *ngIf="isHideConditionOn"></td>
       <td *ngIf="!isHideConditionOn">
-        <a [href]="tdata.quarterly_commentary" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'tax_free_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'tax_free_funds', 'quarterly_commentary')" target="_blank">
          <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
@@ -195,17 +195,17 @@
     >
       <td *ngIf="!isHideConditionOn">{{ tdata.fund_name }}</td>
       <td *ngIf="!isHideConditionOn">
-        <a [href]="tdata.monthly_fact_sheet" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.monthly_fact_sheet" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'global_funds',  'monthly_fact_sheet')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'global_funds','monthly_fact_sheet')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td *ngIf="!isHideConditionOn">
-        <a [href]="tdata.quarterly_fact_sheet" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.quarterly_fact_sheet" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'global_funds',  'quarterly_fact_sheet')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'global_funds', 'quarterly_fact_sheet')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td *ngIf="!isHideConditionOn">
-        <a [href]="tdata.quarterly_commentary" class="complete-fund-eye-btn" target="_blank">
+        <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'global_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'global_funds','quarterly_commentary')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>

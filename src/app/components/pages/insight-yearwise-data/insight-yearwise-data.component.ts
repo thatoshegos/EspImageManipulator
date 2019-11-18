@@ -14,6 +14,7 @@ export class InsightYearwiseDataComponent implements OnInit {
   isfirst = false;
   currentSubCate;
   getApiData;
+  loading = false;
   constructor(private wpservice: WPAPIService, private render: Renderer) {}
   getSubCategoryData(category, event) {
     var month = [
@@ -34,6 +35,8 @@ export class InsightYearwiseDataComponent implements OnInit {
     this.wpservice
       .getSubcategory(`?parent=${category.id}`)
       .subscribe(subcategories => {
+        console.log("0")
+        this.loading = false;
         this.subCategories = subcategories;
         this.subCategories.sort(
           (a, b) =>
@@ -46,6 +49,7 @@ export class InsightYearwiseDataComponent implements OnInit {
   }
   getMonthPost(subcategory, event, toggle) {
     // this code for accordian
+    this.loading = true;
     if (this.currentSubCate) {
       if (subcategory == this.currentSubCate) {
         this.isfirst = !toggle;
@@ -63,6 +67,7 @@ export class InsightYearwiseDataComponent implements OnInit {
         this.wpservice
           .getPostFromCategory(`?categories=${subcategory.id}`)
           .subscribe(posts => {
+            this.loading = false;
             this.posts = posts;
             // console.log(this.posts);
           });
@@ -71,6 +76,7 @@ export class InsightYearwiseDataComponent implements OnInit {
       this.wpservice
         .getPostFromCategory(`?categories=${subcategory.id}`)
         .subscribe(posts => {
+          this.loading = false;
           this.posts = posts;
           // console.log(this.posts);
         });
@@ -78,12 +84,14 @@ export class InsightYearwiseDataComponent implements OnInit {
   }
   ngOnInit() {
     this.wpservice.getCategory("?parent=12").subscribe(categories => {
+      this.loading = false;
       this.categories = categories;
       this.categories.sort((a, b) => b.name - a.name);
       this.selectedItem = categories[0];
     });
 
     this.wpservice.getSubcategory("?parent=47").subscribe(subcategories => {
+      this.loading = false;
       this.subCategories = subcategories;
       this.subCategories.sort((a, b) => b.id - a.id);
       console.log(this.subCategories);

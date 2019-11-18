@@ -69,11 +69,9 @@ export class BreadCrumbComponent implements OnInit {
         //   parent[0] + " " + (parent[1] || '') + " > " + menu[0] + " " + (menu[1] || '');
         this.parentCrumb = parent[0] + " " + (parent[1] || '') 
         this.childCrumb = menu[0] + " " + (menu[1] || '')
-        console.log('sChildCrumb',this.CurrentUrl, smenu)
         if(this.CurrentUrl.schild !== " undefined" && this.CurrentUrl.schild !== "" ) {
           this.sChildCrumb = smenu[0] + " " + smenu[1] + " " + (smenu[2] || '') + " " + (smenu[3] || '') + " " + (smenu[4] || '')
         }
-        console.log('sChildCrumb',this.sChildCrumb)
       }
     } else {
       if(menu[2]) {

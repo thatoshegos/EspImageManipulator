@@ -23,6 +23,7 @@ export class FaqComponent implements OnInit {
     this.isfirst = true;
   }
   getClicked(event, faq, toggle) {
+    console.log('faq', faq, toggle) 
     if (this.currentFaq) {
       if (this.currentFaq != faq) {
         this.isfirst = true;

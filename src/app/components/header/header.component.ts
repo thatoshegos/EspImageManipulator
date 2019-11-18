@@ -356,7 +356,6 @@ export class HeaderComponent implements OnInit {
   ngAfterContentChecked() {
     this.selectedParent = 'individual-investor'
     var urlArr = this.route.url.split("/");
-    console.log('route url',this.route.url, this.childrenMenu)
     urlArr.shift()
     if (urlArr.length > 1){
       this.selectedParent = urlArr[0]

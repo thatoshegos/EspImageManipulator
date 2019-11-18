@@ -32,7 +32,7 @@ export class BalanceFundComponent implements OnInit {
   // }
 
   ngOnInit() {
-    console.log('balance', this.getBalancedData )
+    // console.log('balance', this.getBalancedData )
     this.platformPdf = encodeURI(this.platformPdf);
     window.scrollTo(0,0);
 
@@ -49,7 +49,7 @@ export class BalanceFundComponent implements OnInit {
       console.log("readCSVDataFromServer========", data);
     });*/
    
-    this.getConditionalCSV(4, 3)
+    this.getConditionalCSV(0, 3)
      
     this.currentRoute = this.router.url.slice(1);
     this.url = this.router.url.split("/");
@@ -150,10 +150,8 @@ export class BalanceFundComponent implements OnInit {
         this.wpservice
         .readCSVDataFromServer(csvUrl)
         .subscribe(data => {
-          console.log('csv', data)
           this.csvData = JSON.parse(data);
           this.getGraphData = this.makeDataSetsFromJson(this.csvData, years);
-          console.log('++', this.getGraphData)
         });
       } else {
         this.getGraphData =  null;
@@ -168,12 +166,12 @@ export class BalanceFundComponent implements OnInit {
   }
 
   makeDataSetsFromJson(data, cond = null) {
-    console.log("server", data)
+    // If cond argument is 0 graph get all years from data
     var lines = data.length;
     var yearCond = cond * 12;
     var showYear;
     var startingPoint;
-    // //console.log(lines);
+    
     if (cond) {
       if (lines == yearCond) {
         showYear = lines; 
@@ -200,7 +198,7 @@ export class BalanceFundComponent implements OnInit {
         valueBenchmarkReturn: [],
         valueOutperformance: []
     };
-    console.log('start', startingPoint, lines)
+    
     for (var i = startingPoint; i < lines ; i++) {
 
       const element = data[i]

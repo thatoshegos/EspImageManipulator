@@ -67,16 +67,22 @@
                 "
                 attr.aria-expanded="{{ isfirst }}"
               >
-                <div class="panel-body bg-white">
-                  <div class="repeat-loop" *ngFor="let post of posts">
+              <!-- {{posts | json}} -->
+                <div class="panel-body bg-white" *ngIf="!loading">
+                  <div class="repeat-loop" *ngFor="let post of posts"  >
                     <div class="title" [innerHTML]="post.title.rendered"></div>
                     <div
                       class="content year-contents"
                       [innerHTML]="post.content.rendered"
                     ></div>
                   </div>
-
+                  
                   <!-- {{ faq.answer_label }} -->
+                </div>
+                <div class="loading" *ngIf="loading">
+                    <div class="spinner-border">
+                      <span class="sr-only">Loading...</span>
+                    </div>
                 </div>
               </div>
             </div>
