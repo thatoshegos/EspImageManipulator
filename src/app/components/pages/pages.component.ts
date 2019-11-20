@@ -251,7 +251,7 @@ export class PagesComponent implements OnInit {
                 //console.log(this.page);
               });
             } else if (
-              currentUrl.parent == "about-us-new" &&
+              currentUrl.parent == "about-us" &&
               currentUrl.child == "a-diverse-team-of-independent-thinkers-about-us"
             ) {
               this.page.id = 15552;
