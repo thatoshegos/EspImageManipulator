@@ -251,6 +251,18 @@ export class PagesComponent implements OnInit {
                 //console.log(this.page);
               });
             } else if (
+              currentUrl.parent == "about-us-new" &&
+              currentUrl.child == "a-diverse-team-of-independent-thinkers-about-us"
+            ) {
+              this.page.id = 15552;
+              this.wpservice.pages(`${this.page.id}`).subscribe(page => {
+                this.page = page;
+                this.page.isAboutUsIndependentThinkers = true;
+                // this.page.getParent = "institutional-investor";
+                //console.log(this.page);
+              });
+            } 
+            else if (
               currentUrl.parent == "about-us" &&
               currentUrl.child == "committed-to-transformation"
             ) {

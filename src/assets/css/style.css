@@ -4662,7 +4662,7 @@ a.btn-news-literature:hover{
 .btn-meet-diverse-team.active{ background: url('../images/buttons-new/leaders_b_button.png') no-repeat left center #5b9dbe!important;}
 
 .btn-meet-diverse-team span{
-  padding: 19px 15px 22px 15px;
+    padding: 9px 15px 10px 15px;   
     height: 60px;
     text-align: left;
     display: inline-block;
@@ -4917,6 +4917,14 @@ a.btn-news-literature:hover{
     background-attachment: fixed;
     padding-bottom: 80px;
 }
+
+.independent-thinkers-area {
+    background: url('http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/11/independent-thinkers.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 80px;
+}
+
 .ownership-structure-area{
     background:  url('../images/buttons-new/ownership structure.jpg') no-repeat center;
     background-size: cover;
@@ -5004,5 +5012,5 @@ a.btn-news-literature:hover{
 }
 
 .app-insights-slider .slider-text-bottom {
-    padding-bottom: 230px;
+    padding-bottom: 150px;
 }

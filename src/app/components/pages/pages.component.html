@@ -641,6 +641,82 @@
         </div>
   </div>
  </div>
+
+ <div class="sub-page" *ngIf="page && page.isAboutUsIndependentThinkers">
+  <div class="container xs-no-padding-lr">
+    <div class="col-md-12 margin-120px-top bread-crumb-about-us-home">
+     <app-bread-crumb [CurrentUrl]="getCurrentTab"></app-bread-crumb>
+    </div>
+  </div>
+ <div class="container">
+   <div 
+     class="col-md-8 sm-margin-four-bottom xs-no-margin-bottom wow fadeInUp mobile-common-submenu"
+     data-toggle="collapse"
+     data-target="#navbar-collapse-toggle-18"
+     style="padding: 0"
+   >
+   <h2 style='margin-left: 0; margin-right: 0;'>
+     <span>
+        A DIVERSE TEAM OF INDEPENDENT THINKERS
+     </span>
+     <span class="glyphicon glyphicon-menu-down"></span>
+   </h2>
+   <div
+     class="navbar-collapse collapse pull-right main-nav mobile-menu-collapse-wrapper"
+     id="navbar-collapse-toggle-18"
+   >
+     <ul
+       id="accordion"
+       class="nav navbar-nav navbar-left alt-font text-normal mobile-menu-collapse"
+       data-in="fadeIn"
+       data-out="fadeOut"
+       style="margin: 0"
+     >
+       <li><a routerLink="/about-us">ABOUT US</a></li>
+       <li><a routerLink='/about-us/meet-our-leaders'>MEET OUR LEADERS</a></li>
+       <li><a routerLink="/about-us/investment-approach">INVESTMENT APPROACH</a></li>
+       <li><a routerLink="/about-us-new/a-diverse-team-of-independent-thinkers-about-us">A DIVERSE TEAM OF INDEPENDENT THINKERS</a></li>
+       <li><a routerLink="/about-us/ownership-structure">OWNERSHIP STRUCTURE</a></li>
+       <li><a routerLink="/about-us/our-history">OUR HISTORY</a></li>
+       <li><a routerLink="/about-us/our-culture">OUR CULTURE</a></li>
+       <li><a routerLink="/about-us/responsible-investing">RESPONSIBLE INVESTING</a></li>
+       <li><a routerLink="/about-us/corporate-social-investment">CORPORATE SOCIAL INVESTMENT</a></li>
+       <li><a routerLink="/about-us/committed-to-transformation">COMMITED TO TRANSFORMATION</a></li>
+     </ul>
+   </div>
+ </div>
+  <app-about-menu [CurrentTab]="getCurrentTab"></app-about-menu>
+ </div>
+ <div class="col-md-12 independent-thinkers-area margin-40px-top xs-no-margin-top xs-padding-30px-top xs-padding-15px-bottom" *ngIf="page">
+   <!-- <app-investment-approch-about
+     [investments]="page.content.rendered"
+   ></app-investment-approch-about> -->
+   <div 
+    [innerHTML]='page.content.rendered'
+    class="sm-margin-four-bottom wow margin-100px-lr width-750px xs-no-margin-lr fadeInUp padding-30px-top xs-padding-10px-top about-sec aos-init aos-animate"
+    data-wow-delay="0.6s"
+    >
+  </div>
+   <div class="col-md-3 common-meet-our-leaders common-funds">
+       <a
+         routerLink="/individual-investor/our-funds"
+         class="btn-meet-diverse-team"
+         ><span
+           >OUR FUNDS</span
+         ></a
+       >
+     </div>
+     <div class="col-md-3 common-meet-our-leaders common-insights">
+         <a
+           routerLink="/insights"
+           class="btn-meet-diverse-team"
+           ><span
+             >INSIGHTS</span
+           ></a
+         >
+       </div>
+ </div>
+</div>
  
  
  <div class="sub-page" *ngIf="page && page.isAboutUsMeetLeaders">
@@ -2003,7 +2079,7 @@
 <!--end Instittutional manage equity fund view-->
 <!-- Article-detail-page -->
 
-<div class="article-components margin-30px-bottom margin-60px-top" *ngIf="page && page.articleStatus">
+<div class="article-components margin-30px-bottom" *ngIf="page && page.articleStatus">
     <section class="wow fadeIn no-padding main-slider mobile-height top-space">
       <app-slider [sliders]="slider"></app-slider>
     </section>

@@ -192,6 +192,11 @@ const routes: Routes = [
     component: PagesComponent
   },
   {
+    path: "about-us-new/a-diverse-team-of-independent-thinkers-about-us",
+    pathMatch: "full",
+    component: PagesComponent
+  },
+  {
     path: "about-us/meet-our-leaders",
     pathMatch: "full",
     component: PagesComponent

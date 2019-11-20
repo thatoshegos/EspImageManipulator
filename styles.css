@@ -1958,6 +1958,14 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
     background-attachment: fixed;
     padding-bottom: 80px;
 }
+
+.independent-thinkers-area {
+    background: url('http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/11/independent-thinkers.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 80px;
+}
+
 .ownership-structure-area{
     background:  url('/assets/images/buttons-new/ownership structure.jpg') no-repeat center;
     background-size: cover;
@@ -2220,6 +2228,10 @@ h1.black{color: #000 !important}
     line-height: 1.7!important;
   } 
 .main-slider .swiper-pagination-bullet{background: #000}
+.silders-div > .app-insights-slider > swiper > div.swiper-container.swiper-container-horizontal > div.swiper-button-prev, 
+.silders-div > .app-insights-slider > swiper > div.swiper-container.swiper-container-horizontal > div.swiper-button-next {
+  top: 60%;
+}
 .unconventional-thinking-right .min-height-440.bg-light-green-v2{padding: 30px; min-height: 445px; max-height: 445px}
 .unconventional-thinking-right .min-height-440.bg-light-green-v2 img{margin: 0 0 0 10px; display:block; max-height: 340px}
 .unconventional-thinking-right .min-height-440.bg-light-green-v2 img:hover{transform: scale(1.1)}
