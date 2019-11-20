@@ -1403,7 +1403,7 @@
 	  <div class="text-center insight-title"><span class="text-title">{{quaterly.up_title}}</span></div>
     </a>
     <ng-template #elseSelection>
-        <a [href]="quaterly.up_url">
+        <a  *ngIf="quaterly.up_url.indexOf('http') == -1" [routerLink]="'/' + quaterly.up_url">
           <img
             class="quaterly-image-2"
             [src]="quaterly.up_image.url"
@@ -1411,7 +1411,17 @@
             height="200"
           />
         
-      <div class="text-center insight-title"><span class="text-title">{{quaterly.up_title}}</span></div>
+        <div class="text-center insight-title"><span class="text-title">{{quaterly.up_title}}</span></div>
+      </a>
+      <a *ngIf="quaterly.up_url.indexOf('http') !== -1" [href]="quaterly.up_url">
+          <img
+            class="quaterly-image-2"
+            [src]="quaterly.up_image.url"
+            width="400"
+            height="200"
+          />
+        
+        <div class="text-center insight-title"><span class="text-title">{{quaterly.up_title}}</span></div>
       </a>
     </ng-template>
 	</div>
