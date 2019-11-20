@@ -9,7 +9,7 @@
     data-aos="fade-right"
     *ngFor="let fImagesecond of imageTwo.acf.financial_adviser_image_second"
   >
-    <a [href]="fImagesecond.url"
+    <a [routerLink]="fImagesecond.url"
       ><img [src]="fImagesecond.second_image.url"
     /></a>
   </div>
