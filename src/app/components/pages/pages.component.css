@@ -376,7 +376,7 @@ a.link:hover {
 
 .app-insights-slider {
   display: block;
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 
 .form-document-top-content {
@@ -487,6 +487,10 @@ a.link:hover {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+  }
+
+  .mobile-common-submenu > h2 > span:first-of-type {
+    flex: 1;
   }
   
   .mobile-menu-collapse-wrapper {

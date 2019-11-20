@@ -9,6 +9,7 @@ import { WPAPIService } from "../../../../services/wpapi.service";
 })
 export class CommonInstitutionalFundComponent implements OnInit {
   @Input() fundDatas;
+  performancePdf = 'cms/wp-content/uploads/performance/fundperformance.pdf'
   constructor(private wpservice: WPAPIService, private router: Router) {}
   url;
 
