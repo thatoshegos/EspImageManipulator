@@ -3957,8 +3957,7 @@ a.btn-our-fund-inst span {
     display: inline-block;
     color: #656565;
     font-size: 14px;
-    padding: 10px 50px 10px 0px;
-    width: 175px;
+    padding: 10px 43px 10px 0px;
     text-align: center;
 }
 .bee-btn{
@@ -3987,7 +3986,7 @@ a.btn-our-fund-inst span {
 .plateform-btn{background: #9ec5c1 url(../images/buttons-new/buttons_platforms.png) no-repeat right;}
 .plateform-btn span{background-color: #c8dcda; padding: 11px 26px}
 .form-btn{background: #9ec5c1 url(../images/buttons-new/buttons_forms.png) no-repeat right;}
-.form-btn span{background-color: #c8dcda; padding: 11px 42px 11px 39px}
+.form-btn span{background-color: #c8dcda; padding: 11px 26px}
 .how-to-investe .slider-typography{width: 100%;}
 .how-to-investe .swiper-container-horizontal{background: #ececec;}
 .how-to-investe .slider-typography h3 {
@@ -4662,10 +4661,11 @@ a.btn-news-literature:hover{
 .btn-meet-diverse-team.active{ background: url('../images/buttons-new/leaders_b_button.png') no-repeat left center #5b9dbe!important;}
 
 .btn-meet-diverse-team span{
+    display: inline-flex;
+    align-items: center;
     padding: 9px 15px 10px 15px;   
     height: 60px;
     text-align: left;
-    display: inline-block;
     background: #fff;
     color: #656565;
     font-weight: 500;
@@ -5008,7 +5008,7 @@ a.btn-news-literature:hover{
 .btn-download:hover{background: #5b9dbe url('../images/buttons-new/download.png') no-repeat right;}
 
 .glass-fund-slider .slider-text-bottom {
-    padding-bottom: 175px;
+    padding-bottom: 150px;
 }
 
 .app-insights-slider .slider-text-bottom {

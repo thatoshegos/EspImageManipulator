@@ -20,6 +20,7 @@ export class FooterComponent implements OnInit {
   }
 
   open(content, type) {
+    
     this.type = type
     //console.log('content', content)
     // console.log(this.getMessageStatus);
@@ -34,9 +35,11 @@ export class FooterComponent implements OnInit {
           this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         }
       );
+      
   }
 
   private getDismissReason(reason: any): string {
+    
     if (reason === ModalDismissReasons.ESC) {
       return "by pressing ESC";
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
@@ -45,9 +48,11 @@ export class FooterComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
+    
   }
 
   submitForm(f, type) {
+    
     //console.log('submit', f, this.model, type)
     if (type === "subscribe"){
       this.wpservice.subscribe(this.model).subscribe(data => {

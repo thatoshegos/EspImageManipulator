@@ -28,7 +28,7 @@
         </div> -->
         <div class="text-center">
           <div class="top-content">
-            <h2>
+            <h2 [style.font-size]="getBalancedData.slug == 'islamic-global-equity-feeder-fund' ? '30px' : '35px'">
               <!-- ./assets/images/blanced-fund-bg.jpg -->
               <img class="img"[src]="getBalancedData.acf.fund_icon.url" />
               {{ getBalancedData.title.rendered }}
@@ -161,9 +161,9 @@
             <!--  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/about-us" style="margin-right:10px;">TAX FREE</a>
 		  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/meet-the-fund-manager" style="margin-right:10px;">TOP 10 HOLDINGS</a>
 		  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/faq" style="margin-right:10px;">FORMS</a>
-		  <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/faq" style="margin-right:10px;">PLATEFORMS</a> -->
-            <ul class="fund-subcatagory-box" [ngClass]="currentRoute.includes('equity-alpha-fund') ? 'is-equity-alpha-ul' : ''">
-              <li class="col-md-3" [ngClass]="currentRoute.includes('equity-alpha-fund') ? 'is-equity-alpha-li' : ''">
+      <a _ngcontent-c15="" class="btn-meet-leaders" routerLink="/faq" style="margin-right:10px;">PLATEFORMS</a> -->
+            <ul class="fund-subcatagory-box" [ngClass]="(currentRoute.includes('equity-alpha-fund') || currentRoute.includes('islamic-equity-fund') || currentRoute.includes('global-equity-fund') || currentRoute.includes('islamic-global-equity-feeder-fund')) ? 'is-equity-alpha-ul' : ''">
+              <li class="col-md-3" [ngClass]="(currentRoute.includes('equity-alpha-fund') || currentRoute.includes('islamic-equity-fund') || currentRoute.includes('global-equity-fund') || currentRoute.includes('islamic-global-equity-feeder-fund')) ? 'is-equity-alpha-li' : ''">
                 <a routerLink="/tax-free-investing" class="btn-tax-free">
                   <div class="link-img-box"></div>
                   <div class="title">TAX FREE</div>
@@ -178,13 +178,13 @@
               <li class="col-md-3">
                 <a routerLink="/forms-documents" class="btn-form">
                   <div class="link-img-box"></div>
-                  <div class="title" style="">FORMS</div>
+                  <div class="title" style="">INVESTMENT FORMS</div>
                 </a>
               </li>
-              <li class="col-md-3">
+              <li class="col-md-3" [ngClass]="(currentRoute.includes('global-equity-fund') && !currentRoute.includes('islamic-global-equity-fund')) ? 'is-equity-alpha-li' : ''">
                 <a [href]="platformPdf" target="_blank" style="display: block;" class="btn-platforms">
                   <div class="link-img-box"></div>
-                  <div class="title" style=""><a [href]="platformPdf">PLATFORMS</a></div>
+                  <div class="title" style=""><a [href]="platformPdf">LISP PLATFORMS</a></div>
                 </a>
               </li>
               <div class="clearfix"></div>

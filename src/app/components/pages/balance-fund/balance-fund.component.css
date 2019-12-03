@@ -239,7 +239,7 @@ content: "";
   }
   .fund-img-box ul li .title {
     background: #e3edec;
-    padding: 10px;
+    padding: 10px 6px;
     color: #656565;
     text-transform: uppercase;
       width: 150px;
@@ -459,7 +459,7 @@ content: "";
 }
 .fund-img-box ul li .title {
   background: #e3edec;
-  padding: 10px;
+  padding: 10px 6px;
   color: #656565;
   text-transform: uppercase;
     /* width: 150px; */
