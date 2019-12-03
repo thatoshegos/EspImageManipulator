@@ -14,28 +14,29 @@
           >
             <p class="text-deep-pinktext-deep-pink">
               <span class="contact-content">
-                Our Client Services Team can be reached from Monday to Friday,
-                8am to 5pm on the number below, email or leave a message in the
-                pop up message box.
+                  Our client services team can be reached from Monday to Friday, 08:00 to 17:00 on the number below. Email or leave a message in the pop-up message box below.
               </span>
             </p>
             <div class="row">
               <div
                 class="col-md-6 col-sm-12 col-xs-12 margin-40px-top xs-margin-20px-top"
               >
-                <div
-                  class="box-1 padding-40px-all xs-padding-15px-all margin-40px-bottom xs-margin-20px-bottom"
-                >
+              <div class="box-2-heading padding-15px-all client-services-heading">
+                    Client Services
+                </div>
+              <div
+              class="box-1 padding-40px-all xs-padding-15px-all margin-40px-bottom xs-margin-20px-bottom"
+              >
                   <p>
-                    Phone us on:
+                    Telephone:
                     <span class="text-deep-pink">{{ page.acf.phone }}</span>
                   </p>
                   <p>
-                    Fax us on:
-                    <span class="text-black">{{ page.acf.fax }}</span>
+                    Fax:
+                    <span class="text-black">{{ page.acf.johannesburg_fax }}</span>
                   </p>
                   <p>
-                    Email us on:
+                    Email:
                     <span class="text-black email"
                       ><a href="mailto:{{ page.acf.email_us_on }">
                         {{ page.acf.email_us_on }}</a
@@ -47,7 +48,7 @@
                   class="box-2 padding-5px-all no-padding-top margin-40px-bottom xs-no-margin-bottom contact-form-wrapper"
                 >
                   <div class="box-2-heading padding-15px-all">
-                    Send us an email
+                      Email and Area of interest
                   </div>
                   <div class="box-2-content padding-20px-all xs-padding-15px-all">
                     <form
@@ -156,7 +157,7 @@
                             'is-invalid': f.submitted && comment.invalid
                           }"
                           placeholder="Comment"
-                          rows="12"
+                          rows="9"
                           class="bg-light-green no-border medium-textarea margin-5px-bottom"
                           required
                         ></textarea>
@@ -190,16 +191,16 @@
                   </div>
                   <div class="box-2-content padding-20px-all xs-padding-15px-all">
                     <p class="email">
-                      Telephone: {{ page.acf.telephone }}<br />
-                      Fax: {{ page.acf.fax }}<br />
-                      Email:
+                      Telephone {{ page.acf.telephone }}<br />
+                      Fax {{ page.acf.fax }}<br />
+                      Email
                       <a href="mailto:{{ page.acf.email }}">{{
                         page.acf.email
                       }}</a>
                     </p>
 
                     <p>
-                      <strong>Physical address:</strong><br />
+                      <strong>Physical address</strong><br />
                       <span [innerHTML]="page.acf.physical_address"></span>
                       <!-- {{ page.acf.physical_address }} -->
 
@@ -209,7 +210,7 @@
                     </p>
 
                     <p>
-                      <strong>Postal address:</strong><br />
+                      <strong>Postal address</strong><br />
                       {{ page.acf.postal_address }}
                     </p>
                   </div>
@@ -225,15 +226,15 @@
                     class="box-2-content padding-20px-all xs-padding-15px-all padding-30px-bottom"
                   >
                     <p class="email">
-                      Telephone: {{ page.acf.johannesburg_telephone }}<br />
-                      Fax:{{ page.acf.johannesburg_fax }}<br />
-                      Email:
+                      Telephone {{ page.acf.johannesburg_telephone }}<br />
+                      Fax {{ page.acf.johannesburg_fax }}<br />
+                      Email
                       <a href="mailto:{{ page.acf.johannesburg_email }}">{{
                         page.acf.johannesburg_email
                       }}</a>
                     </p>
                     <p>
-                      <strong>Physical address:</strong><br /><span
+                      <strong>Physical address</strong><br /><span
                         [innerHTML]="page.acf.johannesburg_physical_address"
                       ></span>
                     </p>
