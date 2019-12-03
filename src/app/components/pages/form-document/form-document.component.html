@@ -54,7 +54,6 @@
                 <div class="panel-body">
                   <div class="repeat-loop" *ngIf="getFormPageData" >
                       <div class="form-page-data-wrapper" *ngFor='let category of categories'>
-                        <h1>{{category.category}}</h1>
                         <ul class="form-page-data-list">
                           <li
                             *ngFor="
@@ -81,6 +80,7 @@
                           </div>
                           </li>
                         </ul>
+                        <h1 class='category'>{{category.category}}</h1>
                       </div>
                   </div>
 

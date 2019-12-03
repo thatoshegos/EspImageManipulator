@@ -2,8 +2,13 @@
   margin-bottom: 0px;
 }
 
+.category {
+  color: #b60c2f !important;
+  font-weight: 300 !important;
+}
+
 .quaterly-images-accordan {
-  padding: 0 40px;
+  padding: 0 0px;
 }
 
 .quaterly-images-accordan > .accordion-style2 .panel .panel-heading {
@@ -80,4 +85,5 @@
     flex: 1;
     align-items: center;
   }
+  
 }
