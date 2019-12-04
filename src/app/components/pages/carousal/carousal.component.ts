@@ -65,7 +65,7 @@ export class CarousalComponent implements OnInit {
         heading: "Outperformance and excellence",
         year:"2008",
         content:
-          "Awarded the prestigious Micropal Fund Award for the Best Smaller Group in South Africa over three years Equity Alpha Fund wins two Micropal awards for being the best in its sector over a one and three-year period"
+          "Awarded the prestigious Micropal Fund Award for the Best Smaller Group in South Africa over three years <br /> Equity Alpha Fund wins two Micropal awards for being the best in its sector over a one and three-year period"
       },
       {
         icon:"<img src='/cms/wp-content/uploads/2019/06/2009.png'>",
@@ -86,14 +86,14 @@ export class CarousalComponent implements OnInit {
         heading: "Extending our fund range",
         year:"2011",
         content:
-          "Include three new asset allocation funds: Kagiso Balanced Fund, Kagiso Islamic Balanced Fund and Kagiso Stable Fund Senior staff and the Kagiso Asset Management Staff Trust increase their shareholding to 49.9%"
+          "Include three new asset allocation funds: Kagiso Balanced Fund, Kagiso Islamic Balanced Fund and Kagiso Stable Fund <br /> Senior staff and the Kagiso Asset Management Staff Trust increase their shareholding to 49.9%"
       },
       {
         icon:"<img src='/cms/wp-content/uploads/2019/06/2012.png'>",
         heading: "10 years old",
         year:"2012",
         content:
-          "Proudly cerebrating 10 years in business Open our Johannesburg offices"
+          "Proudly cerebrating 10 years in business <br /> Open our Johannesburg offices"
       },
       {
         icon:"<img src='/cms/wp-content/uploads/2019/06/2014.png'>",
@@ -114,7 +114,7 @@ export class CarousalComponent implements OnInit {
         heading: "Raging Bull Awards",
         year:"2019",
         content:
-          "Prestigious awards for top fund performance awarded to the Protector Fund and the Stable Fund<br>Nominations in two further categories for the Islamic Equity Fund and the Stable Fund<br>Raging Bull Award for the Chairman’s Black Asset Manager of the Year"
+          "Prestigious awards for top fund performance awarded to the Protector Fund and the Stable Fund <br /> Nominations in two further categories for the Islamic Equity Fund and the Stable Fund <br /> Raging Bull Award for the Chairman’s Black Asset Manager of the Year"
       },
 	   {
         icon:"<img src='/cms/wp-content/uploads/2019/06/2009.png'>",
