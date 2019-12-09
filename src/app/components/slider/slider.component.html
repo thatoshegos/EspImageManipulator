@@ -47,28 +47,28 @@
       class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
       [style.backgroundImage]="'url(' + slider.slide_1.url + ')'"
       style="width: 1295px;"
-    >
+      >
       <div class="opacity-extra-medium"></div>
       <div
-        class="container position-relative one-fourth-screen xs-height-500px"
+      class="container position-relative one-fourth-screen xs-height-500px"
       >
-        <div class="slider-typography text-center">
-          <div class="slider-text-middle-main">
-            <div class="slider-text-bottom">
-              <h1>
-                <span>{{slider.image_title ? slider.image_title : slider.slide_1.title}}</span>
+      <div class="slider-typography text-center">
+        <div class="slider-text-middle-main">
+          <div class="slider-text-bottom">
+            <h1>
+              <span>{{slider.image_title ? slider.image_title : slider.slide_1.title}}</span>
                 <span>{{ slider.image_title1 }}</span>
               </h1>
               <div class="btn-dual m-center" *ngIf="slider.image_title2">
                 <a
-                  [routerLink]="slider.image_title2 == 'VIEW LATEST QUARTERLY' ? '/up-quarterly' : '/how-to-invest'"
-                  target="_self"
-                  class="main-slider-btn"
-                  >
-                  <span>
-                    {{ slider.image_title2 }}
-                  </span>
-                  </a
+                [routerLink]="slider.image_title2 == 'VIEW LATEST QUARTERLY' ? '/up-quarterly' : '/how-to-invest'"
+                target="_self"
+                class="main-slider-btn"
+                >
+                <span>
+                  {{ slider.image_title2 }}
+                </span>
+                </a
                 >
               </div>
             </div>

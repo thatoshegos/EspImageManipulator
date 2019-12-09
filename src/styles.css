@@ -622,7 +622,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 
 .parallax {position: relative; background-size: cover; overflow: hidden; background-attachment: fixed  }
 .fix-background {position: relative;  background-size: cover; animation-duration: 0s; animation-fill-mode: none; -webkit-animation-duration: 0s;  -webkit-animation-fill-mode: none; -moz-animation-duration: 0s;  -moz-animation-fill-mode: none; -ms-animation-duration: 0s; -ms-animation-fill-mode: none; -o-animation-fill-mode: none; overflow: hidden; background-position: center center; background-repeat: no-repeat; background-attachment: fixed }
-.cover-background {position: relative !important; background-size: cover !important; overflow: hidden !important; background-position: center top!important; background-repeat: no-repeat !important;}
+.cover-background {position: relative !important; background-size: cover !important; overflow: hidden !important; background-position: center -170%!important; background-repeat: no-repeat !important;}
 .background-size-inherit {background-size: inherit}
 .background-attachment-inherit {background-attachment: inherit}
 .background-position-left {background-position: left center;}
