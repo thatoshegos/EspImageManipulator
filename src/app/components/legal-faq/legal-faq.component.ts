@@ -1,12 +1,11 @@
-import { Component, OnInit, Input } from "@angular/core";
-import * as $ from "jquery";
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: "app-faq",
-  templateUrl: "./faq.component.html",
-  styleUrls: ["./faq.component.css"]
+  selector: 'app-legal-faq',
+  templateUrl: './legal-faq.component.html',
+  styleUrls: ['./legal-faq.component.css']
 })
-export class FaqComponent implements OnInit {
+export class LegalFaqComponent implements OnInit {
   @Input() faqs;
   @Input() fromStatusFaq;
   @Input() insightStatus;
@@ -14,7 +13,7 @@ export class FaqComponent implements OnInit {
   @Input() fromNewInvesting;
   isfirst = false;
   currentFaq;
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     window.scrollTo(0,0);
@@ -23,6 +22,7 @@ export class FaqComponent implements OnInit {
     this.currentFaq = this.faqs[0];
     this.isfirst = true;
   }
+
   getClicked(event, faq, toggle) {
     console.log('faq', faq, toggle) 
     if (this.currentFaq) {

@@ -70,6 +70,7 @@ import { BreadCrumbComponent } from "./components/bread-crumb/bread-crumb.compon
 import { MeetOurLeaderComponent } from "./components/meet-our-leader/meet-our-leader.component";
 import { HowToInvestComponent } from "./how-to-invest/how-to-invest.component";
 import { ArticleComponent } from "./components/article/article.component";
+import { LegalFaqComponent } from './components/legal-faq/legal-faq.component';
 
 @NgModule({
   declarations: [
@@ -123,7 +124,8 @@ import { ArticleComponent } from "./components/article/article.component";
     BreadCrumbComponent,
     MeetOurLeaderComponent,
     HowToInvestComponent,
-    ArticleComponent
+    ArticleComponent,
+    LegalFaqComponent
   ],
   imports: [
     BrowserModule,

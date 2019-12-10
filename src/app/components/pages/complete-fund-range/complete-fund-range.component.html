@@ -128,7 +128,7 @@
     </tr>-->
 	<tr class="bg-white"> <td colspan=7></td></tr>
 
-    <tr>
+    <tr style="display: none;">
       <td colspan="5" class="high-light">
         <strong>{{
           isHideConditionOn ? "Yield funds" : "Tax free fund"
@@ -144,7 +144,7 @@
       "
       [ngClass]="i % 2 == 0 ? 'bg-white' : 'light-bg'"
     >
-      <td>{{ tdata.fund_name }}</td>
+      <td>{{ tdata.fund_name }} </td>
       <td *ngIf="isHideConditionOn"></td>
       <td *ngIf="!isHideConditionOn">
         <a [href]="tdata.monthly_fact_sheet" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'tax_free_funds',  'monthly_fact_sheet')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'tax_free_funds', 'monthly_fact_sheet' )" target="_blank">

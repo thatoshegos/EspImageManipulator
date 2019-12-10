@@ -1,0 +1,23 @@
+.frequently-asked-questions-content > .accordion-style2 .panel .panel-heading {
+  background: #fff;
+  border-radius: 0;
+  padding: 22px 68px 25px;
+  border-bottom: 2px solid #f4f6f7;
+  font-weight: 800;
+}
+
+.frequently-asked-questions-content > .accordion-style2 .panel {
+	margin-bottom: 0;
+}
+
+.active-accordion {
+	color: #b60c2f;
+}
+
+@media screen and (max-width: 768px) {
+
+  .frequently-asked-questions-content > .accordion-style2 .panel .panel-heading {
+    padding: 25px 30px 25px;
+	}
+	
+}

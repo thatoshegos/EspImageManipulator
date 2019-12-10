@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-slider",
@@ -8,8 +9,10 @@ import { Component, OnInit, Input } from "@angular/core";
 export class SliderComponent implements OnInit {
   @Input() sliders;
   @Input() insight;
-  constructor() {}
+  url;
+  constructor(private router: Router) {}
   config: SwiperOptions = {
+    autoplay: this.router.url === '/individual-investor/invest-with-us' ? 5000 : null,
     pagination: ".swiper-pagination",
     paginationClickable: true,
     nextButton: ".swiper-button-next",
@@ -26,6 +29,8 @@ export class SliderComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.url = this.router.url
+    console.log(this.url)
     this.getPaginationStatus();
   }
 }

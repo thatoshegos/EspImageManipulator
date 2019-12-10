@@ -45,6 +45,7 @@
     <div
       *ngFor="let slider of sliders; let i = index"
       class="swiper-slide cover-background swiper-slide-duplicate swiper-slide-duplicate-next"
+      [ngClass]="url == '/article/article-one' ? 'article-one-slider' : ''"
       [style.backgroundImage]="'url(' + slider.slide_1.url + ')'"
       style="width: 1295px;"
       >

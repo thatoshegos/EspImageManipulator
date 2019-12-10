@@ -171,11 +171,14 @@ a.padding-10px-all.ul-tab.active {
   margin-bottom: 40px;
   display: flex;
   width: 100%;
+  padding-right: 0;
 }
 
 .app-about-us-common-right {
   width: 100%;
   display: flex;
+  padding-right: 5px;
+  padding-left: 7px;
 }
 
 .app-about-us-common-right > .about-leader-img {

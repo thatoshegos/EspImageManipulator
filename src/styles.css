@@ -622,7 +622,8 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 
 .parallax {position: relative; background-size: cover; overflow: hidden; background-attachment: fixed  }
 .fix-background {position: relative;  background-size: cover; animation-duration: 0s; animation-fill-mode: none; -webkit-animation-duration: 0s;  -webkit-animation-fill-mode: none; -moz-animation-duration: 0s;  -moz-animation-fill-mode: none; -ms-animation-duration: 0s; -ms-animation-fill-mode: none; -o-animation-fill-mode: none; overflow: hidden; background-position: center center; background-repeat: no-repeat; background-attachment: fixed }
-.cover-background {position: relative !important; background-size: cover !important; overflow: hidden !important; background-position: center -170%!important; background-repeat: no-repeat !important;}
+.cover-background {position: relative !important; background-size: cover !important; overflow: hidden !important; background-position: center top!important; background-repeat: no-repeat !important;}
+.article-one-slider {margin-top: 90px;}
 .background-size-inherit {background-size: inherit}
 .background-attachment-inherit {background-attachment: inherit}
 .background-position-left {background-position: left center;}
@@ -2008,6 +2009,7 @@ header ul.first:nth-of-type(1) li:first-child a{margin-left:0}
 .inner-match-height.process{padding-top:0 !important}
 .year-list{margin-bottom: 3px;font-size: 18px;}
 .year-list ul{margin: 0; padding: 30px 0; list-style-type: none; text-align: center;}
+.unit-trusts-annual-report-list ul{padding: 20px 0 40px 0;}
 .year-list ul li{display: inline-block; border-left:1px solid #000; padding: 0 10px}
 .year-list ul li:first-child{border-left:0;}
 .year-list ul li.active a{color:#b60c2f}
@@ -2026,10 +2028,11 @@ h1.black{color: #000 !important}
 .fund-title{color:#b60c2f; font-size: 20px}
 .annual{
     text-align:center;
+    padding: 40px 0 0 0;
 }
 .annual img {
   left: 37% !important;
-  padding: 40px;
+  border: 1px solid #ccc;
 }
 .annual-heading{
     text-align: center;

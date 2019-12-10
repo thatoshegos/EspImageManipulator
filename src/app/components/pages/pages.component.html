@@ -53,8 +53,8 @@
                 [deeplyThink]="page.acf"> </app-about-us-common>
                 <div class="col-md-4 app-about-us-common-right">
                     <div class="about-leader-img">
-                        <img src="http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/11/gavinrolandV2.png">
-                        <div class="about-leader-title"><a routerLink="/about-us/meet-our-leaders"> MEET OUR LEADERS <span></span></a>
+                        <img src="http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/12/GavinRoland03.jpg">
+                        <div class="about-leader-title"><a routerLink="/about-us/meet-our-leaders"> MEET OUR LEADERS</a>
                         </div>
                         <div class="col-md-3 common-meet-our-leaders">
                           <a
@@ -1255,7 +1255,7 @@
     </div> -->
     <div class="col-md-12 margin-30px-bottom">
       <div class="bg-white">
-        <div class="bg-white text-center year-list year-report-list">
+        <div class="bg-white text-center year-list year-report-list unit-trusts-annual-report-list">
           <ul>
             <li *ngFor="let getYear of page.acf.annual_report">
               <a
@@ -1603,9 +1603,34 @@
 </div>
 <!-- end diverse team-->
 
+
+<!-- <div class="container" *ngIf="page && page.formDocumentStatus">
+    <div class="row margin-twelve-top  xs-margin-100px-top">
+      <h2 [innerHTML]="page.title.rendered"></h2>
+    </div>
+    <div class="row margin-2px-top">
+      <div class="bg-white">
+        <div class="content-div form-document-top-content" [innerHTML]="page.content.rendered"></div>
+      </div>
+    </div>
+    <div class="row margin-5px-top">
+      <div>
+        <app-form-document [formHeading]="page"></app-form-document>
+      </div>
+    </div>
+   <div class="row margin-30px-top margin-50px-bottom">
+        <div class=" col-md-8 col-md-offset-2 text-center suscribe">
+          <a [href]="platformPdf" class="platform-on-grey form-document-status" style="vertical-align: middle"
+            ><span>LISP PLATFORMS</span></a
+          >
+          <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader form-document-status" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
+        </div>
+      </div>
+  </div> -->
+
 <!-- legal-->
-<div class="silder-div" *ngIf="page && page.legalStatus">
-    <div class="container">
+<div class="silder-div container" *ngIf="page && page.legalStatus">
+    <!-- <div class="container">
       <div class="row margin-5px-top">
         <div  [innerHTML]="page.content.rendered"></div>
       </div>
@@ -1618,6 +1643,21 @@
           <h1 class="text-deep-pink" [innerHTML]="legal.legal"></h1>
           <p class="text-deep-pink" [innerHTML]="legal.legal_info"></p>
         </div>
+    </div>
+  </div> -->
+  <div class="row margin-twelve-top  xs-margin-100px-top">
+    <h2 [innerHTML]="page.title.rendered"></h2>
+  </div>
+  <div class="row margin-2px-top">
+    <div class="bg-white">
+      <div class="content-div form-document-top-content" [innerHTML]="page.content.rendered"></div>
+    </div>
+  </div>
+  <div class="row margin-5px-top">
+    <div>
+      <app-legal-faq
+        [faqs]="page.acf['legal']"
+      ></app-legal-faq>
     </div>
   </div>
 </div>
