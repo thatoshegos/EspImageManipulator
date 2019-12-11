@@ -12,3 +12,40 @@ stroke:red;}
 .amcharts-main-div * {
 	transform: none !important;
 }
+
+.chart-labels {
+	position: absolute;
+	top: 20px;
+	left: 170px;
+}
+
+.chart-labels span {
+	position: relative;
+	font-size: 13px;
+}
+
+.chart-labels span:first-of-type {
+	margin-right: 70px;
+}
+
+.chart-labels span:first-of-type:before {
+	position: absolute;
+	width: 40px;
+	height: 2px;
+	background: rgb(106,157,154);
+	display: block;
+	content: '';
+	top: 8px;
+	left: -45px;
+}
+
+.chart-labels span:last-of-type:before {
+	position: absolute;
+	width: 40px;
+	height: 2px;
+	background: rgb(182,12,47);
+	display: block;
+	content: '';
+	top: 8px;
+	left: -45px;
+}
