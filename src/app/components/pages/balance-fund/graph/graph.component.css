@@ -8,6 +8,7 @@ stroke:red;}
 }*/
 #chartdiv2 {
 	background-color: rgb(227, 237, 236);
+	position: relative;
 }
 .amcharts-main-div * {
 	transform: none !important;
