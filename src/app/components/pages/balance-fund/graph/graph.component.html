@@ -1,9 +1,9 @@
 <div class="flex">
   <div class="flex-item">
     <div id="chartdiv2" [style.width.%]="100" [style.height.px]="400"></div>
-    <div class="chart-labels">
-      <span>Fund Return</span>
+    <div *ngIf="newData.length > 0" class="chart-labels">
       <span>Benchmark</span>
+      <span>Fund Return</span>
     </div>
       <!-- <div style="display: block;background:rgb(213,229,227);">
 

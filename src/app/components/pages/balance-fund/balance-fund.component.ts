@@ -20,6 +20,8 @@ export class BalanceFundComponent implements OnInit {
   selectedIndex;
   platformPdf= 'cms/wp-content/uploads/LISP platforms/LISP_Summary_sheet.pdf';
   url;
+  missingCSV;
+  missingCSVClass = '';
   allFundReturn: null;
   allBenchmarkReturn: null;
   allOutperformance: null;
@@ -50,7 +52,17 @@ export class BalanceFundComponent implements OnInit {
     });*/
    
     this.getConditionalCSV(0, 3)
-     
+    let missingCSVCount = 0
+
+    let csvs = ['csv_file_graph', 'csv_file', 'ten_year_csv', 'since_inception_csv'].forEach(file => {
+      if(this.getBalancedData.acf[file] === '') {
+        missingCSVCount += 1
+      }
+    })
+
+    if(missingCSVCount > 0) {
+      this.missingCSVClass = `missing-${missingCSVCount}`
+    }
     this.currentRoute = this.router.url.slice(1);
     this.url = this.router.url.split("/");
     // console.log('routeri', this.router.url)

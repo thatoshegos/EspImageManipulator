@@ -38,8 +38,8 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
     for (var i = 0; i < this.dataSet.dates.length; i++) {
       data.push({
         month: new Date(this.dataSet.dates[i]),
-        value: +this.dataSet.benchMark[i] * 1000,
-        value1: +this.dataSet.fundReturn[i] * 1000
+        value: +this.dataSet.benchMark[i],
+        value1: +this.dataSet.fundReturn[i]
       });
     }
     data.sort(function(_a, _b) {
@@ -105,7 +105,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
       dataProvider: dataProvider,
       valueAxes: [
         {
-          title: this.apiData.title.rendered,
+          title: 'R 1000 initial investment',
           titleBold: false,
           titleFontSize: 16,
           id: "v1",
@@ -116,41 +116,44 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           gridAlpha:2,
           gridColor:"white",
           gridThickness:1,
+          labelFunction: function(value, valueText) {
+            return "R " + valueText
+          }
         }
       ],
 
       graphs: [
         {
-          id: "g2",
-          // bullet: "round",
-          balloonColor:"gray",
-          balloonText:
-            "<div style='font-size:14px; background-color:#fff;text-align:left;padding-right:2px'><span style='color:rgb(182,12,47);'>BENCHMARK [[value1]]&nbsp;&nbsp;</span></div>",
-          // bulletBorderAlpha: 1,
-            // bulletBorderThickness:0,
-          // bulletColor: "#a11c0d",
-          lineColor: "rgb(182,12,47)",
-          hideBulletsCount: 50,
-          lineThickness: 1,
-          valueField: "value1",
-          showOnInit: false,
-          startDuration: 0,
-          pointRadius: 0
-        },
-        {
           id: "g1",
           balloonColor:"gray",
           balloonText:
-            "<div style='font-size:14px; background-color:#fff;text-align:left'><span style='color:rgb(106,157,154); '>FUND RETURN [[value]]</span></div>",
+            "<div style='font-size:14px; background-color:#fff;text-align:left'><span style='color:rgb(182,12,47); '>FUND RETURN [[value]]</span></div>",
           borderThickness:0,
           borderAlpha:0.1,
-          lineColor: "rgb(106,157,154)",
+          lineColor: "rgb(182,12,47)",
           lineThickness: 1,
           useLineColorForBulletBorder: false,
           valueField: "value",
           bulletSize:13,
           showOnInit: false,
           startDuration: 0
+        },
+        {
+          id: "g2",
+          // bullet: "round",
+          balloonColor:"gray",
+          balloonText:
+            "<div style='font-size:14px; background-color:#fff;text-align:left;padding-right:2px'><span style='color:rgb(106,157,154);'>BENCHMARK [[value1]]&nbsp;&nbsp;</span></div>",
+          // bulletBorderAlpha: 1,
+            // bulletBorderThickness:0,
+          // bulletColor: "#a11c0d",
+          lineColor: "rgb(106,157,154)",
+          hideBulletsCount: 50,
+          lineThickness: 1,
+          valueField: "value1",
+          showOnInit: false,
+          startDuration: 0,
+          pointRadius: 0
         },
          
       ],
@@ -224,7 +227,6 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
   }
   ngOnInit() {
     // Create chartdiv1
-    console.log('api data',this.apiData)
     if (this.makeDataSet()) {
       this.options = this.makeOptions(this.makeDataSet());
       
@@ -236,9 +238,8 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
     }
   }
   ngOnChanges(changes: SimpleChanges) {
-	  console.log('chchch')
     this.newData = this.makeDataSet();
-    console.log(this.newData);
+    console.log(this.newData)
     if (this.newData) {
       this.options = this.makeOptions(this.makeDataSet());
 
@@ -247,7 +248,6 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
         "chartdiv2",
         this.makeOptions(this.makeDataSet())
       );
-      console.log(this.makeOptions(this.makeDataSet()))
     }
   }
   ngOnDestroy() {

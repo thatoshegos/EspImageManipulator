@@ -95,6 +95,23 @@ content: "";
   grid-gap: 15px;
   padding-bottom: 30px;
 }
+
+.blanced-fund-box .year-list.missing-1 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.blanced-fund-box .year-list.missing-2 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.blanced-fund-box .year-list.missing-3 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.blanced-fund-box .year-list.missing-4 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
 .blanced-fund-box .year-list li {
   padding: 0;
   font-size: 14px;
@@ -136,7 +153,7 @@ content: "";
 }
 .blanced-fund-box .return-list li a {
   display: block;
-  padding: 8px 2px;
+  padding: 8px 0px;
   color: #656565;
   border: 2px solid #a8c3be;
   margin: 0;

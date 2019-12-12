@@ -78,23 +78,23 @@
               </div>
                <!-- <div class="vertical-row"></div>-->
               <div class="col-md-7  graph-box padding-45px-all" >
-                <ul class="year-list">
-                  <li [ngClass]="selectedIndex === 0 ? 'current' : ''">
+                <ul class="year-list" [ngClass]="missingCSVClass">
+                  <li *ngIf="getBalancedData.acf.csv_file_graph !== ''" [ngClass]="selectedIndex === 0 ? 'current' : ''">
                     <a href="javascript:void(0)" (click)="getConditionalCSV(5, 0)"
                       >5 Years</a
                     >
                   </li>
-                  <li [ngClass]="selectedIndex === 1 ? 'current' : ''">
+                  <li *ngIf="getBalancedData.acf.csv_file !== ''" [ngClass]="selectedIndex === 1 ? 'current' : ''">
                     <a href="javascript:void(0)" (click)="getConditionalCSV(7, 1)"
                       >7 Years</a
                     >
                   </li>
-                  <li [ngClass]="selectedIndex === 2 ? 'current' : ''">
+                  <li *ngIf="getBalancedData.acf.ten_year_csv !== ''" [ngClass]="selectedIndex === 2 ? 'current' : ''">
                     <a href="javascript:void(0)" (click)="getConditionalCSV(10, 2)"
                       >10 Years</a
                     >
                   </li>
-                  <li [ngClass]="selectedIndex === 3 ? 'current' : ''">
+                  <li *ngIf="getBalancedData.acf.since_inception_csv !== ''" [ngClass]="selectedIndex === 3 ? 'current' : ''">
                     <a href="javascript:void(0)" (click)="getConditionalCSV(0, 3)"
                       >Since Inception</a
                     >
