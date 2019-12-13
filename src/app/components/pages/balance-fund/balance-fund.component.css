@@ -947,6 +947,20 @@ a.btn-invest-now-green{
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(2, 1fr);
     }
+    
+    .graph-box .year-list.missing-1 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .graph-box .year-list.missing-2 {
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr)!important;
+    }
+
+    .graph-box .year-list.missing-3 {
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: 1fr;
+    }
   
     .graph-box .year-list li > a {
       width: 100%;
@@ -1167,6 +1181,18 @@ a.btn-invest-now-green{
 
   .graph-box .year-list {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .graph-box .year-list.missing-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .graph-box .year-list.missing-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .graph-box .year-list.missing-3 {
+    grid-template-columns: 1fr;
   }
 
   .graph-box .year-list li {

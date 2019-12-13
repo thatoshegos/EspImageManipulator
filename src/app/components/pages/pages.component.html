@@ -980,7 +980,8 @@
                 class="btn-our-funds  margin-20px-right"
                 style="vertical-align: middle"><span>OUR FUNDS</span></a
             >
-            <a [routerLink]="fundperformance" 
+            <a [routerLink]="fundperformance"
+                target="_blank"
                class="btn-performance-sheet"
                style="vertical-align: middle"><span>PERFORMANCE SHEET</span></a>
           </div>
@@ -1027,7 +1028,7 @@
 <div *ngIf="page && page.shariaBoardStatus">
   <!-- <app-slider [sliders]="page.acf.home_slider"></app-slider> -->
 </div>
-<div class="container" *ngIf="page && page.shariaBoardStatus">
+<div class="container sharia-board-container" *ngIf="page && page.shariaBoardStatus">
   <app-sharia-board class="app-sharia-board" [shariaContent]="page"></app-sharia-board>
 </div>
 <!--Sharia board End-->
@@ -1323,7 +1324,7 @@
         >
           <span aria-hidden="true">&times;</span>
         </button>
-        <div *ngIf="type=='subscribe'" style="text-align: left;" class="box-2-heading padding-15px-all">Please subscribe me to UP, Kagiso’s Quarterly magazine.</div>
+        <div *ngIf="type=='subscribe'" style="text-align: left;" class="box-2-heading padding-15px-all">Subscribe to UP Quaterly</div>
         <div *ngIf="type=='unsubscribe'" style="text-align: left;" class="box-2-heading padding-15px-all">Please unsubscribe me to UP, Kagiso’s Quarterly magazine.</div>
         </div>
       <div  class="modal-body">
@@ -1629,7 +1630,7 @@
   </div> -->
 
 <!-- legal-->
-<div class="silder-div container" *ngIf="page && page.legalStatus">
+<div class="silder-div container legal-container" *ngIf="page && page.legalStatus">
     <!-- <div class="container">
       <div class="row margin-5px-top">
         <div  [innerHTML]="page.content.rendered"></div>
@@ -1664,20 +1665,20 @@
 <!--end legal-->
 
 <!-- text-Free-Investing-->
-<div class="text-free-investing" *ngIf="page && page.textFreeInvesting">
+<div class="text-free-investing xs-margin-40px-top" *ngIf="page && page.textFreeInvesting">
   <div class="container">
     <div class="row margin-fifteen-top">
       <h2>{{ page.title.rendered }}</h2>
     </div>
     <div class="row">
       <div class="bg-white">
-        <div class="padding-45px-all" [innerHTML]="page.content.rendered"></div>
+        <div class="padding-45px-all xs-padding-15px-all" [innerHTML]="page.content.rendered"></div>
       </div>
     </div>
     <div class="row margin-20px-top">
       <h2>Tax-free Funds</h2>
     </div>
-    <div class="row margin-30px-bottom margin-5px-top bg-white padding-45px-all">
+    <div class="row margin-30px-bottom margin-5px-top bg-white padding-45px-all xs-padding-15px-all">
       <div class="bg-white">
         <div
           class="col-md-4   wow fadeInLeft"
@@ -1697,7 +1698,7 @@
         <div class="col-md-2"></div>
       <div class="text-center">
         <div
-          class="col-md-4"
+          class="col-md-4 tax-free-funds-light-green"
           *ngFor="
             let fadviserImage of page.acf.financial_adviser_image;
             let i = index
@@ -1716,10 +1717,10 @@
     </div>
     <div class="row margin-30px-top margin-50px-bottom">
       <div class=" col-md-8 col-md-offset-2 text-center suscribe">
-        <a [href]="platformPdf" class="platform-on-grey" style="vertical-align: middle; margin-left: 30px;"
+        <a [href]="platformPdf" class="platform-on-grey tax-free-platform" style="vertical-align: middle; margin-left: 30px;"
           ><span>LISP PLATFORMS</span></a
         >
-        <a routerLink="/about-us/investment-approach"  class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
+        <a routerLink="/about-us/investment-approach"  class="btn-meet-leaders meet-leader tax-free-meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
       </div>
     </div>
   </div>
@@ -1802,8 +1803,8 @@
 <!-- End New to Investing -->
 
 <!--How to Invest -->
-<div class="container" *ngIf="page && page.howToInvestStatus">
-  <div class="row margin-150px-top 7 xs-margin-30px-top">
+<div class="container how-to-invest-container" *ngIf="page && page.howToInvestStatus">
+  <div class="row margin-150px-top 7 xs-margin-100px-top">
     <h2>{{ page.title.rendered }}</h2>
   </div>
   <div class="row margin-20px-bottom xs-margin-30px-bottom">
@@ -1837,7 +1838,7 @@
 <!-- End How to Invest -->
 
 <!--FormDocument start -->
-<div class="container" *ngIf="page && page.formDocumentStatus">
+<div class="container form-documents-container" *ngIf="page && page.formDocumentStatus">
   <div class="row margin-twelve-top  xs-margin-100px-top">
     <h2 [innerHTML]="page.title.rendered"></h2>
   </div>
@@ -2188,7 +2189,8 @@
             >
               <span aria-hidden="true">&times;</span>
             </button>
-            <div class="box-2-heading padding-15px-all">Send us an email</div>
+            <div *ngIf="type == 'subscribe'" class="box-2-heading padding-15px-all">Subscribe to UP Quaterly</div>
+            <div *ngIf="type == 'unsubscribe'" class="box-2-heading padding-15px-all">Please unsubscribe me to UP, Kagiso’s Quarterly magazine.</div>
           </div>
           <div class="modal-body">
             <div class="box-2 padding-5px-all margin-40px-bottom">

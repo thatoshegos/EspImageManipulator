@@ -13,10 +13,13 @@ export class FooterComponent implements OnInit {
   model: any = {};
   closeResult: string;
   response;
+  year;
   
   constructor(private modalService: NgbModal, private wpservice: WPAPIService, public toastr: ToastrManager) { }
 
   ngOnInit() {
+    const date = new Date()
+    this.year = date.getFullYear()
   }
 
   open(content, type) {

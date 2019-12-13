@@ -51,7 +51,7 @@ export class BalanceFundComponent implements OnInit {
       console.log("readCSVDataFromServer========", data);
     });*/
    
-    this.getConditionalCSV(0, 3)
+    this.getConditionalCSV(5, 0)
     let missingCSVCount = 0
 
     let csvs = ['csv_file_graph', 'csv_file', 'ten_year_csv', 'since_inception_csv'].forEach(file => {

@@ -4259,6 +4259,10 @@ a.btn-news-literature:hover{
     color: #87b8b3!important;
 }
 
+.app-insights-slider .slider-text-bottom {
+    padding-bottom: 150px;
+}
+
 
 .bread-crumb p {font-size: 13px;}
 .bread-crumb-about-us-home p {font-size: 13px;}
@@ -4294,6 +4298,10 @@ a.btn-news-literature:hover{
 
     .bullet-type {
         padding-left: 25px;
+    }
+
+    .app-insights-slider .slider-text-bottom {
+        padding-bottom: 80px;
     }
 }
 
@@ -5008,9 +5016,5 @@ a.btn-news-literature:hover{
 .btn-download:hover{background: #5b9dbe url('../images/buttons-new/download.png') no-repeat right;}
 
 .glass-fund-slider .slider-text-bottom {
-    padding-bottom: 150px;
-}
-
-.app-insights-slider .slider-text-bottom {
     padding-bottom: 150px;
 }

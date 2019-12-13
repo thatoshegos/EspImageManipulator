@@ -38,8 +38,8 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
     for (var i = 0; i < this.dataSet.dates.length; i++) {
       data.push({
         month: new Date(this.dataSet.dates[i]),
-        value: +this.dataSet.benchMark[i],
-        value1: +this.dataSet.fundReturn[i]
+        value1: +this.dataSet.benchMark[i],
+        value: +this.dataSet.fundReturn[i]
       });
     }
     data.sort(function(_a, _b) {
@@ -107,7 +107,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
         {
           title: 'R 1000 initial investment',
           titleBold: false,
-          titleFontSize: 16,
+          titleFontSize: 13,
           id: "v1",
           position: "left",
           axisThickness:1,

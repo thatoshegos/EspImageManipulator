@@ -2454,6 +2454,11 @@ input, select, textarea {
         padding: 30px;
         margin: 4px 0px 0px 0px;
     }
+
+    .sharial-internal-contents p {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
 }
 .video-hide{
     display: none;

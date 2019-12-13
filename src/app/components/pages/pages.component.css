@@ -423,6 +423,37 @@ a.link:hover {
     .image-share.article-one {
       display: none;
     }
+
+    .legal-container,
+    .how-to-invest-container,
+    .form-documents-container,
+    .sharia-board-container {
+      padding: 0 30px;
+    }
+
+    .text-free-investing {
+      padding: 0 15px;
+    }
+
+    .tax-free-funds-light-green {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .tax-free-funds-light-green:first-of-type {
+      margin-bottom: 15px;
+    }
+
+    .tax-free-platform {
+      margin-left: 0!important;
+    }
+
+    .tax-free-platform span,
+    .tax-free-meet-leader span {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
 }
 .inst-img-center {
     display: inline-block;

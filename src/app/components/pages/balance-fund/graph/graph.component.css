@@ -50,3 +50,19 @@ stroke:red;}
 	top: 8px;
 	left: -45px;
 }
+
+@media screen and (max-width: 480px) {
+  .chart-labels {
+		left: 155px;
+		display: flex;
+		flex-flow: column;
+	}
+
+	.chart-labels span {
+		font-size: 11px;
+	}
+
+	.chart-labels span:last-of-type {
+		text-align: left;
+	}
+}
