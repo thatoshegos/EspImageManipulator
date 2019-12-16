@@ -16,6 +16,7 @@
         {{ history.our_history_title }}
       </h2>
       <h2 *ngIf="our_culture">{{ our_culture.our_culture_title }}</h2>
+      <h2 *ngIf="magnet">{{ magnet.magnet_title }}</h2>
       <h2 *ngIf="responsible">{{ responsible.responsible_investing_title }}</h2>
       <h2 *ngIf="social_corporate">
         {{ social_corporate.social_investment_title }}
@@ -77,6 +78,12 @@
         class="o-text"
         [innerHTML]="our_culture.our_culture_content"
       ></p>
+      <p
+        *ngIf="magnet"
+        class="o-text"
+        [innerHTML]="magnet.magnet_content"
+      ></p
+        >
       <!--<a [href]="" class="more-btn read-more xs-margin-20px-bottom" *ngIf="our_culture"> MORE</a>-->
       <div class="responsible-investing-content" *ngIf="responsible">
         

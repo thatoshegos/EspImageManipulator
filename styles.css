@@ -1909,6 +1909,13 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
     background: url('/assets/images/buttons-new/our culture.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.our-culture-area.magnet {
+    margin-top: 0;
+    background: url('http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/12/landing_eye.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
     padding-bottom: 80px;
 }
 

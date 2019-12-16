@@ -2,7 +2,8 @@
   
   <div class="article-component-wrapper">
       <div class="bg-white top-content">
-          <h2>{{ getArticleData.title.rendered }}<p>Rahgib Davids - Investment Analyst</p></h2>
+          <!-- <h2>{{ getArticleData.title.rendered }}<p>Rahgib Davids - Investment Analyst</p></h2> -->
+          <h2>{{ getArticleData.title.rendered }}<p>{{ article_subtitle }}</p></h2>
       </div>
       <div class="inner-content">
           <div class="bg-white inner-content-photo padding-35px-tb padding-10px-lr">
@@ -43,8 +44,8 @@
           </div>
           <div class="bg-white inner-content-text padding-35px-tb padding-10px-lr" >
               <div [innerHTML]="getArticleData.content.rendered"></div>
-              <div class="light-box">
-                <img src="assets/images/lightbox.png"/> 
+              <div *ngIf="article_image !== ''" class="light-box">
+                <img [src]="article_image"/> 
              </div>
           </div>
       </div>

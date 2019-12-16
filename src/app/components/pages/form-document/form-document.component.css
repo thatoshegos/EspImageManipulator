@@ -7,8 +7,26 @@
   font-weight: 300 !important;
 }
 
+.category.advisory {
+  color: #b60c2f!important;
+  font-size: 18px;
+}
+
 .quaterly-images-accordan {
   padding: 0 0px;
+}
+
+.tax-free-additional {
+  color: #b60c2f;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.tax-free-additional.info {
+  color: #b60c2f;
+  margin-bottom: 2px;
+  font-size: 17px;
+  font-weight: 300;
 }
 
 .quaterly-images-accordan > .accordion-style2 .panel .panel-heading {

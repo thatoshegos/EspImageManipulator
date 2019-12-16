@@ -16,12 +16,16 @@ export class FormDocumentComponent implements OnInit {
   currentSubCate;
   isfirst = false;
   categories;
+  openedCategory;
   constructor(private wpservice: WPAPIService) {}
 
   ngOnInit() {
     window.scrollTo(0,0);
+    console.log('(this.formHeadin',this.formHeading)
   }
   getFormData(heading, event, toggle) {
+    console.log('heading',heading)
+    this.openedCategory = heading.headings
     // accordian data
     if (this.currentSubCate) {
       if (heading == this.currentSubCate) {
@@ -55,6 +59,7 @@ export class FormDocumentComponent implements OnInit {
         for (let index = 0; index < arr.length; index++) {
           const element = arr[index];
           if (element.category){
+            console.log('element',element, this.getFormPageData)
             const category= element.category
             const existingCategoryIndex = categories.findIndex(item => item.category == category)
             if (existingCategoryIndex == -1){

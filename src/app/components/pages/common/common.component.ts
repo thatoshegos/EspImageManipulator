@@ -11,6 +11,7 @@ export class CommonComponent implements OnInit {
   @Input() owners;
   @Input() history;
   @Input() our_culture;
+  @Input() magnet;
   @Input() responsible;
   @Input() social_corporate;
   @Input() transformation;

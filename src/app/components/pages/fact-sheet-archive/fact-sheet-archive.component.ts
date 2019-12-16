@@ -37,6 +37,7 @@ export class FactSheetArchiveComponent implements OnInit {
               this.getCategories = category;
               this.categoryDatas.push(categoryData);
               this.categoryDatas.sort((a,b) => a.parentName - b.parentName ? 1 : -1);
+              console.log('aaaa',this.categoryDatas)
             });
         });
       });
@@ -67,6 +68,7 @@ export class FactSheetArchiveComponent implements OnInit {
       .getPostFromCategory(`?categories=${sub.id}`)
       .subscribe(data => {
         this.categoryData = data;
+        console.log('----',this.categoryData)
       });
   }
 }

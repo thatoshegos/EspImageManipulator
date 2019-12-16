@@ -321,6 +321,13 @@
         <app-common [our_culture]="page.acf"></app-common>
       </div>
     </div>
+  </div>
+  <div class=" col-md-12 our-culture-area magnet margin-40px-top xs-no-margin-top xs-padding-30px-top xs-padding-20px-bottom">
+    <div class="container xs-no-padding-lr margin-50px-top margin-50px-bottom our-culture-content" *ngIf="page">
+      <div class="col-md-8 col-md-offset-2 col-xs-12">
+        <app-common [magnet]="page.acf"></app-common>
+      </div>
+    </div>
       <div class="col-md-3 common-meet-our-leaders common-funds">
           <a
             routerLink="/individual-investor/our-funds"
@@ -1325,7 +1332,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <div *ngIf="type=='subscribe'" style="text-align: left;" class="box-2-heading padding-15px-all">Subscribe to UP Quaterly</div>
-        <div *ngIf="type=='unsubscribe'" style="text-align: left;" class="box-2-heading padding-15px-all">Please unsubscribe me to UP, Kagiso’s Quarterly magazine.</div>
+        <div *ngIf="type=='unsubscribe'" style="text-align: left;" class="box-2-heading padding-15px-all">Unsubscribe from UP Quaterly</div>
         </div>
       <div  class="modal-body">
         <div class="box-2 padding-5px-all margin-40px-bottom">
@@ -1842,11 +1849,11 @@
   <div class="row margin-twelve-top  xs-margin-100px-top">
     <h2 [innerHTML]="page.title.rendered"></h2>
   </div>
-  <div class="row margin-2px-top">
+  <!-- <div class="row margin-2px-top">
     <div class="bg-white">
       <div class="content-div form-document-top-content" [innerHTML]="page.content.rendered"></div>
     </div>
-  </div>
+  </div> -->
   <div class="row margin-5px-top">
     <div>
       <app-form-document [formHeading]="page"></app-form-document>
@@ -2190,7 +2197,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
             <div *ngIf="type == 'subscribe'" class="box-2-heading padding-15px-all">Subscribe to UP Quaterly</div>
-            <div *ngIf="type == 'unsubscribe'" class="box-2-heading padding-15px-all">Please unsubscribe me to UP, Kagiso’s Quarterly magazine.</div>
+            <div *ngIf="type == 'unsubscribe'" class="box-2-heading padding-15px-all">Unsubscribe from UP Quaterly</div>
           </div>
           <div class="modal-body">
             <div class="box-2 padding-5px-all margin-40px-bottom">

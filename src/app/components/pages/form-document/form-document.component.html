@@ -54,6 +54,7 @@
                 <div class="panel-body">
                   <div class="repeat-loop" *ngIf="getFormPageData" >
                       <div class="form-page-data-wrapper" *ngFor='let category of categories'>
+                        <h1 class="category">{{ category.category  }}</h1>
                         <ul class="form-page-data-list">
                           <li
                             *ngFor="
@@ -80,7 +81,31 @@
                           </div>
                           </li>
                         </ul>
-                        <h1 class='category'>{{category.category}}</h1>
+                      </div>
+                      <h1 class='category advisory'>{{this.getFormPageData[0].acf.advisory}}</h1>
+                      <div *ngIf="openedCategory == 'Tax-free forms'">
+                          <p class="tax-free-additional">The documents listed above must be read in conjunction with the minimum disclosure document before an application is made. Completed forms can be faxed to +(353) 1 553 9413. An original copy must be posted to:</p>
+                          <p class="tax-free-additional info">
+                            Kagiso Global Equity Fund
+                          </p>
+                          <p class="tax-free-additional info">
+                            c/o Northern Trust
+                          </p>
+                          <p class="tax-free-additional info">
+                            City East Plaza – Block A,
+                          </p>
+                          <p class="tax-free-additional info">
+                            Towlerton,
+                          </p>
+                          <p class="tax-free-additional info">
+                            Ballysimon Road,
+                          </p>
+                          <p class="tax-free-additional info">
+                            Limerick,
+                          </p>
+                          <p class="tax-free-additional info">
+                            Ireland V94 X2N9
+                          </p>
                       </div>
                   </div>
 

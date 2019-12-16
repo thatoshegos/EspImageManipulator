@@ -2456,9 +2456,9 @@ input, select, textarea {
     }
 
     .sharial-internal-contents p {
-        margin-left: 15px;
-        margin-right: 15px;
-      }
+      margin-left: 15px;
+      margin-right: 15px;
+    }
 }
 .video-hide{
     display: none;
