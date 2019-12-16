@@ -20,6 +20,9 @@
       <h2 *ngIf="screenProcess">
         {{ screenProcess.acf.screening_process_title }}
       </h2>
+      <h2 *ngIf="easy">
+        {{ easy.acf.investing_is_easy }}
+      </h2>
     </div>
   </div>
   <div
@@ -46,6 +49,11 @@
         *ngIf="screenProcess"
         [innerHTML]="screenProcess.acf.screening_process_content"
       ></p>
+      <p
+      class="padding-40px-all xs-padding-15px-all"
+      *ngIf="easy"
+      [innerHTML]="easy.acf.investing_is_easy_content"
+    ></p>
    <div class="row" *ngIf="podcast">
         <div
           class="col-md-12 podcost-div"

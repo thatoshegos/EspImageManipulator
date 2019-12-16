@@ -4877,12 +4877,15 @@ a.btn-news-literature:hover{
     background-attachment: fixed;
     padding-bottom: 80px;
 }
-
-.riba-background{
+.easy-background {
+    background: url("../images/buttons-new/investing-is-easy.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.riba-background {
     background: url("../images/buttons-new/funds designed.jpg") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    
 }
 .sharia-investment-background{
     background: url('../images/branch.jpg') no-repeat center;

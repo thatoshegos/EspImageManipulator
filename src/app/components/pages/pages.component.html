@@ -874,6 +874,11 @@
       <app-feature-box [DataSets]="page"></app-feature-box>
     </section>
   </div>
+  <section class="easy-background" *ngIf="page && page.saria">
+    <div class="container">
+      <app-saria-common [easy]="page"></app-saria-common>
+    </div>
+  </section>
   <section class="riba-background" *ngIf="page && page.saria">
     <div class="container">
       <app-saria-common [reba]="page"></app-saria-common>
@@ -1695,7 +1700,7 @@
       </div>
     </div>
     <div class="row margin-30px-top">
-        <div class="col-md-2"></div>
+        <div class="col-md-4"></div>
       <div class="text-center">
         <div
           class="col-md-4 tax-free-funds-light-green"
