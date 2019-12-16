@@ -12,7 +12,10 @@ export class SariaCommonComponent implements OnInit {
   @Input() screenProcess;
   @Input() shariaBoard;
   @Input() podcast;
+  @Input() easy;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.easy)
+  }
 }
