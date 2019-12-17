@@ -78,7 +78,7 @@
               </div>
                <!-- <div class="vertical-row"></div>-->
               <div class="col-md-7  graph-box padding-45px-all" >
-                <ul class="year-list" [ngClass]="missingCSVClass">
+                <!-- <ul class="year-list" [ngClass]="missingCSVClass">
                   <li *ngIf="getBalancedData.acf.csv_file_graph !== ''" [ngClass]="selectedIndex === 0 ? 'current' : ''">
                     <a href="javascript:void(0)" (click)="getConditionalCSV(5, 0)"
                       >5 Years</a
@@ -99,7 +99,7 @@
                       >Since Inception</a
                     >
                   </li>
-                </ul>
+                </ul> -->
                 <div class="graph-content">
                   <app-graph
                     *ngIf="getGraphData"

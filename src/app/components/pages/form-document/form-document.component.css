@@ -12,6 +12,11 @@
   font-size: 18px;
 }
 
+.category.conjunction {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
 .quaterly-images-accordan {
   padding: 0 0px;
 }

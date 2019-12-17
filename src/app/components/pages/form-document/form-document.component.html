@@ -55,6 +55,9 @@
                   <div class="repeat-loop" *ngIf="getFormPageData" >
                       <div class="form-page-data-wrapper" *ngFor='let category of categories'>
                         <h1 class="category">{{ category.category  }}</h1>
+                        <p class="category conjunction" *ngIf="category.category == 'Important documents'">
+                          The documents listed below must be read in conjunction with the minimum disclosure document before an application is made.
+                        </p>
                         <ul class="form-page-data-list">
                           <li
                             *ngFor="

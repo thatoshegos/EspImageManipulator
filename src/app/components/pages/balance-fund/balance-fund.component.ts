@@ -34,7 +34,7 @@ export class BalanceFundComponent implements OnInit {
   // }
 
   ngOnInit() {
-    // console.log('balance', this.getBalancedData )
+    console.log('balance', this.getBalancedData )
     this.platformPdf = encodeURI(this.platformPdf);
     window.scrollTo(0,0);
 
@@ -51,18 +51,17 @@ export class BalanceFundComponent implements OnInit {
       console.log("readCSVDataFromServer========", data);
     });*/
    
-    this.getConditionalCSV(5, 0)
-    let missingCSVCount = 0
+    this.getConditionalCSV(0,3)
+    // let missingCSVCount = 0
+    // let csvs = ['csv_file_graph', 'csv_file', 'ten_year_csv', 'since_inception_csv'].forEach(file => {
+    //   if(this.getBalancedData.acf[file] === '') {
+    //     missingCSVCount += 1
+    //   }
+    // })
 
-    let csvs = ['csv_file_graph', 'csv_file', 'ten_year_csv', 'since_inception_csv'].forEach(file => {
-      if(this.getBalancedData.acf[file] === '') {
-        missingCSVCount += 1
-      }
-    })
-
-    if(missingCSVCount > 0) {
-      this.missingCSVClass = `missing-${missingCSVCount}`
-    }
+    // if(missingCSVCount > 0) {
+    //   this.missingCSVClass = `missing-${missingCSVCount}`
+    // }
     this.currentRoute = this.router.url.slice(1);
     this.url = this.router.url.split("/");
     // console.log('routeri', this.router.url)
@@ -214,6 +213,7 @@ export class BalanceFundComponent implements OnInit {
     for (var i = startingPoint; i < lines ; i++) {
 
       const element = data[i]
+      console.log('element',element)
       // console.log('+++', data[i])
       graphDataSet.dates.push(element['DATE'])
       graphDataSet.benchMark.push(element['VAL2'])

@@ -73,7 +73,9 @@
             .financial_adviser_image_second
         "
       >
-        <a [routerLink]="fImagesecond.url"
+        <a
+          [target]="fImagesecond.url == '/up-quarterly' || fImagesecond.url == '/unit-trusts-annual-report' ? '_self' : '_blank'"
+          [routerLink]="fImagesecond.url"
           ><img class="financial-adviser-bottom-images-inner-img" [src]="fImagesecond.second_image.url"
         /></a>
       </div>

@@ -126,13 +126,11 @@
       </td>
       <td></td>
     </tr>-->
-	<tr class="bg-white"> <td colspan=7></td></tr>
+	<tr class="bg-white" *ngIf='isHideConditionOn'> <td colspan=7></td></tr>
 
-    <tr style="display: none;">
+    <tr *ngIf="isHideConditionOn">
       <td colspan="5" class="high-light">
-        <strong>{{
-          isHideConditionOn ? "Yield funds" : "Tax free fund"
-        }}</strong>
+        <strong>Yield funds</strong>
       </td>
     </tr>
     <tr
@@ -166,7 +164,7 @@
         <a [href]="tdata.archive"><img src="assets/images/arrow_funds.png"/></a>
       </td>
     </tr>
-<tr class="bg-white"> <td colspan=8></td></tr>
+<tr class="bg-white" *ngIf="isHideConditionOn"> <td colspan=8></td></tr>
     <!--<tr class="bg-white">
       <td></td>
       <td *ngIf="isHideConditionOn"></td>

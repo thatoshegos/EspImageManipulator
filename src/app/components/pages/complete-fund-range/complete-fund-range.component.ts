@@ -13,7 +13,9 @@ export class CompleteFundRangeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() { 
+    console.log('afdsfsdsdfsdf', this.tableDate)
     this.isHideConditionOn = this.tableDate.isInstitutionalCompleteFundRange;
+    console.log('ishide',this.isHideConditionOn)
     this.loadStorage();
   }
 

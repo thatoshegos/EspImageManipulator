@@ -22,9 +22,11 @@ export class FactSheetArchiveComponent implements OnInit {
     this.wpservice
       .getCategory("?parent=6&per_page=20")
       .subscribe(pcategories => {
+        console.log('pcategories', pcategories)
         this.getParentCategory = pcategories;
 
         this.getParentCategory.forEach(pCategory => {
+
           var categoryData = {
             parentName: null,
             getCategories: null
@@ -34,6 +36,19 @@ export class FactSheetArchiveComponent implements OnInit {
             .subscribe(category => {
               categoryData.parentName = pCategory.name;
               categoryData.getCategories = category;
+              categoryData.getCategories = categoryData.getCategories.map(cat => {
+                try{
+                  return {
+                    ...cat,
+                    description: JSON.parse(cat.description)
+                  }
+                } catch(err) {
+                  return {
+                    ...cat
+                  }
+                  // cat.description = cat.description
+                }
+              }).sort((a,b) => parseInt(a.description.order_of_the_fund_on_fact_sheets_archive) < parseInt(b.description.order_of_the_fund_on_fact_sheets_archive) ? -1 : 1)
               this.getCategories = category;
               this.categoryDatas.push(categoryData);
               this.categoryDatas.sort((a,b) => a.parentName - b.parentName ? 1 : -1);
