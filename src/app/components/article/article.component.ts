@@ -10,9 +10,7 @@ export class ArticleComponent implements OnInit {
   article_banners;
   article_image;
   article_subtitle;
-  constructor() {
-    console.log('this', this.getArticleData)
-  }
+  constructor() {}
 
   ngOnInit() {
     this.article_banners = this.getArticleData.acf.article_banners

@@ -67,7 +67,11 @@ export class BreadCrumbComponent implements OnInit {
       } else {
         // this.breadCrumb =
         //   parent[0] + " " + (parent[1] || '') + " > " + menu[0] + " " + (menu[1] || '');
-        this.parentCrumb = parent[0] + " " + (parent[1] || '') 
+        this.parentCrumb = parent[0] + " " + (parent[1] || '');
+        if(this.CurrentUrl.parent === 'article') {
+          this.parentCrumb = 'up quarterly'
+          this.parentLink = 'up-quarterly'
+        }
         this.childCrumb = menu[0] + " " + (menu[1] || '')
         if(this.CurrentUrl.schild !== " undefined" && this.CurrentUrl.schild !== "" ) {
           this.sChildCrumb = smenu[0] + " " + smenu[1] + " " + (smenu[2] || '') + " " + (smenu[3] || '') + " " + (smenu[4] || '')
