@@ -623,7 +623,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .parallax {position: relative; background-size: cover; overflow: hidden; background-attachment: fixed  }
 .fix-background {position: relative;  background-size: cover; animation-duration: 0s; animation-fill-mode: none; -webkit-animation-duration: 0s;  -webkit-animation-fill-mode: none; -moz-animation-duration: 0s;  -moz-animation-fill-mode: none; -ms-animation-duration: 0s; -ms-animation-fill-mode: none; -o-animation-fill-mode: none; overflow: hidden; background-position: center center; background-repeat: no-repeat; background-attachment: fixed }
 .cover-background {position: relative !important; background-size: cover !important; overflow: hidden !important; background-position: center top!important; background-repeat: no-repeat !important;}
-.article-one-slider {margin-top: 90px;}
+/* .article-one-slider {margin-top: 90px;} */
 .background-size-inherit {background-size: inherit}
 .background-attachment-inherit {background-attachment: inherit}
 .background-position-left {background-position: left center;}
@@ -2054,7 +2054,7 @@ h1.black{color: #000 !important}
 }
 
 .sharial-internal-contents {
-    padding-top: 10px;
+
 }
 
 .sharial-internal-contents h2 {
@@ -2070,16 +2070,12 @@ h1.black{color: #000 !important}
       margin-top: 20px;
   } 
 .sharial-internal-contents p{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
-    line-height: 1.9;
-    padding: 12px 0px 1px 0;
+    line-height: 1.5;
+    /* padding: 12px 0px 1px 0; */
     text-align: left;
-    color: #000000;
-    margin-left: 50px;
-    margin-right: 50px;
-    text-align: justify;
-    font-weight: 500;
+    font-weight: 400;
 }
 /* .sharial-internal-contents p h2{
   font-weight: 500;  
@@ -2453,11 +2449,6 @@ input, select, textarea {
     .content-div {
         padding: 30px;
         margin: 4px 0px 0px 0px;
-    }
-
-    .sharial-internal-contents p {
-      margin-left: 15px;
-      margin-right: 15px;
     }
 }
 .video-hide{
