@@ -53,6 +53,12 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   makeOptions(dataProvider) {
+    let vTitle = 'R 1000 initial investment'
+    let vLabel = 'R'
+    if(this.apiData.slug === "global-equity-fund" || this.apiData.slug === "islamic-global-equity-fund") {
+      vTitle = '$10 000 initial investment';
+      vLabel = '$';
+    }
     function getMonthNameByNum(pNum) {
       switch (pNum) {
         case 0:
@@ -105,7 +111,8 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
       dataProvider: dataProvider,
       valueAxes: [
         {
-          title: 'R 1000 initial investment',
+          vLabel,
+          title: vTitle,
           titleBold: false,
           titleFontSize: 13,
           id: "v1",
@@ -117,7 +124,8 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           gridColor:"white",
           gridThickness:1,
           labelFunction: function(value, valueText) {
-            return "R " + valueText
+            console.log('ahahahhaha', this)
+            return `${vLabel} ${valueText}`
           }
         }
       ],

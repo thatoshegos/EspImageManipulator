@@ -97,9 +97,9 @@ export class BalanceFundComponent implements OnInit {
         quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/stable/' + year + '/Quartley Investment Report/current.pdf'
       },
       'global-equity-fund':{
-        monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_balanced/' + year + '/current.pdf',
-        quarterly_commentary:'/cms/wp-content/uploads/factsheets/global_balanced/' + year + '/Quarterly Summary/current.pdf',
-        quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_balanced/' + year + '/Quartley Investment Report/current.pdf'
+        monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_equity/' + year + '/current.pdf',
+        quarterly_commentary:'/cms/wp-content/uploads/factsheets/global_equity/' + year + '/Quarterly Summary/current.pdf',
+        quarterly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_equity/' + year + '/Quartley Investment Report/current.pdf'
       },
       'global-equity-feeder-fund':{
         monthly_fact_sheet: '/cms/wp-content/uploads/factsheets/global_equity_feeder_fund/' + year + '/current.pdf',
