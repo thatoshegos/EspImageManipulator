@@ -25,7 +25,7 @@ export class FundRangeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.FundRange);
+    //console.log(this.FundRange);
     this.isInstitutionalFund = this.FundRange.isInstitutionFundRange;
     this.saFund.title = this.FundRange.acf.south_african_fund_title;
     this.saFund.desc = this.FundRange.acf.south_african_fund_disc;
@@ -36,7 +36,7 @@ export class FundRangeComponent implements OnInit {
     this.glfundLength = this.FundRange.acf.south_african_fund_image.length;
     this.platformPdf = encodeURI(this.platformPdf);
 
-    console.log(this.glfundLength);
+    //console.log(this.glfundLength);
     // console.log(this.glFund);
   }
   changeView() {

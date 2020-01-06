@@ -34,7 +34,7 @@ export class BalanceFundComponent implements OnInit {
   // }
 
   ngOnInit() {
-    console.log('balance', this.getBalancedData )
+    //console.log('balance', this.getBalancedData )
     this.platformPdf = encodeURI(this.platformPdf);
     window.scrollTo(0,0);
 
@@ -50,7 +50,7 @@ export class BalanceFundComponent implements OnInit {
     /*this.wpservice.readCSVDataFromServer().subscribe(data => {
       console.log("readCSVDataFromServer========", data);
     });*/
-   
+
     this.getConditionalCSV(0,3)
     // let missingCSVCount = 0
     // let csvs = ['csv_file_graph', 'csv_file', 'ten_year_csv', 'since_inception_csv'].forEach(file => {
@@ -140,7 +140,7 @@ export class BalanceFundComponent implements OnInit {
 
   getConditionalCSV(years = null, index: number) {
     if (years != null) {
-      let csvUrl = ''; 
+      let csvUrl = '';
       switch (index) {
         case 0:
           csvUrl = this.getBalancedData.acf.csv_file_graph
@@ -182,20 +182,20 @@ export class BalanceFundComponent implements OnInit {
     var yearCond = cond * 12;
     var showYear;
     var startingPoint;
-    
+
     if (cond) {
       if (lines == yearCond) {
-        showYear = lines; 
+        showYear = lines;
       } else if (lines > yearCond) {
-        showYear = yearCond; 
-        startingPoint = lines - yearCond; 
+        showYear = yearCond;
+        startingPoint = lines - yearCond;
       } else {
         showYear = lines;
       }
     } else {
       showYear = lines;
     }
-    
+
     if (startingPoint) {
       startingPoint = startingPoint - 1;
     } else {
@@ -209,11 +209,11 @@ export class BalanceFundComponent implements OnInit {
         valueBenchmarkReturn: [],
         valueOutperformance: []
     };
-    
+
     for (var i = startingPoint; i < lines ; i++) {
 
       const element = data[i]
-      console.log('element',element)
+      //console.log('element',element)
       // console.log('+++', data[i])
       graphDataSet.dates.push(element['DATE'])
       graphDataSet.benchMark.push(element['VAL2'])
@@ -230,11 +230,11 @@ export class BalanceFundComponent implements OnInit {
       }
 
       if (element['Outperformance'] && this.allOutperformance !== null )  {
-        this.allOutperformance = element['Outperformance'] 
+        this.allOutperformance = element['Outperformance']
       }
     };
 
-   
+
     // var result = [];
     // var headers = lines[0].split(",");
     // var dates = [];
@@ -276,7 +276,7 @@ export class BalanceFundComponent implements OnInit {
   //   } else {
   //     showYear = lines.length;
   //   }
-    
+
   //   if (startingPoint) {
   //     startingPoint = startingPoint - 1;
   //   } else {

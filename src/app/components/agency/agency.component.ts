@@ -18,6 +18,6 @@ export class AgencyComponent implements OnInit {
   };
 
   ngOnInit() {
-    console.log(this.agencies);
+    //console.log(this.agencies);
   }
 }

@@ -16,6 +16,6 @@ export class SariaCommonComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.easy)
+    //console.log(this.easy)
   }
 }

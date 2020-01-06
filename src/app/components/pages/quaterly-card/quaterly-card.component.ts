@@ -8,11 +8,11 @@ import { Component, OnInit, Input } from "@angular/core";
 export class QuaterlyCardComponent implements OnInit {
   @Input() quaterlyData;
   constructor() {
-    console.log('this1', this)
+    //console.log('this1', this)
   }
 
   ngOnInit() {
     window.scrollTo(0,0);
-    console.log(this.quaterlyData);
+    //console.log(this.quaterlyData);
   }
 }

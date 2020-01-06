@@ -11,6 +11,6 @@ export class FinancialImageTwoComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.imageTwo)
+    //console.log(this.imageTwo)
   }
 }

@@ -28,7 +28,7 @@ export class PagesComponent implements OnInit {
   url: any;
   platformPdf= 'cms/wp-content/uploads/LISP platforms/LISP_Summary_sheet.pdf';
   fundperformance = '/cms/wp-content/uploads/performance/fundperformance.pdf';
-   
+
   activeClickedTab;
   getCurrentTab;
 
@@ -123,7 +123,7 @@ export class PagesComponent implements OnInit {
             //   this.getHomeSlider = silder;
             // });
           }
-          
+
           if (slug == "meet-the-fund-manager-simon") {
             this.page.meetFundManagerSimon = true;
             // this.wpservice.getPost("11267").subscribe(silder => {
@@ -137,7 +137,7 @@ export class PagesComponent implements OnInit {
             //   this.getHomeSlider = silder;
             // });
           }
-          
+
           if (slug == "tax-free-investing") {
             this.page.textFreeInvesting = true;
             // this.wpservice.getPost("11272").subscribe(taxFrees => {
@@ -261,7 +261,7 @@ export class PagesComponent implements OnInit {
                 // this.page.getParent = "institutional-investor";
                 //console.log(this.page);
               });
-            } 
+            }
             else if (
               currentUrl.parent == "about-us" &&
               currentUrl.child == "committed-to-transformation"
@@ -489,7 +489,7 @@ export class PagesComponent implements OnInit {
                 this.page.getParent = "individual-investor";
                 //console.log(this.page);
               });
-            } 
+            }
             else if (
               currentUrl.parent == "institutional-investor" &&
               this.page.slug == "investment-approach"
@@ -503,18 +503,18 @@ export class PagesComponent implements OnInit {
                 //console.log(this.page);
               });
             } else if (
-              currentUrl.parent == "diverse-team" 
+              currentUrl.parent == "diverse-team"
             ) {
-              console.log('ooo')
+              //console.log('ooo')
               this.page.id = 402;
 
               this.wpservice.pages(`${this.page.id}`).subscribe(page => {
-                console.log('diverse',page )
+                //console.log('diverse',page )
                 this.page = page;
                 this.page.isDiverseTeam = true;
                 this.page.getParent = "institutional-investor";
                 //console.log(this.page);
-              }); 
+              });
             }
             else if (
               currentUrl.parent == "institutional-investor" &&

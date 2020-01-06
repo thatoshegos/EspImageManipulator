@@ -22,7 +22,7 @@ export class FactSheetArchiveComponent implements OnInit {
     this.wpservice
       .getCategory("?parent=6&per_page=20")
       .subscribe(pcategories => {
-        console.log('pcategories', pcategories)
+        //console.log('pcategories', pcategories)
         this.getParentCategory = pcategories;
 
         this.getParentCategory.forEach(pCategory => {
@@ -52,7 +52,7 @@ export class FactSheetArchiveComponent implements OnInit {
               this.getCategories = category;
               this.categoryDatas.push(categoryData);
               this.categoryDatas.sort((a,b) => a.parentName - b.parentName ? 1 : -1);
-              console.log('aaaa',this.categoryDatas)
+              //console.log('aaaa',this.categoryDatas)
             });
         });
       });
@@ -75,7 +75,7 @@ export class FactSheetArchiveComponent implements OnInit {
       this.subCategory = subCate;
       this.subCategory.sort((b, a) => b.name - a.name);
       this.subCategory = subCate;
-      console.log(this.subCategory);
+      //console.log(this.subCategory);
     });
   }
   getSubCategoryData(sub, e) {
@@ -83,7 +83,7 @@ export class FactSheetArchiveComponent implements OnInit {
       .getPostFromCategory(`?categories=${sub.id}`)
       .subscribe(data => {
         this.categoryData = data;
-        console.log('----',this.categoryData)
+        //console.log('----',this.categoryData)
       });
   }
 }

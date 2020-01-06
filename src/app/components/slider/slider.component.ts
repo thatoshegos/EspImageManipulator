@@ -20,7 +20,7 @@ export class SliderComponent implements OnInit {
     spaceBetween: 30
   };
   getPaginationStatus() {
-    console.log(this.sliders);
+    //console.log(this.sliders);
     if (this.sliders.length > 1) {
       this.config.pagination = ".swiper-pagination";
     } else {
@@ -30,7 +30,7 @@ export class SliderComponent implements OnInit {
 
   ngOnInit() {
     this.url = this.router.url
-    console.log(this.url)
+    //console.log(this.url)
     this.getPaginationStatus();
   }
 }

@@ -12,6 +12,6 @@ export class InstutionalFinancialAdviserComponent implements OnInit {
 
   ngOnInit() {
     window.scrollTo(0,0);
-    console.log(this.fadvisers);
+    //console.log(this.fadvisers);
   }
 }

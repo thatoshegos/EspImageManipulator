@@ -9,7 +9,7 @@ export class CarousalComponent implements OnInit {
   items = [];
 
   constructor() {
-    console.log("SDfsdfsfsdfsdf");
+    //console.log("SDfsdfsfsdfsdf");
     this.items = [
       {
         icon: "",

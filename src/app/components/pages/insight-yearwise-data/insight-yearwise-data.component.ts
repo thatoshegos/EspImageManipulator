@@ -35,7 +35,7 @@ export class InsightYearwiseDataComponent implements OnInit {
     this.wpservice
       .getSubcategory(`?parent=${category.id}`)
       .subscribe(subcategories => {
-        console.log("0")
+        //console.log("0")
         this.loading = false;
         this.subCategories = subcategories;
         this.subCategories.sort(
@@ -43,7 +43,7 @@ export class InsightYearwiseDataComponent implements OnInit {
             month.indexOf(b.name.split(" ")[0]) -
             month.indexOf(a.name.split(" ")[0])
         );
-        console.log(this.subCategories);
+        //console.log(this.subCategories);
       });
     // this.render.setElementClass(event.target, "active", true);
   }
@@ -94,7 +94,7 @@ export class InsightYearwiseDataComponent implements OnInit {
       this.loading = false;
       this.subCategories = subcategories;
       this.subCategories.sort((a, b) => b.id - a.id);
-      console.log(this.subCategories);
+      //console.log(this.subCategories);
     });
   }
 }

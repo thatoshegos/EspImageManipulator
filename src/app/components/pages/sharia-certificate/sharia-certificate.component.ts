@@ -15,11 +15,11 @@ export class ShariaCertificateComponent implements OnInit {
   ngOnInit() {
     this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
     this.element = document.querySelector('#easy-to-invest')
-    console.log('this.element',this.element)
+    //console.log('this.element',this.element)
   }
 
   navigateToEasy() {
-    console.log('clicked')
+    //console.log('clicked')
     window.scrollTo({
       'behavior': 'smooth',
       'left': 0,

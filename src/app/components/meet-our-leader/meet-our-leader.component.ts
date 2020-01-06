@@ -10,6 +10,6 @@ export class MeetOurLeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.meetOurLeaders);
+    //console.log(this.meetOurLeaders);
   }
 }

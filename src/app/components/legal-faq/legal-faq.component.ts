@@ -18,13 +18,13 @@ export class LegalFaqComponent implements OnInit {
   ngOnInit() {
     window.scrollTo(0,0);
     //console.log(this.faqs);
-    console.log('faqs',this.faqs)
+    //console.log('faqs',this.faqs)
     this.currentFaq = this.faqs[0];
     this.isfirst = true;
   }
 
   getClicked(event, faq, toggle) {
-    console.log('faq', faq, toggle) 
+    //console.log('faq', faq, toggle)
     if (this.currentFaq) {
       if (this.currentFaq != faq) {
         this.isfirst = true;

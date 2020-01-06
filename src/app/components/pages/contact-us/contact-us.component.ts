@@ -10,7 +10,7 @@ import { ToastrManager } from "ng6-toastr-notifications";
 })
 export class ContactUsComponent implements OnInit {
   resolved(captchaResponse: string) {
-    console.log(`Resolved captcha with response: ${captchaResponse}`);
+    //console.log(`Resolved captcha with response: ${captchaResponse}`);
   }
   model: any = {};
   response;
@@ -22,7 +22,7 @@ export class ContactUsComponent implements OnInit {
       this.page = page[0];
       this.wpservice.getPages(`${this.page.id}`).subscribe(page => {
         this.page = page;
-        console.log(this.page);
+        //console.log(this.page);
       });
     });
   }
@@ -31,7 +31,7 @@ export class ContactUsComponent implements OnInit {
       this.response = data;
 
       if (this.response.success) {
-        console.log(this.response);
+        //console.log(this.response);
         this.toastr.successToastr("Contact save successfully !", "success!");
         f.resetForm();
         captchaProtectedForm.resetForm();

@@ -38,7 +38,7 @@ export class PodcastArchiveListComponent implements OnInit {
       .getQuaterlyImagePostFromCategory(`?categories=${category.id}`)
       .subscribe(podcastVedio => {
         this.podcastVideo = podcastVedio;
-        console.log(this.podcastVideo);
+        //console.log(this.podcastVideo);
       });
   }
 }

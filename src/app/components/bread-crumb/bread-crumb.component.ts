@@ -17,7 +17,7 @@ export class BreadCrumbComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.CurrentUrl);
+    //console.log(this.CurrentUrl);
 
     if (this.CurrentUrl.child == "our-funds"){
       this.parentLink = this.CurrentUrl.parent + "/invest-with-us";
@@ -30,7 +30,7 @@ export class BreadCrumbComponent implements OnInit {
     var parent = this.CurrentUrl.parent.split("-");
     var menu = this.CurrentUrl.child.split("-");
     var smenu = this.CurrentUrl.schild.split("-")
-    console.log(menu)
+    //console.log(menu)
     menu.length >= 3
       ? (this.CurrentUrl.child = menu[0] + " " + menu[1] + " " + menu[2])
       : (this.CurrentUrl.child = menu[0] + " " + menu[1]);
@@ -43,7 +43,7 @@ export class BreadCrumbComponent implements OnInit {
       this.CurrentUrl.parent !== ""
     ) {
       if (menu.length >= 3) {
-        console.log(menu)
+        //console.log(menu)
         var child = "";
         for (let i = 0; i < menu.length; i++) {
           child += menu[i] + " ";

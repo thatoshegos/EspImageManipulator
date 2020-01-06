@@ -34,7 +34,7 @@ export class CommonComponent implements OnInit {
     this.showMoreData = this.owners;
   }
   getTabData(tabName, toggle) {
-    console.log(this.responsible);
+    //console.log(this.responsible);
 
     if (tabName == "UNPRI") {
       this.tabData = this.responsible.responsible_investing_tab[0];

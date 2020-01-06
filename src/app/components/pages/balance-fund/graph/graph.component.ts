@@ -124,7 +124,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           gridColor:"white",
           gridThickness:1,
           labelFunction: function(value, valueText) {
-            console.log('ahahahhaha', this)
+            //console.log('ahahahhaha', this)
             return `${vLabel} ${valueText}`
           }
         }
@@ -163,7 +163,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           startDuration: 0,
           pointRadius: 0
         },
-         
+
       ],
         balloon:{
           adjustBorderColor:true,
@@ -178,7 +178,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           fontSize:13,
           animationDuration: 0,
           startDuration: 0
-           
+
         },
 
      chartCursor: {
@@ -237,7 +237,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
     // Create chartdiv1
     if (this.makeDataSet()) {
       this.options = this.makeOptions(this.makeDataSet());
-      
+
       // Create chartdiv2
       this.chart2 = this.AmCharts.makeChart(
         "chartdiv2",
@@ -247,7 +247,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
   }
   ngOnChanges(changes: SimpleChanges) {
     this.newData = this.makeDataSet();
-    console.log(this.newData)
+    //console.log(this.newData)
     if (this.newData) {
       this.options = this.makeOptions(this.makeDataSet());
 

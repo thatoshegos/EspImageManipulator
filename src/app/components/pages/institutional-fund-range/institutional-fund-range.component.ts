@@ -32,7 +32,7 @@ export class InstitutionalFundRangeComponent implements OnInit {
 
   ngOnInit() {
     window.scrollTo(0,0);
-    console.log(this.FundRange);
+    //console.log(this.FundRange);
     this.viewSChangeFlag = "sa";
     this.isInstitutionalFund = this.FundRange.isInstitutionFundRange;
     this.saFund.title = this.FundRange.acf.south_african_fund_title;
@@ -46,7 +46,7 @@ export class InstitutionalFundRangeComponent implements OnInit {
     this.msFund.des = this.FundRange.acf["multi-asset_class_funds_desc"];
     this.msFund.images = this.FundRange.acf["multi-asset_class_funds_image"];
 
-    console.log(this.msFund);
+    //console.log(this.msFund);
     // console.log(this.glFund);
   }
   changeView(status, current) {

@@ -26,7 +26,7 @@ export class UpQuaterlyLibraryComponent implements OnInit {
         .subscribe(imagePost => {
           this.loading = false;
           this.imagePosts = imagePost;
-          console.log("image", this.imagePosts);
+          //console.log("image", this.imagePosts);
           this.isfirst = true;
           this.currentSubCate = this.selectedItem;
         });
@@ -53,7 +53,7 @@ export class UpQuaterlyLibraryComponent implements OnInit {
       .subscribe(imagePost => {
         this.loading = false;
         this.imagePosts = imagePost;
-        console.log(this.imagePosts);
+        //console.log(this.imagePosts);
       });
   }
 }

@@ -21,10 +21,10 @@ export class FormDocumentComponent implements OnInit {
 
   ngOnInit() {
     window.scrollTo(0,0);
-    console.log('(this.formHeadin',this.formHeading)
+    //console.log('(this.formHeadin',this.formHeading)
   }
   getFormData(heading, event, toggle) {
-    console.log('heading',heading)
+    //console.log('heading',heading)
     this.openedCategory = heading.headings
     // accordian data
     if (this.currentSubCate) {
@@ -52,14 +52,14 @@ export class FormDocumentComponent implements OnInit {
       this.wpservice.pages(`?slug=${this.slug}`).subscribe(data => {
         this.getFormPageData = null;
         this.getFormPageData = data;
-        console.log(this.getFormPageData[0].acf.form_title);
+        //console.log(this.getFormPageData[0].acf.form_title);
         const arr = this.convertUrl()
         // makeCategories
         let categories = []
         for (let index = 0; index < arr.length; index++) {
           const element = arr[index];
           if (element.category){
-            console.log('element',element, this.getFormPageData)
+            //console.log('element',element, this.getFormPageData)
             const category= element.category
             const existingCategoryIndex = categories.findIndex(item => item.category == category)
             if (existingCategoryIndex == -1){
@@ -72,7 +72,7 @@ export class FormDocumentComponent implements OnInit {
             }
           }
         }
-        console.log('dsada', categories)
+        //console.log('dsada', categories)
         this.categories = categories;
 
         this.changedSlug = heading.headings;
@@ -81,7 +81,7 @@ export class FormDocumentComponent implements OnInit {
   }
 
   convertUrl () {
-    console.log('category', this.getFormPageData[0].acf);
+    //console.log('category', this.getFormPageData[0].acf);
     const url =  this.getFormPageData[0].acf.form_title;
     for (let i = 0; i < url.length; i++) {
       const element = url[i];
@@ -89,7 +89,7 @@ export class FormDocumentComponent implements OnInit {
         element.url = encodeURI(element.url)
         element.encoded = true
       }
-      
+
     }
     return url
   }
