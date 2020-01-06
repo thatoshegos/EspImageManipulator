@@ -47,7 +47,7 @@
 }
 
 .repeat-loop ul {
-  list-style-image: url('http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/11/bullet_point.png');
+  list-style-image: url('/cms/wp-content/uploads/2019/11/bullet_point.png');
   padding: 0 0 0 15px;
 }
 .repeat-loop ul li {
@@ -108,5 +108,5 @@
     flex: 1;
     align-items: center;
   }
-  
+
 }

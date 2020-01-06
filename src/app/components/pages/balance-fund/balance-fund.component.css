@@ -189,12 +189,12 @@ content: "";
 
 .blanced-fund-box .graph-box .select-fund div:last-of-type {
   flex: 1;
-} 
+}
 
 .select-funds{padding:0px;border: 2px solid #a8c3be; width: 60%;}
 /* .select {
   appearance:none;
-  background: url(https://kagisonew.cotomo.com/assets/images/buttons-new/arrow_large_new_to_inv.png) no-repeat
+  background: url(/assets/images/buttons-new/arrow_large_new_to_inv.png) no-repeat
     right;
 } */
 
@@ -300,7 +300,7 @@ content: "";
   .fund-img-box ul li .title {
     width: 150px;
   }
-  
+
 }
 
 @media (min-width: 992px) and (max-width: 1130px) {
@@ -392,7 +392,7 @@ content: "";
   .top-content .blanced-fund-btn-list li.empty-li {
     display:  none;
   }
-  
+
   .blanced-fund-box .year-list li {
     /* margin: 0 5px; */
   }
@@ -404,7 +404,7 @@ content: "";
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    
+
 
   }
   .blanced-fund-box .graph-box .select-fund span {
@@ -439,7 +439,7 @@ content: "";
     padding: 15px 5px;
  }
  .fund-img-box ul li {
- 
+
   margin-right: 20px;
 }
 } */
@@ -563,30 +563,30 @@ a.btn-invest-now-green{
     background-size: cover!important;
 }
 .btn-tax-free .link-img-box{
-  background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/taxfree.png) no-repeat;
+  background: url(/cms/wp-content/uploads/2019/06/taxfree.png) no-repeat;
 }
 .btn-top-10-holdings .link-img-box{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/top10.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/top10.png) no-repeat;
 }
 .btn-form .link-img-box{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/forms.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/forms.png) no-repeat;
 }
 .btn-platforms .link-img-box{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/platforms-1.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/platforms-1.png) no-repeat;
     background-position: center;
 }
 
 .btn-tax-free .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/taxfree-over.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/taxfree-over.png) no-repeat;
 }
 .btn-top-10-holdings .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/top10-over.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/top10-over.png) no-repeat;
 }
 .btn-form .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/forms-over.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/forms-over.png) no-repeat;
 }
 .btn-platforms .link-img-box:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/platforms-1-over.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/platforms-1-over.png) no-repeat;
 }
 
 .btn-green-white{
@@ -611,22 +611,22 @@ a.btn-invest-now-green{
     background: #c8dbe5;
 }
 .btn-investment-approch{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch.png) left center no-repeat #80ada7;
+    background: url(/cms/wp-content/uploads/2019/06/meet-investment-approch.png) left center no-repeat #80ada7;
 }
 .btn-meet-fund-manager1{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-fund-manager.png) left center no-repeat #80ada7;
+    background: url(/cms/wp-content/uploads/2019/06/meet-fund-manager.png) left center no-repeat #80ada7;
 }
 .btn-meet-insights{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-insights.png) left center no-repeat #80ada7;
+    background: url(/cms/wp-content/uploads/2019/06/meet-insights.png) left center no-repeat #80ada7;
 }
 .btn-investment-approch:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-investment-approch-over.png) left center no-repeat #5b9dbe;
+    background: url(/cms/wp-content/uploads/2019/06/meet-investment-approch-over.png) left center no-repeat #5b9dbe;
 }
 .btn-meet-fund-manager1:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-fund-manager-over.png) left center no-repeat #5b9dbe;
+    background: url(/cms/wp-content/uploads/2019/06/meet-fund-manager-over.png) left center no-repeat #5b9dbe;
 }
 .btn-meet-insights:hover{
-    background: url(https://dev.omangom.com/kagiso/wordpress/wp-content/uploads/2019/06/meet-insights-over.png) left center no-repeat #5b9dbe;
+    background: url(/cms/wp-content/uploads/2019/06/meet-insights-over.png) left center no-repeat #5b9dbe;
 }
 
 .is-equity-alpha-li {
@@ -661,7 +661,7 @@ a.btn-invest-now-green{
     flex-direction: column;
     margin: 10px 0;
     width: 315px;
-   
+
   }
   .top-content .blanced-fund-btn-list li {
     margin: 10px 10px 0 12px;
@@ -681,7 +681,7 @@ a.btn-invest-now-green{
     display: flex;
     flex-flow: row;
     width: 90px;
-    
+
   }
 
   .nav-content ul li > a {
@@ -758,7 +758,7 @@ a.btn-invest-now-green{
     align-content: center;
   }
 
-  
+
 
   /* .top-content .blanced-fund-btn-list li:nth-child(6){
     margin-top: 10px;
@@ -768,7 +768,7 @@ a.btn-invest-now-green{
     height: 50px;
     margin-top: 0px;
   } */
-} 
+}
 
 @media screen and (max-width: 480px) {
     .nav-content{
@@ -826,7 +826,7 @@ a.btn-invest-now-green{
       display: flex;
       border: 2px solid #a8c3be;
       text-transform: uppercase;
-   
+
     }
     /* .blanced-fund-box .graph-box .select-fund span{
         border-right: 2px solid #a8c3be;
@@ -838,16 +838,16 @@ a.btn-invest-now-green{
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      
-  
+
+
     }
     .blanced-fund-box .graph-box .select-fund span {
-      
+
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
    }
-   
+
     /* .blanced-fund-box .graph-box .select-fund select{
       width: 100%;
       white-space: nowrap;
@@ -924,20 +924,20 @@ a.btn-invest-now-green{
       flex-direction: column;
       margin: 10px 0;
       width: 315px;
-     
+
     }
     .top-content .blanced-fund-btn-list li {
       width: 95%;
       margin: 10px 10px 0 0;
     }
-  
+
     .top-content .blanced-fund-btn-list li > a{
       margin-top: 0;
       height: 100%;
       width: 100%;
       display: block;
     }
-  
+
     .top-content .blanced-fund-btn-list li > a > span {
       height: 100%;
     }
@@ -947,11 +947,11 @@ a.btn-invest-now-green{
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .graph-box .year-list.missing-1 {
       grid-template-columns: repeat(1, 1fr);
     }
-    
+
     .graph-box .year-list.missing-2 {
       grid-template-rows: repeat(1, 1fr);
       grid-template-columns: repeat(2, 1fr)!important;
@@ -961,7 +961,7 @@ a.btn-invest-now-green{
       grid-template-rows: repeat(1, 1fr);
       grid-template-columns: 1fr;
     }
-  
+
     .graph-box .year-list li > a {
       width: 100%;
       height: 100%;
@@ -969,11 +969,11 @@ a.btn-invest-now-green{
       align-items: center;
       justify-content: center;
     }
-  
+
     .graph-box .year-list li:nth-child(odd) {
       margin-left: 0;
     }
-  
+
     .graph-box .year-list li:nth-child(even) {
       margin-right: 0;
     }
@@ -981,25 +981,25 @@ a.btn-invest-now-green{
     .graph-box .year-list li:last-of-type {
       grid-column-end: span 1;
     }
-    
+
     .graph-box .return-list {
       display: flex;
       flex-flow: column;
       justify-content: center;
     }
-  
+
     .graph-box .return-list li {
       margin: 5px 0;
     }
-  
+
     .graph-box .select-fund {
       display: flex;
     }
-  
+
     .graph-box .select-fund > div {
       width: 50%;
     }
-  
+
     .blanced-fund-box .graph-box .select-fund span,
     .blanced-fund-box .graph-box .select-fund select {
       width: 100%;
@@ -1007,7 +1007,7 @@ a.btn-invest-now-green{
       text-overflow: ellipsis;
       overflow: hidden;
     }
-  
+
     .bottom-content > a {
       margin-right: 0;
       width: 100%;
@@ -1045,7 +1045,7 @@ a.btn-invest-now-green{
       flex-direction: row;
       margin: 5px;
       width: 315px;
-     
+
     }
     .top-content .blanced-fund-btn-list li {
       height: 50px;
@@ -1071,7 +1071,7 @@ a.btn-invest-now-green{
       overflow: hidden;
       text-overflow: ellipsis;
     }
-  
+
     .inner-match-height .graph-box1 {
       display: flex;
       flex: 1;
@@ -1117,7 +1117,7 @@ a.btn-invest-now-green{
     /* a.btn-meet-faq {
       margin-left: 0px;
     } */
-    
+
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {

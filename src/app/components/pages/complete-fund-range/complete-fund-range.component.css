@@ -20,7 +20,7 @@ a.complete-fund-eye-btn {
 }
 
 a.complete-fund-eye-btn.visited {
-  background: url('http://kagisonew.cotomo.com/cms/wp-content/uploads/2019/11/form_view_r.png');
+  background: url('/cms/wp-content/uploads/2019/11/form_view_r.png');
 }
 
 /* .complete-fund-btn-list li a.red{background: #eac7ce url(../images/red-arrow-icon.jpg) no-repeat right} */

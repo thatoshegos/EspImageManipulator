@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 // for the live server with local wordpress running, following var ("domainPrefix") can be set to empty string
 // adding domain here allows devs to do local development without installing wp and lemp/lamp server locally
-const domainPrefix = "";//"http://kagisonew.cotomo.com";
+const domainPrefix = "";//"https://kagisoam.co.za";
 const wpPrefix = "/cms";
 
 @Injectable({
