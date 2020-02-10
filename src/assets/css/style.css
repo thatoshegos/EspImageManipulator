@@ -4388,10 +4388,7 @@ a.btn-news-literature:hover{
     nav.navbar.navbar-default ul.nav > li:first-child  a{
         margin-left: 0px!important;
     }
-    .light-green-box{
-        min-height: 280px;
-        height: auto!important;
-    }
+   
     .one-fourth-screen{
         height: 520px!important;
     }
@@ -4420,6 +4417,13 @@ a.btn-news-literature:hover{
     }
     .invester-login-btn{
         padding: 0px 32px 0px 0px!important;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+    .light-green-box{
+        min-height: 240px;
+        height: auto!important;
     }
 }
 

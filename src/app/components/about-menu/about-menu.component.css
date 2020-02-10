@@ -1,8 +1,8 @@
 .btn-meet-leaders {
     display: inline-block;
-    padding-left: 60px;
+    /* padding-left: 60px; */
     /*margin: 0 10px;*/
-    background-size: 60px!important;;
+    /* background-size: 60px!important;; */
 }
 .btn-meet-leaders span {
     padding:9px 15px 10px 15px;
@@ -24,6 +24,127 @@ span.active {
   font-weight: 400;
 }
 
+.about-submenu-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px 0 30px;
+}
+
+.desktop-about-submenu-item {
+    margin-right: 30px;
+    width: 100%;
+}
+
+.about-submenu-flex > .desktop-about-submenu-item:last-of-type {
+    margin-right: 5px;
+}
+
+.desktop-about-submenu-item a{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background: #fff;
+}
+
+.desktop-about-submenu a:hover {
+    background: #c8dbe5;
+}
+
+.desktop-about-submenu a:hover span {
+    color: #656565;
+}
+
+.about-submenu-item-image {
+    height: 60px;
+    width: 60px;
+}
+
+.desktop-about-submenu-item a span {
+    display: block;
+    flex: 1 1 auto;
+    margin: 0;
+    width: 100px;
+    text-align: left;
+    padding: 0 12px;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.about-submenu-item-image.about-submenu-investment-approach {
+    background: url('../../../assets/images/buttons-new/invapp_button.png') no-repeat left center #8abbb6;
+}
+
+.desktop-about-submenu a:hover .about-submenu-item-image.about-submenu-investment-approach,
+.about-submenu-item-image.about-submenu-investment-approach:hover {
+    background: url('../../../assets/images/buttons-new/invapp_b_button.png') no-repeat left center #5b9dbe; color: #656565;
+}
+
+.about-submenu-item-image.about-submenu-diverse-independent {
+    background: url('../../../assets/images/buttons-new/leaders_button.png') no-repeat left center #8abbb6;
+}
+
+.desktop-about-submenu a:hover .about-submenu-item-image.about-submenu-diverse-independent,
+.about-submenu-item-image.about-submenu-diverse-independent:hover {
+    background: url('../../../assets/images/buttons-new/leaders_b_button.png') no-repeat left center #5b9dbe; color: #656565;
+}
+
+.about-submenu-item-image.about-submenu-ownership-structure {
+    background: url('../../../assets/images/buttons-new/structure.png') no-repeat left center #8abbb6;
+}
+.desktop-about-submenu a:hover .about-submenu-item-image.about-submenu-ownership-structure,
+.about-submenu-item-image.about-submenu-ownership-structure:hover {
+    background: url('../../../assets/images/buttons-new/structure–b.png') no-repeat left center #5b9dbe; color: #656565;
+}
+
+.about-submenu-item-image.about-submenu-our-history {
+    background: url('../../../assets/images/buttons-new/history.png') no-repeat left center #8abbb6;
+}
+
+.desktop-about-submenu a:hover .about-submenu-item-image.about-submenu-our-history,
+.about-submenu-item-image.about-submenu-our-history:hover {
+    background: url('../../../assets/images/buttons-new/history–b.png') no-repeat left center #5b9dbe; color: #656565;
+}
+
+.about-submenu-item-image.about-submenu-our-culture {
+    background: url('../../../assets/images/buttons-new/culture.png') no-repeat left center #8abbb6;
+    
+}
+
+.desktop-about-submenu a:hover .about-submenu-item-image.about-submenu-our-culture,
+.about-submenu-item-image.about-submenu-our-culture:hover {
+    background: url('../../../assets/images/buttons-new/culture-b.png') no-repeat left center #5b9dbe; color: #656565;
+}
+
+.about-submenu-item-image.about-submenu-responsible-investing {
+    background: url('../../../assets/images/buttons-new/responsible.png') no-repeat left center #8abbb6;
+}
+
+.desktop-about-submenu a:hover .about-submenu-item-image.about-submenu-responsible-investing,
+.about-submenu-item-image.about-submenu-responsible-investing:hover {
+    background: url('../../../assets/images/buttons-new/responsible–b.png') no-repeat left center  #5b9dbe; color: #656565;
+}
+
+.about-submenu-item-image.about-submenu-social-investment {
+    background: url('../../../assets/images/buttons-new/csi.png') no-repeat left center #8abbb6;
+}
+
+.desktop-about-submenu a:hover .about-submenu-item-image.about-submenu-social-investment,
+.about-submenu-item-image.about-submenu-social-investment:hover {
+    background: url('../../../assets/images/buttons-new/csi-b.png') no-repeat left center  #5b9dbe; color: #656565;
+}
+
+.about-submenu-item-image.about-submenu-committed-transformation {
+    background: url('../../../assets/images/buttons-new/transformation.png') no-repeat left center #8abbb6;
+}
+
+.desktop-about-submenu a:hover .about-submenu-item-image.about-submenu-committed-transformation,
+.about-submenu-item-image.about-submenu-committed-transformation:hover {
+    background: url('../../../assets/images/buttons-new/transformation-b.png') no-repeat left center  #5b9dbe; color: #656565;
+}
+
 @media (max-width: 991px) {
 
     .desktop-about-submenu {
@@ -34,6 +155,22 @@ span.active {
         margin-right: 0;
         margin-left: 0;
     }
+
+    
 }
 
+@media screen and (min-width: 1200px) {
+    .desktop-about-submenu-item a span {
+        width: 100%;
+        padding: 0 0 0 12px;
+        white-space: unset;
+        text-overflow: unset;
+        overflow: unset;
+    }
+
+    .about-submenu-item-image {
+        width: 80px;
+    }
+}
+ 
 

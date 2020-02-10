@@ -167,6 +167,11 @@ a.padding-10px-all.ul-tab.active {
     background: url(/wp-content/uploads/2019/05/INSIGHTS-abt.png) 14px center no-repeat #5a9fc0;
 }
 
+.app-about-us-common {
+  display: flex;
+  flex-flow: column;
+}
+
 .app-about-us-common-wrapper {
   margin-bottom: 40px;
   display: flex;
@@ -187,8 +192,12 @@ a.padding-10px-all.ul-tab.active {
   width: 100%;
 }
 
-.app-about-us-common-right > .about-leader-img > img {
-  flex: 1;
+.app-about-us-common-right > .about-leader-img > .about-leader-img-bg {
+  flex: 1 1 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  height: 100%;
 }
 
 .about-leader-title{
@@ -850,6 +859,10 @@ a.link:hover {
     display: flex;
     align-items: center;
     width: 100%;
+  }
+
+  .app-about-us-common-right > .about-leader-img > .about-leader-img-bg {
+    height: 1000px;
   }
 }
 

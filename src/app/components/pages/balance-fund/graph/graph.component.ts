@@ -53,7 +53,7 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   makeOptions(dataProvider) {
-    let vTitle = 'R 1000 initial investment'
+    let vTitle = 'R1,000 initial investment'
     let vLabel = 'R'
     if(this.apiData.slug === "global-equity-fund" || this.apiData.slug === "islamic-global-equity-fund") {
       vTitle = '$10 000 initial investment';
@@ -125,7 +125,8 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           gridThickness:1,
           labelFunction: function(value, valueText) {
             //console.log('ahahahhaha', this)
-            return `${vLabel} ${valueText}`
+            console.log(`${vLabel}${valueText}`)
+            return `${vLabel}${valueText}`
           }
         }
       ],

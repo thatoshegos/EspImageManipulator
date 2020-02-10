@@ -1,40 +1,46 @@
 
 <div class="row desktop-about-submenu">
-    <div class="col-md-12  margin-30px-bottom xs-margin-30px-top">
-  <div class="text-center suscribe">
-    <div class="col-md-3">
+    <div class="col-md-12  margin-30px-bottom xs-margin-30px-top about-submenu-flex">
+    <div class="desktop-about-submenu-item">
       <a
         routerLink="/about-us/investment-approach"
-        class="btn-meet-leaders meet-leader margin-20px-right xs-no-margin-right xs-margin-20px-bottom"
+        class=""
          [ngClass]="
             CurrentTab.child == 'investment approach' ? 'active' : 'none'
           "
-        ><span
+        >
+        <div class="about-submenu-item-image about-submenu-investment-approach"></div>
+        <span
           [ngClass]="
             CurrentTab.child == 'investment approach' ? 'active' : 'none'
-          "
-          >INVESTMENT APPROACH</span
-        ></a
+          ">
+          INVESTMENT APPROACH
+          </span>
+        </a
       >
     </div>
-    <div class="col-md-3">
+    <div class="desktop-about-submenu-item">
       <a
         routerLink="/about-us/a-diverse-team-of-independent-thinkers-about-us"
-        class="btn-meet-diverse-team"
-        ><span
+        class=""
+        >
+        <div class="about-submenu-item-image about-submenu-diverse-independent"></div>
+        <span
           [ngClass]="CurrentTab.child == 'a diverse team' ? 'active' : 'none'"
           >INDEPENDENT THINKERS</span
         ></a
       >
     </div>
-    <div class="col-md-3">
+    <div class="desktop-about-submenu-item">
       <a
         routerLink="/about-us/ownership-structure"
-        class="ownership-structure"
+        class=""
          [ngClass]="
             CurrentTab.child == 'ownership structure' ? 'active' : 'none'
           "
-        ><span
+        >
+        <div class="about-submenu-item-image about-submenu-ownership-structure"></div>
+        <span
           [ngClass]="
             CurrentTab.child == 'ownership structure' ? 'active' : 'none'
           "
@@ -43,69 +49,78 @@
       >
     </div>
 
-    <div class="col-md-3">
-      <a routerLink="/about-us/our-history" class="our-history"
+    <div class="desktop-about-submenu-item">
+      <a routerLink="/about-us/our-history" class=""
          [ngClass]="CurrentTab.child == 'our history' ? 'active' : 'none'"
-        ><span [ngClass]="CurrentTab.child == 'our history' ? 'active' : 'none'"
+        >
+        <div class="about-submenu-item-image about-submenu-our-history"></div>
+        <span [ngClass]="CurrentTab.child == 'our history' ? 'active' : 'none'"
           >OUR HISTORY</span
         ></a
       >
     </div>
-  </div>
+    
 </div>
 
-<div class="col-md-12 ">
-  <div class="text-center suscribe">
-    <div class="col-md-3">
-      <a
-        routerLink="/about-us/our-culture"
-        class="our-culture xs-no-margin-right xs-margin-20px-bottom "
-         [ngClass]="CurrentTab.child == 'our culture' ? 'active' : 'none'"
-        ><span [ngClass]="CurrentTab.child == 'our culture' ? 'active' : 'none'"
-          >OUR CULTURE</span
-        ></a
+<div class="col-md-12 about-submenu-flex">
+  <div class="desktop-about-submenu-item">
+    <a
+      routerLink="/about-us/our-culture"
+      class=""
+       [ngClass]="CurrentTab.child == 'our culture' ? 'active' : 'none'"
       >
-    </div>
-    <div class="col-md-3">
-      <a
-        routerLink="/about-us/responsible-investing"
-        class="responsible-investing"
-         [ngClass]="
-          CurrentTab.child == 'responsible investing' ? 'active' : 'none'
-        ">
-        <span [ngClass]="
-          CurrentTab.child == 'responsible investing' ? 'active' : 'none'
-        "
-        >RESPONSIBLE INVESTING</span></a
+      <div class="about-submenu-item-image about-submenu-our-culture"></div>
+      <span [ngClass]="CurrentTab.child == 'our culture' ? 'active' : 'none'"
+        >OUR CULTURE</span
+      ></a
+    >
+  </div>
+  <div class="desktop-about-submenu-item">
+    <a
+      routerLink="/about-us/responsible-investing"
+      class=""
+       [ngClass]="
+        CurrentTab.child == 'responsible investing' ? 'active' : 'none'
+      ">
+      <div class="about-submenu-item-image about-submenu-responsible-investing"></div>
+      <span [ngClass]="
+        CurrentTab.child == 'responsible investing' ? 'active' : 'none'
+      "
+      >RESPONSIBLE INVESTING</span></a
+    >
+  </div>
+  <div class="desktop-about-submenu-item">
+    <a
+      routerLink="/about-us/corporate-social-investment"
+      class=""
+        [ngClass]="
+          CurrentTab.child == 'corporate social investment' ? 'active' : 'none' "
       >
-    </div>
-    <div class="col-md-3">
-      <a
-        routerLink="/about-us/corporate-social-investment"
-        class="corporate-social-investing"
-          [ngClass]="
-            CurrentTab.child == 'corporate social investment' ? 'active' : 'none' "
-        ><span
-          [ngClass]="
-            CurrentTab.child == 'corporate social investment' ? 'active' : 'none' "
-          >CORPORATE SOCIAL INVESTMENT</span
-        ></a
+      <div class="about-submenu-item-image about-submenu-social-investment"></div>
+      <span
+        [ngClass]="
+          CurrentTab.child == 'corporate social investment' ? 'active' : 'none' "
+        >CORPORATE SOCIAL INVESTMENT</span
+      ></a
+    >
+  </div>
+  
+  <div class="desktop-about-submenu-item">
+    <a
+      routerLink="/about-us/committed-to-transformation"
+      class=""
+       [ngClass]="
+          CurrentTab.child == 'committed to transformation' ? 'active' : 'none' "
       >
-    </div>
-
-    <div class="col-md-3">
-      <a
-        routerLink="/about-us/committed-to-transformation"
-        class="transformation"
-         [ngClass]="
-            CurrentTab.child == 'committed to transformation' ? 'active' : 'none' "
-        ><span
-          [ngClass]="
-            CurrentTab.child == 'committed to transformation' ? 'active' : 'none' "
-          >TRANSFORMATION</span
-        ></a
+      <div class="about-submenu-item-image about-submenu-committed-transformation"></div>
+      <span
+        [ngClass]="
+          CurrentTab.child == 'committed to transformation' ? 'active' : 'none' "
       >
-    </div>
+      TRANSFORMATION
+      </span
+      ></a
+    >
   </div>
 </div>
 </div>

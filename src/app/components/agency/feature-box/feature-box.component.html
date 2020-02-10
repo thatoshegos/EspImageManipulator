@@ -24,9 +24,11 @@
   class="col-md-4 col-sm-4 col-xs-12 sm-margin-four-bottom unconventional-thinking-right xs-no-margin-bottom wow fadeInUp"
   data-wow-delay="0.4s"
 > <a [routerLink]="'/' + DataSets.acf.buttonurl">
-  <div class="min-height-440 bg-light-green-v2" style="background: #d0e0df">
-    <img [src]="DataSets.acf.image.sizes.large" alt="" />
-    <div class="text-center"><span class="text-title">
+  <div class="green-image-holder bg-light-green-v2" style="background: #d0e0df">
+    <div class="green-image">
+      <img [src]="DataSets.acf.image.sizes.large" alt="" />
+    </div>
+    <div class="green-image-text text-center"><span class="text-title">
      {{DataSets.acf.button_title}}</span>
     </div>
   </div>

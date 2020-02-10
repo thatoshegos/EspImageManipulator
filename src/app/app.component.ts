@@ -7,7 +7,7 @@ import { ToastrManager } from "ng6-toastr-notifications";
 
 if (console){
    //don't try this at home :)
-  // console.log = () => {};
+  console.log = () => {};
 }
 
 @Component({

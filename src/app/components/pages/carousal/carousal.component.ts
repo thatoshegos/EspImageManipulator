@@ -123,6 +123,13 @@ export class CarousalComponent implements OnInit {
         content:
           "Launched the Islamic Equity Feeder Fund and the Islamic High Yield Fund"
       },
+	   {
+        icon:"<img src='/cms/wp-content/uploads/2019/06/2019.png'>",
+        heading: "Six Raging Bull Awards",
+        year:"2020",
+        content:
+          "Raging Bull Awards for the Equity Alpha Fund and Protector Fund <br /> Prestigious awards for top fund performance awarded to the Balanced Fund and Stable Fund <br /> Two prestigious awards for top fund performance awarded to the Protector Fund"
+      },
       {
         icon: "",
         heading: "",
