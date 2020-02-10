@@ -1,6 +1,6 @@
 <!-- <div class="swiper-full-screen swiper-container width-100 white-move">
   <div class="swiper-wrapper">
-    
+
     <div
       class="swiper-slide cover-background"
       *ngFor="let slider of sliders"
@@ -25,9 +25,9 @@
         </div>
       </div>
     </div>
- 
+
   </div>
- 
+
   <div
     class="swiper-pagination swiper-pagination-white swiper-full-screen-pagination"
   ></div>
@@ -61,16 +61,20 @@
                 <span>{{ slider.image_title1 }}</span>
               </h1>
               <div class="btn-dual m-center" *ngIf="slider.image_title2">
-                <a
-                [routerLink]="slider.image_title2 == 'VIEW LATEST QUARTERLY' ? '/up-quarterly' : '/how-to-invest'"
-                target="_self"
-                class="main-slider-btn"
-                >
-                <span>
-                  {{ slider.image_title2 }}
-                </span>
-                </a
-                >
+                <div *ngIf="slider.image_url.indexOf('.pdf') === -1">
+                  <a
+                  [routerLink]="[slider.image_url]"
+                  target="_self"
+                  class="main-slider-btn">
+                  <span>{{ slider.image_title2 }}</span></a>
+                </div>
+                <div *ngIf="slider.image_url.indexOf('.pdf') !== -1">
+                  <a
+                  [href]="[slider.image_url]"
+                  target="_blank"
+                  class="main-slider-btn">
+                  <span>{{ slider.image_title2 }}</span></a>
+                </div>
               </div>
             </div>
           </div>
