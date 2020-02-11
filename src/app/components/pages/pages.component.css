@@ -956,7 +956,7 @@ a.link:hover {
 
 @media screen and (max-width: 1200px) {
   li.row-end {
-    margin-right: 60px !important;
+    /* margin-right: 60px !important; */
   }
 
   .fact-sheet-content {

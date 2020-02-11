@@ -28,7 +28,8 @@
         </div> -->
         <div class="text-center">
           <div class="top-content">
-            <h2 [style.font-size]="getBalancedData.slug == 'islamic-global-equity-feeder-fund' ? '30px' : '35px'">
+            <!-- [style.font-size]="getBalancedData.slug == 'islamic-global-equity-feeder-fund' ? '30px' : '35px'" -->
+            <h2 [ngClass]="getBalancedData.slug == 'islamic-global-equity-feeder-fund' ? 'top-content-fund-heading islamic-global-equity-feeder-fund' : 'top-content-fund-heading' ">
               <!-- ./assets/images/blanced-fund-bg.jpg -->
               <img class="img"[src]="getBalancedData.acf.fund_icon.url" />
               {{ getBalancedData.title.rendered }}
