@@ -1213,6 +1213,12 @@ a.btn-invest-now-green{
 
 }
 
+
+.top-content-fund-heading.islamic-global-equity-feeder-fund {
+  font-size: 30px;
+}
+
+
 @media screen and (min-width: 600px) and (max-width: 991px) {
   .app-fund-tab {
     width: 100%
@@ -1230,6 +1236,16 @@ a.btn-invest-now-green{
 
   .blanced-fund-box .graph-box .select-fund div:last-of-type {
     flex: 1;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .top-content-fund-heading {
+    font-size: 24px!important;
+  }
+
+  .top-content-fund-heading.islamic-global-equity-feeder-fund {
+    font-size: 19px!important;
   }
 }
 
