@@ -33,10 +33,10 @@ stroke:red;}
 	position: absolute;
 	width: 40px;
 	height: 2px;
-	background: rgb(106,157,154);
+	background: rgb(182,12,47);
 	display: block;
 	content: '';
-	top: 8px;
+	top: 8.5px;
 	left: -45px;
 }
 
@@ -44,10 +44,10 @@ stroke:red;}
 	position: absolute;
 	width: 40px;
 	height: 2px;
-	background: rgb(182,12,47);
+	background: rgb(106,157,154);
 	display: block;
 	content: '';
-	top: 8px;
+	top: 8.5px;
 	left: -45px;
 }
 
