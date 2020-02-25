@@ -563,30 +563,30 @@ a.btn-invest-now-green{
     background-size: cover!important;
 }
 .btn-tax-free .link-img-box{
-  background: url(/cms/wp-content/uploads/2019/06/taxfree.png) no-repeat;
+  background: url(/cms/wp-content/uploads/2019/06/taxfree.png) no-repeat center;
 }
 .btn-top-10-holdings .link-img-box{
-    background: url(/cms/wp-content/uploads/2019/06/top10.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/top10.png) no-repeat center;
 }
 .btn-form .link-img-box{
-    background: url(/cms/wp-content/uploads/2019/06/forms.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/forms.png) no-repeat center;
 }
 .btn-platforms .link-img-box{
-    background: url(/cms/wp-content/uploads/2019/06/platforms-1.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/platforms-1.png) no-repeat center;
     background-position: center;
 }
 
 .btn-tax-free .link-img-box:hover{
-    background: url(/cms/wp-content/uploads/2019/06/taxfree-over.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/taxfree-over.png) no-repeat center;
 }
 .btn-top-10-holdings .link-img-box:hover{
-    background: url(/cms/wp-content/uploads/2019/06/top10-over.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/top10-over.png) no-repeat center;
 }
 .btn-form .link-img-box:hover{
-    background: url(/cms/wp-content/uploads/2019/06/forms-over.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/forms-over.png) no-repeat center;
 }
 .btn-platforms .link-img-box:hover{
-    background: url(/cms/wp-content/uploads/2019/06/platforms-1-over.png) no-repeat;
+    background: url(/cms/wp-content/uploads/2019/06/platforms-1-over.png) no-repeat center;
 }
 
 .btn-green-white{
@@ -826,7 +826,7 @@ a.btn-invest-now-green{
       display: flex;
       border: 2px solid #a8c3be;
       text-transform: uppercase;
-
+      flex-flow: column;
     }
     /* .blanced-fund-box .graph-box .select-fund span{
         border-right: 2px solid #a8c3be;
@@ -996,8 +996,11 @@ a.btn-invest-now-green{
       display: flex;
     }
 
-    .graph-box .select-fund > div {
-      width: 50%;
+    .blanced-fund-box .graph-box .select-fund > div:first-of-type > span {
+      text-align: left;
+      text-indent: 2px;
+      border-right: 0;
+      border-bottom: 2px solid #a8c3be;
     }
 
     .blanced-fund-box .graph-box .select-fund span,
@@ -1098,6 +1101,7 @@ a.btn-invest-now-green{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: 20px 15px;
+      grid-column-gap: 10px;
     }
 
     .fund-img-box ul li:nth-child(odd) {

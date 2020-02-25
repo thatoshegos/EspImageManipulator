@@ -66,7 +66,7 @@ p { font-size: 18px;
   .content>p {
     line-height: 1.5 !important;
     font-size: 21px !important;
-    text-align: justify !important;
+    /* text-align: justify !important; */
     font-weight: 400 !important;
   }
 
@@ -2439,7 +2439,7 @@ input, select, textarea {
         text-align: center;
     }
     h2 {
-        font-size: 30px;
+        font-size: 28px;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -2555,6 +2555,10 @@ input, select, textarea {
     .content-div {
         padding: 30px;
         margin: 4px 0px 0px 0px;
+    }
+
+    .contact-sec p {
+        margin: 0;
     }
 }
 

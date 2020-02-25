@@ -9,6 +9,7 @@ export class FundRangeComponent implements OnInit {
   @Input() FundRange;
   saFund = { title: "", desc: "", images: [] };
   glFund = { title: "", desc: "", images: [] };
+  saFundImagesLength;
   viewChangeflag = false;
   viewSChangeFlag = true;
     isInstitutionalFund = false;
@@ -30,6 +31,7 @@ export class FundRangeComponent implements OnInit {
     this.saFund.title = this.FundRange.acf.south_african_fund_title;
     this.saFund.desc = this.FundRange.acf.south_african_fund_disc;
     this.saFund.images = this.FundRange.acf.south_african_fund_image;
+    this.saFundImagesLength = this.saFund.images.length
     this.glFund.title = this.FundRange.acf.global_funds_title;
     this.glFund.desc = this.FundRange.acf.global_funds_discription;
     this.glFund.images = this.FundRange.acf.global_funds_image;
