@@ -169,11 +169,34 @@
                             Comment is required
                           </div>
                         </div>
+
+                        <form
+                          class="captcha-form"
+                          name="form"
+                          #captchaProtectedForm="ngForm"
+                          novalidate
+                        >
+                          <re-captcha
+                              [(ngModel)]="model.captcha"
+                              name="captcha"
+                              required
+                              siteKey="6LdbUb8UAAAAAO9XJtO0kqIlk2cnK7YErs4Thu6T"
+                              #captchaControl="ngModel"
+                          ></re-captcha>
+                          <!-- {{!(f.submitted && !captchaControl.valid && !captchaProtectedForm.form.valid")) }} -->
+                          <!-- <div *ngIf="(f.submitted && !captchaProtectedForm.form.valid)" class="error">Captcha must be solved</div>
+                          <div *ngIf="(!f.submitted && captchaProtectedForm.form.valid)" class="error">Captcha is solved</div> -->
+                          <div [hidden]="!(f.submitted && !(!captchaProtectedForm.form.valid || !captchaControl.pristine))" class="error">Captcha is required</div>
+                            <!-- <div [hidden]="!captchaControl.valid" class="success">Captcha is valid</div>
+                            <div [hidden]="!(f.submitted && !captchaControl.valid)" class="error">The form must be filled out</div>
+                            <div [hidden]="!captchaProtectedForm.form.valid" class="success">The form is valid</div> -->
+                        </form>
+
                         <div class="padding-30px-top text-center ">
                           <!-- <a href="#" target="_blank" class="more-btn text-black">SEND</a> -->
                           <input
                             type="submit"
-                            class="more-btn text-black"
+                            class="text-black contact-us-send"
                             value="SEND"
                           />
                         </div> 
@@ -252,31 +275,7 @@
                   </div>
                 </div>
 
-                <div class="box-2 padding-5px-all">
-                  <div class="box-2-content padding-25px-all xs-padding-15px-all">
-                    <form
-                      class="captcha-form"
-                      name="form"
-                      #captchaProtectedForm="ngForm"
-                      novalidate
-                    >
-                      <re-captcha
-                          [(ngModel)]="model.captcha"
-                          name="captcha"
-                          required
-                          siteKey="6LdbUb8UAAAAAO9XJtO0kqIlk2cnK7YErs4Thu6T"
-                          #captchaControl="ngModel"
-                      ></re-captcha>
-                      <!-- {{!(f.submitted && !captchaControl.valid && !captchaProtectedForm.form.valid")) }} -->
-                      <!-- <div *ngIf="(f.submitted && !captchaProtectedForm.form.valid)" class="error">Captcha must be solved</div>
-                      <div *ngIf="(!f.submitted && captchaProtectedForm.form.valid)" class="error">Captcha is solved</div> -->
-                      <div [hidden]="!(f.submitted && !(!captchaProtectedForm.form.valid || !captchaControl.pristine))" class="error">Captcha is required</div>
-                        <!-- <div [hidden]="!captchaControl.valid" class="success">Captcha is valid</div>
-                        <div [hidden]="!(f.submitted && !captchaControl.valid)" class="error">The form must be filled out</div>
-                        <div [hidden]="!captchaProtectedForm.form.valid" class="success">The form is valid</div> -->
-                    </form>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>

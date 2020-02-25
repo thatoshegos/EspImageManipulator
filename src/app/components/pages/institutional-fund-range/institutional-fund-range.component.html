@@ -68,7 +68,7 @@
           </div>
           <div
             class="fund-range-graph bg-light-green"
-            [ngClass]="i != 4 ? 'margin-30px-bottom' : ''"
+            [ngClass]="i !== saFundImagesLength - 1 ? 'margin-30px-bottom' : ''"
           >
             <a [routerLink]="'/' + image.south_african_fund_url"
               ><img [src]="image.south_african_fund_image_uploader.url"
@@ -94,11 +94,13 @@
           }"
         >
           <div class="fund-range-graph-title">
+            {{i}}
+            {{saFundImagesLength}}
             {{ image["multi-asset_class_funds_image_title"] }}
           </div>
           <div
             class="fund-range-graph bg-light-green"
-            [ngClass]="i != 4 ? 'margin-30px-bottom' : ''"
+            [ngClass]="i !== saFundImagesLength - 1 ? 'margin-30px-bottom' : ''"
           >
             <a [routerLink]="'/' + image['multi-asset_class_funds_image_url']"
               ><img [src]="image['multi-asset_class_funds_uplode'].url"
@@ -127,7 +129,7 @@
           <div class="fund-range-graph-title">
             {{ image.global_funds_image_title }}
           </div>
-          <div class="fund-range-graph bg-light-green margin-30px-bottom">
+          <div class="fund-range-graph bg-light-green margin-20px-bottom">
             <a [routerLink]="'/' + image.global_funds_url"
               ><img [src]="image.global_funds_image_uploader.url"
             /></a>
@@ -141,7 +143,7 @@
         data-aos="fade-right"
         *ngIf="!isInstitutionalFund"
       >
-        <div class="col-md-6 col-sm-6 col-xs-12 text-right padding-5px-bottom">
+        <div class="col-md-6 col-sm-6 col-xs-12 text-right padding-5px-bottom padding-30px-top">
           <a routerLink="/" class="plateform-btn"><span>LISP PLATFORMS</span></a>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 text-left">
@@ -154,7 +156,7 @@
         data-aos="fade-right"
         *ngIf="isInstitutionalFund"
       >
-        <div class="margin-40px-bottom text-center institutional-performance-sheet">
+        <div class="margin-40px-bottom text-center institutional-performance-sheet padding-30px-top">
           <a
             href="cms/wp-content/uploads/performance/fundperformance.pdf"
             target="_blank"

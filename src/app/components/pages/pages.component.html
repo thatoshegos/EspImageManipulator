@@ -1308,12 +1308,12 @@
     ><i class="fas fa-arrow-up"></i
   ></a> -->
   <div
-    class="row margin-30px-top sm-margin-four-bottom xs-margin-15px-bottom wow fadeInUp padding-30px-top"
+    class="row margin-30px-top xs-margin-20px-top sm-margin-four-bottom xs-margin-15px-bottom wow fadeInUp padding-30px-top"
     data-wow-delay="0.6s"
     data-aos="fade-up"
   >
-    <div class="col-md-12 col-sm-12 col-xs-12 margin-100px-top">
-      <h2 style="margin-bottom: 30px;" [innerHTML]="page.title.rendered"></h2>
+    <div class="col-md-12 col-sm-12 col-xs-12 margin-100px-top xs-no-margin-top">
+      <h2 class="up-quarterly-title-rendered" [innerHTML]="page.title.rendered"></h2>
     </div>
   </div>
   <div class="clearfix"></div>
@@ -1703,7 +1703,7 @@
           <div class="fund-range-graph-title">
             {{ invest.tax_free_funds_title }}
           </div>
-          <div class="fund-range-graph bg-light-green margin-30px-bottom">
+          <div class="fund-range-graph bg-light-green margin-20px-bottom">
             <a href="#"><img [src]="invest.tax_free_funds_image_.url"/></a>
           </div>
         </div>

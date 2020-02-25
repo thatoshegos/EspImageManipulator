@@ -398,6 +398,10 @@ a.link:hover {
   margin-bottom: 30px;
 }
 
+.up-quarterly-title-rendered {
+  margin-bottom: 30px;
+}
+
 @media screen and (max-width: 480px) {
   .bread-crumb {
     padding: 20px 15px 0px 15px;
@@ -462,6 +466,9 @@ a.link:hover {
       width: 100%;
       display: flex;
       align-items: center;
+    }
+    .up-quarterly-title-rendered {
+      margin-bottom: 15px;
     }
 }
 .inst-img-center {

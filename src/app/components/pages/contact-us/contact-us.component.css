@@ -708,9 +708,29 @@ input.more-btn.text-black {
   background: #a9d0cc;
 }
 
+.contact-us-send {
+  padding: 10px 40px 10px 0px;
+  /* background: #BCDAD7 url(../images/arrow-icon.jpg) no-repeat; */
+  background: #BCDAD7 url(../../../../assets/images/arrow-icon.jpg) no-repeat;
+  background-position: 104% 50%;
+  color: #656565;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  width: 175px;
+}
+
+.captcha-form {
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 480px) {
   .captcha-form {
-    transform: scale(0.73);
+    transform: scale(0.91);
     transform-origin: 0;
+  }
+
+  .contact-us-send {
+    width: 100%;
   }
 }

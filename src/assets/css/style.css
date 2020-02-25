@@ -4303,6 +4303,13 @@ a.btn-news-literature:hover{
     .app-insights-slider .slider-text-bottom {
         padding-bottom: 80px;
     }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .bread-crumb p {font-size: 11px;}
+    .bread-crumb-about-us-home p {font-size: 11px;}
+    .bread-crumb-about-us-home { font-size: 11px;}
 }
 
 @media only screen and (min-width: 481px) and (max-width: 991px) {
