@@ -62,7 +62,6 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
       vLabel = '$';
     }
     let isMobile = this.isMobile
-    console.log('isMobile', isMobile)
     function getMonthNameByNum(pNum) {
       switch (pNum) {
         case 0:
@@ -128,8 +127,6 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
           gridColor:"white",
           gridThickness:1,
           labelFunction: function(value, valueText) {
-            //console.log('ahahahhaha', this)
-            console.log(`${vLabel}${valueText}`)
             return `${vLabel}${valueText}`
           }
         }
@@ -241,7 +238,6 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
     };
   }
   ngOnInit() {
-    console.log('width screen', window, navigator)
     let isMobile = false; //initiate as false
     // device detection
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -262,7 +258,6 @@ export class GraphComponent implements OnInit, OnDestroy, OnChanges {
   }
   ngOnChanges(changes: SimpleChanges) {
     this.newData = this.makeDataSet();
-    //console.log(this.newData)
     if (this.newData) {
       this.options = this.makeOptions(this.makeDataSet());
 

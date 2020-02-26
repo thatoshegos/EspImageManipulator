@@ -116,7 +116,7 @@ h6 {font-size:25px; line-height:30px}
 .text-extra-light-gray {color:#b7b7b7}
 .text-light-gray {color:#d6d5d5}
 .text-very-light-gray {color:#ededed}
-.text-deep-pink {color:#b60c2f}
+.text-deep-pink {color:#b60c2f!important}
 .bullet-type{color:#b60c2f; list-style-image: url('/cms/wp-content/uploads/2019/11/bullet_point.png');}
 
 /* dropcap */
@@ -4248,6 +4248,10 @@ a.btn-news-literature:hover{
     color: #656565!important;
     text-decoration: underline!important;
     text-decoration-color: #87b8b3!important;
+}
+
+.accordion-style2 a.text-deep-pink {
+    color: #b60c2f!important;
 }
 
 .responsible-investing-content p a{

@@ -42,6 +42,16 @@
   height: 200px;
 }
 
+.content.year-contents > p > a,
+.content.year-contents > div > a {
+  font-weight: 400!important;
+}
+
+.content.year-contents > p > a > strong,
+.content.year-contents > div > a > strong {
+  font-weight: 400!important;
+}
+
 @keyframes spinner-border {
   to { transform: rotate(360deg); }
 }
