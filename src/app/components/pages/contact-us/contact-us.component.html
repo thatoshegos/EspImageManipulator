@@ -184,7 +184,8 @@
                               #captchaControl="ngModel"
                           ></re-captcha>
                           <!-- {{!(f.submitted && !captchaControl.valid && !captchaProtectedForm.form.valid")) }} -->
-                          <!-- <div *ngIf="(f.submitted && !captchaProtectedForm.form.valid)" class="error">Captcha must be solved</div>
+                          <!-- <div *ngIf="(f.submitted && !captchaProtectedForm.fo
+                            rm.valid)" class="error">Captcha must be solved</div>
                           <div *ngIf="(!f.submitted && captchaProtectedForm.form.valid)" class="error">Captcha is solved</div> -->
                           <div [hidden]="!(f.submitted && !(!captchaProtectedForm.form.valid || !captchaControl.pristine))" class="error">Captcha is required</div>
                             <!-- <div [hidden]="!captchaControl.valid" class="success">Captcha is valid</div>
@@ -274,8 +275,6 @@
                     </p-->
                   </div>
                 </div>
-
-                
               </div>
             </div>
           </div>
