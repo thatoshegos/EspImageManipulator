@@ -25,7 +25,7 @@
   padding-left: 0px;
   color: #B60C2F;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .year-list > ul > li .active {
@@ -35,6 +35,11 @@
 .year-post > span {
   font-weight: 800;
 }
+
+.year-contents {
+  font-weight: 400!important;
+}
+
 .accordion-style2 .panel-body{
     padding: 0px 28px 25px;
     border: none;
@@ -73,3 +78,5 @@
   border-radius: 50%;
   animation: spinner-border  .75s linear infinite;
 }
+
+

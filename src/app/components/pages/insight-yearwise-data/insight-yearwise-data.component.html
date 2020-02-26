@@ -70,7 +70,7 @@
               <!-- {{posts | json}} -->
                 <div class="panel-body bg-white" *ngIf="!loading">
                   <div class="repeat-loop" *ngFor="let post of posts"  >
-                    <div class="title" [innerHTML]="post.title.rendered"></div>
+                    <div class="title"  [innerHTML]="post.title.rendered"></div>
                     <div
                       class="content year-contents"
                       [innerHTML]="post.content.rendered"

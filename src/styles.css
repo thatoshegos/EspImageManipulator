@@ -122,7 +122,7 @@ h6 {font-size:25px; line-height:30px}
 .text-extra-light-gray {color:#b7b7b7}
 .text-light-gray {color:#d6d5d5}
 .text-very-light-gray {color:#ededed}
-.text-deep-pink {color:#b60c2f;}
+.text-deep-pink {color:#b60c2f!important}
 .text-light-blue{color: #80b9b3 }
 .text-italic{font-weight: 600;font-style:italic;}
 
@@ -2159,6 +2159,16 @@ h1.black{color: #000 !important}
 
 .home-light-bg .col-sm-4{padding-left: 20px; padding-right: 20px}
 .content.year-contents p{font-size: 18px !important}
+.content.year-contents p{font-size: 18px !important}
+.content.year-contents p a,
+.content.year-contents div a {
+    font-weight: 400!important;
+}
+
+.content.year-contents p a strong,
+.content.year-contents div a strong {
+    font-weight: 400!important;
+}
 .red-head{color:#b60c2f;}
 .investment-tab.ul-tab.active{font-weight:normal !important;}
 
