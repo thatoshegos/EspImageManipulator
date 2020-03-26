@@ -53,7 +53,7 @@
                   <div class="box-2-content padding-20px-all xs-padding-15px-all">
                     <form
                       name="form"
-                      (ngSubmit)="f.form.valid && captchaProtectedForm.form.valid && submitForm(f, captchaProtectedForm)"
+                      (ngSubmit)="f.form.valid &&  captchaControl.valid && captchaProtectedForm.form.valid && submitForm(f, captchaProtectedForm)"
                       #f="ngForm"
                       novalidate
                     >
@@ -187,7 +187,9 @@
                           <!-- <div *ngIf="(f.submitted && !captchaProtectedForm.fo
                             rm.valid)" class="error">Captcha must be solved</div>
                           <div *ngIf="(!f.submitted && captchaProtectedForm.form.valid)" class="error">Captcha is solved</div> -->
-                          <div [hidden]="!(f.submitted && !(!captchaProtectedForm.form.valid || !captchaControl.pristine))" class="error">Captcha is required</div>
+                          <div [hidden]="!(f.submitted && (!f.form.valid || !captchaControl.valid))" class="error">
+                            Captcha is required
+                          </div>
                             <!-- <div [hidden]="!captchaControl.valid" class="success">Captcha is valid</div>
                             <div [hidden]="!(f.submitted && !captchaControl.valid)" class="error">The form must be filled out</div>
                             <div [hidden]="!captchaProtectedForm.form.valid" class="success">The form is valid</div> -->

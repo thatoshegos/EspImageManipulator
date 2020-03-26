@@ -10,7 +10,7 @@ import { ToastrManager } from "ng6-toastr-notifications";
 })
 export class ContactUsComponent implements OnInit {
   resolved(captchaResponse: string) {
-    //console.log(`Resolved captcha with response: ${captchaResponse}`);
+    console.log(`Resolved captcha with response: ${captchaResponse}`);
   }
   model: any = {};
   response;
