@@ -13,6 +13,15 @@
   <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div>
 </div>-->
 
+<div class="temporary-popup" *ngIf="url && url[1] == 'individual-investor' && url[2] == 'invest-with-us' && isPopupOpen == true">
+  <div class="popup-container">
+    <h3>CORONAVIRUS: 21-Day Lockdown</h3>
+    <p>Please note that we are in a position to continue actively managing our clients’ portfolios remotely for as long as the virus is a threat. All of our usual communication channels will continue to remain open.</p>
+    <p>To learn more about COVID-19 in South Africa, please visit <a href="https://sacoronavirus.co.za" target="_blank">sacoronavirus.co.za</a></p>
+    <div class="close-popup" (click)="closePopup()">&times;</div>
+  </div>
+</div>
+
 <div class="right-fixed-link">
   
   <div *ngIf="url && url[1] !== 'institutional-investor'">

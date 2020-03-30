@@ -23,6 +23,8 @@ export class AppComponent {
   model: any = {};
   url: any
   response;
+  isPopupOpen = true;
+  body;
   constructor(
     private router: Router,
     private modalService: NgbModal,
@@ -33,6 +35,10 @@ export class AppComponent {
 
   }
   ngOnInit() {
+    this.body = document.getElementsByTagName('body')
+    if (this.isPopupOpen == true) {
+      this.body[0].classList.add('popup-open')
+    }
     AOS.init({
       offset: 200,
       duration: 600,
@@ -40,11 +46,11 @@ export class AppComponent {
       delay: 100
     });
   }
-
+  
   ngAfterContentChecked() {
     this.url = this.router.url.split("/")
   }
-
+  
   open(content) {
     this.getMessageStatus = false;
     console.log(this.getMessageStatus);
@@ -60,6 +66,14 @@ export class AppComponent {
           this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         }
       );
+  }
+
+  closePopup() {
+    this.isPopupOpen = false
+    this.body = document.getElementsByTagName('body')
+    if (this.isPopupOpen == false) {
+      this.body[0].classList.remove('popup-open')
+    }
   }
 
   private getDismissReason(reason: any): string {
