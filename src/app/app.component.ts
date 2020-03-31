@@ -23,7 +23,7 @@ export class AppComponent {
   model: any = {};
   url: any
   response;
-  isPopupOpen = true;
+  isPopupOpen = false;
   body;
   constructor(
     private router: Router,
@@ -46,11 +46,11 @@ export class AppComponent {
       delay: 100
     });
   }
-  
+
   ngAfterContentChecked() {
     this.url = this.router.url.split("/")
   }
-  
+
   open(content) {
     this.getMessageStatus = false;
     console.log(this.getMessageStatus);
