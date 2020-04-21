@@ -90,7 +90,7 @@ export class InsightYearwiseDataComponent implements OnInit {
       this.selectedItem = categories[0];
     });
 
-    this.wpservice.getSubcategory("?parent=47").subscribe(subcategories => {
+    this.wpservice.getSubcategory("?parent=273").subscribe(subcategories => {
       this.loading = false;
       this.subCategories = subcategories;
       this.subCategories.sort((a, b) => b.id - a.id);
