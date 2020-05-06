@@ -2053,6 +2053,17 @@
 </div>
 <!--End Fact sheet archive-->
 
+<!--Institutional Fact Sheet Archive-->
+<div class="container" *ngIf="page && page.institutionalFactSheetsArchiveStatus">
+  <div class="row margin-twelve-top xs-margin-100px-top fact-sheet-content">
+    <h2 class="fact-sheet-archive-title">{{ page.title.rendered }}</h2>
+  </div>
+  <div class="row">
+    <app-institutional-fact-sheets class="app-fact-sheet-archive"></app-institutional-fact-sheets>
+  </div>
+</div>
+<!--End Fact sheet archive-->
+
 <!-- Institutional manage equity fund view-->
 <div class="container ">
   <section class="margin-30px-top"  *ngIf="page && page.isManagedEquityFund">

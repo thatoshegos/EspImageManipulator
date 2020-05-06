@@ -9,11 +9,16 @@ import { WPAPIService } from "../../../../services/wpapi.service";
 })
 export class CommonInstitutionalFundComponent implements OnInit {
   @Input() fundDatas;
+  latestQuarterlyReport;
+  latestQuarterlyCommentary;
   performancePdf = 'cms/wp-content/uploads/performance/fundperformance.pdf'
   constructor(private wpservice: WPAPIService, private router: Router) {}
   url;
 
   ngOnInit() {
     this.url = this.router.url.split("/");
+    console.log('FUND DATAS', this.fundDatas, this.url)
+    this.latestQuarterlyReport = this.fundDatas.acf.latest_quarterly_report
+    this.latestQuarterlyCommentary = this.fundDatas.acf.latest_quarterly_commentary
   }
 }

@@ -26,7 +26,7 @@ export class FactSheetArchiveComponent implements OnInit {
         this.getParentCategory = pcategories;
 
         this.getParentCategory.forEach(pCategory => {
-
+          if (pCategory.id === 13) { return null }
           var categoryData = {
             parentName: null,
             getCategories: null

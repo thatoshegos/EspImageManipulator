@@ -48,7 +48,7 @@ export class PagesComponent implements OnInit {
     this.platformPdf = encodeURI(this.platformPdf);
     this.fundperformance = this.fundperformance;
     route.params.subscribe(val => {
-      // console.log(val);
+      console.log(val);
       //console.log(this.router.url);
       var urlArr = this.router.url.split("/");
       this.url = urlArr;
@@ -68,6 +68,7 @@ export class PagesComponent implements OnInit {
         // console.log(slug);
         this.wpservice.pages(`?slug=${slug}`).subscribe(page => {
           this.page = page[0];
+          console.log('this.page', this.page)
 
           // if (slug == "meet-our-leaders") {
           //   this.page.ourteamStatus = true;
@@ -77,6 +78,12 @@ export class PagesComponent implements OnInit {
           //     );
           //   });
           // }
+          // if (slug == "institutional-fact-sheets-archive") {
+          //   this.page.institutionalFactSheetsArchive = true
+          // }
+          if (slug == "institutional-fact-sheets-archive") {
+            this.page.institutionalFactSheetsArchiveStatus = true
+          }
           if (slug == "faq") {
             this.page.faqStatus = true;
           }

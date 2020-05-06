@@ -155,6 +155,10 @@ const routes: Routes = [
     path: "institutional-investor/our-funds/global-balanced-fund",
     component: PagesComponent
   },
+  {
+    path: 'institutional-investor/institutional-fact-sheets-archive',
+    component: PagesComponent
+  },
 
   {
     path: "about-us/our-history",

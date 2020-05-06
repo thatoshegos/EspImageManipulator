@@ -5,13 +5,13 @@
       <th></th>
       <th *ngIf="isHideConditionOn"></th>
       <th *ngIf="!isHideConditionOn">MONTHLY FACT SHEET</th>
-      <th>QUARTERLY FACT SHEET</th>
+      <th>QUARTERLY REPORTS</th>
       <th *ngIf="isHideConditionOn"></th>
-      <th *ngIf="!isHideConditionOn">QUARTERLY COMMENTARY</th>
+      <th *ngIf="isHideConditionOn">QUARTERLY COMMENTARIES</th> <!-- HERE -->
       <th>ARCHIVE</th>
     </tr>
     <tr>
-      <td colspan="5" class="high-light">
+      <td colspan="6" class="high-light">
         <strong>{{
           isHideConditionOn ? "Equity funds" : "South African funds"
         }}</strong>
@@ -41,7 +41,7 @@
         </a>
       </td>
       <td *ngIf="isHideConditionOn"></td>
-      <td *ngIf="!isHideConditionOn">
+      <td *ngIf="isHideConditionOn"> <!-- HERE -->
         <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'south_african_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'south_african_funds', 'quarterly_commentary')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
@@ -69,7 +69,7 @@
     </tr>-->
 
     <tr>
-      <td colspan="5" class="high-light">
+      <td colspan="6" class="high-light">
         <strong>
           {{
             isHideConditionOn ? "Multi-asset class funds" : "Sharia funds"
@@ -98,12 +98,13 @@
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
-      <td *ngIf="!isHideConditionOn">
+      <td *ngIf="isHideConditionOn"></td>
+      <td *ngIf="isHideConditionOn"> <!-- HERE -->
         <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'sharia_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'sharia_funds', 'quarterly_commentary')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
-      <td *ngIf="isHideConditionOn"></td>
+      <!-- <td *ngIf="isHideConditionOn"></td> -->
       <td>
         <a [href]="tdata.archive"><img src="assets/images/arrow_funds.png"/></a>
       </td>
@@ -129,7 +130,7 @@
 	<tr class="bg-white" *ngIf='isHideConditionOn'> <td colspan=7></td></tr>
 
     <tr *ngIf="isHideConditionOn">
-      <td colspan="5" class="high-light">
+      <td colspan="6" class="high-light">
         <strong>Yield funds</strong>
       </td>
     </tr>
@@ -155,7 +156,7 @@
         </a>
       </td>
       <td *ngIf="isHideConditionOn"></td>
-      <td *ngIf="!isHideConditionOn">
+      <td *ngIf="isHideConditionOn"> <!-- HERE -->
         <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'tax_free_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'tax_free_funds', 'quarterly_commentary')" target="_blank">
          <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
@@ -182,7 +183,7 @@
       <td></td>
     </tr>-->
     <tr>
-      <td *ngIf="!isHideConditionOn" colspan="5" class="high-light">
+      <td *ngIf="!isHideConditionOn" colspan="6" class="high-light">
         <strong>Global Fund</strong>
       </td>
     </tr>
@@ -218,6 +219,6 @@
       <td><img src="assets/images/buttons-new/form_download_b.png" /> full pack</td>
       <td></td>
     </tr>-->
-	<tr class="bg-white"> <td colspan=5></td></tr>
+	<tr class="bg-white"> <td colspan=6></td></tr>
   </table>
 </div>
