@@ -7,7 +7,7 @@
       <th *ngIf="!isHideConditionOn">MONTHLY FACT SHEET</th>
       <th>QUARTERLY REPORTS</th>
       <th *ngIf="isHideConditionOn"></th>
-      <th *ngIf="isHideConditionOn">QUARTERLY COMMENTARIES</th> <!-- HERE -->
+      <th>QUARTERLY COMMENTARIES</th> <!-- HERE -->
       <th>ARCHIVE</th>
     </tr>
     <tr>
@@ -41,13 +41,13 @@
         </a>
       </td>
       <td *ngIf="isHideConditionOn"></td>
-      <td *ngIf="isHideConditionOn"> <!-- HERE -->
+      <td> <!-- HERE  *ngIf="isHideConditionOn"-->
         <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'south_african_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'south_african_funds', 'quarterly_commentary')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td>
-        <a [href]="tdata.archive"><img src="assets/images/arrow_funds.png"/></a>
+        <a [href]="isHideConditionOn ? '/institutional-investor/institutional-fact-sheets-archive' : tdata.archive"><img src="assets/images/arrow_funds.png"/></a>
       </td>
     </tr>
 	<tr class="bg-white"> <td colspan=7></td></tr>
@@ -99,14 +99,14 @@
         </a>
       </td>
       <td *ngIf="isHideConditionOn"></td>
-      <td *ngIf="isHideConditionOn"> <!-- HERE -->
+      <td> <!-- HERE  *ngIf="isHideConditionOn"-->
         <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'sharia_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'sharia_funds', 'quarterly_commentary')" target="_blank">
           <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <!-- <td *ngIf="isHideConditionOn"></td> -->
       <td>
-        <a [href]="tdata.archive"><img src="assets/images/arrow_funds.png"/></a>
+        <a [href]="isHideConditionOn ? '/institutional-investor/institutional-fact-sheets-archive' : tdata.archive"><img src="assets/images/arrow_funds.png"/></a>
       </td>
     </tr>
 
@@ -156,13 +156,13 @@
         </a>
       </td>
       <td *ngIf="isHideConditionOn"></td>
-      <td *ngIf="isHideConditionOn"> <!-- HERE -->
+      <td> <!-- HERE *ngIf="isHideConditionOn" -->
         <a [href]="tdata.quarterly_commentary" [ngClass]="visited[makeVisitedKey(tdata.fund_name,'tax_free_funds',  'quarterly_commentary')] ? 'complete-fund-eye-btn visited' : 'complete-fund-eye-btn'" (click)="selectQuarterly(tdata, 'tax_free_funds', 'quarterly_commentary')" target="_blank">
          <!-- <img src="assets/images/buttons-new/form_view_b.png"/> -->
         </a>
       </td>
       <td>
-        <a [href]="tdata.archive"><img src="assets/images/arrow_funds.png"/></a>
+        <a [href]="isHideConditionOn ? '/institutional-investor/institutional-fact-sheets-archive' : tdata.archive"><img src="assets/images/arrow_funds.png"/></a>
       </td>
     </tr>
 <tr class="bg-white" *ngIf="isHideConditionOn"> <td colspan=8></td></tr>

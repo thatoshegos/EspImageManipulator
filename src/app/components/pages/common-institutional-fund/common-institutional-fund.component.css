@@ -46,7 +46,7 @@ a.btn-invest-now-red span:hover {
   line-height: 13px;
 }
 a.btn-invest-now-red {
-  display: inline-block;
+  display: block;
   background: #b30b2e url('src/assets/images/red-arrow-icon.jpg') no-repeat;
   background-position: 103% 50%;
   padding-right: 45px;
@@ -72,7 +72,7 @@ a.btn-invest-now-green span:hover {
   line-height: 13px;
 }
 a.btn-invest-now-green {
-  display: inline-block;
+  display: block;
   background: #8abbb6 url('src/assets/images/arrow-icon.jpg') no-repeat;
   background-position: 103% 50%;
   padding-right: 45px;
@@ -94,18 +94,34 @@ a.btn-invest-now-green {
   padding: 15px 0;
 }
 
-.institutional-header-holder > .fund-manage-heading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.balanced-fund-heading-wrap {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  margin-left: 30px;
+}
+
+.institutional-header-holder > .balanced-fund-heading-wrap > .fund-manage-heading {
   margin: 0;
+  padding: 0;
+  min-height: auto;
+  margin-left: 15px;
 }
 
 .institutional-header-holder > ul.blanced-fund-btn-list {
   grid-column: 2 / 3;
   float: unset;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 7.5px;
+  margin-right: 15px;
+}
+
+.quarterly-commentary {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
 }
 
 /* --------------- Mobile CSS ---*/
