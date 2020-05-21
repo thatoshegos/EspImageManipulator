@@ -164,10 +164,28 @@ a.btn-invest-now-green {
     margin: 0;
     padding: 0 15px 0 0;
     float: none;
-    display: flex;
-    flex-flow: column;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
     justify-content: center;
     margin-bottom: 0;
+  }
+
+  .unconventional-thinking > .text-center > .blanced-fund-btn-list li {
+    margin: 0;
+  }
+
+  .balanced-fund-heading-wrap {
+    flex-flow: column-reverse;
+    margin-left: 15px;
+    align-items: flex-start;
+  }
+
+  .balanced-fund-heading-wrap > h2.fund-manage-heading {
+    text-align: left;
+    margin: 0 0 15px 0!important;
+    line-height: 1!important;
   }
 
 }
@@ -178,5 +196,11 @@ a.btn-invest-now-green {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 494px) and (max-width: 991px) {
+  .unconventional-thinking > .text-center > .blanced-fund-btn-list {
+    margin: 15px 0;
   }
 }
