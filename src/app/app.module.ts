@@ -71,7 +71,8 @@ import { MeetOurLeaderComponent } from "./components/meet-our-leader/meet-our-le
 import { HowToInvestComponent } from "./how-to-invest/how-to-invest.component";
 import { ArticleComponent } from "./components/article/article.component";
 import { LegalFaqComponent } from './components/legal-faq/legal-faq.component';
-import { InstitutionalFactSheetsComponent } from './components/institutional-fact-sheets/institutional-fact-sheets.component'
+import { InstitutionalFactSheetsComponent } from './components/institutional-fact-sheets/institutional-fact-sheets.component';
+import { EmailDisclaimerComponent } from './components/email-disclaimer/email-disclaimer.component'
 
 @NgModule({
   declarations: [
@@ -127,7 +128,8 @@ import { InstitutionalFactSheetsComponent } from './components/institutional-fac
     HowToInvestComponent,
     ArticleComponent,
     LegalFaqComponent,
-    InstitutionalFactSheetsComponent
+    InstitutionalFactSheetsComponent,
+    EmailDisclaimerComponent
   ],
   imports: [
     BrowserModule,
