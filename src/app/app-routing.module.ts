@@ -16,6 +16,8 @@ const routes: Routes = [
     component: ContactUsComponent
   },
   { path: "glossary", pathMatch: "full", component: PagesComponent },
+  
+  { path: "email-disclaimer", pathMatch: "full", component: PagesComponent },
 
   {
     path: "individual-investor/invest-with-us",
