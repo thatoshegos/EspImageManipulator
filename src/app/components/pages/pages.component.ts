@@ -177,6 +177,9 @@ export class PagesComponent implements OnInit {
           if (slug == "legal") {
             this.page.legalStatus = true;
           }
+            if (slug == "email-disclaimer") {
+            this.page.emailDisclaimerStatus = true;
+          }
 
           // if (slug == "balanced-fund") {
           //   this.page.balaceFundStatus = true;

@@ -1678,6 +1678,11 @@
   </div>
 </div>
 <!--end legal-->
+<!--Email Disclaimer-->
+<div class="container sharia-board-container" *ngIf="page && page.emailDisclaimerStatus">
+  <app-email-disclaimer class="app-sharia-board" [shariaContent]="page"></app-email-disclaimer>
+</div>
+
 
 <!-- text-Free-Investing-->
 <div class="text-free-investing xs-margin-40px-top" *ngIf="page && page.textFreeInvesting">
