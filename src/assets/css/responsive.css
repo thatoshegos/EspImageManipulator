@@ -1522,7 +1522,7 @@
     .dropdown-menu { box-shadow: none; border: none; border-top: 1px solid rgba(255, 255, 255, 0.06);}
     .navbar-collapse {right: 0; padding:0; position: absolute; top: 100%; width: 100%;min-width: 250px;}
     nav.navbar.bootsnav ul.nav > li.dropdown > ul.dropdown-menu, nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu.mega-menu { padding: 10px 15px 0 !important; margin: 0; float: left; top: 0 !important; }
-    nav.navbar.bootsnav .navbar-nav { margin: 0; padding: 0; display: block; height: 100%; background-color: rgba(23, 23, 23, 0.95); }
+    nav.navbar.bootsnav .navbar-nav { margin: 0; padding: 0; display: block; height: 100vh; background-color: rgba(23, 23, 23, 0.95); overflow-y: auto; }
     nav.navbar.bootsnav li.dropdown .mega-menu-full > ul > li {border-bottom: none; margin-bottom: 10px}
     nav.navbar.bootsnav li.dropdown.open .mega-menu-full {padding-top: 10px;}
     nav.navbar.bootsnav li.dropdown .mega-menu-full > ul > li:last-child {margin-bottom: 0}

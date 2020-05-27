@@ -125,25 +125,7 @@ a.btn-invest-now-green {
 }
 
 /* --------------- Mobile CSS ---*/
-@media screen and (max-width: 480px) {
-  .p-text {
-    text-align: left;
-  }
 
-  .button-section > .row > .suscribe > .btn-meet-leaders {
-    margin-right: 0!important;
-    margin-bottom: 10px;
-  }
-  
-  .button-section > .row > .suscribe > .btn-meet-leaders > span, 
-  .button-section > .row > .suscribe > .btn-meet-fund-manager > span{
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-
-}
 
 @media screen and (max-width: 991px) {
   .unconventional-thinking {
@@ -190,12 +172,86 @@ a.btn-invest-now-green {
 
 }
 
+@media screen and (max-width: 480px) {
+  .p-text {
+    text-align: left;
+  }
+
+  .button-section > .row > .suscribe > .btn-meet-leaders {
+    margin-right: 0!important;
+    margin-bottom: 10px;
+  }
+  
+  .button-section > .row > .suscribe > .btn-meet-leaders > span, 
+  .button-section > .row > .suscribe > .btn-meet-fund-manager > span{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .unconventional-thinking > .text-center {
+    padding: 0;
+  }
+
+  .unconventional-thinking > .text-center > .blanced-fund-btn-list {
+    margin: 10px 0;
+    padding: 0;
+    float: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 315px;
+  }
+
+  .unconventional-thinking > .text-center > .blanced-fund-btn-list li {
+    margin: 10px 10px 0 0;
+    width: 95%;
+    height: 45px;
+  }
+
+  .unconventional-thinking > .text-center > .blanced-fund-btn-list li a {
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .unconventional-thinking > .text-center > .blanced-fund-btn-list li a span {
+    height: 100%;
+    padding: 0 0 0 10px;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .balanced-fund-heading-wrap {
+    flex-flow: column;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+    align-items: center;
+    width: 150px;
+    align-self: flex-start;
+  }
+
+  .balanced-fund-heading-wrap > h2.fund-manage-heading {
+    text-align: center;
+  }
+
+}
 
 @media screen and (min-width: 481px) and (max-width: 991px) {
   .unconventional-thinking > .text-center {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+  }
+
+  .balanced-fund-heading-wrap {
+    flex: 1 1 0%;
+    flex-flow: row;
+    align-items: center;
+    margin: 0;
   }
 }
 

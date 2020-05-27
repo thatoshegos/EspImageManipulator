@@ -9,6 +9,7 @@ import { CompileShallowModuleMetadata } from "@angular/compiler";
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
+  noScroll = false;
   selectedParent;
   menuItems = {
     primary: null,
@@ -333,6 +334,23 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  navBarBtnClick = () => {
+    let body = document.querySelector('body')
+    let mobileMenuList = document.querySelectorAll('ul.nav.navbar-nav')
+    console.log('akakakakaka', mobileMenuList)
+    let navBar = document.querySelector('nav').clientHeight
+    this.noScroll = !this.noScroll
+    if (body) {
+      if (this.noScroll) {
+        body.classList.add('no-scroll')
+        mobileMenuList.forEach(item => item.setAttribute('style', `padding-bottom: ${navBar}px`))
+      } else {
+        body.classList.remove('no-scroll')
+        mobileMenuList.forEach(item => item.removeAttribute('style'))
+      }
+    }
+  }
+
   ngOnInit() {
     window.scrollTo(0,0);
     this.WPService.getFirstMenu().subscribe(menus => {
@@ -372,6 +390,6 @@ export class HeaderComponent implements OnInit {
 		this.childrenMenu[0].name = "INVEST WITH US";
     this.childrenMenu[0].slug = "invest-with-us";
     this.childrenMenu[0]["display"] = true;
-	}
+  }
   }
 }

@@ -46,6 +46,7 @@ Table of contents
 
 body{ font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased;  font-smoothing: antialiased; font-size:18px; color:#656565; font-weight: 400;line-height:1.5;background-color:#E7E7E7; }
 body.popup-open { overflow: hidden }
+body.no-scroll { overflow: hidden!important; }
 body, html { height: 100%; position: relative; -moz-osx-font-smoothing: grayscale;}
 a, a:active, a:focus { color: #6f6f6f; text-decoration: none; }
 a:hover, a:active{color: #b60c2f; text-decoration: none;}
