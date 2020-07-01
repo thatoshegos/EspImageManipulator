@@ -29,6 +29,8 @@ export class PagesComponent implements OnInit {
   platformPdf= 'cms/wp-content/uploads/LISP platforms/LISP_Summary_sheet.pdf';
   fundperformance = '/cms/wp-content/uploads/performance/fundperformance.pdf';
 
+  articleDownload;
+
   activeClickedTab;
   getCurrentTab;
 
@@ -159,6 +161,9 @@ export class PagesComponent implements OnInit {
               this.page = post;
               this.page.articleStatus = true;
               // console.log(this.page);
+              if (this.page.articleStatus) {
+                this.articleDownload = this.page[0].acf.pdf_page_download
+              }
             });
           }
           if (slug == "new-to-investing") {

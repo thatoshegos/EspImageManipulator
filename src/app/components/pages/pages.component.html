@@ -2166,7 +2166,7 @@
       <app-slider [sliders]="slider"></app-slider>
     </section>
     <div class="image article-one">
-        <a href="javascript:void(0)" class="btn-subcribe">
+        <a href="javascript:void(0)" class="btn-subcribe" (click)="open(content, 'subscribe')">
           <img class="image-arrow-check" src="assets/images/subscribe-1.png"/>
         </a>
       <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
@@ -2176,7 +2176,7 @@
     </div>
 
     <div class="image-unsubscribe article-one">
-        <a href="javascript:void(0)" class="btn-subcribe">
+        <a href="javascript:void(0)" class="btn-subcribe" (click)="open(content, 'unsubscribe')">
           <img class="image-arrow-check-unsubscribe" src="assets/images/unsubscribe-1.png"/>
         </a>
       <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
@@ -2187,12 +2187,12 @@
 
 
     <div class="image-download article-one">
-        <a href="javascript:void(0)" class="btn-subcribe">
+        <a [href]="articleDownload" class="btn-subcribe" download>
           <img class="image-arrow-check-download" src="assets/images/download-1.png"/>
         </a>
       <!-- <div class="show-message" *ngIf="!getMessageStatus">LEAVE A MESSAGE</div> -->
       <div class="image-text-download">
-        <a class="link">DOWNLOAD</a>
+        <a [href]="articleDownload" class="link" download>DOWNLOAD</a>
       </div>
     </div>
 
