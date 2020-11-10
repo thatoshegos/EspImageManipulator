@@ -132,6 +132,13 @@ export class PagesComponent implements OnInit {
             //   this.getHomeSlider = silder;
             // });
           }
+            
+            if (slug == "meet-the-fund-manager-dirk-van-vlaanderen") {
+            this.page.meetFundManagerDirk = true;
+            // this.wpservice.getPost("11267").subscribe(silder => {
+            //   this.getHomeSlider = silder;
+            // });
+          }
 
           if (slug == "meet-the-fund-manager-simon") {
             this.page.meetFundManagerSimon = true;
