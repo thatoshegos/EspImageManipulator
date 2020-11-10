@@ -1544,6 +1544,28 @@
    </div>
 <!-- end Meet Fund  Manager Abdul-->
 
+<!-- Meet Fund  Manager Dirk-->
+<div class="silder-div" *ngIf="page && page.meetFundManagerDirk">
+    <!-- <app-slider [sliders]="page.acf.home_slider"></app-slider>-->
+     <div class="container">
+       <div class="row margin-130px-top">
+         <h2 [innerHTML]="page.title.rendered"></h2>
+       </div>
+       <div class="row margin-5px-top">
+         <!-- <div class="bg-white padding-25px-bottom"> -->
+           <div  [innerHTML]="page.content.rendered"></div>
+         <!-- </div> -->
+       </div>
+       <div class="row margin-30px-bottom  margin-30px-top">
+         <div class=" col-md-8 col-md-offset-2 text-center suscribe">
+           <a [href]="platformPdf" class="platform-on-grey" style="vertical-align: middle"><span>LISP PLATFORMS</span></a>
+           <a routerLink="/about-us/investment-approach" class="btn-meet-leaders meet-leader" style="vertical-align: middle"><span>INVESTMENT APPROACH</span></a>
+         </div>
+       </div>
+     </div>
+   </div>
+<!-- end Meet Fund  Manager Dirk-->
+
 <!-- Meet Fund  Manager Simon-->
 <div class="silder-div" *ngIf="page && page.meetFundManagerSimon">
     <!-- <app-slider [sliders]="page.acf.home_slider"></app-slider>-->
